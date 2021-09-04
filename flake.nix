@@ -18,7 +18,7 @@
     flake-compat.flake = false;
   };
 
-  outputs = inputs @ { self, nixpkgs, flake-utils, haskell-nix, ... }:
+  outputs = inputs @ { self, nixpkgs, darwin, home-manager, flake-utils, haskell-nix, ... }:
     let
       supportedSystem = [ "x86_64-linux" "x86_64-darwin" ];
 
@@ -46,8 +46,47 @@
           haskell-nix.overlay
         ];
       };
+
+      homeManagerConfig =
+        { user
+        , userConfig ? ./home + "/user-${user}.nix"
+        , ...
+        }: {
+          imports = [
+            userConfig
+            ./home
+          ];
+        };
+
+      mkDarwinModules =
+        args @ { user
+        , host
+        , hostConfig ? ./hosts + "/host-${host}.nix"
+        , ...
+        }: [
+          home-manager.darwinModules.home-manager
+          hostConfig
+          {
+            nix.nixPath = {
+              nixpkgs = "$HOME/.config/nixpkgs/nixpkgs.nix";
+            };
+            nixpkgs = nixpkgsConfig;
+            users.users.${user}.home = "/Users/${user}";
+            home-manager.useGlobalPkgs = true;
+            home-manager.users.${user} = homeManagerConfig args;
+          }
+        ];
     in
       {
+        darwinConfigurations = {
+          bootstrap = darwin.lib.darwinSystem {
+            inputs = inputs;
+            modules = [
+              ./shared/darwin-bootstrap.nix
+            ];
+          };
+        };
+
         pkgs = forAllSystems (
           system:
             import nixpkgs {
