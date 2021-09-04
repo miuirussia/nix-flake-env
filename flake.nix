@@ -85,6 +85,30 @@
               ./shared/darwin-bootstrap.nix
             ];
           };
+
+          ghActions = darwin.lib.darwinSystem {
+            inputs = inputs;
+            modules = mkDarwinModules {
+              user = "runner";
+              host = "mac-gh";
+            };
+          };
+
+          home = darwin.lib.darwinSystem {
+            inputs = inputs;
+            modules = mkDarwinModules {
+              user = "kirill";
+              host = "Kirills-iMac-5K";
+            };
+          };
+
+          work = darwin.lib.darwinSystem {
+            inputs = inputs;
+            modules = mkDarwinModules {
+              user = "kirill";
+              host = "kkuznetsov";
+            };
+          };
         };
 
         pkgs = forAllSystems (
