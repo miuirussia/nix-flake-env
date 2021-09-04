@@ -273,6 +273,22 @@
         "type": "github"
       }
     },
+    "neovim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1630777757,
+        "narHash": "sha256-TIcYO6hmrXNHa/SJs52UAnRwNZ3yMRexUfCdt1ANAvY=",
+        "owner": "neovim",
+        "repo": "neovim",
+        "rev": "dce50312e1e9af81fb0e3b61d6e70bdf286fbffb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "neovim",
+        "repo": "neovim",
+        "type": "github"
+      }
+    },
     "nix-tools": {
       "flake": false,
       "locked": {
@@ -395,8 +411,10 @@
         "hls-nix": "hls-nix",
         "home-manager": "home-manager",
         "jetbrains-mono": "jetbrains-mono",
+        "neovim": "neovim",
         "nixpkgs": "nixpkgs",
-        "stackage": "stackage"
+        "stackage": "stackage",
+        "tree-sitter": "tree-sitter"
       }
     },
     "stackage": {
@@ -412,6 +430,22 @@
       "original": {
         "owner": "input-output-hk",
         "repo": "stackage.nix",
+        "type": "github"
+      }
+    },
+    "tree-sitter": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1630702665,
+        "narHash": "sha256-qih2hoKiwqNZOo0I4JF9X7rpFirTMSKIH3POmkxcNmk=",
+        "owner": "tree-sitter",
+        "repo": "tree-sitter",
+        "rev": "4d64c2b939d4bb1074b5ae5631cf2616368f78d8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tree-sitter",
+        "repo": "tree-sitter",
         "type": "github"
       }
     }

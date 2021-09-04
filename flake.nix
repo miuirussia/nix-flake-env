@@ -27,6 +27,12 @@
     hls-nix.url = "github:miuirussia/hls-nix";
     hls-nix.flake = false;
 
+    tree-sitter.url = "github:tree-sitter/tree-sitter";
+    tree-sitter.flake = false;
+
+    neovim.url = "github:neovim/neovim";
+    neovim.flake = false;
+
     flake-utils.url = "github:numtide/flake-utils";
     flake-compat.url = "github:edolstra/flake-compat";
     flake-compat.flake = false;
@@ -89,8 +95,6 @@
         ];
     in
       {
-        inherit homeOverlays;
-
         darwinConfigurations = {
           bootstrap = darwin.lib.darwinSystem {
             inputs = inputs;

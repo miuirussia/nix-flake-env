@@ -9,6 +9,7 @@ in
 {
   hls = prev.buildEnv {
     name = "haskell-language-server";
+    version = inputs.hls-nix.shortRev;
 
     paths = [
       hls865.hls-renamed
