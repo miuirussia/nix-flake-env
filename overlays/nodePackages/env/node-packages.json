@@ -1,0 +1,17 @@
+[
+  "coc-markdown-preview-enhanced",
+  "coc-webview",
+  "coc-yaml",
+  "diagnostic-languageserver",
+  "eslint_d",
+  "fx",
+  "npm",
+  "pnpm",
+  "prettier-eslint-cli",
+  "pulp",
+  "purescript",
+  "purescript-language-server",
+  "purescript-psa",
+  "spago",
+  "typescript-language-server"
+]

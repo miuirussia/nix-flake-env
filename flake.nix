@@ -4,6 +4,12 @@
   inputs = {
     nixpkgs.url = "github:miuirussia/nixpkgs";
 
+    hackage.url = "github:miuirussia/hackage.nix";
+    hackage.flake = false;
+
+    stackage.url = "github:input-output-hk/stackage.nix";
+    stackage.flake = false;
+
     darwin.url = "github:LnL7/nix-darwin/master";
     darwin.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -12,6 +18,14 @@
 
     haskell-nix.url = "github:miuirussia/haskell.nix";
     haskell-nix.inputs.nixpkgs.follows = "nixpkgs";
+    haskell-nix.inputs.hackage.follows = "hackage";
+    haskell-nix.inputs.stackage.follows = "stackage";
+
+    jetbrains-mono.url = "github:JetBrains/JetBrainsMono";
+    jetbrains-mono.flake = false;
+
+    hls-nix.url = "github:miuirussia/hls-nix";
+    hls-nix.flake = false;
 
     flake-utils.url = "github:numtide/flake-utils";
     flake-compat.url = "github:edolstra/flake-compat";
@@ -28,7 +42,7 @@
         path = ./overlays;
       in
         with builtins;
-        map (n: import (path + ("/" + n))) (
+        map (n: (import (path + ("/" + n)) inputs)) (
           filter
             (
               n:
@@ -67,17 +81,16 @@
           home-manager.darwinModules.home-manager
           hostConfig
           {
-            nix.nixPath = {
-              nixpkgs = "$HOME/.config/nixpkgs/nixpkgs.nix";
-            };
             nixpkgs = nixpkgsConfig;
             users.users.${user}.home = "/Users/${user}";
-            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
             home-manager.users.${user} = homeManagerConfig args;
           }
         ];
     in
       {
+        inherit homeOverlays;
+
         darwinConfigurations = {
           bootstrap = darwin.lib.darwinSystem {
             inputs = inputs;

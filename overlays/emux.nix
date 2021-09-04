@@ -1,6 +1,6 @@
-final: prev: with prev; {
-  emux = writeShellScriptBin "emux" ''
-    SESSION=$(${tmux}/bin/tmux display-message -p "#S")
+inputs: final: prev: {
+  emux = prev.writeShellScriptBin "emux" ''
+    SESSION=$(${final.tmux}/bin/tmux display-message -p "#S")
     OIFS=$IFS
     IFS=$'\n'
     for line in $(grep '^# exit:' ~/.config/tmuxinator/$SESSION.yml); do
@@ -13,11 +13,11 @@ final: prev: with prev; {
       unset 'elems[2]'
       unset 'elems[3]'
       cmd="''${elems[*]}"
-      echo "${tmux}/bin/tmux send-keys -t $SESSION:$window.$pane $cmd"
-      ${tmux}/bin/tmux send-keys -t $SESSION:$window.$pane $cmd
+      echo "${final.tmux}/bin/tmux send-keys -t $SESSION:$window.$pane $cmd"
+      ${final.tmux}/bin/tmux send-keys -t $SESSION:$window.$pane $cmd
       sleep 0.5
     done
     IFS=$OIFS
-    ${tmux}/bin/tmux kill-session
+    ${final.tmux}/bin/tmux kill-session
   '';
 }
