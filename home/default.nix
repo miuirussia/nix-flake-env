@@ -3,8 +3,13 @@
 let
   tmp_directory = "/tmp";
   home_directory = "${config.home.homeDirectory}";
-in {
+in
+{
   imports = [
+    ./git.nix
+    ./kitty/default.nix
+    ./starship.nix
+    ./zsh/default.nix
   ];
 
   home = {
@@ -19,12 +24,42 @@ in {
       PATH = "$PATH:$HOME/.local/bin:$HOME/.tfenv/bin";
     };
 
-    packages = with pkgs; [
-    ];
+    packages = with pkgs; [];
   };
 
   programs = {
     home-manager = { enable = true; };
+
+    direnv = {
+      enable = true;
+      nix-direnv = {
+        enable = true;
+      };
+    };
+
+    dircolors = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+
+    fzf = {
+      enable = true;
+      enableBashIntegration = true;
+      enableZshIntegration = true;
+    };
+
+    ssh = {
+      enable = true;
+
+      controlMaster = "auto";
+      controlPath = "${tmp_directory}/ssh-%u-%r@%h:%p";
+      controlPersist = "1800";
+
+      forwardAgent = true;
+      serverAliveInterval = 60;
+
+      hashKnownHosts = true;
+    };
   };
 
   xdg = {

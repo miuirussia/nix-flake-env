@@ -85,6 +85,8 @@
         , ...
         }: [
           home-manager.darwinModules.home-manager
+          ./shared/darwin.nix
+          ./shared/tmux.nix
           hostConfig
           {
             nixpkgs = nixpkgsConfig;
@@ -115,7 +117,15 @@
             inputs = inputs;
             modules = mkDarwinModules {
               user = "kirill";
-              host = "Kirills-iMac-5K";
+              host = "kirill-imac";
+            };
+          };
+
+          macbook = darwin.lib.darwinSystem {
+            inputs = inputs;
+            modules = mkDarwinModules {
+              user = "kirill";
+              host = "kirill-macbook";
             };
           };
 
