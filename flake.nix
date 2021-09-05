@@ -2,7 +2,7 @@
   description = "KDeveloper system config";
 
   inputs = {
-    nixpkgs.url = "github:miuirussia/nixpkgs";
+    nixpkgs.url = "github:miuirussia/nixpkgs/nixpkgs-unstable";
 
     hackage.url = "github:miuirussia/hackage.nix";
     hackage.flake = false;

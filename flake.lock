@@ -316,6 +316,7 @@
       },
       "original": {
         "owner": "miuirussia",
+        "ref": "nixpkgs-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }
