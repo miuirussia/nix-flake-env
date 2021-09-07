@@ -8,6 +8,7 @@ in
   imports = [
     ./git.nix
     ./kitty/default.nix
+    ./neovim/default.nix
     ./starship.nix
     ./zsh/default.nix
   ];

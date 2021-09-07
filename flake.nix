@@ -52,7 +52,7 @@
 
       forAllSystems = f: nixpkgs.lib.genAttrs supportedSystem (system: f system);
 
-      homeOverlays = let
+      nixpkgsOverlays = let
         path = ./overlays;
       in
         with builtins;
@@ -70,7 +70,7 @@
         config = {
           allowUnfree = true;
         };
-        overlays = homeOverlays ++ [
+        overlays = nixpkgsOverlays ++ [
           haskell-nix.overlay
         ];
       };
@@ -99,7 +99,7 @@
           {
             nixpkgs = nixpkgsConfig;
             users.users.${user}.home = "/Users/${user}";
-            home-manager.useUserPackages = true;
+            home-manager.useGlobalPkgs = true;
             home-manager.users.${user} = homeManagerConfig args;
           }
         ];
