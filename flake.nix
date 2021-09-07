@@ -24,6 +24,16 @@
     tree-sitter = { url = "github:tree-sitter/tree-sitter"; flake = false; };
 
     neovim = { url = "github:neovim/neovim"; flake = false; };
+    coc-nvim = { url = "github:neoclide/coc.nvim/release"; flake = false; };
+    purescript-vim = { url = "github:purescript-contrib/purescript-vim"; flake = false; };
+    vim-styled-components = { url = "github:styled-components/vim-styled-components"; flake = false; };
+    rust-vim = { url = "github:rust-lang/rust.vim"; flake = false; };
+    vim-sandwich = { url = "github:machakann/vim-sandwich"; flake = false; };
+    vim-javascript = { url = "github:pangloss/vim-javascript"; flake = false; };
+    vim-jsx = { url = "github:mxw/vim-jsx"; flake = false; };
+    nginx-vim = { url = "github:chr4/nginx.vim"; flake = false; };
+    vim-toml = { url = "github:cespare/vim-toml"; flake = false; };
+    dhall-vim = { url = "github:vmchale/dhall-vim"; flake = false; };
 
     flake-utils = { url = "github:numtide/flake-utils"; };
     flake-compat = { url = "github:edolstra/flake-compat"; flake = false; };
