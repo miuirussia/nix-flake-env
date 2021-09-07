@@ -103,8 +103,8 @@
         , ...
         }: [
           home-manager.darwinModules.home-manager
-          ./shared/darwin.nix
-          ./shared/tmux.nix
+          ./hosts/darwin.nix
+          ./hosts/tmux.nix
           hostConfig
           {
             nixpkgs = nixpkgsConfig;
@@ -119,7 +119,7 @@
           bootstrap = darwin.lib.darwinSystem {
             inputs = inputs;
             modules = [
-              ./shared/darwin-bootstrap.nix
+              ./hosts/darwin-bootstrap.nix
             ];
           };
 
