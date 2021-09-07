@@ -2,40 +2,31 @@
   description = "KDeveloper system config";
 
   inputs = {
-    nixpkgs.url = "github:miuirussia/nixpkgs/nixpkgs-unstable";
+    nixpkgs = { url = "github:miuirussia/nixpkgs/nixpkgs-unstable"; };
 
-    hackage.url = "github:miuirussia/hackage.nix";
-    hackage.flake = false;
+    hackage = { url = "github:miuirussia/hackage.nix"; flake = false; };
+    stackage = { url = "github:input-output-hk/stackage.nix"; flake = false; };
 
-    stackage.url = "github:input-output-hk/stackage.nix";
-    stackage.flake = false;
+    darwin = { url = "github:LnL7/nix-darwin/master"; inputs.nixpkgs.follows = "nixpkgs"; };
+    home-manager = { url = "github:miuirussia/home-manager"; inputs.nixpkgs.follows = "nixpkgs"; };
 
-    darwin.url = "github:LnL7/nix-darwin/master";
-    darwin.inputs.nixpkgs.follows = "nixpkgs";
+    haskell-nix = {
+      url = "github:miuirussia/haskell.nix";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        hackage.follows = "hackage";
+        stackage.follows = "stackage";
+      };
+    };
 
-    home-manager.url = "github:miuirussia/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    jetbrains-mono = { url = "github:JetBrains/JetBrainsMono"; flake = false; };
+    hls-nix = { url = "github:miuirussia/hls-nix"; flake = false; };
+    tree-sitter = { url = "github:tree-sitter/tree-sitter"; flake = false; };
 
-    haskell-nix.url = "github:miuirussia/haskell.nix";
-    haskell-nix.inputs.nixpkgs.follows = "nixpkgs";
-    haskell-nix.inputs.hackage.follows = "hackage";
-    haskell-nix.inputs.stackage.follows = "stackage";
+    neovim = { url = "github:neovim/neovim"; flake = false; };
 
-    jetbrains-mono.url = "github:JetBrains/JetBrainsMono";
-    jetbrains-mono.flake = false;
-
-    hls-nix.url = "github:miuirussia/hls-nix";
-    hls-nix.flake = false;
-
-    tree-sitter.url = "github:tree-sitter/tree-sitter";
-    tree-sitter.flake = false;
-
-    neovim.url = "github:neovim/neovim";
-    neovim.flake = false;
-
-    flake-utils.url = "github:numtide/flake-utils";
-    flake-compat.url = "github:edolstra/flake-compat";
-    flake-compat.flake = false;
+    flake-utils = { url = "github:numtide/flake-utils"; };
+    flake-compat = { url = "github:edolstra/flake-compat"; flake = false; };
   };
 
   outputs = inputs @ { self, nixpkgs, darwin, home-manager, flake-utils, haskell-nix, ... }:
