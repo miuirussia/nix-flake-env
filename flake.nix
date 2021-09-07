@@ -18,10 +18,20 @@
         stackage.follows = "stackage";
       };
     };
+    hls-nix = {
+      url = "github:miuirussia/hls-nix";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        hackage.follows = "hackage";
+        stackage.follows = "stackage";
+        haskell-nix.follows = "haskell-nix";
+        hls-unstable.follows = "hls-unstable";
+      };
+    };
 
     jetbrains-mono = { url = "github:JetBrains/JetBrainsMono"; flake = false; };
-    hls-nix = { url = "github:miuirussia/hls-nix"; };
     tree-sitter = { url = "github:tree-sitter/tree-sitter"; flake = false; };
+    hls-unstable = { url = "github:haskell/haskell-language-server"; flake = false; };
 
     neovim = { url = "github:neovim/neovim"; flake = false; };
     coc-nvim = { url = "github:neoclide/coc.nvim/release"; flake = false; };
