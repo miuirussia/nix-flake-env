@@ -25,15 +25,22 @@
 
     neovim = { url = "github:neovim/neovim"; flake = false; };
     coc-nvim = { url = "github:neoclide/coc.nvim/release"; flake = false; };
-    purescript-vim = { url = "github:purescript-contrib/purescript-vim"; flake = false; };
-    vim-styled-components = { url = "github:styled-components/vim-styled-components"; flake = false; };
-    rust-vim = { url = "github:rust-lang/rust.vim"; flake = false; };
-    vim-sandwich = { url = "github:machakann/vim-sandwich"; flake = false; };
-    vim-javascript = { url = "github:pangloss/vim-javascript"; flake = false; };
-    vim-jsx = { url = "github:mxw/vim-jsx"; flake = false; };
-    nginx-vim = { url = "github:chr4/nginx.vim"; flake = false; };
-    vim-toml = { url = "github:cespare/vim-toml"; flake = false; };
+
     dhall-vim = { url = "github:vmchale/dhall-vim"; flake = false; };
+    json5-vim = { url = "github:gutenye/json5.vim"; flake = false; };
+    nginx-vim = { url = "github:chr4/nginx.vim"; flake = false; };
+    purescript-vim = { url = "github:purescript-contrib/purescript-vim"; flake = false; };
+    rust-vim = { url = "github:rust-lang/rust.vim"; flake = false; };
+    vim-airline = { url = "github:vim-airline/vim-airline"; flake = false; };
+    vim-airline-themes = { url = "github:vim-airline/vim-airline-themes"; flake = false; };
+    vim-js = { url = "github:yuezk/vim-js"; flake = false; };
+    vim-jsx-pretty = { url = "github:maxmellon/vim-jsx-pretty"; flake = false; };
+    vim-rooter = { url = "github:airblade/vim-rooter"; flake = false; };
+    vim-sandwich = { url = "github:machakann/vim-sandwich"; flake = false; };
+    vim-styled-components = { url = "github:styled-components/vim-styled-components"; flake = false; };
+    vim-tabular = { url = "github:godlygeek/tabular"; flake = false; };
+    vim-toml = { url = "github:cespare/vim-toml"; flake = false; };
+    vista-vim = { url = "github:liuchengxu/vista.vim"; flake = false; };
 
     flake-utils = { url = "github:numtide/flake-utils"; };
     flake-compat = { url = "github:edolstra/flake-compat"; flake = false; };

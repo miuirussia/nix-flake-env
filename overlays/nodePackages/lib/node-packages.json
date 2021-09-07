@@ -1,6 +1,10 @@
 [
+  "coc-git",
+  "coc-json",
   "coc-markdown-preview-enhanced",
+  "coc-tsserver",
   "coc-webview",
+  "coc-yaml",
   "coc-yaml",
   "diagnostic-languageserver",
   "eslint_d",
