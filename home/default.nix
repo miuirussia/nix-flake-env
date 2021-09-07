@@ -25,7 +25,8 @@ in
       PATH = "$PATH:$HOME/.local/bin:$HOME/.tfenv/bin";
     };
 
-    packages = with pkgs; [];
+    packages = with pkgs; [
+    ];
   };
 
   programs = {

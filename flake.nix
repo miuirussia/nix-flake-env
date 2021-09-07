@@ -20,7 +20,7 @@
     };
 
     jetbrains-mono = { url = "github:JetBrains/JetBrainsMono"; flake = false; };
-    hls-nix = { url = "github:miuirussia/hls-nix"; flake = false; };
+    hls-nix = { url = "github:miuirussia/hls-nix"; };
     tree-sitter = { url = "github:tree-sitter/tree-sitter"; flake = false; };
 
     neovim = { url = "github:neovim/neovim"; flake = false; };
