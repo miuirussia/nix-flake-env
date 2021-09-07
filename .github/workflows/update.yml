@@ -1,0 +1,44 @@
+name: "Update dependencies"
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 4 * * *"
+jobs:
+  update:
+    name: "Update dependencies"
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install nix
+        uses: cachix/install-nix-action@v13
+        with:
+          nix_path: nixpkgs=channel:nixpkgs-unstable
+          install_url: https://github.com/numtide/nix-unstable-installer/releases/download/nix-2.4pre20210823_af94b54/install
+          extra_nix_config: |
+            experimental-features = nix-command flakes
+            access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
+            trusted-public-keys = hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ= s3.kdevlab.com:PhuKrzVfCsS0T1R4FnslJy2qUBul9oQ2CTSO/fg/llM= cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=
+            substituters = https://hydra.iohk.io https://nix-cache.s3.kdevlab.com https://cache.nixos.org/
+      - uses: cachix/cachix-action@v10
+        with:
+          name: kdevlab
+          authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
+      - name: Check flakes
+        run: |
+          nix flake show
+      - name: Install niv, jq, nix-prefetch-git, node2nix
+        run: |
+          nix-env -iA niv gnugrep bash -f https://github.com/miuirussia/nixpkgs/tarball/nixpkgs-unstable
+      - name: Update dependencies
+        run: |
+          nix flake update
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build
+        run: |
+          nix build .#darwinConfigurations.ghActions.system
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+           commit_message: Automatic dependencies update
