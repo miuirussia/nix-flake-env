@@ -11,7 +11,7 @@
     home-manager = { url = "github:miuirussia/home-manager"; inputs.nixpkgs.follows = "nixpkgs"; };
 
     haskell-nix = {
-      url = "github:miuirussia/haskell.nix";
+      url = "github:input-output-hk/haskell.nix";
       inputs = {
         nixpkgs.follows = "nixpkgs";
         hackage.follows = "hackage";

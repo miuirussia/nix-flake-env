@@ -240,15 +240,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1631010121,
-        "narHash": "sha256-7AO01bowRcBQMv8BDb6T67av6HUAQvCKP/wjPkUNSU4=",
-        "owner": "miuirussia",
+        "lastModified": 1631093146,
+        "narHash": "sha256-Zqunjc5epQjYAIicdabx5X3lyDoruruEPJaIoRVbTgU=",
+        "owner": "input-output-hk",
         "repo": "haskell.nix",
-        "rev": "f3b109b2fb54274d52c51419167db461d74ec51c",
+        "rev": "970c84ad19e84d4ae42075cfe283022394f6effa",
         "type": "github"
       },
       "original": {
-        "owner": "miuirussia",
+        "owner": "input-output-hk",
         "repo": "haskell.nix",
         "type": "github"
       }
