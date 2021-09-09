@@ -51,6 +51,7 @@
     vim-tabular = { url = "github:godlygeek/tabular"; flake = false; };
     vim-toml = { url = "github:cespare/vim-toml"; flake = false; };
     vim-vista = { url = "github:liuchengxu/vista.vim"; flake = false; };
+    vim-yats = { url = "github:herringtondarkholme/yats.vim"; flake = false; };
 
     flake-utils = { url = "github:numtide/flake-utils"; };
     flake-compat = { url = "github:edolstra/flake-compat"; flake = false; };

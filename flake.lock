@@ -549,7 +549,8 @@
         "vim-styled-components": "vim-styled-components",
         "vim-tabular": "vim-tabular",
         "vim-toml": "vim-toml",
-        "vim-vista": "vim-vista"
+        "vim-vista": "vim-vista",
+        "vim-yats": "vim-yats"
       }
     },
     "stackage": {
@@ -821,6 +822,22 @@
       "original": {
         "owner": "liuchengxu",
         "repo": "vista.vim",
+        "type": "github"
+      }
+    },
+    "vim-yats": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1630837734,
+        "narHash": "sha256-axQW0XFmzYlFBmBjw64yDEruvSkX0HaBqiZCC0Jr0m8=",
+        "owner": "herringtondarkholme",
+        "repo": "yats.vim",
+        "rev": "3188778d38c736f11161cf6fafc33572cb055816",
+        "type": "github"
+      },
+      "original": {
+        "owner": "herringtondarkholme",
+        "repo": "yats.vim",
         "type": "github"
       }
     }

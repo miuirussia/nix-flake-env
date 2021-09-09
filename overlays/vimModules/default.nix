@@ -41,5 +41,6 @@ in
     vim-tabular = buildVimPlugin "vim-tabular";
     vim-toml = buildVimPlugin "vim-toml";
     vim-vista = buildVimPlugin "vim-vista";
+    vim-yats = buildVimPlugin "vim-yats";
   };
 }

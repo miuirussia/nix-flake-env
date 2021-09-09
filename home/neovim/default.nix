@@ -66,15 +66,15 @@
       coc-webview
       coc-markdown-preview-enhanced
 
-      dhall-vim
+      vim-dhall
       editorconfig-vim
       fzf-vim
       fzfWrapper
       haskell-vim
 
-      nginx-vim
-      purescript-vim
-      tabular
+      vim-nginx
+      vim-purescript
+      vim-tabular
       {
         plugin = vim-airline;
         config = ''
@@ -116,8 +116,8 @@
       vim-devicons
       vim-fugitive
       vim-js
-      vim-jsx-pretty
       vim-json5
+      vim-jsx-pretty
       vim-lastplace
       vim-markdown
       vim-nix
@@ -125,7 +125,8 @@
       vim-rust
       vim-sandwich
       vim-toml
-      vista-vim
+      vim-yats
+      vim-vista
 
       #themes
       base16-vim
