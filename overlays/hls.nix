@@ -1,5 +1,5 @@
 inputs: final: prev: let
-  mkHlsPackage = ghcVersion: (import inputs.hls-nix).build."${final.system}"."${ghcVersion}";
+  mkHlsPackage = ghcVersion: (import inputs.hls-nix).lib."${final.system}"."${ghcVersion}";
 
   hls865 = mkHlsPackage "ghc865";
   hls884 = mkHlsPackage "ghc884";
@@ -22,7 +22,7 @@ in
   };
 
   haskell = let
-    mkGhcPackage = ghcVersion: (import inputs.hls-nix).build."${final.system}"."${ghcVersion}".ghc;
+    mkGhcPackage = ghcVersion: (import inputs.hls-nix).lib."${final.system}"."${ghcVersion}".ghc;
   in
     prev.haskell // {
       compiler = prev.haskell.compiler // {
