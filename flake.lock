@@ -309,11 +309,11 @@
     "hls-unstable": {
       "flake": false,
       "locked": {
-        "lastModified": 1631322369,
-        "narHash": "sha256-EfX9G3NdXQKV28vImExgO9h2lQVlX+8rIPttGW9mblI=",
+        "lastModified": 1631352303,
+        "narHash": "sha256-XBwyo8Mc+RgjWmadZBa1Fh/vm2HSldIRkmEW8kW82BE=",
         "owner": "haskell",
         "repo": "haskell-language-server",
-        "rev": "c3e2e23eef1b86a531d9847974cc74fb073d17eb",
+        "rev": "155023f86504b457b6d1e1fda87b12ac6c513c76",
         "type": "github"
       },
       "original": {
@@ -424,11 +424,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1630715066,
-        "narHash": "sha256-QBw2juhWgCjTK7hIDLIikPsUC0KwTJ3pd9Z8mF97i58=",
+        "lastModified": 1631352384,
+        "narHash": "sha256-F0IUlniBfIm6cBzzoScl9+kLXFPBxmxwUq03zP/9lAI=",
         "owner": "miuirussia",
         "repo": "nixpkgs",
-        "rev": "00cd8b68b79908398f3424140ba1b057a081cac9",
+        "rev": "fec571f6732a6d75e1d8d61ad673fd22f553432f",
         "type": "github"
       },
       "original": {
