@@ -28,7 +28,7 @@ jobs:
           authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
       - name: Build ghc${{ matrix.ghc }}
         run:
-          nix build .#pkgs.x86_64-darwin.haskell-nix.compiler.ghc${{ matrix.ghc }} --no-link
+          nix build --print-build-logs --no-link .#pkgs.x86_64-darwin.haskell-nix.compiler.ghc${{ matrix.ghc }}
   update:
     name: "Update dependencies"
     needs: [build-ghc]
@@ -61,12 +61,12 @@ jobs:
           nix flake show
       - name: Update dependencies
         run: |
-          nix flake update
+          nix flake update --recreate-lock-file
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Build
         run: |
-          nix build .#darwinConfigurations.ghActions.system
+          nix build --print-build-logs --no-link .#darwinConfigurations.ghActions.system
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
