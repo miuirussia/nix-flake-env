@@ -17,7 +17,9 @@ jobs:
         uses: cachix/install-nix-action@v14
         with:
           nix_path: nixpkgs=channel:nixpkgs-unstable
+          install_url: https://github.com/miuirussia/nix-unstable-installer/releases/download/nix-2.4pre20210823_af94b54/install
           extra_nix_config: |
+            experimental-features = nix-command flakes
             trusted-public-keys = hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ= s3.kdevlab.com:PhuKrzVfCsS0T1R4FnslJy2qUBul9oQ2CTSO/fg/llM= cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=
             substituters = https://hydra.iohk.io https://nix-cache.s3.kdevlab.com https://cache.nixos.org/
       - uses: cachix/cachix-action@v10
@@ -29,6 +31,7 @@ jobs:
           nix build .#pkgs.x86_64-darwin.haskell.compiler.ghc${{ matrix.ghc }} --no-link
   update:
     name: "Update dependencies"
+    needs: [build-ghc]
     runs-on: macos-latest
     steps:
       - name: Checkout
@@ -43,7 +46,7 @@ jobs:
         uses: cachix/install-nix-action@v13
         with:
           nix_path: nixpkgs=channel:nixpkgs-unstable
-          install_url: https://github.com/numtide/nix-unstable-installer/releases/download/nix-2.4pre20210823_af94b54/install
+          install_url: https://github.com/miuirussia/nix-unstable-installer/releases/download/nix-2.4pre20210823_af94b54/install
           extra_nix_config: |
             experimental-features = nix-command flakes
             access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
