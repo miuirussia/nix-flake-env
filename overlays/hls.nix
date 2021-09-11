@@ -27,11 +27,6 @@ in
     prev.haskell // {
       compiler = prev.haskell.compiler // {
         ghc865 = mkGhcPackage "ghc865";
-        ghc884 = mkGhcPackage "ghc884";
-        ghc8104 = mkGhcPackage "ghc8104";
-        ghc8105 = mkGhcPackage "ghc8105";
-        ghc8106 = mkGhcPackage "ghc8106";
-        ghc8107 = mkGhcPackage "ghc8107";
       };
     };
 }
