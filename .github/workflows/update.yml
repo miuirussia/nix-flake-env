@@ -28,7 +28,6 @@ jobs:
           authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
       - name: Build ghc${{ matrix.ghc }}
         run:
-          nix build .#pkgs.x86_64-darwin.haskell.compiler.ghc${{ matrix.ghc }} --no-link
           nix build .#pkgs.x86_64-darwin.haskell-nix.compiler.ghc${{ matrix.ghc }} --no-link
   update:
     name: "Update dependencies"
