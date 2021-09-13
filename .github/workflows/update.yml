@@ -4,24 +4,69 @@ on:
   schedule:
     - cron: "0 4 * * *"
 jobs:
-  build-ghc:
-    strategy:
-      matrix:
-        ghc: ['865', '884', '8104', '8106', '8107', '901']
-    name: "Build ghc${{ matrix.ghc }}"
+  update:
+    name: "Update dependencies"
     runs-on: macos-latest
+    outputs:
+      release_id: ${{ steps.push.outputs.release_id }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +%s)"
+      - uses: actions/checkout@v2
       - name: Install nix
         uses: cachix/install-nix-action@v14
         with:
           nix_path: nixpkgs=channel:nixpkgs-unstable
           install_url: https://github.com/miuirussia/nix-unstable-installer/releases/download/nix-2.4pre20210823_af94b54/install
           extra_nix_config: |
+            access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
             experimental-features = nix-command flakes
-            trusted-public-keys = hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ= s3.kdevlab.com:PhuKrzVfCsS0T1R4FnslJy2qUBul9oQ2CTSO/fg/llM= cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=
             substituters = https://hydra.iohk.io https://nix-cache.s3.kdevlab.com https://cache.nixos.org/
+            trusted-public-keys = hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ= s3.kdevlab.com:PhuKrzVfCsS0T1R4FnslJy2qUBul9oQ2CTSO/fg/llM= cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=
+
+      - name: Configure git
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+      - name: Update flakes and nodePackages
+        run: |
+          nix flake update
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Push changes
+        id: push
+        env:
+          RELEASE_ID: v0.1.${{ steps.date.outputs.date }}
+        run: |
+          git commit -m "Release $RELEASE_ID" flake.lock
+          git push origin HEAD:update/"$RELEASE_ID"
+          git tag "$RELEASE_ID"
+          git push origin "$RELEASE_ID"
+          echo "::set-output name=release_id::$RELEASE_ID"
+
+  build-ghc:
+    strategy:
+      matrix:
+        ghc: ['865', '884', '8104', '8106', '8107', '901']
+    name: "Build ghc${{ matrix.ghc }}"
+    needs: update
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: update/${{ needs.update.outputs.release_id }}
+      - name: Install nix
+        uses: cachix/install-nix-action@v14
+        with:
+          nix_path: nixpkgs=channel:nixpkgs-unstable
+          install_url: https://github.com/miuirussia/nix-unstable-installer/releases/download/nix-2.4pre20210823_af94b54/install
+          extra_nix_config: |
+            access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
+            experimental-features = nix-command flakes
+            substituters = https://hydra.iohk.io https://nix-cache.s3.kdevlab.com https://cache.nixos.org/
+            trusted-public-keys = hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ= s3.kdevlab.com:PhuKrzVfCsS0T1R4FnslJy2qUBul9oQ2CTSO/fg/llM= cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=
       - uses: cachix/cachix-action@v10
         with:
           name: kdevlab
@@ -29,13 +74,15 @@ jobs:
       - name: Build ghc${{ matrix.ghc }}
         run:
           nix build --print-build-logs --no-link .#pkgs.x86_64-darwin.haskell-nix.compiler.ghc${{ matrix.ghc }}
-  update:
-    name: "Update dependencies"
+  test:
+    name: Test
     needs: [build-ghc]
     runs-on: macos-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          ref: update/${{ needs.update.outputs.release_id }}
       - name: Unlock secrets
         run: |
           brew install git-crypt
@@ -48,10 +95,10 @@ jobs:
           nix_path: nixpkgs=channel:nixpkgs-unstable
           install_url: https://github.com/miuirussia/nix-unstable-installer/releases/download/nix-2.4pre20210823_af94b54/install
           extra_nix_config: |
-            experimental-features = nix-command flakes
             access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
-            trusted-public-keys = hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ= s3.kdevlab.com:PhuKrzVfCsS0T1R4FnslJy2qUBul9oQ2CTSO/fg/llM= cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=
+            experimental-features = nix-command flakes
             substituters = https://hydra.iohk.io https://nix-cache.s3.kdevlab.com https://cache.nixos.org/
+            trusted-public-keys = hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ= s3.kdevlab.com:PhuKrzVfCsS0T1R4FnslJy2qUBul9oQ2CTSO/fg/llM= cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=
       - uses: cachix/cachix-action@v10
         with:
           name: kdevlab
@@ -59,15 +106,31 @@ jobs:
       - name: Check flakes
         run: |
           nix flake show
-      - name: Update dependencies
-        run: |
-          nix flake update --recreate-lock-file
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Build
         run: |
           nix build --print-build-logs --no-link .#darwinConfigurations.ghActions.system
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v4
+
+  release:
+    name: Release
+    needs: [update, test]
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
         with:
-           commit_message: Automatic dependencies update
+          fetch-depth: 0
+
+      - name: Configure git
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+      - name: Update master branch
+        env:
+          RELEASE_ID: ${{ needs.update.outputs.release_id }}
+        run:
+          git cherry-pick origin/update/"$RELEASE_ID"
+          git push origin "$GITHUB_REF"
+          git tag -f "$RELEASE_ID"
+          git push -f origin "$RELEASE_ID"
+
+          git push origin -d update/"$RELEASE_ID"
