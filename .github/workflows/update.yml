@@ -67,19 +67,13 @@ jobs:
             experimental-features = nix-command flakes
             substituters = https://hydra.iohk.io https://nix-cache.s3.kdevlab.com https://cache.nixos.org/
             trusted-public-keys = hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ= s3.kdevlab.com:PhuKrzVfCsS0T1R4FnslJy2qUBul9oQ2CTSO/fg/llM= cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=
+      - uses: cachix/cachix-action@v10
+        with:
+          name: kdevlab
+          authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
       - name: Build ghc${{ matrix.ghc }}
         run:
           nix build --print-build-logs .#pkgs.x86_64-darwin.haskell-nix.compiler.ghc${{ matrix.ghc }}
-      - name: Upload cache
-        run: |
-          nix build --print-build-logs --out-link nix-cache-tools .#pkgs.x86_64-darwin.nix-cache-tools
-          ./nix-cache-tools/bin/all-nix-deps $(readlink result) | xargs -P8 ./nix-cache-tools/bin/upload-nix
-          rm -f nix-cache-tools
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          NIX_UPLOAD_STORE_URL: ${{ secrets.NIX_UPLOAD_STORE_URL }}
-          NIX_UPLOAD_SECRET_KEY: ${{ secrets.NIX_UPLOAD_SECRET_KEY }}
 
   test:
     name: Test
@@ -106,22 +100,16 @@ jobs:
             experimental-features = nix-command flakes
             substituters = https://hydra.iohk.io https://nix-cache.s3.kdevlab.com https://cache.nixos.org/
             trusted-public-keys = hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ= s3.kdevlab.com:PhuKrzVfCsS0T1R4FnslJy2qUBul9oQ2CTSO/fg/llM= cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=
+      - uses: cachix/cachix-action@v10
+        with:
+          name: kdevlab
+          authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
       - name: Check flakes
         run: |
           nix flake show
       - name: Build
         run: |
           nix build --print-build-logs .#darwinConfigurations.ghActions.system
-      - name: Upload cache
-        run: |
-          nix build --print-build-logs --out-link nix-cache-tools .#pkgs.x86_64-darwin.nix-cache-tools
-          ./nix-cache-tools/bin/all-nix-deps $(readlink result) | xargs -P8 ./nix-cache-tools/bin/upload-nix
-          rm -f nix-cache-tools
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          NIX_UPLOAD_STORE_URL: ${{ secrets.NIX_UPLOAD_STORE_URL }}
-          NIX_UPLOAD_SECRET_KEY: ${{ secrets.NIX_UPLOAD_SECRET_KEY }}
 
   release:
     name: Release
