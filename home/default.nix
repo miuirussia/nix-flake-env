@@ -24,33 +24,6 @@ in
       GPG_TTY = "$TTY";
       PATH = "$PATH:$HOME/.local/bin:$HOME/.tfenv/bin";
     };
-
-    packages = with pkgs; [
-      autoconf
-      automake
-      coreutils
-      curl
-      findutils
-      gnugrep
-      gnupatch
-      gnused
-      gnutar
-      htop
-      jq
-      nix-cleanup-store
-      rename
-      rsync
-      shellcheck
-      tree
-      wget
-      xz
-      zlib
-
-      gitAndTools.diff-so-fancy
-      git-crypt
-
-      nix-prefetch-git
-    ];
   };
 
   home.activation = {

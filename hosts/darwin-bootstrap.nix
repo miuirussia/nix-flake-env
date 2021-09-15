@@ -20,4 +20,11 @@
   users.nix.configureBuildUsers = true;
 
   system.stateVersion = 4;
+
+  programs = {
+    gnupg.agent = {
+      enable = true;
+      enableSSHSupport = true;
+    };
+  };
 }
