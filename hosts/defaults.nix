@@ -19,6 +19,38 @@
     ];
   };
 
+  environment = {
+    systemPackages = with pkgs; [
+      autoconf
+      automake
+      coreutils
+      curl
+      findutils
+      gnugrep
+      gnupatch
+      gnupg
+      gnused
+      gnutar
+      htop
+      jq
+      nix-cleanup-store
+      rename
+      rsync
+      shellcheck
+      tmuxinator
+      tree
+      wget
+      xz
+      zlib
+
+      gitAndTools.diff-so-fancy
+      git-crypt
+
+      nix-prefetch-git
+
+    ];
+  };
+
   programs = {
     zsh = {
       enable = true;
@@ -26,13 +58,21 @@
     };
   };
 
-  fonts = (lib.mkMerge [
-    # NOTE: Remove this condition when `nix-darwin` aligns with NixOS
-    (if (builtins.hasAttr "fontDir" options.fonts) then {
-      fontDir.enable = true;
-    } else {
-      enableFontDir = true;
-    })
-    { fonts = with pkgs; [ jetbrains-mono ]; }
-  ]);
+  fonts = (
+    lib.mkMerge [
+      # NOTE: Remove this condition when `nix-darwin` aligns with NixOS
+      (
+        if (builtins.hasAttr "fontDir" options.fonts) then {
+          fontDir.enable = true;
+        } else {
+          enableFontDir = true;
+        }
+      )
+      {
+        fonts = with pkgs; [
+          jetbrains-mono
+        ];
+      }
+    ]
+  );
 }
