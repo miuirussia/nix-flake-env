@@ -94,7 +94,7 @@
 
       homeManagerConfig =
         { user
-        , userConfig ? ./home + "/user-${user}.nix"
+        , userConfig ? ./home + "/user-${user}/default.nix"
         , ...
         }: {
           imports = [
@@ -106,7 +106,7 @@
       mkDarwinModules =
         args @ { user
         , host
-        , hostConfig ? ./hosts + "/host-${host}.nix"
+        , hostConfig ? ./hosts + "/host-${host}/default.nix"
         , ...
         }: [
           home-manager.darwinModules.home-manager
