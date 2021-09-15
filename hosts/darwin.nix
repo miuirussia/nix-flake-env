@@ -10,35 +10,6 @@
       # https://github.com/nix-community/home-manager/issues/423
       TERMINFO_DIRS = "${pkgs.kitty.terminfo.outPath}/share/terminfo";
     };
-
-    systemPackages = with pkgs; [
-      autoconf
-      automake
-      coreutils
-      curl
-      findutils
-      gnugrep
-      gnupatch
-      gnupg
-      gnused
-      gnutar
-      htop
-      jq
-      nix-cleanup-store
-      rename
-      rsync
-      shellcheck
-      tree
-      wget
-      xz
-      zlib
-
-      gitAndTools.diff-so-fancy
-      git-crypt
-
-      nix-prefetch-git
-
-    ];
   };
 
   programs.bash = {
