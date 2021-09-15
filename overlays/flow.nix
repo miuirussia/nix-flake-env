@@ -1,5 +1,5 @@
 inputs: final: prev: {
-  flow = prev.writeShellScriptBin "flow"
+  flow = final.writeShellScriptBin "flow"
     ''
       lookup() {
         local file="''${1}"
@@ -16,7 +16,7 @@ inputs: final: prev: {
         done
       }
       FLOW_EXEC=$(lookup "node_modules/.bin/flow")
-      [[ -z "''${FLOW_EXEC}" ]] && FLOW_EXEC="${final.flow}/bin/flow"
+      [[ -z "''${FLOW_EXEC}" ]] && FLOW_EXEC="${prev.flow}/bin/flow"
       $FLOW_EXEC "$@"
     '';
 }

@@ -9,7 +9,6 @@ in
 {
   hls = prev.buildEnv {
     name = "haskell-language-server";
-    version = inputs.hls-nix.shortRev;
 
     paths = [
       hls865.hls-renamed
@@ -17,7 +16,6 @@ in
       hls8106.hls-renamed
       hls8107.hls-renamed
       hls8107.hls-wrapper
-      hls8107.hls-wrapper-nix
     ];
   };
 
