@@ -16,6 +16,22 @@
         "type": "github"
       }
     },
+    "base16-shell": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1560619632,
+        "narHash": "sha256-OMhC6paqEOQUnxyb33u0kfKpy8plLSRgp8X8T8w0Q/o=",
+        "owner": "chriskempson",
+        "repo": "base16-shell",
+        "rev": "ce8e1e540367ea83cc3e01eec7b2a11783b3f9e1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "chriskempson",
+        "repo": "base16-shell",
+        "type": "github"
+      }
+    },
     "cabal-32": {
       "flake": false,
       "locked": {
@@ -521,6 +537,7 @@
     },
     "root": {
       "inputs": {
+        "base16-shell": "base16-shell",
         "coc-nvim": "coc-nvim",
         "darwin": "darwin",
         "flake-compat": "flake-compat",

@@ -32,6 +32,7 @@
     jetbrains-mono = { url = "github:JetBrains/JetBrainsMono"; flake = false; };
     tree-sitter = { url = "github:tree-sitter/tree-sitter"; flake = false; };
     hls-unstable = { url = "github:haskell/haskell-language-server"; flake = false; };
+    base16-shell = { url = "github:chriskempson/base16-shell"; flake = false; };
 
     neovim = { url = "github:neovim/neovim"; flake = false; };
     coc-nvim = { url = "github:neoclide/coc.nvim/release"; flake = false; };
