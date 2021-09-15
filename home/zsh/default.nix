@@ -28,6 +28,11 @@
       "~"
     ];
 
+    plugins = with pkgs.zshPlugins; [
+      fast-syntax-highlighting
+      zsh-history-substring-search
+    ];
+
     shellAliases = {
       # Recursively remove Apple meta files
       cleanupds = "find . -type f -name '*.DS_Store' -ls -delete";
@@ -53,6 +58,24 @@
 
     defaultKeymap = "viins";
     dotDir = ".config/zsh";
+
+    envExtra = ''
+      export LC_ALL="en_US.UTF-8";
+      export LANG="en_US.UTF-8";
+
+      CABAL="$HOME/.cabal/bin"
+      CARGO="$HOME/.cargo/bin"
+      DOT_LOCAL="$HOME/.local/bin"
+      LOCAL="/usr/local/bin"
+      PYTHON="/usr/local/opt/python/libexec/bin"
+      SBIN="/usr/local/sbin"
+      YARN="$HOME/.yarn/bin"
+      YARN_NM="$XDG_CONFIG_HOME/yarn/global/node_modules/.bin"
+      export PATH="$DOT_LOCAL:$CARGO:$CABAL:$YARN:$YARN_NM:$PYTHON:$LOCAL:$SBIN:$PATH"
+      export HOMEBREW_NO_ANALYTICS=1
+      export HOMEBREW_BUNDLE_NO_LOCK=1
+      export NVIM_LOG_FILE=/dev/null
+    '';
 
     profileExtra = ''
       export GPG_TTY=$(tty)

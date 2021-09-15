@@ -53,6 +53,29 @@ in
     ];
   };
 
+  home.activation = {
+    linkAppsAction = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+      if [ -f $HOME/.linked-apps ]; then
+        while read p; do
+          $DRY_RUN_CMD rm -rf "$p"
+        done < $HOME/.linked-apps
+      fi
+      $DRY_RUN_CMD rm -f $HOME/.linked-apps
+      $DRY_RUN_CMD mkdir -p $HOME/Applications
+      for f in /nix/var/nix/profiles/per-user/$USER/profile/Applications/* ; do
+        if [ -d "$f" ]; then
+          target="/Applications/''${f##*/}"
+          $DRY_RUN_CMD cp ''${VERBOSE_ARG:+-v} -fHRL "$f" "$target"
+          $DRY_RUN_CMD chmod ''${VERBOSE_ARG:+-v} -R +w "$target"
+          echo "$target" >> $HOME/.linked-apps
+        fi
+      done
+      mv $HOME/.linked-apps $HOME/.linked-apps.unsorted
+      cat $HOME/.linked-apps.unsorted | sort -u > $HOME/.linked-apps
+      rm $HOME/.linked-apps.unsorted
+    '';
+  };
+
   programs = {
     home-manager = { enable = true; };
 

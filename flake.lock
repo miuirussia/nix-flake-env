@@ -120,6 +120,22 @@
         "type": "github"
       }
     },
+    "fast-syntax-highlighting": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1621022231,
+        "narHash": "sha256-rHdOnA0Y/i/ISDlriGrGDXr5rD2nZ4T7iuG7PFUVIFQ=",
+        "owner": "zdharma",
+        "repo": "fast-syntax-highlighting",
+        "rev": "817916dfa907d179f0d46d8de355e883cf67bd97",
+        "type": "github"
+      },
+      "original": {
+        "owner": "zdharma",
+        "repo": "fast-syntax-highlighting",
+        "type": "github"
+      }
+    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -540,6 +556,7 @@
         "base16-shell": "base16-shell",
         "coc-nvim": "coc-nvim",
         "darwin": "darwin",
+        "fast-syntax-highlighting": "fast-syntax-highlighting",
         "flake-compat": "flake-compat",
         "flake-utils": "flake-utils",
         "hackage": "hackage",
@@ -567,7 +584,9 @@
         "vim-tabular": "vim-tabular",
         "vim-toml": "vim-toml",
         "vim-vista": "vim-vista",
-        "vim-yats": "vim-yats"
+        "vim-yats": "vim-yats",
+        "zsh-history-substring-search": "zsh-history-substring-search",
+        "zsh-syntax-highlighting": "zsh-syntax-highlighting"
       }
     },
     "stackage": {
@@ -855,6 +874,38 @@
       "original": {
         "owner": "herringtondarkholme",
         "repo": "yats.vim",
+        "type": "github"
+      }
+    },
+    "zsh-history-substring-search": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1627971553,
+        "narHash": "sha256-8kiPBtgsjRDqLWt0xGJ6vBBLqCWEIyFpYfd+s1prHWk=",
+        "owner": "zsh-users",
+        "repo": "zsh-history-substring-search",
+        "rev": "4abed97b6e67eb5590b39bcd59080aa23192f25d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "zsh-users",
+        "repo": "zsh-history-substring-search",
+        "type": "github"
+      }
+    },
+    "zsh-syntax-highlighting": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1629459010,
+        "narHash": "sha256-m+gKQXNRYTpraWDXVMTU6UPJFivcyhOw3dNofFR4cyU=",
+        "owner": "zsh-users",
+        "repo": "zsh-syntax-highlighting",
+        "rev": "6e0e950154a4c6983d9e077ed052298ad9126144",
+        "type": "github"
+      },
+      "original": {
+        "owner": "zsh-users",
+        "repo": "zsh-syntax-highlighting",
         "type": "github"
       }
     }

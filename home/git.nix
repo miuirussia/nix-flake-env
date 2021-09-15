@@ -21,6 +21,9 @@
       l = "log --graph --pretty=format:'%Cred%h%Creset"
       + " —%Cblue%d%Creset %s %Cgreen(%cr)%Creset'"
       + " --abbrev-commit --date=relative --show-notes=*";
+      s = "status";
+      st = "status -sb";
+      feature = "!feature() { git checkout -b feature/$1 2>/dev/null || git checkout feature/$1; 2>/dev/null }; feature";
     };
 
     extraConfig = {

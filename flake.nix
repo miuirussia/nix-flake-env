@@ -32,7 +32,12 @@
     jetbrains-mono = { url = "github:JetBrains/JetBrainsMono"; flake = false; };
     tree-sitter = { url = "github:tree-sitter/tree-sitter"; flake = false; };
     hls-unstable = { url = "github:haskell/haskell-language-server"; flake = false; };
+
+    # zsh plugins
     base16-shell = { url = "github:chriskempson/base16-shell"; flake = false; };
+    zsh-syntax-highlighting = { url = "github:zsh-users/zsh-syntax-highlighting"; flake = false; };
+    fast-syntax-highlighting = { url = "github:zdharma/fast-syntax-highlighting"; flake = false; };
+    zsh-history-substring-search = { url = "github:zsh-users/zsh-history-substring-search"; flake = false; };
 
     neovim = { url = "github:neovim/neovim"; flake = false; };
     coc-nvim = { url = "github:neoclide/coc.nvim/release"; flake = false; };
