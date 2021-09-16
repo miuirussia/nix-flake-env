@@ -128,6 +128,7 @@
             modules = [
               ./hosts/darwin-bootstrap.nix
             ];
+            system = "x86_64-darwin";
           };
 
           ghActions = darwin.lib.darwinSystem {
@@ -136,6 +137,7 @@
               user = "runner";
               host = "mac-gh";
             };
+            system = "x86_64-darwin";
           };
 
           home = darwin.lib.darwinSystem {
@@ -144,6 +146,7 @@
               user = "kirill";
               host = "kirill-imac";
             };
+            system = "x86_64-darwin";
           };
 
           macbook = darwin.lib.darwinSystem {
@@ -152,6 +155,7 @@
               user = "kirill";
               host = "kirill-macbook";
             };
+            system = "x86_64-darwin";
           };
 
           work = darwin.lib.darwinSystem {
@@ -160,6 +164,7 @@
               user = "kirill";
               host = "kkuznetsov";
             };
+            system = "x86_64-darwin";
           };
         };
 
