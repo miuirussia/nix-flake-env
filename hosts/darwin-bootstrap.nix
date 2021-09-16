@@ -27,4 +27,16 @@
       enableSSHSupport = true;
     };
   };
+
+  launchd.daemons.limit-maxfiles = {
+    serviceConfig.RunAtLoad = true;
+    serviceConfig.ProgramArguments = [
+      "launchctl"
+      "limit"
+      "maxfiles"
+      "2048"
+      "unlimited"
+    ];
+    serviceConfig.Label = "limit.maxfiles";
+  };
 }
