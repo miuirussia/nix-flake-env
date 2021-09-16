@@ -143,6 +143,9 @@
       [ -n "$PS1" ] && \
           [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
               eval "$("$BASE16_SHELL/profile_helper.sh")"
+
+      bindkey '^[[A' history-substring-search-up
+      bindkey '^[[B' history-substring-search-down
     '';
   };
 }
