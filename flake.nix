@@ -118,6 +118,11 @@
             users.users.${user}.home = "/Users/${user}";
             home-manager.useGlobalPkgs = true;
             home-manager.users.${user} = homeManagerConfig args;
+            networking = {
+              computerName = host;
+              hostName = host;
+              localHostName = host;
+            };
           }
         ];
     in
