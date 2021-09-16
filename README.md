@@ -81,6 +81,15 @@ Open up a new terminal session and run
 $ darwin-rebuild switch --flake .#<configuration-name>
 ```
 
+Optional add overlays from env by creating `~/.config/nixpkgs/overlays.nix` with content:
+
+```nix
+let
+  nix-flake-env = import (builtins.fetchTarball https://api.github.com/repos/miuirussia/nix-flake-env/tarball/master);
+in
+  nix-flake-env.pkgs.x86_64-darwin.overlays
+```
+
 Tada! Everything should be installed and ready to go.
 
 **NOTE:** It's a good idea to make sure that any existing installation of
