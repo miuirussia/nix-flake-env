@@ -113,6 +113,7 @@ jobs:
       - name: Build
         run: |
           nix build --print-build-logs .#darwinConfigurations.ghActions.system
+          nix build --print-build-logs .#darwinConfigurations.home.system
 
   release:
     name: Release
