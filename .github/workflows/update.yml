@@ -32,7 +32,7 @@ jobs:
       - name: Update flakes and nodePackages
         run: |
           nix flake update
-          nix-env -iA jq nix-prefetch-git nodePackages.node2nix -f https://github.com/miuirussia/nixpkgs/tarball/nixpkgs-unstable
+          nix-env -iA nodePackages.node2nix -f https://github.com/miuirussia/nixpkgs/tarball/nixpkgs-unstable
           cd $GITHUB_WORKSPACE/overlays/vscode && ./update-vscode-plugins.py
           cd $GITHUB_WORKSPACE/overlays/vscode/package && ./update.sh
           cd $GITHUB_WORKSPACE/overlays/vscode/codelldb && ./update.sh

@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+#! /usr/bin/env nix-shell
+#! nix-shell -i bash -p coreutils curl jq nixUnstable
 
 cd "$(pwd)/$(dirname ${BASH_SOURCE})"
 version=$(curl "https://api.github.com/repos/vadimcn/vscode-lldb/tags" | jq -r ".[0].name")
