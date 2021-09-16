@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+#! /usr/bin/env nix-shell
+#! nix-shell -i bash -p coreutils curl gnugrep jq nixUnstable
 
 cd "$(pwd)/$(dirname ${BASH_SOURCE})"
 url="https://update.code.visualstudio.com/latest/darwin/stable"
