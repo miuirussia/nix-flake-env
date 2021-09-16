@@ -95,12 +95,14 @@
       homeManagerConfig =
         { user
         , userConfig ? ./home + "/user-${user}/default.nix"
+        , host
+        , hostOverride ? ./hosts + "/host-${host}/user-${user}.nix"
         , ...
         }: {
           imports = [
             userConfig
             ./home
-          ];
+          ] ++ nixpkgs.lib.optional (builtins.pathExists hostOverride) hostOverride;
         };
 
       mkDarwinModules =
