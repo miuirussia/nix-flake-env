@@ -2,6 +2,8 @@
   programs.git = {
     enable = true;
 
+    signing.signByDefault = true;
+
     aliases = {
       authors = "!${pkgs.git}/bin/git log --pretty=format:%aN"
       + " | ${pkgs.coreutils}/bin/sort" + " | ${pkgs.coreutils}/bin/uniq -c"
