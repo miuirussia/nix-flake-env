@@ -11,10 +11,29 @@
       # Misc                                                                     #
       ############################################################################
 
+      # status bar
+      set-option -g status-left "⧉ #S "
+      set-option -g status-right "#[fg=#3E4452,bg=black,nobold]#[fg=white,bg=#3E4452] #(uptime | awk '{print $3}' | sed 's/,//') #[fg=brightblue,bg=#3E4452,nobold]#[fg=colour235,bg=brightblue] %Y-%m-%d %H:%M "
+      set-option -g set-titles-string "tmux:#I #W"
+
+      # window status (tab selected/unselected)
+      set-window-option -g window-status-current-format "#[fg=colour15] ⬥ #I:#W#{?window_zoomed_flag, ◯,}"
+      set-window-option -g window-status-format " ⬦ #I:#W"
+
       # more colors and themes
       set -as terminal-overrides ',*:Smulx=\E[4::%p1%dm'  # undercurl support
       set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'  # underscore colours - needs tmux-3.0
       set -g default-terminal "xterm-kitty"
+      set -g message-style bg="colour0",fg="colour3"
+      set -g pane-active-border-style fg="colour0"
+      set -g pane-border-style fg="colour0"
+      set -g status-position "bottom"
+      set -g status-style bg="default",fg="colour7"
+      set-window-option -g window-status-current-style fg="colour15"
+
+      # dim inactive window text
+      set -g window-style fg=colour7
+      set -g window-active-style fg=colour15
 
       # Rebind prefix key from C-b to C-s
       unbind C-b
@@ -55,24 +74,6 @@
 
       # macOS Command+K (Clear scrollback buffer)
       bind -n C-k clear-history
-
-      set -g pane-border-style fg=colour235
-      set -g pane-active-border-style fg=colour237
-
-      set -g message-style bg=default,fg=blue
-
-      set -g status-justify centre
-      set -g status-bg colour0
-      set -g status-fg default
-      set -g status-left ""
-      set -g status-right-style "none"
-      set -g status-right-length "100"
-      set -g status-right "#[fg=#3E4452,bg=black,nobold]#[fg=white,bg=#3E4452] #(uptime | awk '{print $3}' | sed 's/,//') #[fg=brightblue,bg=#3E4452,nobold]#[fg=colour235,bg=brightblue] %Y-%m-%d %H:%M "
-
-      setw -g window-status-style bg=default,fg=colour8,none
-      setw -g window-status-format '#[fg=colour235,bg=colour235]#[default]#I #W   #[fg=colour235,bg=colour235]'
-      setw -g window-status-current-format "#[fg=colour0]#[fg=colour1]#I #W #F #[fg=colour0]"
-      set-option -g status-position bottom
     '';
   };
 }
