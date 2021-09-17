@@ -51,10 +51,6 @@
       # Enable clipboard interactivity
       set -g set-clipboard on
 
-      # Set window notifications
-      set -g monitor-activity on
-      set -g visual-activity on
-
       # Emulate scrolling by sending up and down keys if these commands are running in the pane
       # https://github.com/tmux/tmux/issues/1320#issuecomment-381952082
       tmux_commands_with_legacy_scroll="nano less more man git"
