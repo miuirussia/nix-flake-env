@@ -11,8 +11,10 @@
       # Misc                                                                     #
       ############################################################################
 
-      # Colors
-      set -ga terminal-overrides ',*256col*:Tc'
+      # more colors and themes
+      set -as terminal-overrides ',*:Smulx=\E[4::%p1%dm'  # undercurl support
+      set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'  # underscore colours - needs tmux-3.0
+      set -g default-terminal "xterm-kitty"
 
       # Rebind prefix key from C-b to C-s
       unbind C-b
