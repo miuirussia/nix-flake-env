@@ -42,7 +42,8 @@ jobs:
         env:
           RELEASE_ID: v0.1.${{ steps.date.outputs.date }}
         run: |
-          git commit -m "Release $RELEASE_ID" flake.lock
+          git add flake.lock overlays
+          git commit -m "Release $RELEASE_ID"
           git push origin HEAD:update/"$RELEASE_ID"
           git tag "$RELEASE_ID"
           git push origin "$RELEASE_ID"
