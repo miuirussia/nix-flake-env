@@ -25,8 +25,8 @@
       set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'  # underscore colours - needs tmux-3.0
       set -g default-terminal "xterm-kitty"
       set -g message-style bg="colour0",fg="colour3"
-      set -g pane-active-border-style fg="colour0"
-      set -g pane-border-style fg="colour0"
+      set -g pane-active-border-style fg="colour237"
+      set -g pane-border-style fg="colour235"
       set -g status-position "bottom"
       set -g status-style bg="default",fg="colour7"
       set-window-option -g window-status-current-style fg="colour15"
