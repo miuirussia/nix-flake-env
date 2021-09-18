@@ -8,7 +8,7 @@
     stackage = { url = "github:input-output-hk/stackage.nix"; flake = false; };
 
     darwin = { url = "github:LnL7/nix-darwin/master"; inputs.nixpkgs.follows = "nixpkgs"; };
-    home-manager = { url = "github:miuirussia/home-manager"; inputs.nixpkgs.follows = "nixpkgs"; };
+    home-manager = { url = "github:nix-community/home-manager"; inputs.nixpkgs.follows = "nixpkgs"; };
 
     haskell-nix = {
       url = "github:input-output-hk/haskell.nix";
