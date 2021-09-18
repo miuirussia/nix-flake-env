@@ -38,7 +38,7 @@ inputs: final: prev: let
     set -eu
     set -f
     export IFS=' '
-    nix-store -qR --include-outputs $@ $(nix-store -q --deriver $@)
+    ${final.nixUnstable}/bin/nix-store -qR --include-outputs $@ $(${final.nixUnstable}/bin/nix-store -q --deriver $@)
   '';
 
   upload-nix = final.writeShellScriptBin "upload-nix" ''
@@ -49,10 +49,10 @@ inputs: final: prev: let
     echo ''${NIX_UPLOAD_SECRET_KEY:?Please, define binary cache secret key} > $STORE_PRIVATE_KEY
     REMOTE_STORE_URL=''${NIX_UPLOAD_STORE_URL:?Please, define binary cache url. Example: s3://nix-cache?profile=default&endpoint=s3.server.m}
     echo "Signing store paths..."
-    nix sign-paths -v --recursive --key-file ''${STORE_PRIVATE_KEY} $@
+    ${final.nix}/bin/nix sign-paths -v --recursive --key-file ''${STORE_PRIVATE_KEY} $@
     rm $STORE_PRIVATE_KEY
     echo "Uploading store paths..."
-    nix copy -v --to ''${REMOTE_STORE_URL} $@
+    ${final.nixUnstable}/bin/nix copy -v --to ''${REMOTE_STORE_URL} $@
     echo "...done!"
   '';
 in
