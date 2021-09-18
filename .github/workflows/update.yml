@@ -82,6 +82,8 @@ jobs:
           nix build --print-build-logs --no-link .#pkgs.x86_64-darwin.haskell-nix.compiler.ghc${{ matrix.ghc }}
           push-snapshot-nix-to-cache
         env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           NIX_UPLOAD_SECRET_KEY: ${{ secrets.NIX_UPLOAD_SECRET_KEY }}
           NIX_UPLOAD_STORE_URL: ${{ secrets.NIX_UPLOAD_STORE_URL }}
 
@@ -127,6 +129,8 @@ jobs:
           nix build --print-build-logs --no-link .#darwinConfigurations.macbook.system
           push-snapshot-nix-to-cache
         env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           NIX_UPLOAD_SECRET_KEY: ${{ secrets.NIX_UPLOAD_SECRET_KEY }}
           NIX_UPLOAD_STORE_URL: ${{ secrets.NIX_UPLOAD_STORE_URL }}
 
