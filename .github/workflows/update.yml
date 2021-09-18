@@ -124,6 +124,7 @@ jobs:
           nix build --print-build-logs --no-link .#darwinConfigurations.ghActions.system
           nix build --print-build-logs --no-link .#darwinConfigurations.home.system
           nix build --print-build-logs --no-link .#darwinConfigurations.work.system
+          nix build --print-build-logs --no-link .#darwinConfigurations.macbook.system
           push-snapshot-nix-to-cache
         env:
           NIX_UPLOAD_SECRET_KEY: ${{ secrets.NIX_UPLOAD_SECRET_KEY }}
