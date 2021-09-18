@@ -108,7 +108,8 @@
       mkDarwinModules =
         args @ { user
         , host
-        , hostConfig ? ./hosts + "/host-${host}/default.nix"
+        , hostLink ? host
+        , hostConfig ? ./hosts + "/host-${hostLink}/default.nix"
         , ...
         }: [
           home-manager.darwinModules.home-manager
@@ -161,6 +162,7 @@
             modules = mkDarwinModules {
               user = "kirill";
               host = "kirill-macbook";
+              hostLink = "kirill-imac";
             };
             system = "x86_64-darwin";
           };

@@ -1,5 +1,4 @@
 hosts/host-*/default.nix filter=git-crypt diff=git-crypt
 hosts/host-*/user-*.nix filter=git-crypt diff=git-crypt
-hosts/host-kirill-macbook !filter !diff
 home/user-*/default.nix filter=git-crypt diff=git-crypt
 .gitattributes !filter !diff
