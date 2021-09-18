@@ -49,7 +49,7 @@ inputs: final: prev: let
     echo ''${NIX_UPLOAD_SECRET_KEY:?Please, define binary cache secret key} > $STORE_PRIVATE_KEY
     REMOTE_STORE_URL=''${NIX_UPLOAD_STORE_URL:?Please, define binary cache url. Example: s3://nix-cache?profile=default&endpoint=s3.server.m}
     echo "Signing store paths..."
-    ${final.nix}/bin/nix sign-paths -v --recursive --key-file ''${STORE_PRIVATE_KEY} $@
+    ${final.nixUnstable}/bin/nix store sign -v --recursive --key-file ''${STORE_PRIVATE_KEY} $@
     rm $STORE_PRIVATE_KEY
     echo "Uploading store paths..."
     ${final.nixUnstable}/bin/nix copy -v --to ''${REMOTE_STORE_URL} $@
