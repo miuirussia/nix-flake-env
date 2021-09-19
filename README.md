@@ -15,9 +15,9 @@ it isn't, add it
 $ export PATH=/usr/sbin:$PATH
 ```
 
-Now you can go ahead and run the installer
+Now you can go ahead and run the installer:
 
-[Nix unstable installer]: https://github.com/miuirussia/nix-unstable-installer
+[Nix unstable installer](https://github.com/miuirussia/nix-unstable-installer)
 
 This should take you throught the process in a nice and straight-forward way.
 
@@ -50,6 +50,12 @@ symlink
 
 ```
 sudo ln -s /nix/var/nix/profiles/default/etc/ssl/certs/ca-bundle.crt /etc/ssl/certs/ca-certificates.crt
+```
+
+***If you have some permission errors, then enable permissions on /nix volume:
+
+```
+sudo diskutil enableOwnership /nix
 ```
 
 #### Flakes
@@ -191,5 +197,5 @@ Run
 
 to remove all remaining `Nix` artifacts from the system.
 
-[nix-darwin]: https://github.com/LnL7/nix-darwin
-[home-manager]: https://github.com/nix-community/home-manager
+[nix-darwin](https://github.com/LnL7/nix-darwin)
+[home-manager](https://github.com/nix-community/home-manager)
