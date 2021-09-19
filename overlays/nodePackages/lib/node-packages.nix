@@ -3406,13 +3406,13 @@ let
         sha512 = "xTYd4JVHpSCW+aqDof6w/MebaMVNTVYBZhbB/vi513xXdiPT92JMVCo0Jq8W2UZnzYRFeVbQiQ+I25l13JuKvA==";
       };
     };
-    "map-obj-4.2.1" = {
+    "map-obj-4.3.0" = {
       name = "map-obj";
       packageName = "map-obj";
-      version = "4.2.1";
+      version = "4.3.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/map-obj/-/map-obj-4.2.1.tgz";
-        sha512 = "+WA2/1sPmDj1dlvvJmB5G6JKfY9dpn7EVBUL06+y6PoljPkh+6V1QihwxNkbcGxCRjt2b0F9K0taiCuo7MbdFQ==";
+        url = "https://registry.npmjs.org/map-obj/-/map-obj-4.3.0.tgz";
+        sha512 = "hdN1wVrZbb29eBGiGjJbeP8JbKjq1urkHJ/LIP/NY48MZ1QVXUsQBV1G1zvYFHn1XE06cwjBsOI2K3Ulnj1YXQ==";
       };
     };
     "md5.js-1.3.5" = {
@@ -7142,7 +7142,7 @@ in
         ];
       })
       sources."make-plural-4.3.0"
-      sources."map-obj-4.2.1"
+      sources."map-obj-4.3.0"
       sources."messageformat-2.3.0"
       sources."messageformat-formatters-2.0.1"
       sources."messageformat-parser-4.1.3"

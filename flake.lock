@@ -233,11 +233,11 @@
     "hackage": {
       "flake": false,
       "locked": {
-        "lastModified": 1631950830,
-        "narHash": "sha256-IchOadAwdm7wT1iVJSPhq/u8ZyUyrJhxrjr1eTd43f4=",
+        "lastModified": 1632029302,
+        "narHash": "sha256-GtzCbXU/slxks/VpYXJmNZRF7mOxhyfMMyWXSt5PdR8=",
         "owner": "miuirussia",
         "repo": "hackage.nix",
-        "rev": "db51166b7e5af4c3aeb0a97b431ee95ba6bda73a",
+        "rev": "f67420c71a46f2e031c42a5484717c79f1dd8c8b",
         "type": "github"
       },
       "original": {
@@ -341,11 +341,11 @@
     "hls-unstable": {
       "flake": false,
       "locked": {
-        "lastModified": 1632012358,
-        "narHash": "sha256-NUtQ5kCG7Ul/VNkfT+tS8br6SHBOoAOCxL47j1XSZrI=",
+        "lastModified": 1632046352,
+        "narHash": "sha256-Lq6xhKIOwD2kDo85E4obvhANH+E/BaPxVy07RzmZgl4=",
         "owner": "haskell",
         "repo": "haskell-language-server",
-        "rev": "597bee937706337b7d9e811b02c5ef169a709f5d",
+        "rev": "59bb9e6488285e11a37154073274954296009df4",
         "type": "github"
       },
       "original": {
@@ -409,11 +409,11 @@
     "neovim": {
       "flake": false,
       "locked": {
-        "lastModified": 1631998863,
-        "narHash": "sha256-1wpuIebYz+PRojdCWTUn0hjcLm58VBWOWBZ03DXhD7I=",
+        "lastModified": 1632043777,
+        "narHash": "sha256-xtoGg0ug8Y438eCuVukPWB6kEP2fRnGLtCkgjx2Sba8=",
         "owner": "neovim",
         "repo": "neovim",
-        "rev": "924e8e4f2d88ee5c45e521e9f758b7c9f247a011",
+        "rev": "2afbce7651f79b0626ebeae3688274ce18ac2920",
         "type": "github"
       },
       "original": {
