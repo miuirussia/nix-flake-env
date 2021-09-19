@@ -2,6 +2,11 @@
 { pkgs, lib, options, ... }: {
   nix = {
     package = pkgs.nixUnstable;
+
+    nixPath = [
+      "/nix/var/nix/profiles/per-user/root/channels"
+    ];
+
     extraOptions = "experimental-features = nix-command flakes ca-derivations ca-references";
     binaryCaches = [
       "https://cache.ngi0.nixos.org/"
