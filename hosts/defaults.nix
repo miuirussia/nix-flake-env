@@ -2,8 +2,9 @@
 { pkgs, lib, options, ... }: {
   nix = {
     package = pkgs.nixUnstable;
-    extraOptions = "experimental-features = nix-command flakes";
+    extraOptions = "experimental-features = nix-command flakes ca-derivations ca-references";
     binaryCaches = [
+      "https://cache.ngi0.nixos.org/"
       "https://cache.nixos.org/"
       "https://nix-cache.s3.kdevlab.com"
       "https://kdevlab.cachix.org"
@@ -12,6 +13,7 @@
       "https://iohk.cachix.org"
     ];
     binaryCachePublicKeys = [
+      "cache.ngi0.nixos.org-1:KqH5CBLNSyX184S9BKZJo1LxrxJ9ltnY2uAs5c/f1MA="
       "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
       "s3.kdevlab.com:PhuKrzVfCsS0T1R4FnslJy2qUBul9oQ2CTSO/fg/llM="
       "kdevlab.cachix.org-1:/Mxmbtc6KwP9ifFmetjkadaeeqTAtvzBXI81DGLAVIo="
