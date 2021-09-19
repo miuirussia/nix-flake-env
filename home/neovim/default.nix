@@ -96,7 +96,9 @@
                   lualine_b = {'branch'},
                   lualine_c = {
                       {
-                        'filename'
+                        'filename',
+                        path = 1,
+                        shorting_target = 40,
                       },
                       {
                         'diagnostics',
