@@ -17,6 +17,10 @@ inputs: final: prev: let
         # Skip .lock files
         continue
         ;;
+      *apple-framework*)
+        # Skip apple-framework files
+        continue
+        ;;
       *)
         echo "$file"
         ;;
