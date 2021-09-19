@@ -75,42 +75,6 @@
       vim-nginx
       vim-purescript
       vim-tabular
-      {
-        plugin = vim-airline;
-        config = ''
-          let g:airline_powerline_fonts                    = 1
-          let g:airline#extensions#lsp#enabled             = 1
-          let g:airline#extensions#tabline#enabled         = 1
-          let g:airline#extensions#branch#enabled          = 0
-          let g:airline#extensions#keymap#enabled          = 0
-          let g:airline#extensions#tagbar#enabled          = 1
-          let g:airline_exclude_preview                    = 1
-          let g:airline_mode_map                           = {} " :h mode()
-          let g:airline_mode_map['!']                      = '!'
-          let g:airline_mode_map['__']                     = '-'
-          let g:airline_mode_map['c']                      = 'C'
-          let g:airline_mode_map['i']                      = 'I'
-          let g:airline_mode_map['ic']                     = 'IC'
-          let g:airline_mode_map['ix']                     = 'IC'
-          let g:airline_mode_map['n']                      = 'N'
-          let g:airline_mode_map['ni']                     = '(I)'
-          let g:airline_mode_map['no']                     = 'OP'
-          let g:airline_mode_map['r']                      = 'CR'
-          let g:airline_mode_map['rm']                     = 'M'
-          let g:airline_mode_map['r?']                     = '?'
-          let g:airline_mode_map['R']                      = 'R'
-          let g:airline_mode_map['Rv']                     = 'VR'
-          let g:airline_mode_map['Rx']                     = 'RX'
-          let g:airline_mode_map['s']                      = 'S'
-          let g:airline_mode_map['S']                      = 'SL'
-          let g:airline_mode_map['']                     = 'SB'
-          let g:airline_mode_map['t']                      = 'T'
-          let g:airline_mode_map['v']                      = 'V'
-          let g:airline_mode_map['V']                      = 'VL'
-          let g:airline_mode_map['']                     = 'VB'
-        '';
-      }
-      vim-airline-themes
       vim-better-whitespace
       vim-cursorword
       vim-devicons
