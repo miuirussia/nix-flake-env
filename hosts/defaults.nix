@@ -35,7 +35,6 @@
       gnutar
       htop
       jq
-      nix-cleanup-store
       rename
       rsync
       shellcheck
