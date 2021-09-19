@@ -88,6 +88,8 @@
                   lualine_a = {
                     {
                       'mode',
+                      separator = { left = '' },
+                      padding = { left = 1, right = 2 },
                       fmt = function(str) return str:sub(1,1) end,
                     }
                   },
@@ -109,6 +111,8 @@
                       },
                       {
                         'location',
+                        separator = { right = '' },
+                        padding = { left = 2, right = 1 },
                       }
                   }
                 },
@@ -121,7 +125,7 @@
                   lualine_z = {}
                 },
                 tabline = {},
-                extensions = {}
+                extensions = {'fugitive'}
               }
             EOF
         '';
