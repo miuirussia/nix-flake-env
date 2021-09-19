@@ -569,12 +569,11 @@
         "nixpkgs": "nixpkgs",
         "stackage": "stackage",
         "tree-sitter": "tree-sitter",
-        "vim-airline": "vim-airline",
-        "vim-airline-themes": "vim-airline-themes",
         "vim-dhall": "vim-dhall",
         "vim-js": "vim-js",
         "vim-json5": "vim-json5",
         "vim-jsx-pretty": "vim-jsx-pretty",
+        "vim-lualine": "vim-lualine",
         "vim-nginx": "vim-nginx",
         "vim-purescript": "vim-purescript",
         "vim-rooter": "vim-rooter",
@@ -618,38 +617,6 @@
       "original": {
         "owner": "tree-sitter",
         "repo": "tree-sitter",
-        "type": "github"
-      }
-    },
-    "vim-airline": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1631261038,
-        "narHash": "sha256-SXGr8XpO24E5nKVxaj+4ovnSKs7gzgxJFKgFHA02Nuw=",
-        "owner": "vim-airline",
-        "repo": "vim-airline",
-        "rev": "2e29ab965625d1315f0ad070c928794baea3d66f",
-        "type": "github"
-      },
-      "original": {
-        "owner": "vim-airline",
-        "repo": "vim-airline",
-        "type": "github"
-      }
-    },
-    "vim-airline-themes": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1626191053,
-        "narHash": "sha256-kQs2pEGCV3d1agced5LTHpnj7bBkKYL/9J32g8OSfTE=",
-        "owner": "vim-airline",
-        "repo": "vim-airline-themes",
-        "rev": "97cf3e6e638f936187d5f6e9b5eb1bdf0a4df256",
-        "type": "github"
-      },
-      "original": {
-        "owner": "vim-airline",
-        "repo": "vim-airline-themes",
         "type": "github"
       }
     },
@@ -714,6 +681,22 @@
       "original": {
         "owner": "maxmellon",
         "repo": "vim-jsx-pretty",
+        "type": "github"
+      }
+    },
+    "vim-lualine": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1632048145,
+        "narHash": "sha256-v0zVIsGnJ+DDFCfuvhAW+nqOw2+Sha9G2lGyseTf0LA=",
+        "owner": "shadmansaleh",
+        "repo": "lualine.nvim",
+        "rev": "28d89472e3326f81d3d7e4ff0054723eeade9e3d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "shadmansaleh",
+        "repo": "lualine.nvim",
         "type": "github"
       }
     },

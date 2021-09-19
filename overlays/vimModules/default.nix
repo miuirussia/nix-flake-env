@@ -27,8 +27,7 @@ in
 
     coc-nvim = buildVimPlugin "coc-nvim";
 
-    vim-airline = buildVimPlugin "vim-airline";
-    vim-airline-themes = buildVimPlugin "vim-airline-themes";
+    vim-lualine = buildVimPlugin "vim-lualine";
     vim-dhall = buildVimPlugin "vim-dhall";
     vim-js = buildVimPlugin "vim-js";
     vim-json5 = buildVimPlugin "vim-json5";

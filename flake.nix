@@ -42,8 +42,7 @@
     neovim = { url = "github:neovim/neovim"; flake = false; };
     coc-nvim = { url = "github:neoclide/coc.nvim/release"; flake = false; };
 
-    vim-airline = { url = "github:vim-airline/vim-airline"; flake = false; };
-    vim-airline-themes = { url = "github:vim-airline/vim-airline-themes"; flake = false; };
+    vim-lualine = { url = "github:shadmansaleh/lualine.nvim"; flake = false; };
     vim-dhall = { url = "github:vmchale/dhall-vim"; flake = false; };
     vim-js = { url = "github:yuezk/vim-js"; flake = false; };
     vim-json5 = { url = "github:gutenye/json5.vim"; flake = false; };
