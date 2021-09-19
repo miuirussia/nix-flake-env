@@ -66,11 +66,11 @@
       coc-webview
       coc-markdown-preview-enhanced
 
-      vim-dhall
       editorconfig-vim
       fzf-vim
       fzfWrapper
       haskell-vim
+      vim-dhall
 
       {
         plugin = vim-lualine;
@@ -107,9 +107,6 @@
                   lualine_y = {'progress'},
                   lualine_z = {
                       {
-                        'diff',
-                      },
-                      {
                         'location',
                         separator = { right = '' },
                         padding = { left = 2, right = 1 },
@@ -130,9 +127,6 @@
             EOF
         '';
       }
-      vim-nginx
-      vim-purescript
-      vim-tabular
       vim-better-whitespace
       vim-cursorword
       vim-devicons
@@ -142,12 +136,34 @@
       vim-jsx-pretty
       vim-lastplace
       vim-markdown
+      vim-nginx
       vim-nix
+      vim-purescript
       vim-rooter
       vim-rust
       vim-sandwich
+      vim-tabular
       vim-toml
-      vim-yats
+      {
+        plugin = vim-treesitter;
+        config = ''
+          lua << EOF
+            require'nvim-treesitter.configs'.setup {
+              ensure_installed = "maintained",
+              highlight = {
+                enable = true,
+                additional_vim_regex_highlighting = false,
+              },
+              matchup = {
+                enable = true,
+              },
+            }
+
+            local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
+            parser_config.typescript.used_by = {"javascript", "javascriptreact"}
+          EOF
+        '';
+      }
       vim-vista
 
       #themes

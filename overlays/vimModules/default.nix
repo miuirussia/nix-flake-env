@@ -27,19 +27,22 @@ in
 
     coc-nvim = buildVimPlugin "coc-nvim";
 
-    vim-lualine = buildVimPlugin "vim-lualine";
     vim-dhall = buildVimPlugin "vim-dhall";
     vim-js = buildVimPlugin "vim-js";
     vim-json5 = buildVimPlugin "vim-json5";
     vim-jsx-pretty = buildVimPlugin "vim-jsx-pretty";
+    vim-lualine = buildVimPlugin "vim-lualine";
+    vim-matchup = buildVimPlugin "vim-matchup";
     vim-nginx = buildVimPlugin "vim-nginx";
     vim-purescript = buildVimPlugin "vim-purescript";
+    vim-rooter = buildVimPlugin "vim-rooter";
     vim-rust = buildVimPlugin "vim-rust";
     vim-sandwich = buildVimPlugin "vim-sandwich";
     vim-styled-components = buildVimPlugin "vim-styled-components";
     vim-tabular = buildVimPlugin "vim-tabular";
     vim-toml = buildVimPlugin "vim-toml";
+    vim-treesitter = buildVimPlugin "vim-treesitter";
+    vim-typescript = buildVimPlugin "vim-typescript";
     vim-vista = buildVimPlugin "vim-vista";
-    vim-yats = buildVimPlugin "vim-yats";
   };
 }

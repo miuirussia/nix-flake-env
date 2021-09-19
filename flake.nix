@@ -25,13 +25,11 @@
         hackage.follows = "hackage";
         stackage.follows = "stackage";
         haskell-nix.follows = "haskell-nix";
-        hls-unstable.follows = "hls-unstable";
       };
     };
 
     jetbrains-mono = { url = "github:JetBrains/JetBrainsMono"; flake = false; };
     tree-sitter = { url = "github:tree-sitter/tree-sitter"; flake = false; };
-    hls-unstable = { url = "github:haskell/haskell-language-server"; flake = false; };
 
     # zsh plugins
     base16-shell = { url = "github:chriskempson/base16-shell"; flake = false; };
@@ -42,11 +40,12 @@
     neovim = { url = "github:neovim/neovim"; flake = false; };
     coc-nvim = { url = "github:neoclide/coc.nvim/release"; flake = false; };
 
-    vim-lualine = { url = "github:shadmansaleh/lualine.nvim"; flake = false; };
     vim-dhall = { url = "github:vmchale/dhall-vim"; flake = false; };
     vim-js = { url = "github:yuezk/vim-js"; flake = false; };
     vim-json5 = { url = "github:gutenye/json5.vim"; flake = false; };
     vim-jsx-pretty = { url = "github:maxmellon/vim-jsx-pretty"; flake = false; };
+    vim-lualine = { url = "github:shadmansaleh/lualine.nvim"; flake = false; };
+    vim-matchup = { url = "github:andymass/vim-matchup"; flake = false; };
     vim-nginx = { url = "github:chr4/nginx.vim"; flake = false; };
     vim-purescript = { url = "github:purescript-contrib/purescript-vim"; flake = false; };
     vim-rooter = { url = "github:airblade/vim-rooter"; flake = false; };
@@ -55,8 +54,9 @@
     vim-styled-components = { url = "github:styled-components/vim-styled-components"; flake = false; };
     vim-tabular = { url = "github:godlygeek/tabular"; flake = false; };
     vim-toml = { url = "github:cespare/vim-toml"; flake = false; };
+    vim-treesitter = { url = "github:nvim-treesitter/nvim-treesitter"; flake = false; };
+    vim-typescript = { url = "github:herringtondarkholme/yats.vim"; flake = false; };
     vim-vista = { url = "github:liuchengxu/vista.vim"; flake = false; };
-    vim-yats = { url = "github:herringtondarkholme/yats.vim"; flake = false; };
 
     flake-utils = { url = "github:numtide/flake-utils"; };
     flake-compat = { url = "github:edolstra/flake-compat"; flake = false; };
