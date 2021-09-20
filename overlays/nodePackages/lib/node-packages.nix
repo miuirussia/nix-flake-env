@@ -1237,13 +1237,13 @@ let
         sha1 = "2680fbb8068a48d08656b6098092bdafc906f4a5";
       };
     };
-    "core-js-3.17.3" = {
+    "core-js-3.18.0" = {
       name = "core-js";
       packageName = "core-js";
-      version = "3.17.3";
+      version = "3.18.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/core-js/-/core-js-3.17.3.tgz";
-        sha512 = "lyvajs+wd8N1hXfzob1LdOCCHFU4bGMbqqmLn1Q4QlCpDqWPpGf+p0nj+LNrvDDG33j0hZXw2nsvvVpHysxyNw==";
+        url = "https://registry.npmjs.org/core-js/-/core-js-3.18.0.tgz";
+        sha512 = "WJeQqq6jOYgVgg4NrXKL0KLQhi0CT4ZOCvFL+3CQ5o7I6J8HkT5wd53EadMfqTDp1so/MT1J+w2ujhWcCJtN7w==";
       };
     };
     "core-util-is-1.0.2" = {
@@ -4405,6 +4405,15 @@ let
         sha512 = "AH82x8Tx0/JkubeF6U12y8SuVB5vFgsw8lt/Ox5MhXaAktREFiotCTq324U2nPtJUnh2A8yJciDnzAmhbHidqQ==";
       };
     };
+    "purescript-0.14.4" = {
+      name = "purescript";
+      packageName = "purescript";
+      version = "0.14.4";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/purescript/-/purescript-0.14.4.tgz";
+        sha512 = "9Lq2qvyVkQoKUBSNOEBKIJjtD5sDwThurSt3SRdtSseaA03p1Fk7VxbUr9HV/gHLVZPIkOhPtjvZGUNs5U2PDA==";
+      };
+    };
     "purescript-installer-0.2.5" = {
       name = "purescript-installer";
       packageName = "purescript-installer";
@@ -5024,6 +5033,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/sourcemap-codec/-/sourcemap-codec-1.4.8.tgz";
         sha512 = "9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA==";
+      };
+    };
+    "spago-0.20.3" = {
+      name = "spago";
+      packageName = "spago";
+      version = "0.20.3";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/spago/-/spago-0.20.3.tgz";
+        sha512 = "R4CWLP5IbaWoNIpS1QAUuDK2LKlKYqT5gBKVZL7ILilvCwdwS72u3NbGZbvx7VCRRZz4lG7zXUkqKNow7zh6wQ==";
       };
     };
     "sprintf-js-1.0.3" = {
@@ -5879,6 +5897,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/vscode-json-languageservice/-/vscode-json-languageservice-4.1.7.tgz";
         sha512 = "cwG5TwZyHYthsk2aS3W1dVgVP6Vwn3o+zscwN58uMgZt/nKuyxd9vdEB1F58Ix+S5kSKAnkUCP6hvulcoImQQQ==";
+      };
+    };
+    "vscode-jsonrpc-5.0.1" = {
+      name = "vscode-jsonrpc";
+      packageName = "vscode-jsonrpc";
+      version = "5.0.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/vscode-jsonrpc/-/vscode-jsonrpc-5.0.1.tgz";
+        sha512 = "JvONPptw3GAQGXlVV2utDcHx0BiY34FupW/kI6mZ5x06ER5DdPG/tXWMVHjTNULF5uKPOUUD0SaXg5QaubJL0A==";
       };
     };
     "vscode-jsonrpc-6.0.0" = {
@@ -7055,7 +7082,7 @@ in
       sources."color-name-1.1.3"
       sources."common-tags-1.8.0"
       sources."concat-map-0.0.1"
-      sources."core-js-3.17.3"
+      sources."core-js-3.18.0"
       sources."cross-spawn-6.0.5"
       sources."debug-4.3.2"
       sources."decamelize-1.2.0"
@@ -7718,22 +7745,193 @@ in
   purescript-language-server = nodeEnv.buildNodePackage {
     name = "purescript-language-server";
     packageName = "purescript-language-server";
-    version = "0.15.5";
+    version = "0.15.7";
     src = fetchurl {
-      url = "https://registry.npmjs.org/purescript-language-server/-/purescript-language-server-0.15.5.tgz";
-      sha512 = "Km6LOus92Rab315/OhnILwslCseXbl8s53m0T8te0SYeYgNfUnxVh4/m/r217PAApicemaT3ZMdnXrtAZJ5U6Q==";
+      url = "https://registry.npmjs.org/purescript-language-server/-/purescript-language-server-0.15.7.tgz";
+      sha512 = "bl62M0n/fAq/ZWvyZD2Wpxlg5A9I0zyCnAvqdRsS052gbGlbyRmzJJz2kT2NexfZvubZT5EYTsENKI/zewUvuw==";
     };
     dependencies = [
+      sources."ajv-6.12.6"
+      sources."ansi-escapes-3.2.0"
+      sources."ansi-regex-4.1.0"
+      sources."ansi-styles-3.2.1"
+      sources."aproba-1.2.0"
+      sources."arch-2.2.0"
+      sources."asn1-0.2.4"
+      sources."assert-plus-1.0.0"
+      sources."asynckit-0.4.0"
+      sources."aws-sign2-0.7.0"
+      sources."aws4-1.11.0"
+      sources."balanced-match-1.0.2"
+      sources."bcrypt-pbkdf-1.0.2"
+      sources."bluebird-3.7.2"
+      sources."brace-expansion-1.1.11"
+      sources."buffer-from-1.1.2"
+      sources."byline-5.0.0"
+      sources."cacache-11.3.3"
+      sources."caseless-0.12.0"
+      sources."chalk-2.4.2"
+      sources."chownr-1.1.4"
+      sources."cli-cursor-2.1.0"
+      sources."color-convert-1.9.3"
+      sources."color-name-1.1.3"
+      sources."combined-stream-1.0.8"
+      sources."concat-map-0.0.1"
+      sources."concat-stream-1.6.2"
+      sources."copy-concurrently-1.0.5"
+      sources."core-util-is-1.0.3"
+      sources."cross-spawn-7.0.3"
+      sources."cyclist-1.0.1"
+      sources."dashdash-1.14.1"
+      sources."delayed-stream-1.0.0"
+      sources."duplexify-3.7.1"
+      sources."ecc-jsbn-0.1.2"
+      sources."emoji-regex-7.0.3"
+      sources."end-of-stream-1.4.4"
+      sources."env-paths-2.2.1"
+      sources."escape-string-regexp-1.0.5"
+      sources."execa-2.1.0"
+      sources."extend-3.0.2"
+      sources."extsprintf-1.3.0"
+      sources."fast-deep-equal-3.1.3"
+      sources."fast-json-stable-stringify-2.1.0"
+      sources."figgy-pudding-3.5.2"
+      sources."filesize-4.2.1"
+      sources."flush-write-stream-1.1.1"
+      sources."forever-agent-0.6.1"
+      sources."form-data-2.3.3"
+      sources."from2-2.3.0"
+      sources."fs-minipass-1.2.7"
+      sources."fs-write-stream-atomic-1.0.10"
+      sources."fs.realpath-1.0.0"
+      sources."get-stream-5.2.0"
+      sources."getpass-0.1.7"
+      sources."glob-7.1.7"
+      sources."graceful-fs-4.2.8"
+      sources."har-schema-2.0.0"
+      sources."har-validator-5.1.5"
+      sources."has-flag-3.0.0"
+      sources."http-signature-1.2.0"
+      sources."iferr-0.1.5"
+      sources."imurmurhash-0.1.4"
+      sources."inflight-1.0.6"
+      sources."inherits-2.0.4"
+      sources."is-fullwidth-code-point-2.0.0"
+      sources."is-plain-obj-2.1.0"
+      sources."is-stream-2.0.1"
+      sources."is-typedarray-1.0.0"
+      sources."isarray-1.0.0"
       sources."isexe-2.0.0"
+      sources."isstream-0.1.2"
+      sources."jsbn-0.1.1"
+      sources."json-schema-0.2.3"
+      sources."json-schema-traverse-0.4.1"
+      sources."json-stringify-safe-5.0.1"
+      sources."jsprim-1.4.1"
+      sources."log-symbols-3.0.0"
+      sources."log-update-3.4.0"
+      sources."lru-cache-5.1.1"
+      sources."merge-stream-2.0.0"
+      sources."mime-db-1.49.0"
+      sources."mime-types-2.1.32"
+      sources."mimic-fn-2.1.0"
+      sources."minimatch-3.0.4"
+      sources."minimist-1.2.5"
+      sources."minipass-2.9.0"
+      sources."minizlib-1.3.3"
+      sources."mississippi-3.0.0"
+      sources."mkdirp-0.5.5"
+      sources."move-concurrently-1.0.1"
+      sources."ms-2.1.3"
+      sources."npm-run-path-3.1.0"
+      sources."oauth-sign-0.9.0"
+      sources."once-1.4.0"
+      sources."onetime-5.1.2"
+      sources."p-finally-2.0.1"
+      sources."parallel-transform-1.2.0"
+      sources."path-is-absolute-1.0.1"
+      sources."path-key-3.1.1"
+      sources."performance-now-2.1.0"
+      sources."process-nextick-args-2.0.1"
+      sources."promise-inflight-1.0.1"
+      sources."psl-1.8.0"
+      sources."pump-3.0.0"
+      (sources."pumpify-1.5.1" // {
+        dependencies = [
+          sources."pump-2.0.1"
+        ];
+      })
+      sources."punycode-2.1.1"
+      sources."purescript-0.14.4"
+      (sources."purescript-installer-0.2.5" // {
+        dependencies = [
+          sources."which-1.3.1"
+        ];
+      })
+      sources."qs-6.5.2"
+      sources."readable-stream-2.3.7"
+      sources."request-2.88.2"
+      (sources."restore-cursor-2.0.0" // {
+        dependencies = [
+          sources."mimic-fn-1.2.0"
+          sources."onetime-2.0.1"
+        ];
+      })
+      sources."rimraf-2.7.1"
+      sources."run-queue-1.0.3"
+      sources."safe-buffer-5.1.2"
+      sources."safer-buffer-2.1.2"
+      sources."shebang-command-2.0.0"
+      sources."shebang-regex-3.0.0"
       sources."shell-quote-1.7.2"
+      sources."signal-exit-3.0.4"
+      sources."spago-0.20.3"
+      sources."sshpk-1.16.1"
+      sources."ssri-6.0.2"
+      sources."stream-each-1.2.3"
+      sources."stream-shift-1.0.1"
+      sources."string-width-3.1.0"
+      sources."string_decoder-1.1.1"
+      sources."strip-ansi-5.2.0"
+      sources."strip-final-newline-2.0.0"
+      sources."supports-color-5.5.0"
+      (sources."tar-4.4.19" // {
+        dependencies = [
+          sources."safe-buffer-5.2.1"
+        ];
+      })
+      sources."through2-2.0.5"
+      sources."tough-cookie-2.5.0"
+      sources."tunnel-agent-0.6.0"
+      sources."tweetnacl-0.14.5"
+      sources."typedarray-0.0.6"
+      sources."unique-filename-1.1.1"
+      sources."unique-slug-2.0.2"
+      sources."uri-js-4.4.1"
+      sources."util-deprecate-1.0.2"
       sources."uuid-3.4.0"
-      sources."vscode-jsonrpc-6.0.0"
+      (sources."verror-1.10.0" // {
+        dependencies = [
+          sources."core-util-is-1.0.2"
+        ];
+      })
+      sources."vscode-jsonrpc-5.0.1"
       sources."vscode-languageserver-6.1.1"
-      sources."vscode-languageserver-protocol-3.16.0"
+      (sources."vscode-languageserver-protocol-3.16.0" // {
+        dependencies = [
+          sources."vscode-jsonrpc-6.0.0"
+        ];
+      })
       sources."vscode-languageserver-textdocument-1.0.1"
       sources."vscode-languageserver-types-3.16.0"
       sources."vscode-uri-2.1.2"
       sources."which-2.0.2"
+      sources."wrap-ansi-5.1.0"
+      sources."wrappy-1.0.2"
+      sources."xtend-4.0.2"
+      sources."y18n-4.0.3"
+      sources."yallist-3.1.1"
+      sources."zen-observable-0.8.15"
     ];
     buildInputs = globalBuildInputs;
     meta = {
