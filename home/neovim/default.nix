@@ -154,7 +154,7 @@
               ensure_installed = "maintained",
               highlight = {
                 enable = true,
-                additional_vim_regex_highlighting = false,
+                disable = { "haskell" },
               },
               matchup = {
                 enable = true,
