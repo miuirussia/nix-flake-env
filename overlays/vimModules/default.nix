@@ -28,6 +28,7 @@ in
     coc-nvim = buildVimPlugin "coc-nvim";
 
     vim-dhall = buildVimPlugin "vim-dhall";
+    vim-haskell = buildVimPlugin "vim-haskell";
     vim-js = buildVimPlugin "vim-js";
     vim-json5 = buildVimPlugin "vim-json5";
     vim-jsx-pretty = buildVimPlugin "vim-jsx-pretty";

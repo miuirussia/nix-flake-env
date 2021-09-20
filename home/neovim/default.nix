@@ -69,8 +69,6 @@
       editorconfig-vim
       fzf-vim
       fzfWrapper
-      haskell-vim
-      vim-dhall
 
       {
         plugin = vim-lualine;
@@ -129,10 +127,13 @@
             EOF
         '';
       }
+
       vim-better-whitespace
       vim-cursorword
       vim-devicons
+      vim-dhall
       vim-fugitive
+      vim-haskell
       vim-js
       vim-json5
       vim-jsx-pretty

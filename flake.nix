@@ -10,6 +10,7 @@
     darwin = { url = "github:LnL7/nix-darwin/master"; inputs.nixpkgs.follows = "nixpkgs"; };
     home-manager = { url = "github:nix-community/home-manager"; inputs.nixpkgs.follows = "nixpkgs"; };
 
+    neovim-nightly-overlay = { url = "github:nix-community/neovim-nightly-overlay"; };
     haskell-nix = {
       url = "github:input-output-hk/haskell.nix";
       inputs = {
@@ -29,18 +30,16 @@
     };
 
     jetbrains-mono = { url = "github:JetBrains/JetBrainsMono"; flake = false; };
-    tree-sitter = { url = "github:tree-sitter/tree-sitter"; flake = false; };
-
     # zsh plugins
     base16-shell = { url = "github:chriskempson/base16-shell"; flake = false; };
     zsh-syntax-highlighting = { url = "github:zsh-users/zsh-syntax-highlighting"; flake = false; };
     fast-syntax-highlighting = { url = "github:zdharma/fast-syntax-highlighting"; flake = false; };
     zsh-history-substring-search = { url = "github:zsh-users/zsh-history-substring-search"; flake = false; };
 
-    neovim = { url = "github:neovim/neovim"; flake = false; };
     coc-nvim = { url = "github:neoclide/coc.nvim/release"; flake = false; };
 
     vim-dhall = { url = "github:vmchale/dhall-vim"; flake = false; };
+    vim-haskell = { url = "github:neovimhaskell/haskell-vim"; flake = false; };
     vim-js = { url = "github:yuezk/vim-js"; flake = false; };
     vim-json5 = { url = "github:gutenye/json5.vim"; flake = false; };
     vim-jsx-pretty = { url = "github:maxmellon/vim-jsx-pretty"; flake = false; };
@@ -62,7 +61,7 @@
     flake-compat = { url = "github:edolstra/flake-compat"; flake = false; };
   };
 
-  outputs = inputs @ { self, nixpkgs, darwin, home-manager, flake-utils, haskell-nix, ... }:
+  outputs = inputs @ { self, nixpkgs, darwin, home-manager, flake-utils, haskell-nix, neovim-nightly-overlay, ... }:
     let
       supportedSystem = [ "x86_64-linux" "x86_64-darwin" ];
 
@@ -88,6 +87,7 @@
         };
         overlays = nixpkgsOverlays ++ [
           haskell-nix.overlay
+          neovim-nightly-overlay.overlay
         ];
       };
 
