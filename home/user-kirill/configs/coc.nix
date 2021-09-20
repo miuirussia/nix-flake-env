@@ -35,13 +35,13 @@
         };
       };
     };
-    purescript = {
-      command = "${pkgs.nodePackages.purescript-language-server}/bin/purescript-language-server";
-      args = [ "--stdio" ];
-      filetypes = [ "purescript" ];
-      requireRootPattern = true;
-      rootPatterns = [ "bower.json" "psc-package.json" "spago.dhall" ];
-    };
+#   purescript = {
+#     command = "${pkgs.nodePackages.purescript-language-server}/bin/purescript-language-server";
+#     args = [ "--stdio" ];
+#     filetypes = [ "purescript" ];
+#     requireRootPattern = true;
+#     rootPatterns = [ "bower.json" "psc-package.json" "spago.dhall" ];
+#   };
     diagnostic = {
       command = "${pkgs.nodePackages.diagnostic-languageserver}/bin/diagnostic-languageserver";
       args = [ "--stdio" ];
