@@ -4,13 +4,13 @@
   inputs = {
     nixpkgs = { url = "github:miuirussia/nixpkgs/nixpkgs-unstable"; };
 
-    hackage = { url = "github:miuirussia/hackage.nix"; flake = false; };
-    stackage = { url = "github:input-output-hk/stackage.nix"; flake = false; };
-
+    # dotenv management
     darwin = { url = "github:LnL7/nix-darwin/master"; inputs.nixpkgs.follows = "nixpkgs"; };
     home-manager = { url = "github:nix-community/home-manager"; inputs.nixpkgs.follows = "nixpkgs"; };
 
-    neovim-nightly-overlay = { url = "github:nix-community/neovim-nightly-overlay"; };
+    # haskell-nix
+    hackage = { url = "github:miuirussia/hackage.nix"; flake = false; };
+    stackage = { url = "github:input-output-hk/stackage.nix"; flake = false; };
     haskell-nix = {
       url = "github:input-output-hk/haskell.nix";
       inputs = {
@@ -29,12 +29,18 @@
       };
     };
 
+    # fonts
     jetbrains-mono = { url = "github:JetBrains/JetBrainsMono"; flake = false; };
+
     # zsh plugins
     base16-shell = { url = "github:chriskempson/base16-shell"; flake = false; };
     zsh-syntax-highlighting = { url = "github:zsh-users/zsh-syntax-highlighting"; flake = false; };
     fast-syntax-highlighting = { url = "github:zdharma/fast-syntax-highlighting"; flake = false; };
     zsh-history-substring-search = { url = "github:zsh-users/zsh-history-substring-search"; flake = false; };
+
+    # neovim
+    neovim = { url = "github:neovim/neovim"; flake = false; };
+    tree-sitter = { url = "github:tree-sitter/tree-sitter"; flake = false; };
 
     coc-nvim = { url = "github:neoclide/coc.nvim/release"; flake = false; };
 
@@ -57,11 +63,12 @@
     vim-typescript = { url = "github:herringtondarkholme/yats.vim"; flake = false; };
     vim-vista = { url = "github:liuchengxu/vista.vim"; flake = false; };
 
+    # flakes
     flake-utils = { url = "github:numtide/flake-utils"; };
     flake-compat = { url = "github:edolstra/flake-compat"; flake = false; };
   };
 
-  outputs = inputs @ { self, nixpkgs, darwin, home-manager, flake-utils, haskell-nix, neovim-nightly-overlay, ... }:
+  outputs = inputs @ { self, nixpkgs, darwin, home-manager, flake-utils, haskell-nix, ... }:
     let
       supportedSystem = [ "x86_64-linux" "x86_64-darwin" ];
 
@@ -87,7 +94,6 @@
         };
         overlays = nixpkgsOverlays ++ [
           haskell-nix.overlay
-          neovim-nightly-overlay.overlay
         ];
       };
 
