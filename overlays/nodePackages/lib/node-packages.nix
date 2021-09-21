@@ -3766,13 +3766,13 @@ let
         sha512 = "1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==";
       };
     };
-    "node-fetch-2.6.3" = {
+    "node-fetch-2.6.4" = {
       name = "node-fetch";
       packageName = "node-fetch";
-      version = "2.6.3";
+      version = "2.6.4";
       src = fetchurl {
-        url = "https://registry.npmjs.org/node-fetch/-/node-fetch-2.6.3.tgz";
-        sha512 = "BXSmNTLLDHT0UjQDg5E23x+0n/hPDjySqc0ELE4NpCa2wE5qmmaEWFRP/+v8pfuocchR9l5vFLbSB7CPE2ahvQ==";
+        url = "https://registry.npmjs.org/node-fetch/-/node-fetch-2.6.4.tgz";
+        sha512 = "aD1fO+xtLiSCc9vuD+sYMxpIuQyhHscGSkBEo2o5LTV/3bTEAYvdUii29n8LlO5uLCmWdGP7uVUVXFo5SRdkLA==";
       };
     };
     "node-static-0.7.11" = {
@@ -6496,7 +6496,7 @@ in
       sources."mz-2.7.0"
       sources."native-request-1.1.0"
       sources."netmask-2.0.2"
-      sources."node-fetch-2.6.3"
+      sources."node-fetch-2.6.4"
       sources."nth-check-2.0.1"
       sources."oauth-sign-0.9.0"
       sources."object-assign-4.1.1"
