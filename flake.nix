@@ -10,7 +10,14 @@
     darwin = { url = "github:LnL7/nix-darwin/master"; inputs.nixpkgs.follows = "nixpkgs"; };
     home-manager = { url = "github:nix-community/home-manager"; inputs.nixpkgs.follows = "nixpkgs"; };
 
-    neovim-nightly-overlay = { url = "github:nix-community/neovim-nightly-overlay"; };
+    neovim-nightly-overlay = {
+      url = "github:nix-community/neovim-nightly-overlay";
+      inputs = {
+        flake-compat.follows = "flake-compat";
+        neovim-flake.follows = "neovim";
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
     haskell-nix = {
       url = "github:input-output-hk/haskell.nix";
       inputs = {
@@ -30,6 +37,8 @@
     };
 
     jetbrains-mono = { url = "github:JetBrains/JetBrainsMono"; flake = false; };
+    neovim = { url = "github:neovim/neovim?dir=contrib"; };
+
     # zsh plugins
     base16-shell = { url = "github:chriskempson/base16-shell"; flake = false; };
     zsh-syntax-highlighting = { url = "github:zsh-users/zsh-syntax-highlighting"; flake = false; };
