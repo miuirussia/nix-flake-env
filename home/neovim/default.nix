@@ -133,29 +133,28 @@
       vim-devicons
       vim-dhall
       vim-fugitive
-      vim-haskell
-      vim-js
       vim-json5
-      vim-jsx-pretty
       vim-lastplace
-      vim-markdown
       vim-nginx
-      vim-nix
       vim-purescript
       vim-rooter
-      vim-rust
       vim-sandwich
       vim-tabular
-      vim-toml
+      vim-vista
+
+      # tree-sitter
       {
         plugin = vim-treesitter;
         config = ''
           lua << EOF
             require'nvim-treesitter.configs'.setup {
-              ensure_installed = "maintained",
+              ensure_installed = { },
               highlight = {
                 enable = true,
-                disable = { "haskell" },
+                additional_vim_regex_highlighting = false,
+              },
+              indent = {
+                enable = true,
               },
               matchup = {
                 enable = true,
@@ -167,7 +166,7 @@
           EOF
         '';
       }
-      vim-vista
+      tree-sitter-grammars
 
       #themes
       base16-vim

@@ -27,6 +27,53 @@ in
 
     coc-nvim = buildVimPlugin "coc-nvim";
 
+    tree-sitter-grammars = buildVimPluginFrom2Nix rec {
+      pname = "tree-sitter-grammars";
+      version = final.tree-sitter.version;
+      enabled = (
+        map (v: "tree-sitter-${v}") [
+          "bash"
+          "c"
+          "cpp"
+          "css"
+          "haskell"
+          "html"
+          "java"
+          "javascript"
+          "json"
+          "lua"
+          "markdown"
+          "nix"
+          "ocaml"
+          "ocaml_interface"
+          "python"
+          "regex"
+          "ruby"
+          "rust"
+          "toml"
+          "tsx"
+          "typescript"
+          "yaml"
+        ]
+      );
+      src = final.runCommandNoCC "tree-sitter-grammars" {} ''
+        mkdir -p $out/parser
+        ${builtins.concatStringsSep "\n" (
+        builtins.attrValues (
+          builtins.mapAttrs
+            (
+              n: v: "ln -s ${v}/parser $out/parser/${
+              builtins.replaceStrings [ "-" ] [ "_" ] (final.lib.removePrefix "tree-sitter-" n)
+              }.so"
+            )
+            (final.lib.filterAttrs (n: _: builtins.elem n enabled) final.tree-sitter.builtGrammars)
+        )
+      )}
+      '';
+      dependencies = [];
+    };
+
+
     vim-dhall = buildVimPlugin "vim-dhall";
     vim-haskell = buildVimPlugin "vim-haskell";
     vim-js = buildVimPlugin "vim-js";
