@@ -3766,13 +3766,13 @@ let
         sha512 = "1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==";
       };
     };
-    "node-fetch-2.6.2" = {
+    "node-fetch-2.6.3" = {
       name = "node-fetch";
       packageName = "node-fetch";
-      version = "2.6.2";
+      version = "2.6.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/node-fetch/-/node-fetch-2.6.2.tgz";
-        sha512 = "aLoxToI6RfZ+0NOjmWAgn9+LEd30YCkJKFSyWacNZdEKTit/ZMcKjGkTRo8uWEsnIb/hfKecNPEbln02PdWbcA==";
+        url = "https://registry.npmjs.org/node-fetch/-/node-fetch-2.6.3.tgz";
+        sha512 = "BXSmNTLLDHT0UjQDg5E23x+0n/hPDjySqc0ELE4NpCa2wE5qmmaEWFRP/+v8pfuocchR9l5vFLbSB7CPE2ahvQ==";
       };
     };
     "node-static-0.7.11" = {
@@ -5476,6 +5476,15 @@ let
         sha512 = "nlLsUzgm1kfLXSXfRZMc1KLAugd4hqJHDTvc2hDIwS3mZAfMEuMbc03SujMF+GEcpaX/qboeycw6iO8JwVv2+g==";
       };
     };
+    "tr46-0.0.3" = {
+      name = "tr46";
+      packageName = "tr46";
+      version = "0.0.3";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/tr46/-/tr46-0.0.3.tgz";
+        sha1 = "8184fd347dac9cdc185992f3a6622e14b9d9ab6a";
+      };
+    };
     "tree-kill-1.2.2" = {
       name = "tree-kill";
       packageName = "tree-kill";
@@ -6016,6 +6025,24 @@ let
         sha512 = "ZezcU71Owm84xVF6gfurBQUGg8WQ+WZGxgDEQu1IHFBZNx7BFZg3L1yHxrCBNNwbwFtE1GuvfJKMtb6Xuwc/Bw==";
       };
     };
+    "webidl-conversions-3.0.1" = {
+      name = "webidl-conversions";
+      packageName = "webidl-conversions";
+      version = "3.0.1";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/webidl-conversions/-/webidl-conversions-3.0.1.tgz";
+        sha1 = "24534275e2a7bc6be7bc86611cc16ae0a5654871";
+      };
+    };
+    "whatwg-url-5.0.0" = {
+      name = "whatwg-url";
+      packageName = "whatwg-url";
+      version = "5.0.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/whatwg-url/-/whatwg-url-5.0.0.tgz";
+        sha1 = "966454e8765462e37644d3626f6742ce8b70965d";
+      };
+    };
     "which-1.3.1" = {
       name = "which";
       packageName = "which";
@@ -6469,7 +6496,7 @@ in
       sources."mz-2.7.0"
       sources."native-request-1.1.0"
       sources."netmask-2.0.2"
-      sources."node-fetch-2.6.2"
+      sources."node-fetch-2.6.3"
       sources."nth-check-2.0.1"
       sources."oauth-sign-0.9.0"
       sources."object-assign-4.1.1"
@@ -6556,6 +6583,7 @@ in
       sources."toidentifier-1.0.0"
       sources."topojson-client-3.1.0"
       sources."tough-cookie-2.5.0"
+      sources."tr46-0.0.3"
       sources."tslib-2.3.1"
       sources."tunnel-agent-0.6.0"
       sources."tweetnacl-0.14.5"
@@ -6597,6 +6625,8 @@ in
         ];
       })
       sources."vm2-3.9.3"
+      sources."webidl-conversions-3.0.1"
+      sources."whatwg-url-5.0.0"
       sources."which-1.3.1"
       sources."win-release-1.1.1"
       sources."word-wrap-1.2.3"
