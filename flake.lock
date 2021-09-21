@@ -847,11 +847,11 @@
     "vim-toml": {
       "flake": false,
       "locked": {
-        "lastModified": 1631209327,
-        "narHash": "sha256-aFtDTWOapjMqXnoirpdZulGs5GxKuqvuZSb6WgJdSRc=",
+        "lastModified": 1632240024,
+        "narHash": "sha256-3ghcrsz+3/Og7RGesqWhsYDGzIxmA/rUhYi45qkrk4U=",
         "owner": "cespare",
         "repo": "vim-toml",
-        "rev": "b524235e91a6ce07a53411719c67e5265b3d5edf",
+        "rev": "9a05931018f4046179b76dec5b3932b48f3e3fb9",
         "type": "github"
       },
       "original": {

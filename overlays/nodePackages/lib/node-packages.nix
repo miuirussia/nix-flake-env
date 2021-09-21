@@ -5827,13 +5827,13 @@ let
         sha512 = "oTAeub3KWm6nKhXoYCx1q9G3K43R6/pDMXvqDlTSUtjoY7b/Gixm8iLcir5S9bPjvH40n4AcbZsPmNfL/Up77A==";
       };
     };
-    "vega-loader-4.4.0" = {
+    "vega-loader-4.4.1" = {
       name = "vega-loader";
       packageName = "vega-loader";
-      version = "4.4.0";
+      version = "4.4.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/vega-loader/-/vega-loader-4.4.0.tgz";
-        sha512 = "e5enQECdau7rJob0NFB5pGumh3RaaSWWm90+boxMy3ay2b4Ki/3XIvo+C4F1Lx04qSxvQF7tO2LJcklRm6nqRA==";
+        url = "https://registry.npmjs.org/vega-loader/-/vega-loader-4.4.1.tgz";
+        sha512 = "dj65i4qlNhK0mOmjuchHgUrF5YUaWrYpx0A8kXA68lBk5Hkx8FNRztkcl07CZJ1+8V81ymEyJii9jzGbhEX0ag==";
       };
     };
     "vega-time-2.0.4" = {
@@ -5845,13 +5845,13 @@ let
         sha512 = "U314UDR9+ZlWrD3KBaeH+j/c2WSMdvcZq5yJfFT0yTg1jsBKAQBYFGvl+orackD8Zx3FveHOxx3XAObaQeDX+Q==";
       };
     };
-    "vega-util-1.16.1" = {
+    "vega-util-1.17.0" = {
       name = "vega-util";
       packageName = "vega-util";
-      version = "1.16.1";
+      version = "1.17.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/vega-util/-/vega-util-1.16.1.tgz";
-        sha512 = "FdgD72fmZMPJE99FxvFXth0IL4BbLA93WmBg/lvcJmfkK4Uf90WIlvGwaIUdSePIsdpkZjBPyQcHMQ8OcS8Smg==";
+        url = "https://registry.npmjs.org/vega-util/-/vega-util-1.17.0.tgz";
+        sha512 = "HTaydZd9De3yf+8jH66zL4dXJ1d1p5OIFyoBzFiOli4IJbwkL1jrefCKz6AHDm1kYBzDJ0X4bN+CzZSCTvNk1w==";
       };
     };
     "verror-1.10.0" = {
@@ -6616,9 +6616,9 @@ in
       })
       sources."uuid-3.4.0"
       sources."vega-format-1.0.4"
-      sources."vega-loader-4.4.0"
+      sources."vega-loader-4.4.1"
       sources."vega-time-2.0.4"
-      sources."vega-util-1.16.1"
+      sources."vega-util-1.17.0"
       (sources."verror-1.10.0" // {
         dependencies = [
           sources."core-util-is-1.0.2"
