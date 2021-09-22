@@ -233,11 +233,11 @@
     "hackage": {
       "flake": false,
       "locked": {
-        "lastModified": 1632201504,
-        "narHash": "sha256-JJUrTnZ2TGFJXq5kzQuh9is6REzg5c412ZWj7Scmqbc=",
+        "lastModified": 1632287996,
+        "narHash": "sha256-vaD+CE6QWGtt6ULY/kTn+hImuL5DNTAD0itPIoOykA4=",
         "owner": "miuirussia",
         "repo": "hackage.nix",
-        "rev": "7fc4681388f7fff23ecfa96dde9aa93ce89c5fcd",
+        "rev": "49a8e0f96c4268701728fc028f5ddd8132e38e75",
         "type": "github"
       },
       "original": {
@@ -306,11 +306,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1632195822,
-        "narHash": "sha256-ZoauFt0TM4nXLI+LHuptU9efhw26+a/rt+L3STchD7s=",
+        "lastModified": 1632300909,
+        "narHash": "sha256-WhVuVWnCMkGAKHarc9Gucf746oyV7RWW0lJGaeyJXxQ=",
         "owner": "miuirussia",
         "repo": "hls-nix",
-        "rev": "8046c2fb9b6b59ab62aa9d633bafadb70c0c481b",
+        "rev": "f3fecdcd1fd2a09ee3aca78a6649c31386541f0b",
         "type": "github"
       },
       "original": {
@@ -607,11 +607,11 @@
     "tree-sitter": {
       "flake": false,
       "locked": {
-        "lastModified": 1632275388,
-        "narHash": "sha256-Jh0ooE1r6QcvXWvdPjmSHRU+4BTvlYGQ+/bcEivyzyY=",
+        "lastModified": 1632285314,
+        "narHash": "sha256-P5jus00LlJc8I9W97rB43MPk1CXjmB/JjQuI5qmSXjc=",
         "owner": "tree-sitter",
         "repo": "tree-sitter",
-        "rev": "6d2a9983d16fdedb6a6f8d2df547b5c848e1ce7a",
+        "rev": "0e3a2780cdeee1fdc8d2935e8d40a21dc2ad4958",
         "type": "github"
       },
       "original": {
