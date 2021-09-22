@@ -7,17 +7,12 @@ inputs: final: prev: let
   hls8107package = mkHlsPackage "ghc8107";
 in
 {
-  hls = prev.buildEnv {
-    name = "haskell-language-server";
-
-    paths = [
-      hls865package.hls-renamed
-      hls884package.hls-renamed
-      hls8106package.hls-renamed
-      hls8107package.hls-renamed
-      hls8107package.hls-wrapper
-    ];
-  };
+  hls = hls8107package.mkHlsWrapper [
+    hls865package.hls-renamed
+    hls884package.hls-renamed
+    hls8106package.hls-renamed
+    hls8107package.hls-renamed
+  ];
 
   hls865 = hls865package.hls;
   hls884 = hls884package.hls;
