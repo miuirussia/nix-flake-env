@@ -101,7 +101,8 @@
                       {
                         'diagnostics',
                         sources = {'coc', 'nvim'},
-                      }
+                      },
+                      'coc#status'
                   },
                   lualine_x = {'encoding', 'fileformat', 'filetype'},
                   lualine_y = {'progress'},
