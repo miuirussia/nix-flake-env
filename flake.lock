@@ -703,11 +703,11 @@
     "vim-lualine": {
       "flake": false,
       "locked": {
-        "lastModified": 1632205819,
-        "narHash": "sha256-+oJRj/O5pcfeBC1mKbYsiOPkf97mxli3fFUqhc/h7i4=",
+        "lastModified": 1632382181,
+        "narHash": "sha256-4y6M5MllyPvPmmrP1CCEaK8aejl6WguY++/+3r490j0=",
         "owner": "shadmansaleh",
         "repo": "lualine.nvim",
-        "rev": "ceec01bc6cf26a36fd5116deee06a843522f798f",
+        "rev": "8f647f7e5afebeceee78c9bf32451c96d20a5833",
         "type": "github"
       },
       "original": {
