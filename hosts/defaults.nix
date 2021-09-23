@@ -1,7 +1,11 @@
 # This file contains configuration that is shared across all hosts.
-{ pkgs, lib, options, ... }: {
+{ inputs, pkgs, lib, options, ... }: {
   nix = {
     package = pkgs.nixUnstable;
+
+    nixPath = [
+      { nixpkgs = inputs.nixpkgs; }
+    ];
 
     extraOptions = "experimental-features = nix-command flakes";
     binaryCaches = [
