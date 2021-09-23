@@ -2470,6 +2470,15 @@ let
         sha512 = "OvD9ENzPLbegENnYP5UUfJIirTg4+XwMWGaQfQTY0JenxNvvIKP3U3/tAQSPIu/lHxXYSZmpXlUHeqAIdKzBLQ==";
       };
     };
+    "glob-7.2.0" = {
+      name = "glob";
+      packageName = "glob";
+      version = "7.2.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/glob/-/glob-7.2.0.tgz";
+        sha512 = "lmLf6gtyrPq8tTjSmrO94wBeQbFR3HbLHbuyD69wuyQkImp2hWqMGB47OX65FBkPffO641IP9jWa1z4ivqG26Q==";
+      };
+    };
     "glob-parent-5.1.2" = {
       name = "glob-parent";
       packageName = "glob-parent";
@@ -6437,7 +6446,7 @@ in
       sources."get-intrinsic-1.1.1"
       sources."get-uri-3.0.2"
       sources."getpass-0.1.7"
-      sources."glob-7.1.7"
+      sources."glob-7.2.0"
       sources."graceful-fs-4.2.8"
       sources."har-schema-2.0.0"
       sources."har-validator-5.1.5"
@@ -6769,7 +6778,7 @@ in
       sources."fill-range-7.0.1"
       sources."find-up-4.1.0"
       sources."fs.realpath-1.0.0"
-      sources."glob-7.1.7"
+      sources."glob-7.2.0"
       sources."glob-parent-5.1.2"
       sources."globby-11.0.4"
       sources."graceful-fs-4.2.8"
@@ -6913,7 +6922,7 @@ in
       sources."flatted-3.2.2"
       sources."fs.realpath-1.0.0"
       sources."functional-red-black-tree-1.0.1"
-      sources."glob-7.1.7"
+      sources."glob-7.2.0"
       sources."glob-parent-5.1.2"
       sources."globals-13.11.0"
       sources."has-flag-4.0.0"
@@ -7156,7 +7165,7 @@ in
       sources."functional-red-black-tree-1.0.1"
       sources."get-caller-file-2.0.5"
       sources."get-stdin-7.0.0"
-      sources."glob-7.1.7"
+      sources."glob-7.2.0"
       sources."globals-11.12.0"
       (sources."has-ansi-2.0.0" // {
         dependencies = [
@@ -7425,8 +7434,12 @@ in
       sources."function-bind-1.1.1"
       sources."gaze-1.1.3"
       sources."get-assigned-identifiers-1.2.0"
-      sources."glob-7.1.7"
-      sources."globule-1.3.3"
+      sources."glob-7.2.0"
+      (sources."globule-1.3.3" // {
+        dependencies = [
+          sources."glob-7.1.7"
+        ];
+      })
       sources."graceful-fs-4.2.8"
       sources."has-1.0.3"
       (sources."hash-base-3.1.0" // {
@@ -7652,7 +7665,7 @@ in
       sources."fs.realpath-1.0.0"
       sources."get-stream-5.2.0"
       sources."getpass-0.1.7"
-      sources."glob-7.1.7"
+      sources."glob-7.2.0"
       sources."graceful-fs-4.2.8"
       sources."har-schema-2.0.0"
       sources."har-validator-5.1.5"
@@ -7836,7 +7849,7 @@ in
       sources."fs.realpath-1.0.0"
       sources."get-stream-5.2.0"
       sources."getpass-0.1.7"
-      sources."glob-7.1.7"
+      sources."glob-7.2.0"
       sources."graceful-fs-4.2.8"
       sources."har-schema-2.0.0"
       sources."har-validator-5.1.5"
@@ -8095,7 +8108,7 @@ in
       sources."fill-range-7.0.1"
       sources."fs-extra-10.0.0"
       sources."fs.realpath-1.0.0"
-      sources."glob-7.1.7"
+      sources."glob-7.2.0"
       sources."glob-parent-5.1.2"
       sources."globby-11.0.4"
       sources."graceful-fs-4.2.8"
