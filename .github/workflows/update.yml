@@ -81,6 +81,7 @@ jobs:
           nix-env -f ./default.nix -iA pkgs.x86_64-darwin.nix-cache-tools
           snapshot-nix-store
           nix build --print-build-logs --no-link .#pkgs.x86_64-darwin.haskell-nix.compiler.ghc${{ matrix.ghc }}
+          nix build --print-build-logs --no-link .#pkgs.x86_64-darwin.stack-in-nix
           push-snapshot-nix-to-cache
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
