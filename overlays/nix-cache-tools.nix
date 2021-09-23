@@ -29,12 +29,14 @@ inputs: final: prev: let
   '';
 
   snapshot-nix-store = final.writeShellScriptBin "snapshot-nix-store" ''
+    set -euo pipefail
     ${list-nix-store}/bin/list-nix-store > /tmp/snapshot-nix-store
   '';
 
   push-snapshot-nix-to-cache = final.writeShellScriptBin "push-snapshot-nix-to-cache" ''
     set -euo pipefail
     PATHS=$(${final.coreutils}/bin/comm -13 <(${final.coreutils}/bin/sort /tmp/snapshot-nix-store) <(${list-nix-store}/bin/list-nix-store))
+    echo "Uploading $PATHS..."
     echo "$PATHS" | xargs -P8 ${upload-nix}/bin/upload-nix
   '';
 
