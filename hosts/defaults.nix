@@ -5,6 +5,7 @@
 
     nixPath = [
       { nixpkgs = inputs.nixpkgs; }
+      { nix-flake-env = inputs.self; }
     ];
 
     extraOptions = "experimental-features = nix-command flakes";

@@ -11,6 +11,7 @@ in
     ./neovim/default.nix
     ./starship.nix
     ./zsh/default.nix
+    ./nixpkgs/default.nix
   ];
 
   home = {
