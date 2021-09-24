@@ -115,7 +115,7 @@ jobs:
         with:
           name: kdevlab
           authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
-      - name: Build ghc${{ matrix.ghc }}
+      - name: Build hls${{ matrix.ghc }}
         run: |
           nix-env -f ./default.nix -iA pkgs.x86_64-darwin.nix-cache-tools
           snapshot-nix-store
