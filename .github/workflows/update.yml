@@ -136,12 +136,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: update/${{ needs.update.outputs.release_id }}
-      - name: Unlock secrets
-        run: |
-          brew install git-crypt
-          echo "${{ secrets.GIT_CRYPT_KEY }}" | base64  -d > ./git-crypt-key
-          git-crypt unlock ./git-crypt-key
-          rm ./git-crypt-key
       - name: Install nix
         uses: miuirussia/install-nix-action@master
         with:
@@ -152,6 +146,11 @@ jobs:
             experimental-features = nix-command flakes
             substituters = https://hydra.iohk.io https://nix-cache.s3.kdevlab.com https://cache.nixos.org/
             trusted-public-keys = hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ= s3.kdevlab.com:PhuKrzVfCsS0T1R4FnslJy2qUBul9oQ2CTSO/fg/llM= cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=
+      - name: Unlock secrets
+        run: |
+          echo "${{ secrets.GIT_CRYPT_KEY }}" | base64  -d > /tmp/git-crypt-key
+          nix-shell -p pkgs.git-crypt --run "git-crypt unlock /tmp/git-crypt-key"
+          rm /tmp/git-crypt-key
       - uses: cachix/cachix-action@v10
         with:
           name: kdevlab
