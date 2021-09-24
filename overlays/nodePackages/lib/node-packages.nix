@@ -7038,10 +7038,10 @@ in
   npm = nodeEnv.buildNodePackage {
     name = "npm";
     packageName = "npm";
-    version = "7.24.0";
+    version = "7.24.1";
     src = fetchurl {
-      url = "https://registry.npmjs.org/npm/-/npm-7.24.0.tgz";
-      sha512 = "4zd4txmN7dYEx32kH/K+gecnZhnGDdCrRFK6/n5TGUtqtyjevw0uPul0knJ9PzwDXeNf9MsWzGhjxGeI1M43FA==";
+      url = "https://registry.npmjs.org/npm/-/npm-7.24.1.tgz";
+      sha512 = "U7/C++ZgB3zNH/kzhSJMnp3pO2iLrZRGUUXAgCCLB/by+sR+dKVhP/ik9+sTOGk9wk3zbmwHAYDT8igkv1ss0g==";
     };
     buildInputs = globalBuildInputs;
     meta = {
