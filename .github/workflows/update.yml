@@ -163,7 +163,6 @@ jobs:
         run: |
           nix-env -f ./default.nix -iA pkgs.x86_64-darwin.nix-cache-tools
           snapshot-nix-store
-          nix build --print-build-logs --no-link .#darwinConfigurations.ghActions.system
           nix build --print-build-logs --no-link .#darwinConfigurations.home.system
           nix build --print-build-logs --no-link .#darwinConfigurations.work.system
           nix build --print-build-logs --no-link .#darwinConfigurations.macbook.system

@@ -15,5 +15,5 @@ inputs: final: prev: let
     '';
   };
 in {
-  stack-in-nix = stack-with-args "--no-nix --system-ghc";
+  stack-in-nix = stack-with-args "--no-nix --system-ghc --no-install-ghc";
 }
