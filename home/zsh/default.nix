@@ -38,9 +38,6 @@
       cleanupds = "find . -type f -name '*.DS_Store' -ls -delete";
       cleanupad = "find . -type d -name '.AppleD*' -ls -exec /bin/rm -r {} \\;";
 
-      # bat > cat
-      cat = "bat";
-
       wip = "g add -u && g commit -m \"wip\" && g fetch --all && g pull --rebase && g push";
 
       e = "nvim";
@@ -48,8 +45,7 @@
       grep = "grep --color";
       password = "LC_CTYPE=C tr -dc 'A-HJ-NPR-Za-km-z2-9' < /dev/urandom | head -c 16";
       clc = "clear && printf \"\\033[3J\"";
-      srv = "npx serve";
-      htop = "TERM=screen-256color htop";
+      srv = "pnpx -y serve";
       kssh = "kitty +kitten ssh";
 
       ":r" = "exec $SHELL -l";
