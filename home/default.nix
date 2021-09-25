@@ -53,6 +53,10 @@ in
   programs = {
     home-manager = { enable = true; };
 
+    nix-index = {
+      enable = true;
+    };
+
     direnv = {
       enable = true;
       nix-direnv = {
