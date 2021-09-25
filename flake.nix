@@ -92,23 +92,9 @@
         config = {
           allowUnfree = true;
         };
-        overlays = nixpkgsOverlays ++ (
-          with haskell-nix.overlays; [
-            haskell
-            hackage-quirks
-            bootstrap
-            ghc
-            ghc-packages
-            darwin
-            tools
-            emscripten
-            nix-prefetch-git-minimal
-            ghcjs
-            gobject-introspection
-            hix
-            eval-packages
-          ]
-        );
+        overlays = nixpkgsOverlays ++ [
+          haskell-nix.overlay
+        ];
       };
 
       homeManagerConfig =
