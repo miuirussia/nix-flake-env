@@ -93,12 +93,7 @@
           allowUnfree = true;
         };
         overlays = nixpkgsOverlays ++ [
-          (final: prev: let
-            appliedHaskellNix = haskell-nix.overlay final prev;
-          in {
-            inherit (appliedHaskellNix) haskell-nix;
-          })
-
+          haskell-nix.overlay
         ];
       };
 
