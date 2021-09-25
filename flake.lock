@@ -272,11 +272,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1632446082,
-        "narHash": "sha256-TCJbzBGjsyjPbMbPJPkEwjuqGBWgb5nI7ilayXWzdeI=",
+        "lastModified": 1632532423,
+        "narHash": "sha256-sqbXBvKyQ1wQqIoNy6nPcd3NOCdjRwVwnNC3Z1G4i3E=",
         "owner": "input-output-hk",
         "repo": "haskell.nix",
-        "rev": "70f49c25f76f8ee5c89f856126d5a4d931cda5bf",
+        "rev": "cafe6e10e9312421b42c8023913ccb877b15f7f1",
         "type": "github"
       },
       "original": {
@@ -863,11 +863,11 @@
     "vim-treesitter": {
       "flake": false,
       "locked": {
-        "lastModified": 1632180199,
-        "narHash": "sha256-isefDW1x3jI0jfP/rwlnH2BbK6EpMMVYgJXSCGKNNrg=",
+        "lastModified": 1632524380,
+        "narHash": "sha256-jFf//nxL4LySLx1Iq4/6wZU8tQhszJNUPZkGf09prdk=",
         "owner": "nvim-treesitter",
         "repo": "nvim-treesitter",
-        "rev": "6b3f9087514af0b12a1abc92d5c9f0229e96cc39",
+        "rev": "351eefd988ae5d8873147cf082014a99be0007f0",
         "type": "github"
       },
       "original": {
