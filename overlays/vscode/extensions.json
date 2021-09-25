@@ -30,12 +30,6 @@
     "version": "1.9.2"
   },
   {
-    "name": "vscode-neovim",
-    "publisher": "asvetliakov",
-    "sha256": "17f0jzg9vdbqdjnnc5i1q28ij2kckvvxi7fw9szmyy754f074jb1",
-    "version": "0.0.82"
-  },
-  {
     "name": "Nix",
     "publisher": "bbenoist",
     "sha256": "0zd0n9f5z1f0ckzfjr38xw2zzmcxg1gjrava7yahg5cvdcw6l35b",

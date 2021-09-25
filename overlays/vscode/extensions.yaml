@@ -8,8 +8,6 @@
   publisher: orta
 - name: flow-for-vscode
   publisher: flowtype
-- name: vscode-neovim
-  publisher: asvetliakov
 - name: Nix
   publisher: bbenoist
 - name: toml

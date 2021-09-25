@@ -88,6 +88,7 @@
   };
 
   haskell.serverExecutablePath = "${pkgs.hls}/bin/haskell-language-server-wrapper";
+  haskell.updateBehavior = "never-check";
 
   git.path = "${pkgs.git}/bin/git";
 
@@ -103,11 +104,6 @@
   rust-client.rustupPath = "${pkgs.rustup}/bin/rustup";
 
   purescript.pursExe = "${pkgs.nodePackages.purescript}/bin/purs";
-
-  vscode-neovim.neovimExecutablePaths = {
-    darwin = "${pkgs.neovim-nightly}/bin/nvim";
-    linux = "${pkgs.neovim-nightly}/bin/nvim";
-  };
 
   hadolint.hadolintPath = "${pkgs.hadolint}/bin/hadolint";
 }

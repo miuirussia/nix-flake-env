@@ -7,7 +7,6 @@ inputs: final: prev: {
     ) ++ prev.vscode-utils.extensionsFromVscodeMarketplace (fromJSON (readFile ./extensions.json));
   in
     prev.vscode-with-extensions.override {
-      vscode = prev.callPackage ./package {};
       vscodeExtensions = extensions;
     };
 }
