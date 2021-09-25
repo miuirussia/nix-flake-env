@@ -70,7 +70,7 @@
 
   outputs = inputs @ { self, nixpkgs, darwin, home-manager, flake-utils, haskell-nix, ... }:
     let
-      supportedSystem = [ "x86_64-linux" "x86_64-darwin" ];
+      supportedSystem = [ "aarch64-darwin" "x86_64-linux" "x86_64-darwin" ];
 
       forAllSystems = f: nixpkgs.lib.genAttrs supportedSystem (system: f system);
 
