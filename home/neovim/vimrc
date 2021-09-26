@@ -1,8 +1,3 @@
-" basics
-syntax on
-filetype on
-" filetype plugin indent on
-
 set autoread
 set cursorline
 set cursorcolumn
@@ -21,10 +16,10 @@ set backupcopy=yes
 set nowrap
 set mouse=a
 set completeopt=menuone,noinsert,noselect,preview
-set spelllang=ru_yo,en_us
 set foldlevelstart=20
 set foldmethod=syntax
 set fo-=t
+set timeoutlen=500
 
 set noautoindent
 set nocindent
@@ -116,12 +111,6 @@ set backup
 
 set textwidth=120
 
-" Scrolling
-" set ttyfast
-" set lazyredraw
-" set regexpengine=1
-" set synmaxcol=4096
-
 " not compatible with vi
 set nocompatible
 
@@ -134,45 +123,28 @@ if os == 'Darwin' || os == 'Mac'
 endif
 
 " remap leader
-let mapleader = ','
+" map leader key to space
+let g:mapleader = ","
+let g:maplocalleader = ","
+
 " quicker access to commands
 nnoremap ; :
 nnoremap Q <nop>
 
 " replace
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
-" easymotion
-" map <Leader>ss <Plug>(easymotion-prefix)s
+
 " clean search
 nnoremap <silent> <leader><space> :noh<cr>
+
 " wipout buffer
 nmap <silent> <leader>b :bw<cr>
-
-" Format file
-map <F7> mzgg=G`z
-" Edit .vimrc
-map <leader>v :vsp $MYVIMRC<CR>
-map <leader>V :source $MYVIMRC<CR>
-autocmd! bufwritepost $MYVIMRC execute "normal! :source $MYVIMRC"
-
-nnoremap <silent> n nzzzv:call <SID>BlinkCurrentMatch()<CR>
-nnoremap <silent> N Nzzzv:call <SID>BlinkCurrentMatch()<CR>
-
-function! s:BlinkCurrentMatch()
-  let target = '\c\%#'.@/
-  let match = matchadd('IncSearch', target)
-  redraw
-  sleep 100m
-  call matchdelete(match)
-  redraw
-endfunction
 
 " highlight problematic whitespace
 highlight WhitespaceErrors ctermbg=Red guibg=#ff6a6a
 autocmd BufEnter * match WhitespaceErrors /\s\+$\|[^\t]\@<=\t\+/
 
 nnoremap <expr><silent> <C-p> (len(system('git rev-parse')) ? ':Files' : ':GFiles')."\<cr>"
-nnoremap <silent> <C-t> :call FloatTerm()<cr>
 
 " Make Y yank everything from the cursor to the end of the line. This makes Y
 " act more like C or D because by default, Y yanks the current line (i.e. the
@@ -248,32 +220,17 @@ augroup on_change_colorschema
   autocmd ColorScheme * call s:base16_customize()
 augroup END
 
-" colorscheme one
-" colorscheme palenight
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
-else
-  colorscheme base16-onedark
-endif
+colorscheme base16-onedark
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite,**/node_modules/*,**/flow-typed/*
 
 " jsx
 let g:jsx_ext_required       = 0
 
-" enable flow support
-let g:javascript_plugin_flow = 1
-
 " Tab for formatting
 vnoremap <Tab> :'<,'>Tab /
 
 let g:markdown_fenced_languages = ['typescript=javascript', 'flow=javascript.jsx']
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
 
 let g:vimspector_enable_mappings = 'HUMAN'
 let g:better_whitespace_enabled  = 1
@@ -330,17 +287,7 @@ function! FloatingWindow()
   return nvim_open_win(buf, v:true, opts)
 endfunction
 
-" Floating Term
-let s:float_term_win = 0
-function! FloatTerm()
-  let s:float_term_win = FloatingWindow()
-  terminal googler -n 7
-  startinsert
-  autocmd TermClose * ++once :q
-endfunction
-
 let g:rooter_patterns = ['bower.json', 'psc-package.json', 'spago.dhall', '.flowconfig', 'package.json', '.git/']
-let g:startify_change_to_dir = 0
 
 function! ToggleVerbose()
   if !&verbose
@@ -366,9 +313,14 @@ augroup BWCCreateDir
 		autocmd BufWritePre * if !isdirectory(expand("%:h")) | execute "silent! !mkdir -p " . shellescape(expand('%:h'), 1) | endif
 augroup END
 
-nnoremap [lsp] <Nop>
-nmap <Leader>l [lsp]
-inoremap [lsp] <Nop>
-imap <Leader>l [lsp]
-
 au TextYankPost * lua vim.highlight.on_yank {higroup="IncSearch", timeout=150, on_visual=true}
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+let g:matchup_matchparen_offscreen = {'method': 'popup'}

@@ -26,39 +26,13 @@
       ]
     );
 
-    extraConfig = builtins.readFile ./vimrc;
+    extraConfig = builtins.readFile ./vimrc + ''
+      luafile ${./vimrc.lua}
+    '';
 
     plugins = with pkgs.vimPlugins; [
-      {
-        plugin = coc-nvim;
-        config = ''
-          nmap <silent> [ <Plug>(coc-diagnostic-prev)
-          nmap <silent> ] <Plug>(coc-diagnostic-next)
-          function! s:show_documentation()
-            if (index(['vim','help'], &filetype) >= 0)
-              execute 'h '.expand('<cword>')
-            else
-              call CocAction('doHover')
-            endif
-          endfunction
-          nmap <silent> [lsp]a  :<C-u>CocAction<cr>
-          nmap <silent> [lsp]c  :<C-u>CocCommand<cr>
-          nmap <silent> [lsp]D  :<C-u>CocDiagnostics<cr>
-          nmap <silent> [lsp]E  :<C-u>CocList extensions<cr>
-          nmap <silent> [lsp]l  :<C-u>CocList location<cr>
-          nmap <silent> [lsp]s  :<C-u>CocList services<cr>
-          autocmd FileType purescript nmap <silent> [lsp]b  :<C-u>CocCommand purescript.build<cr>
-          nmap <silent> [lsp]d   <Plug>(coc-definition)
-          nmap <silent> [lsp]y   <Plug>(coc-type-definition)
-          nmap <silent> [lsp]i   <Plug>(coc-implementation)
-          nmap <silent> [lsp]r   <Plug>(coc-rename)
-          nmap <silent> [lsp]R   <Plug>(coc-references)
-          nmap <silent> [lsp]ca  <Plug>(coc-codeaction)
-          nmap <silent> [lsp]f   <Plug>(coc-format)
-          nmap <silent> [lsp]h  :<C-u>call <SID>show_documentation()<cr>
-          let g:airline#extensions#coc#enabled = 1
-        '';
-      }
+      coc-nvim
+
       coc-tsserver
       coc-json
       coc-yaml
@@ -70,68 +44,7 @@
       fzf-vim
       fzfWrapper
 
-      {
-        plugin = vim-lualine;
-        config = ''
-            lua << EOF
-              require'lualine'.setup {
-                options = {
-                  icons_enabled = true,
-                  theme = 'onedark',
-                  component_separators = { left = '', right = ''},
-                  section_separators = { left = '', right = ''},
-                  disabled_filetypes = {}
-                },
-                sections = {
-                  lualine_a = {
-                    {
-                      'mode',
-                      separator = { left = '' },
-                      padding = { left = 1, right = 2 },
-                      fmt = function(str) return str:sub(1,1) end,
-                    }
-                  },
-                  lualine_b = {'branch'},
-                  lualine_c = {
-                      {
-                        'filename',
-                        path = 1,
-                        shorting_target = 40,
-                      },
-                      {
-                        'diagnostics',
-                        sources = {'coc', 'nvim'},
-                      },
-                      'coc#status'
-                  },
-                  lualine_x = {'encoding', 'fileformat', 'filetype'},
-                  lualine_y = {'progress'},
-                  lualine_z = {
-                      {
-                        'location',
-                        separator = { right = '' },
-                        padding = { left = 2, right = 1 },
-                      }
-                  }
-                },
-                inactive_sections = {
-                  lualine_a = {},
-                  lualine_b = {},
-                  lualine_c = {'filename'},
-                  lualine_x = {'location'},
-                  lualine_y = {},
-                  lualine_z = {}
-                },
-                tabline = {},
-                extensions = {'fugitive'}
-              }
-            EOF
-        '';
-      }
-
       vim-better-whitespace
-      vim-cursorword
-      vim-devicons
       vim-dhall
       vim-fugitive
       vim-json5
@@ -143,30 +56,19 @@
       vim-tabular
       vim-vista
 
-      # tree-sitter
-      {
-        plugin = vim-treesitter;
-        config = ''
-          lua << EOF
-            require'nvim-treesitter.configs'.setup {
-              ensure_installed = { },
-              highlight = {
-                enable = true,
-                additional_vim_regex_highlighting = false,
-              },
-              indent = {
-                enable = true,
-              },
-              matchup = {
-                enable = true,
-              },
-            }
+      # lua plugins
+      vim-bufferline
+      vim-lualine
+      vim-matchup
+      vim-nui
+      vim-package-info
+      vim-which-key
 
-            local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
-            parser_config.typescript.used_by = {"javascript", "javascriptreact"}
-          EOF
-        '';
-      }
+      # icons
+      vim-web-devicons
+
+      # tree-sitter
+      vim-treesitter
       tree-sitter-grammars
 
       #themes

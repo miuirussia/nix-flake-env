@@ -566,6 +566,7 @@
         "nixpkgs": "nixpkgs",
         "stackage": "stackage",
         "tree-sitter": "tree-sitter",
+        "vim-bufferline": "vim-bufferline",
         "vim-dhall": "vim-dhall",
         "vim-haskell": "vim-haskell",
         "vim-js": "vim-js",
@@ -574,6 +575,8 @@
         "vim-lualine": "vim-lualine",
         "vim-matchup": "vim-matchup",
         "vim-nginx": "vim-nginx",
+        "vim-nui": "vim-nui",
+        "vim-package-info": "vim-package-info",
         "vim-purescript": "vim-purescript",
         "vim-rooter": "vim-rooter",
         "vim-rust": "vim-rust",
@@ -584,6 +587,8 @@
         "vim-treesitter": "vim-treesitter",
         "vim-typescript": "vim-typescript",
         "vim-vista": "vim-vista",
+        "vim-web-devicons": "vim-web-devicons",
+        "vim-which-key": "vim-which-key",
         "zsh-history-substring-search": "zsh-history-substring-search",
         "zsh-syntax-highlighting": "zsh-syntax-highlighting"
       }
@@ -617,6 +622,22 @@
       "original": {
         "owner": "tree-sitter",
         "repo": "tree-sitter",
+        "type": "github"
+      }
+    },
+    "vim-bufferline": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1632223193,
+        "narHash": "sha256-LlIK2dE6PlNTKONHCzpH/CL4ExBtql+n7v2FG6F3Jos=",
+        "owner": "akinsho",
+        "repo": "bufferline.nvim",
+        "rev": "94211eac27c931f4458ce713fbe430b7cc82dea8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "akinsho",
+        "repo": "bufferline.nvim",
         "type": "github"
       }
     },
@@ -745,6 +766,38 @@
       "original": {
         "owner": "chr4",
         "repo": "nginx.vim",
+        "type": "github"
+      }
+    },
+    "vim-nui": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1632242513,
+        "narHash": "sha256-4O3e/G7/gTRdOkEPtdvU9+Zg3jVKr8Z7wqnIt/bLXnk=",
+        "owner": "MunifTanjim",
+        "repo": "nui.nvim",
+        "rev": "426289045eb59a8083bda34750bc3ffcc1094bad",
+        "type": "github"
+      },
+      "original": {
+        "owner": "MunifTanjim",
+        "repo": "nui.nvim",
+        "type": "github"
+      }
+    },
+    "vim-package-info": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1632264220,
+        "narHash": "sha256-6y/2XfFMl4qDbPBFb+vqwKoxJkNNrAEkL/wdXguEbVA=",
+        "owner": "vuki656",
+        "repo": "package-info.nvim",
+        "rev": "e4c4b81ea41f6bd0dd4df437488f33c6a1aebe50",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vuki656",
+        "repo": "package-info.nvim",
         "type": "github"
       }
     },
@@ -905,6 +958,38 @@
       "original": {
         "owner": "liuchengxu",
         "repo": "vista.vim",
+        "type": "github"
+      }
+    },
+    "vim-web-devicons": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1632662055,
+        "narHash": "sha256-nz5JFaDe2H9qQeEw4CZGokeuA9FGDxICfUWGvjfb5xk=",
+        "owner": "kyazdani42",
+        "repo": "nvim-web-devicons",
+        "rev": "ba8a9362c96bc1fe62038640aa8ce902516707e4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "kyazdani42",
+        "repo": "nvim-web-devicons",
+        "type": "github"
+      }
+    },
+    "vim-which-key": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1628160854,
+        "narHash": "sha256-eoaBx7PzctB0rwmBW/ba9O9rcbyRCNvBafWXHUToZAI=",
+        "owner": "folke",
+        "repo": "which-key.nvim",
+        "rev": "b582c9d78f0d105041ed29ec3a8ee11d98ddfd50",
+        "type": "github"
+      },
+      "original": {
+        "owner": "folke",
+        "repo": "which-key.nvim",
         "type": "github"
       }
     },
