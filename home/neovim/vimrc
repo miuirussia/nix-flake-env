@@ -1,41 +1,3 @@
-set autoread
-set cursorline
-set cursorcolumn
-set ruler
-set number relativenumber
-set incsearch
-set showmatch
-set matchtime=2
-set hlsearch
-set ignorecase
-set smartcase
-set showcmd
-set softtabstop=0
-set expandtab
-set backupcopy=yes
-set nowrap
-set mouse=a
-set completeopt=menuone,noinsert,noselect,preview
-set foldlevelstart=20
-set foldmethod=syntax
-set fo-=t
-set timeoutlen=500
-
-set noautoindent
-set nocindent
-set nopreserveindent
-set indentexpr=
-set smartindent
-set tabstop=2
-set shiftwidth=2
-set shiftround
-
-if has('nvim-0.4')
-  set wildoptions=pum
-  set winblend=10
-  set pumblend=10
-endif
-
 " Save undo info
 let s:undo_dir = expand('~/.config/nvim/undo')
 if !isdirectory(s:undo_dir)
@@ -51,6 +13,7 @@ let s:directory_dir = expand('~/.config/nvim/swaps')
 if !isdirectory(s:directory_dir)
   call mkdir(s:directory_dir, 'p')
 endif
+
 let s:logs_dir = expand('~/.config/nvim/logs')
 if !isdirectory(s:logs_dir)
   call mkdir(s:logs_dir, 'p')
@@ -59,57 +22,6 @@ endif
 execute 'set undodir=' . s:undo_dir
 execute 'set backupdir=' . s:backup_dir
 execute 'set directory=' . s:directory_dir
-
-" Don’t create backups when editing files in certain directories
-set backupskip=/tmp/*,/private/tmp/*
-
-" Enhance command-line completion
-set wildmenu
-
-" Add the g flag to search/replace by default
-set gdefault
-
-" Use UTF-8 without BOM
-set encoding=utf-8 nobomb
-set fileencoding=utf-8
-
-" Prevent security exploits with modelines
-set modelines=0
-
-" Open new split panes to right and bottom, which feels more natural
-set splitright
-set splitbelow
-
-set whichwrap+=<,>,[,]
-set autochdir
-set noshowmode
-set hidden
-if has('nvim-0.4')
-  set signcolumn=yes:2
-else
-  set signcolumn=yes
-end
-
-" set noerrorbells
-set visualbell
-set cmdheight=2
-set updatetime=300
-
-set virtualedit=all
-set colorcolumn=120
-set report=0
-set notimeout
-set ttimeout
-set shortmess=aoOIT
-set scrolloff=3
-
-if exists("+undofile")
-  set undolevels=1000
-  set undofile
-end
-set backup
-
-set textwidth=120
 
 " not compatible with vi
 set nocompatible
@@ -131,15 +43,6 @@ let g:maplocalleader = ","
 nnoremap ; :
 nnoremap Q <nop>
 
-" replace
-nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
-
-" clean search
-nnoremap <silent> <leader><space> :noh<cr>
-
-" wipout buffer
-nmap <silent> <leader>b :bw<cr>
-
 " highlight problematic whitespace
 highlight WhitespaceErrors ctermbg=Red guibg=#ff6a6a
 autocmd BufEnter * match WhitespaceErrors /\s\+$\|[^\t]\@<=\t\+/
@@ -151,21 +54,8 @@ nnoremap <expr><silent> <C-p> (len(system('git rev-parse')) ? ':Files' : ':GFile
 " same as yy).
 noremap Y y$
 
-" Do not show stupid q: window
-map q: :q
-
-" sometimes this happens and I hate it
-map :Vs :vs
-map :Sp :sp
-
 " Just go out in insert mode
 imap jk <ESC>l
-
-" Get off my lawn - helpful when learning Vim :)
-" nnoremap <Left> :echoe "Use h"<CR>
-" nnoremap <Right> :echoe "Use l"<CR>
-" nnoremap <Up> :echoe "Use k"<CR>
-" nnoremap <Down> :echoe "Use j"<CR>
 
 " plugin settings
 
@@ -314,13 +204,5 @@ augroup BWCCreateDir
 augroup END
 
 au TextYankPost * lua vim.highlight.on_yank {higroup="IncSearch", timeout=150, on_visual=true}
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
 
 let g:matchup_matchparen_offscreen = {'method': 'popup'}

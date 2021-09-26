@@ -1,3 +1,74 @@
+local o = vim.opt
+
+o.cursorline     = true -- enable cursorline
+o.cursorcolumn   = true
+o.ruler          = true
+o.number         = true
+o.relativenumber = true
+o.mouse          = "a"
+
+o.undofile      = true
+o.backup        = false
+o.expandtab     = true
+o.autowrite     = true
+o.hidden        = true
+o.hlsearch      = true
+o.ignorecase    = true
+o.smartcase     = true
+o.equalalways   = true
+o.autoindent    = true
+o.smartindent   = true
+o.smarttab      = true
+o.splitbelow    = true
+o.splitright    = true
+o.startofline   = false
+o.swapfile      = false
+o.termguicolors = true
+o.modelines     = 0
+o.visualbell    = true
+o.cmdheight     = 2
+o.updatetime    = 300
+
+o.virtualedit   = "all"
+o.wrap = true
+o.whichwrap = o.whichwrap + "<,>,[,],h,l"
+
+o.completeopt   = {
+  "menu",
+  "menuone",
+  "noselect",
+  "noinsert",
+}
+
+o.encoding      = "UTF-8"
+o.shortmess     = "csa"
+o.signcolumn    = "yes"
+
+o.laststatus     = 2 -- always enable statusline
+o.pumheight      = 10 -- limit completion items
+o.re             = 0 -- set regexp engine to auto
+o.scrolloff      = 2 -- make scrolling better
+o.sidescroll     = 2 -- make scrolling better
+o.shiftwidth     = 2 -- set indentation width
+o.sidescrolloff  = 15 -- make scrolling better
+o.tabstop        = 2 -- tabsize
+o.timeoutlen     = 400 -- faster timeout wait time
+o.updatetime     = 1000 -- set faster update time
+o.joinspaces     = false
+
+-- stolen from tjdevries
+o.formatoptions = o.formatoptions
+  - "a" -- Auto formatting is BAD.
+  - "t" -- Don't auto format my code. I got linters for that.
+  + "c" -- In general, I like it when comments respect textwidth
+  + "q" -- Allow formatting comments w/ gq
+  - "o" -- O and o, don't continue comments
+  + "r" -- But do continue when pressing enter.
+  + "n" -- Indent past the formatlistpat, not underneath it.
+  + "j" -- Auto-remove comments if possible.
+  - "2" -- I'm not in gradeschool anymore
+
+
 require("lualine").setup {
   options = {
     icons_enabled = true,
@@ -86,6 +157,12 @@ wk.register({
     d = { "<cmd>lua require('package-info').delete()<cr>", "Delete package" },
     p = { "<cmd>lua require('package-info').change_version()<cr>", "Change package version" },
   },
+}, { mode = "n", prefix = "<leader>", silent = true })
+
+wk.register({
+  ["<space>"] = { "<cmd>noh<cr>", "Clean search" },
+  b = { "<cmd>bw<cr>", "Wipeout buffer" },
+  s = { "<cmd>%s/\\<<C-r><C-w>\\>/" },
 }, { mode = "n", prefix = "<leader>", silent = true })
 
 wk.register({
