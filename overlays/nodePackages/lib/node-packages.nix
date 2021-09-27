@@ -1237,13 +1237,13 @@ let
         sha1 = "2680fbb8068a48d08656b6098092bdafc906f4a5";
       };
     };
-    "core-js-3.18.0" = {
+    "core-js-3.18.1" = {
       name = "core-js";
       packageName = "core-js";
-      version = "3.18.0";
+      version = "3.18.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/core-js/-/core-js-3.18.0.tgz";
-        sha512 = "WJeQqq6jOYgVgg4NrXKL0KLQhi0CT4ZOCvFL+3CQ5o7I6J8HkT5wd53EadMfqTDp1so/MT1J+w2ujhWcCJtN7w==";
+        url = "https://registry.npmjs.org/core-js/-/core-js-3.18.1.tgz";
+        sha512 = "vJlUi/7YdlCZeL6fXvWNaLUPh/id12WXj3MbkMw5uOyF0PfWPBNOCNbs53YqgrvtujLNlt9JQpruyIKkUZ+PKA==";
       };
     };
     "core-util-is-1.0.2" = {
@@ -2938,13 +2938,13 @@ let
         sha512 = "zymm5+u+sCsSWyD9qNaejV3DFvhCKclKdizYaJUuHA83RLjb7nSuGnddCHGv0hk+KY7BMAlsWeK4Ueg6EV6XQg==";
       };
     };
-    "is-glob-4.0.1" = {
+    "is-glob-4.0.2" = {
       name = "is-glob";
       packageName = "is-glob";
-      version = "4.0.1";
+      version = "4.0.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/is-glob/-/is-glob-4.0.1.tgz";
-        sha512 = "5G0tKtBTFImOqDnLB2hG6Bp2qcKEFduo4tZu9MT/H6NQv/ghhy30o55ufafxJ/LdH79LLs2Kfrn85TLKyA7BUg==";
+        url = "https://registry.npmjs.org/is-glob/-/is-glob-4.0.2.tgz";
+        sha512 = "ZZTOjRcDjuAAAv2cTBQP/lL59ZTArx77+7UzHdWW/XB1mrfp7DEaVpKmZ0XIzx+M7AxfhKcqV+nMetUQmFifwg==";
       };
     };
     "is-number-7.0.0" = {
@@ -6787,7 +6787,7 @@ in
       sources."inflight-1.0.6"
       sources."inherits-2.0.4"
       sources."is-extglob-2.1.1"
-      sources."is-glob-4.0.1"
+      sources."is-glob-4.0.2"
       sources."is-number-7.0.0"
       sources."is-path-cwd-2.2.0"
       sources."is-path-inside-3.0.3"
@@ -6933,7 +6933,7 @@ in
       sources."inherits-2.0.4"
       sources."is-extglob-2.1.1"
       sources."is-fullwidth-code-point-3.0.0"
-      sources."is-glob-4.0.1"
+      sources."is-glob-4.0.2"
       sources."isexe-2.0.0"
       sources."js-tokens-4.0.0"
       sources."js-yaml-3.14.1"
@@ -7056,10 +7056,10 @@ in
   pnpm = nodeEnv.buildNodePackage {
     name = "pnpm";
     packageName = "pnpm";
-    version = "6.15.1";
+    version = "6.15.2";
     src = fetchurl {
-      url = "https://registry.npmjs.org/pnpm/-/pnpm-6.15.1.tgz";
-      sha512 = "hYGK8xlLdMj/sFhOLJ+x8IotsOkBp01c2mdWdLeKlUdA6EOl/RNWRp+7dUWs3Si2E1zgdTiHsEgNGYffv0PyLQ==";
+      url = "https://registry.npmjs.org/pnpm/-/pnpm-6.15.2.tgz";
+      sha512 = "zDvVALUM2r4DfU9lTP/zkUbkRlrVy/Ihn9vojfrrqOJfkUXoYlT/hfe2TfAELMmOsG21h7b3qms5DV6gzpVX9w==";
     };
     buildInputs = globalBuildInputs;
     meta = {
@@ -7121,7 +7121,7 @@ in
       sources."color-name-1.1.3"
       sources."common-tags-1.8.0"
       sources."concat-map-0.0.1"
-      sources."core-js-3.18.0"
+      sources."core-js-3.18.1"
       sources."cross-spawn-6.0.5"
       sources."debug-4.3.2"
       sources."decamelize-1.2.0"
@@ -8117,7 +8117,7 @@ in
       sources."inflight-1.0.6"
       sources."inherits-2.0.4"
       sources."is-extglob-2.1.1"
-      sources."is-glob-4.0.1"
+      sources."is-glob-4.0.2"
       sources."is-number-7.0.0"
       sources."is-path-cwd-2.2.0"
       sources."is-path-inside-3.0.3"

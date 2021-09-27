@@ -233,11 +233,11 @@
     "hackage": {
       "flake": false,
       "locked": {
-        "lastModified": 1632549080,
-        "narHash": "sha256-/HDeZ+AsyGcWkjIlx+CsdtNp+q2OcYFtOY2XzZoxu6U=",
+        "lastModified": 1632635580,
+        "narHash": "sha256-jYd1fmECCCOQZhB55woX+J1RnVMTGwSYsYjPTxxhSUY=",
         "owner": "miuirussia",
         "repo": "hackage.nix",
-        "rev": "a1af3a04458ef3d39e1b6f222b0da0c32048b921",
+        "rev": "ea4c78428e72f33783e262a846f43087cd74dad8",
         "type": "github"
       },
       "original": {
@@ -272,11 +272,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1632619033,
-        "narHash": "sha256-KuXVOH0xPLx+iGBS66Liwn+zM4hDoAt3QvEZJB0wBxE=",
+        "lastModified": 1632705270,
+        "narHash": "sha256-qOAVSuX1N5eLEAqiyeelINwl3kmoRn8NAnwjeVbegmw=",
         "owner": "input-output-hk",
         "repo": "haskell.nix",
-        "rev": "91d27be17795918a5a36c4efff77b905c6e6f98b",
+        "rev": "87a4143ea9b78a7f9bbb765fee648e3be3813b20",
         "type": "github"
       },
       "original": {
@@ -306,11 +306,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1632627368,
-        "narHash": "sha256-FGXBJZTMGKn3kixRtwcUaYFJ8lXms8MthKtuB1VLRCY=",
+        "lastModified": 1632714259,
+        "narHash": "sha256-+LDo08vkC/sVOa95sTdhzWKMbx/UVg6nX/5Nbc9kr8k=",
         "owner": "miuirussia",
         "repo": "hls-nix",
-        "rev": "7fcdc96a38aa191768225f691b7d030475ebe3d3",
+        "rev": "f15d6f6d831240b20add2c647a0bdfd66900a6f7",
         "type": "github"
       },
       "original": {
@@ -407,11 +407,11 @@
     "neovim": {
       "flake": false,
       "locked": {
-        "lastModified": 1632620331,
-        "narHash": "sha256-6KqtlHdteNmeaPez9egvYebcytvT7PcGkIQ2giSNOEQ=",
+        "lastModified": 1632702260,
+        "narHash": "sha256-vC7hux+lQKfjkft8yQ0WstFBR4AUT2fcXfEvWwbWJqs=",
         "owner": "neovim",
         "repo": "neovim",
-        "rev": "b3b02eb52943fdc8ba74af3b485e9d11655bc9c9",
+        "rev": "bec7f47cee8b69fbaa3452762745c9d0e8ea4256",
         "type": "github"
       },
       "original": {
@@ -740,11 +740,11 @@
     "vim-matchup": {
       "flake": false,
       "locked": {
-        "lastModified": 1632141363,
-        "narHash": "sha256-IYF313OJFdx9ZJ9otcCo1Bgl9e1wMTFJu4QO13ocHdM=",
+        "lastModified": 1632704076,
+        "narHash": "sha256-hQr0Q8duOptcKYjTzkqQEhUw9chEsytOexCTu/+qcOs=",
         "owner": "andymass",
         "repo": "vim-matchup",
-        "rev": "daaa7dbde55d829dd456f458d90ae2ba98717ed2",
+        "rev": "97896a6d97c923ea0f95c3168dc9385b2ebe2bfa",
         "type": "github"
       },
       "original": {
@@ -900,11 +900,11 @@
     "vim-toml": {
       "flake": false,
       "locked": {
-        "lastModified": 1632240024,
-        "narHash": "sha256-3ghcrsz+3/Og7RGesqWhsYDGzIxmA/rUhYi45qkrk4U=",
+        "lastModified": 1632672446,
+        "narHash": "sha256-JfB1SmlYKNADcDWoEE+kIg7QtyFjkK4vEFx48As6yrI=",
         "owner": "cespare",
         "repo": "vim-toml",
-        "rev": "9a05931018f4046179b76dec5b3932b48f3e3fb9",
+        "rev": "8f40e6db284db7e893fceff64c62358862bceb88",
         "type": "github"
       },
       "original": {
@@ -916,11 +916,11 @@
     "vim-treesitter": {
       "flake": false,
       "locked": {
-        "lastModified": 1632524380,
-        "narHash": "sha256-jFf//nxL4LySLx1Iq4/6wZU8tQhszJNUPZkGf09prdk=",
+        "lastModified": 1632694504,
+        "narHash": "sha256-xEcMnYZ6ZsZZ/xHlzAUbZoroJzdTRdxMure8svD5cp4=",
         "owner": "nvim-treesitter",
         "repo": "nvim-treesitter",
-        "rev": "351eefd988ae5d8873147cf082014a99be0007f0",
+        "rev": "ee213de0cdb29ff458b1a011ebea741fec430ce8",
         "type": "github"
       },
       "original": {
@@ -1012,11 +1012,11 @@
     "zsh-syntax-highlighting": {
       "flake": false,
       "locked": {
-        "lastModified": 1629459010,
-        "narHash": "sha256-m+gKQXNRYTpraWDXVMTU6UPJFivcyhOw3dNofFR4cyU=",
+        "lastModified": 1632454857,
+        "narHash": "sha256-vwtgFWEs51ZfrUbWmRjcHZz+WPMFUrSHfIt4FjrMOoU=",
         "owner": "zsh-users",
         "repo": "zsh-syntax-highlighting",
-        "rev": "6e0e950154a4c6983d9e077ed052298ad9126144",
+        "rev": "1a9264bc661b3d52756916bf9ec3f41687d64db2",
         "type": "github"
       },
       "original": {
