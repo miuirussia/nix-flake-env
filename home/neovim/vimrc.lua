@@ -97,7 +97,8 @@ require("lualine").setup {
           'diagnostics',
           sources = {'coc', 'nvim'},
         },
-        'coc#status'
+        'coc#status',
+        "require'package-info'.get_status()"
     },
     lualine_x = {'encoding', 'fileformat', 'filetype'},
     lualine_y = {'progress'},
@@ -156,13 +157,14 @@ wk.register({
     s = { "<cmd>lua require('package-info').show()<cr>", "Show package info" },
     d = { "<cmd>lua require('package-info').delete()<cr>", "Delete package" },
     p = { "<cmd>lua require('package-info').change_version()<cr>", "Change package version" },
+    i = { "<cmd>lua require('package-info').install()<cr>", "Install package" },
+    r = { "<cmd>lua require('package-info').reinstall()<cr>", "Reinstall package" },
   },
 }, { mode = "n", prefix = "<leader>", silent = true })
 
 wk.register({
   ["<space>"] = { "<cmd>noh<cr>", "Clean search" },
   b = { "<cmd>bw<cr>", "Wipeout buffer" },
-  s = { "<cmd>%s/\\<<C-r><C-w>\\>/" },
 }, { mode = "n", prefix = "<leader>", silent = true })
 
 wk.register({
