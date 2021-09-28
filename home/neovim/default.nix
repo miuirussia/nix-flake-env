@@ -28,7 +28,19 @@
 
     extraConfig = let
       vimInit = pkgs.substituteAll { src = ./init.vim; };
-      luaInit = pkgs.substituteAll { src = ./init.lua; };
+      luaInit = pkgs.substituteAll {
+        src = ./init.lua;
+
+        sumneko_lua_language_server = pkgs.sumneko-lua-language-server-mac;
+        flow = pkgs.flow;
+        haskell_language_server_wrapper = pkgs.hls;
+        rnix_lsp = pkgs.rnix-lsp;
+        typescript_language_server = pkgs.nodePackages.typescript-language-server;
+        eslint_d = pkgs.nodePackages.eslint_d;
+        shellcheck = pkgs.shellcheck;
+        prettier = pkgs.nodePackages.prettier;
+        stylua = pkgs.stylua;
+      };
     in
       ''
         source ${vimInit}
@@ -36,15 +48,6 @@
       '';
 
     plugins = with pkgs.vimPlugins; [
-      coc-nvim
-
-      coc-tsserver
-      coc-json
-      coc-yaml
-      coc-git
-      coc-webview
-      coc-markdown-preview-enhanced
-
       editorconfig-vim
       fzf-vim
       fzfWrapper
@@ -61,12 +64,28 @@
       vim-tabular
       vim-vista
 
+      # lua utils
+      nvim-nui
+      nvim-plenary
+
       # lua plugins
       nvim-bufferline
+      nvim-cmp
+      nvim-cmp-buffer
+      nvim-cmp-lsp
+      nvim-cmp-vsnip
+      nvim-gitsigns
+      nvim-gps
+      nvim-lspconfig
+      nvim-lspkind
+      nvim-lspsaga
+      nvim-lspstatus
       nvim-lualine
       nvim-matchup
-      nvim-nui
+      nvim-notify
+      nvim-null-ls
       nvim-package-info
+      nvim-vsnip
       nvim-which-key
 
       # icons
@@ -78,6 +97,7 @@
 
       #themes
       base16-vim
+      nvim-onedark
     ];
   };
 }
