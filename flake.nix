@@ -70,11 +70,13 @@
     nvim-lspconfig = { url = "github:neovim/nvim-lspconfig"; flake = false; };
     nvim-lspkind = { url = "github:onsails/lspkind-nvim"; flake = false; };
     nvim-lspsaga = { url = "github:miuirussia/lspsaga.nvim"; flake = false; };
+    nvim-lspstatus = { url = "github:nvim-lua/lsp-status.nvim"; flake = false; };
     nvim-lualine = { url = "github:shadmansaleh/lualine.nvim"; flake = false; };
     nvim-matchup = { url = "github:andymass/vim-matchup"; flake = false; };
     nvim-notify = { url = "github:rcarriga/nvim-notify"; flake = false; };
     nvim-nui = { url = "github:MunifTanjim/nui.nvim"; flake = false; };
     nvim-null-ls = { url = "github:jose-elias-alvarez/null-ls.nvim"; flake = false; };
+    nvim-onedark = { url = "github:monsonjeremy/onedark.nvim"; flake = false; };
     nvim-package-info = { url = "github:vuki656/package-info.nvim"; flake = false; };
     nvim-plenary = { url = "github:nvim-lua/plenary.nvim"; flake = false; };
     nvim-treesitter = { url = "github:nvim-treesitter/nvim-treesitter"; flake = false; };

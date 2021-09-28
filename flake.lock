@@ -692,6 +692,22 @@
         "type": "github"
       }
     },
+    "nvim-lspstatus": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1631735121,
+        "narHash": "sha256-otDFYc9Sl1OYmkrWFCzgAG0XkXyvR/ebRe2zAOwQ1IA=",
+        "owner": "nvim-lua",
+        "repo": "lsp-status.nvim",
+        "rev": "e8e5303f9ee3d8dc327c97891eaa1257ba5d4eee",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-lua",
+        "repo": "lsp-status.nvim",
+        "type": "github"
+      }
+    },
     "nvim-lualine": {
       "flake": false,
       "locked": {
@@ -769,6 +785,22 @@
       "original": {
         "owner": "jose-elias-alvarez",
         "repo": "null-ls.nvim",
+        "type": "github"
+      }
+    },
+    "nvim-onedark": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1628698393,
+        "narHash": "sha256-Pv/r4oduRTlS5anpUDIPpbBXcEHFJwkJ1v3VubZDHA4=",
+        "owner": "monsonjeremy",
+        "repo": "onedark.nvim",
+        "rev": "86c704ae07a032adf25cbc8bb73a88f42810df74",
+        "type": "github"
+      },
+      "original": {
+        "owner": "monsonjeremy",
+        "repo": "onedark.nvim",
         "type": "github"
       }
     },
@@ -910,11 +942,13 @@
         "nvim-lspconfig": "nvim-lspconfig",
         "nvim-lspkind": "nvim-lspkind",
         "nvim-lspsaga": "nvim-lspsaga",
+        "nvim-lspstatus": "nvim-lspstatus",
         "nvim-lualine": "nvim-lualine",
         "nvim-matchup": "nvim-matchup",
         "nvim-notify": "nvim-notify",
         "nvim-nui": "nvim-nui",
         "nvim-null-ls": "nvim-null-ls",
+        "nvim-onedark": "nvim-onedark",
         "nvim-package-info": "nvim-package-info",
         "nvim-plenary": "nvim-plenary",
         "nvim-treesitter": "nvim-treesitter",

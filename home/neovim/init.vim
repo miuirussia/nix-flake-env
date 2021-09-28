@@ -70,48 +70,6 @@ augroup vimrcEx
   autocmd FocusLost * :wa
 augroup END
 
-" Theme
-syntax enable
-set termguicolors
-set background=dark
-let base16colorspace=256  " Access colors present in 256 colorspace
-
-function! s:base16_customize() abort
-  call Base16hi("CursorLineNr", g:base16_gui04, g:base16_gui01, g:base16_cterm04, g:base16_cterm01, 'bold')
-  call Base16hi("Comment", g:base16_gui03, '', g:base16_cterm03, '', 'italic')
-  call Base16hi('TabLineSel', g:base16_gui0B, g:base16_gui01, g:base16_cterm0B, g:base16_cterm01, 'bold')
-  call Base16hi('TabLine', g:base16_gui03, g:base16_gui01, g:base16_cterm03, g:base16_cterm01, '')
-
-  call Base16hi('CocErrorSign', g:base16_gui08, g:base16_gui01, g:base16_cterm08, g:base16_cterm01)
-  call Base16hi('CocWarningSign', g:base16_gui0A, g:base16_gui01, g:base16_cterm0A, g:base16_cterm01)
-  call Base16hi('CocInfoSign', g:base16_gui0D, g:base16_gui01, g:base16_cterm0D, g:base16_cterm01)
-  call Base16hi('CocHintSign', g:base16_gui0E, g:base16_gui01, g:base16_cterm0E, g:base16_cterm01)
-
-  call Base16hi('CocErrorHighlight', g:base16_gui08, '', '', '', 'undercurl')
-  call Base16hi('CocWarningHighlight', g:base16_gui0A, '', '', '', 'undercurl')
-  call Base16hi('CocInfoHighlight', g:base16_gui0D, '', '', '', 'undercurl')
-  call Base16hi('CocHintHighlight', g:base16_gui0E, '', '', '', 'undercurl')
-
-  call Base16hi('CocErrorVirtualText', g:base16_gui08, '', '', '')
-  call Base16hi('CocWarningVirtualText', g:base16_gui0A, '', '', '')
-  call Base16hi('CocInfoVirtualText', g:base16_gui0D, '', '', '')
-  call Base16hi('CocHintVirtualText', g:base16_gui0E, '', '', '')
-
-  call Base16hi('CocErrorFloat', g:base16_gui08, '', '', '')
-  call Base16hi('CocWarningFloat', g:base16_gui0A, '', '', '')
-  call Base16hi('CocInfoFloat', g:base16_gui0D, '', '', '')
-  call Base16hi('CocHintFloat', g:base16_gui0E, '', '', '')
-
-  call Base16hi('CocUnderline', '', '', '', '', 'undercurl')
-endfunction
-
-augroup on_change_colorschema
-  autocmd!
-  autocmd ColorScheme * call s:base16_customize()
-augroup END
-
-colorscheme base16-onedark
-
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite,**/node_modules/*,**/flow-typed/*
 
 " jsx
