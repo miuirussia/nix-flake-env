@@ -62,18 +62,18 @@
       vim-vista
 
       # lua plugins
-      vim-bufferline
-      vim-lualine
-      vim-matchup
-      vim-nui
-      vim-package-info
-      vim-which-key
+      nvim-bufferline
+      nvim-lualine
+      nvim-matchup
+      nvim-nui
+      nvim-package-info
+      nvim-which-key
 
       # icons
-      vim-web-devicons
+      nvim-web-devicons
 
       # tree-sitter
-      vim-treesitter
+      nvim-treesitter
       tree-sitter-grammars
 
       #themes
