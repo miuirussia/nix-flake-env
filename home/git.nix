@@ -50,10 +50,15 @@
       merge.tool = "nvim -d";
       mergetool.keepBackup = true;
       pull.rebase = true;
-      push.default = "tracking";
+      push.default = "current";
       rebase.autosquash = true;
       rerere.enabled = true;
       status.submoduleSummary = true;
+
+      url = {
+        "https://gitlab.com/".insteadOf = [ "gl:" "gitlab:" ];
+        "https://github.com/".insteadOf = [ "gh:" "github:" ];
+      };
     };
 
     ignores = [
