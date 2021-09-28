@@ -26,9 +26,14 @@
       ]
     );
 
-    extraConfig = builtins.readFile ./vimrc + ''
-      luafile ${./vimrc.lua}
-    '';
+    extraConfig = let
+      vimInit = pkgs.substituteAll { src = ./init.vim; };
+      luaInit = pkgs.substituteAll { src = ./init.lua; };
+    in
+      ''
+        source ${vimInit}
+        luafile ${luaInit}
+      '';
 
     plugins = with pkgs.vimPlugins; [
       coc-nvim
