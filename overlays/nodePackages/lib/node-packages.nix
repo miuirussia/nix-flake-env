@@ -1867,13 +1867,13 @@ let
         sha512 = "zymm5+u+sCsSWyD9qNaejV3DFvhCKclKdizYaJUuHA83RLjb7nSuGnddCHGv0hk+KY7BMAlsWeK4Ueg6EV6XQg==";
       };
     };
-    "is-glob-4.0.2" = {
+    "is-glob-4.0.3" = {
       name = "is-glob";
       packageName = "is-glob";
-      version = "4.0.2";
+      version = "4.0.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/is-glob/-/is-glob-4.0.2.tgz";
-        sha512 = "ZZTOjRcDjuAAAv2cTBQP/lL59ZTArx77+7UzHdWW/XB1mrfp7DEaVpKmZ0XIzx+M7AxfhKcqV+nMetUQmFifwg==";
+        url = "https://registry.npmjs.org/is-glob/-/is-glob-4.0.3.tgz";
+        sha512 = "xelSayHH36ZgE7ZWhli7pW34hNbNl8Ojv5KVmkJD4hBdD3th8Tfk9vYasLM+mXWOZhFkgZfxhLSnrwRr4elSSg==";
       };
     };
     "is-number-7.0.0" = {
@@ -4013,7 +4013,7 @@ in
       sources."inflight-1.0.6"
       sources."inherits-2.0.4"
       sources."is-extglob-2.1.1"
-      sources."is-glob-4.0.2"
+      sources."is-glob-4.0.3"
       sources."is-number-7.0.0"
       sources."is-path-cwd-2.2.0"
       sources."is-path-inside-3.0.3"
@@ -4159,7 +4159,7 @@ in
       sources."inherits-2.0.4"
       sources."is-extglob-2.1.1"
       sources."is-fullwidth-code-point-3.0.0"
-      sources."is-glob-4.0.2"
+      sources."is-glob-4.0.3"
       sources."isexe-2.0.0"
       sources."js-tokens-4.0.0"
       sources."js-yaml-3.14.1"
@@ -5104,7 +5104,7 @@ in
       sources."inflight-1.0.6"
       sources."inherits-2.0.4"
       sources."is-extglob-2.1.1"
-      sources."is-glob-4.0.2"
+      sources."is-glob-4.0.3"
       sources."is-number-7.0.0"
       sources."is-path-cwd-2.2.0"
       sources."is-path-inside-3.0.3"
