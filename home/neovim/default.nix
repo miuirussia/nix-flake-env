@@ -40,6 +40,7 @@
         shellcheck = pkgs.shellcheck;
         prettier = pkgs.nodePackages.prettier;
         stylua = pkgs.stylua;
+        diagnosticls = pkgs.nodePackages.diagnostic-languageserver;
       };
     in
       ''
@@ -76,6 +77,7 @@
       nvim-cmp-vsnip
       nvim-gitsigns
       nvim-gps
+      nvim-lsp-colors
       nvim-lspconfig
       nvim-lspkind
       nvim-lspsaga

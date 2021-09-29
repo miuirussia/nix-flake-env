@@ -90,6 +90,7 @@ in
       "nvim-cmp-vsnip"
       "nvim-gitsigns"
       "nvim-gps"
+      "nvim-lsp-colors"
       "nvim-lspconfig"
       "nvim-lspkind"
       "nvim-lspsaga"

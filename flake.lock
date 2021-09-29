@@ -644,6 +644,22 @@
         "type": "github"
       }
     },
+    "nvim-lsp-colors": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1619764948,
+        "narHash": "sha256-Uao1qxTKc5gHKs0CYbYkOne0yZ8B/dpjLGrmpcqaQeE=",
+        "owner": "folke",
+        "repo": "lsp-colors.nvim",
+        "rev": "00b40add53f2f6bd249932d0c0cd25a42ce7a2fc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "folke",
+        "repo": "lsp-colors.nvim",
+        "type": "github"
+      }
+    },
     "nvim-lspconfig": {
       "flake": false,
       "locked": {
@@ -939,6 +955,7 @@
         "nvim-cmp-vsnip": "nvim-cmp-vsnip",
         "nvim-gitsigns": "nvim-gitsigns",
         "nvim-gps": "nvim-gps",
+        "nvim-lsp-colors": "nvim-lsp-colors",
         "nvim-lspconfig": "nvim-lspconfig",
         "nvim-lspkind": "nvim-lspkind",
         "nvim-lspsaga": "nvim-lspsaga",

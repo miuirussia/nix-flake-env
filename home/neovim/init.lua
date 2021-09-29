@@ -343,6 +343,67 @@ local runtime_path = vim.split(package.path, ";")
 table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
 
+if vim.lsp.setup then
+  vim.lsp.setup({
+    floating_preview = { border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" } },
+    diagnostics = {
+      signs = { error = " ", warning = " ", hint = " ", information = " " },
+      display = {
+        underline = true,
+        update_in_insert = false,
+        virtual_text = { spacing = 4, prefix = "●" },
+        severity_sort = true,
+      },
+    },
+    completion = {
+      kind = {
+        Class = " ",
+        Color = " ",
+        Constant = " ",
+        Constructor = " ",
+        Enum = "了 ",
+        EnumMember = " ",
+        Field = " ",
+        File = " ",
+        Folder = " ",
+        Function = " ",
+        Interface = "ﰮ ",
+        Keyword = " ",
+        Method = "ƒ ",
+        Module = " ",
+        Property = " ",
+        Snippet = "﬌ ",
+        Struct = " ",
+        Text = " ",
+        Unit = " ",
+        Value = " ",
+        Variable = " ",
+      },
+    },
+  })
+else
+  vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+    underline = true,
+    update_in_insert = false,
+    virtual_text = { spacing = 4, prefix = "●" },
+    severity_sort = true,
+  })
+
+  local signs = { Error = " ", Warning = " ", Hint = " ", Information = " " }
+
+  for type, icon in pairs(signs) do
+    local hl = "LspDiagnosticsSign" .. type
+    vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+  end
+end
+
+require("lsp-colors").setup({
+  Error = "#db4b4b",
+  Warning = "#e0af68",
+  Information = "#0db9d7",
+  Hint = "#10B981"
+})
+
 lspconfig.sumneko_lua.setup({
 	capabilities = capabilities,
 	cmd = { "@sumneko_lua_language_server@/bin/lua-language-server" },
@@ -403,12 +464,72 @@ lspconfig.rnix.setup({
 	on_attach = on_attach,
 })
 
+local eslint_linter = {
+	command = "@eslint_d@/bin/eslint_d",
+	rootPatterns = { "package.json" },
+	debounce = 50,
+	args = { "--stdin", "--stdin-filename", "%filepath", "--format", "json", "--no-color" },
+	sourceName = "eslint",
+	parseJson = {
+		errorsRoot = "[0].messages",
+		line = "line",
+		column = "column",
+		endLine = "endLine",
+		endColumn = "endColumn",
+		message = "[eslint] ${message} [${ruleId}]",
+		security = "severity",
+	},
+	securities = {
+		[2] = "error",
+		[1] = "warning",
+	},
+}
+
+local eslint_formatter = {
+	command = "@eslint_d@/bin/eslint_d",
+	debounce = 50,
+	args = { "--fix-to-stdout", "--stdin", "--stdin-filename", "%filepath" },
+	isStdout = true,
+	rootPatterns = { ".eslintrc.js", ".eslintrc.json" },
+}
+
+lspconfig.diagnosticls.setup({
+	capabilities = capabilities,
+	cmd = { "@diagnosticls@/bin/diagnostic-languageserver", "--stdio" },
+	filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+	root_dir = lspconfig.util.root_pattern("package.json", "jsconfig.json"),
+	init_options = {
+		filetypes = {
+			javascript = "eslint",
+			javascriptreact = "eslint",
+			typescript = "eslint",
+			typescriptreact = "eslint",
+		},
+		formatFiletypes = {
+			javascript = "eslint",
+			javascriptreact = "eslint",
+		},
+		linters = {
+			eslint = eslint_linter,
+		},
+		formatters = {
+			eslint = eslint_formatter,
+		},
+	},
+	on_init = function(client)
+		client.resolved_capabilities.document_formatting = true
+		client.resolved_capabilities.code_action = true
+		client.resolved_capabilities.execute_command = true
+
+		os.execute("@eslint_d@/bin/eslint_d restart")
+	end,
+	on_attach = on_attach,
+})
+
 null_ls.config({
 	diagnostics_format = "[#{c}] #{m} (#{s})",
 	sources = {
 		nb.diagnostics.shellcheck.with({ command = "@shellcheck@/bin/shellcheck" }),
-		nb.diagnostics.eslint_d.with({ command = "@eslint_d@/bin/eslint_d" }),
-		nb.formatting.eslint_d.with({ command = "@eslint_d@/bin/eslint_d" }),
 		nb.formatting.stylua.with({ command = "@stylua@/bin/stylua" }),
 		nb.formatting.prettier.with({
 			command = "@prettier@/bin/prettier",
