@@ -339,10 +339,6 @@ parser_config.typescript.used_by = { "javascript", "javascriptreact" }
 
 vim.notify = notify
 
-local runtime_path = vim.split(package.path, ";")
-table.insert(runtime_path, "lua/?.lua")
-table.insert(runtime_path, "lua/?/init.lua")
-
 if vim.lsp.setup then
   vim.lsp.setup({
     floating_preview = { border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" } },
@@ -404,14 +400,13 @@ require("lsp-colors").setup({
   Hint = "#10B981"
 })
 
+local runtime_path = vim.split(package.path, ";")
+table.insert(runtime_path, "lua/?.lua")
+table.insert(runtime_path, "lua/?/init.lua")
+
 lspconfig.sumneko_lua.setup({
 	capabilities = capabilities,
 	cmd = { "@sumneko_lua_language_server@/bin/lua-language-server" },
-	root_dir = function(file)
-		return lspconfig.util.root_pattern("lua-globals")(file)
-			or lspconfig.util.find_git_ancestor(file)
-			or lspconfig.util.path.dirname(file)
-	end,
 	on_attach = on_attach,
 	settings = {
 		Lua = {
