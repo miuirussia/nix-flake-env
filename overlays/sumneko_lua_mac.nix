@@ -1,5 +1,5 @@
 inputs: self: super: {
-  sumneko-lua-language-server-mac = super.sumneko-lua-language-server.overrideAttrs (
+  sumneko-lua-language-server = super.sumneko-lua-language-server.overrideAttrs (
     o: rec {
       version = "2.3.6";
 

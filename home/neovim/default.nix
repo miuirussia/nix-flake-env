@@ -31,7 +31,7 @@
       luaInit = pkgs.substituteAll {
         src = ./init.lua;
 
-        sumneko_lua_language_server = pkgs.sumneko-lua-language-server-mac;
+        sumneko_lua_language_server = pkgs.sumneko-lua-language-server;
         flow = pkgs.flow;
         haskell_language_server_wrapper = pkgs.hls;
         rnix_lsp = pkgs.rnix-lsp;
