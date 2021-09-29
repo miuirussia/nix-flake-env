@@ -21,9 +21,9 @@
       set-window-option -g window-status-format " ⬦ #I:#W"
 
       # more colors and themes
+      set -g default-terminal "''${TERM}"
       set -as terminal-overrides ',*:Smulx=\E[4::%p1%dm'  # undercurl support
       set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'  # underscore colours - needs tmux-3.0
-      set -g default-terminal "xterm-kitty"
       set -g message-style bg="colour0",fg="colour3"
       set -g pane-active-border-style fg="colour237"
       set -g pane-border-style fg="colour235"
