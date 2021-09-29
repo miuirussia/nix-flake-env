@@ -340,64 +340,64 @@ parser_config.typescript.used_by = { "javascript", "javascriptreact" }
 vim.notify = notify
 
 if vim.lsp.setup then
-  vim.lsp.setup({
-    floating_preview = { border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" } },
-    diagnostics = {
-      signs = { error = " ", warning = " ", hint = " ", information = " " },
-      display = {
-        underline = true,
-        update_in_insert = false,
-        virtual_text = { spacing = 4, prefix = "●" },
-        severity_sort = true,
-      },
-    },
-    completion = {
-      kind = {
-        Class = " ",
-        Color = " ",
-        Constant = " ",
-        Constructor = " ",
-        Enum = "了 ",
-        EnumMember = " ",
-        Field = " ",
-        File = " ",
-        Folder = " ",
-        Function = " ",
-        Interface = "ﰮ ",
-        Keyword = " ",
-        Method = "ƒ ",
-        Module = " ",
-        Property = " ",
-        Snippet = "﬌ ",
-        Struct = " ",
-        Text = " ",
-        Unit = " ",
-        Value = " ",
-        Variable = " ",
-      },
-    },
-  })
+	vim.lsp.setup({
+		floating_preview = { border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" } },
+		diagnostics = {
+			signs = { error = " ", warning = " ", hint = " ", information = " " },
+			display = {
+				underline = true,
+				update_in_insert = false,
+				virtual_text = { spacing = 4, prefix = "●" },
+				severity_sort = true,
+			},
+		},
+		completion = {
+			kind = {
+				Class = " ",
+				Color = " ",
+				Constant = " ",
+				Constructor = " ",
+				Enum = "了 ",
+				EnumMember = " ",
+				Field = " ",
+				File = " ",
+				Folder = " ",
+				Function = " ",
+				Interface = "ﰮ ",
+				Keyword = " ",
+				Method = "ƒ ",
+				Module = " ",
+				Property = " ",
+				Snippet = "﬌ ",
+				Struct = " ",
+				Text = " ",
+				Unit = " ",
+				Value = " ",
+				Variable = " ",
+			},
+		},
+	})
 else
-  vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-    underline = true,
-    update_in_insert = false,
-    virtual_text = { spacing = 4, prefix = "●" },
-    severity_sort = true,
-  })
+	vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+		underline = true,
+		update_in_insert = false,
+		virtual_text = { spacing = 4, prefix = "●" },
+		severity_sort = true,
+	})
 
-  local signs = { Error = " ", Warning = " ", Hint = " ", Information = " " }
+	local signs = { Error = " ", Warning = " ", Hint = " ", Information = " " }
 
-  for type, icon in pairs(signs) do
-    local hl = "LspDiagnosticsSign" .. type
-    vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
-  end
+	for type, icon in pairs(signs) do
+		local hl = "LspDiagnosticsSign" .. type
+		vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+	end
 end
 
 require("lsp-colors").setup({
-  Error = "#db4b4b",
-  Warning = "#e0af68",
-  Information = "#0db9d7",
-  Hint = "#10B981"
+	Error = "#db4b4b",
+	Warning = "#e0af68",
+	Information = "#0db9d7",
+	Hint = "#10B981",
 })
 
 local runtime_path = vim.split(package.path, ";")
@@ -423,6 +423,8 @@ lspconfig.sumneko_lua.setup({
 			workspace = {
 				-- Make the server aware of Neovim runtime files
 				library = vim.api.nvim_get_runtime_file("", true),
+				maxPreload = 2000,
+				preloadFileSize = 1000,
 			},
 			-- Do not send telemetry data containing a randomized but unique identifier
 			telemetry = {
@@ -538,9 +540,12 @@ lspconfig["null-ls"].setup({
 	on_attach = on_attach,
 })
 
-vim.api.nvim_exec([[
-  hi DiagnosticUnderlineWarn gui=undercurl guisp=#e0af68
-  hi DiagnosticUnderlineError gui=undercurl guisp=#db4b4b
-  hi DiagnosticUnderlineHint gui=undercurl guisp=#1abc9c
-  hi DiagnosticUnderlineInfo gui=undercurl guisp=#0db9d7
-]], false)
+vim.api.nvim_exec(
+	[[
+    hi DiagnosticUnderlineWarn gui=undercurl guisp=#e0af68
+    hi DiagnosticUnderlineError gui=undercurl guisp=#db4b4b
+    hi DiagnosticUnderlineHint gui=undercurl guisp=#1abc9c
+    hi DiagnosticUnderlineInfo gui=undercurl guisp=#0db9d7
+  ]],
+	false
+)
