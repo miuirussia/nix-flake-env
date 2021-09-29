@@ -596,6 +596,22 @@
         "type": "github"
       }
     },
+    "nvim-cmp-path": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1631378163,
+        "narHash": "sha256-axU7g7Dg+/uCVFxuz42FaUtUyU/Xzlm/XOsEvlUfZA4=",
+        "owner": "hrsh7th",
+        "repo": "cmp-path",
+        "rev": "0016221b6143fd6bf308667c249e9dbdee835ae2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hrsh7th",
+        "repo": "cmp-path",
+        "type": "github"
+      }
+    },
     "nvim-cmp-vsnip": {
       "flake": false,
       "locked": {
@@ -952,6 +968,7 @@
         "nvim-cmp": "nvim-cmp",
         "nvim-cmp-buffer": "nvim-cmp-buffer",
         "nvim-cmp-lsp": "nvim-cmp-lsp",
+        "nvim-cmp-path": "nvim-cmp-path",
         "nvim-cmp-vsnip": "nvim-cmp-vsnip",
         "nvim-gitsigns": "nvim-gitsigns",
         "nvim-gps": "nvim-gps",

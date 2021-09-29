@@ -87,6 +87,7 @@ in
       "nvim-cmp"
       "nvim-cmp-buffer"
       "nvim-cmp-lsp"
+      "nvim-cmp-path"
       "nvim-cmp-vsnip"
       "nvim-gitsigns"
       "nvim-gps"

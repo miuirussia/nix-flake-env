@@ -202,6 +202,7 @@ cmp.setup({
 			-- set a name for each source
 			vim_item.menu = ({
 				buffer = "[Buffer]",
+        path = "[Path]",
 				nvim_lsp = "[LSP]",
 				nvim_lua = "[Lua]",
 			})[entry.source.name]
@@ -218,6 +219,7 @@ cmp.setup({
 	sources = {
 		{ name = "nvim_lsp" },
 		{ name = "buffer" },
+    { name = "path" },
 	},
 })
 
