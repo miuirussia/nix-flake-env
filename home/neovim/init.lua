@@ -537,3 +537,10 @@ lspconfig["null-ls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })
+
+vim.api.nvim_exec([[
+  hi DiagnosticUnderlineWarn gui=undercurl guisp=#e0af68
+  hi DiagnosticUnderlineError gui=undercurl guisp=#db4b4b
+  hi DiagnosticUnderlineHint gui=undercurl guisp=#1abc9c
+  hi DiagnosticUnderlineInfo gui=undercurl guisp=#0db9d7
+]], false)
