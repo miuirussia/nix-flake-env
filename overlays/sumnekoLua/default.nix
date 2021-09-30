@@ -1,6 +1,6 @@
 inputs: final: prev: {
   sumneko-lua-language-server = let
-    mainSrc = (builtins.fromJSON (builtins.readFile ./hash.json));
+    mainSrc = (builtins.fromJSON (builtins.readFile ./lua-language-server/hash.json));
     src = prev.fetchgit {
       inherit (mainSrc) url rev sha256 fetchSubmodules;
     };

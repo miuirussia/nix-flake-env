@@ -4,8 +4,39 @@ on:
   schedule:
     - cron: "0 4 * * *"
 jobs:
+  build-latest-lua-lsp:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-18.04, macos-11]
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          repository: sumneko/lua-language-server
+          submodules: recursive
+      - name: Install nix
+        uses: miuirussia/install-nix-action@master
+        with:
+          nix_path: nixpkgs=channel:nixpkgs-unstable
+          install_url: https://github.com/miuirussia/nix-unstable-installer/releases/latest/download/install
+          extra_nix_config: |
+            access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
+            experimental-features = nix-command flakes
+            substituters = https://hydra.iohk.io https://nix-cache.s3.kdevlab.com https://cache.nixos.org/
+            trusted-public-keys = hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ= s3.kdevlab.com:PhuKrzVfCsS0T1R4FnslJy2qUBul9oQ2CTSO/fg/llM= cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=
+      - uses: actboy168/setup-luamake@master
+      - run: rm -rf bin
+      - run: luamake
+      - run: nix-shell -p nix-prefetch-git --run "nix-prefetch-git --url https://github.com/sumneko/lua-language-server.git --rev $(git rev-parse HEAD) --fetch-submodules > bin/hash.json"
+      - uses: actions/upload-artifact@v1.0.0
+        with:
+          name: lua-language-server
+          path: bin
+
   update:
     name: "Update dependencies"
+    needs: [build-latest-lua-lsp]
     runs-on: macos-11
     outputs:
       release_id: ${{ steps.push.outputs.release_id }}
@@ -38,8 +69,14 @@ jobs:
           nix-env -iA nodePackages.node2nix -f https://github.com/miuirussia/nixpkgs/tarball/nixpkgs-unstable
           cd $GITHUB_WORKSPACE/overlays/vscode && ./update-vscode-plugins.py
           cd $GITHUB_WORKSPACE/overlays/nodePackages/lib && node2nix -i node-packages.json
+          rm -rf $GITHUB_WORKSPACE/overlays/sumnekoLua/lua-language-server
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Get lua-language-server
+        uses: actions/download-artifact@v2
+        with:
+          name: lua-language-server
+          path: overlays/sumnekoLua/lua-language-server
       - name: Push changes
         id: push
         env:
