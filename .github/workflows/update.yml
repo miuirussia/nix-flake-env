@@ -9,7 +9,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-18.04, macos-11]
+        os: [ubuntu-latest, macos-latest]
     steps:
       - uses: actions/checkout@v2
         with:
@@ -37,7 +37,7 @@ jobs:
   update:
     name: "Update dependencies"
     needs: [build-latest-lua-lsp]
-    runs-on: macos-11
+    runs-on: macos-latest
     outputs:
       release_id: ${{ steps.push.outputs.release_id }}
     steps:
@@ -96,7 +96,7 @@ jobs:
         ghc: ['865', '884', '8104', '8106', '8107', '901']
     name: "Build ghc${{ matrix.ghc }}"
     needs: update
-    runs-on: macos-11
+    runs-on: macos-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -136,7 +136,7 @@ jobs:
         ghc: ['865', '884', '8106', '8107']
     name: "Build hls${{ matrix.ghc }}"
     needs: [update, build-ghc]
-    runs-on: macos-11
+    runs-on: macos-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -172,7 +172,7 @@ jobs:
   test:
     name: Test
     needs: [update, build-hls]
-    runs-on: macos-11
+    runs-on: macos-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -219,7 +219,7 @@ jobs:
   release:
     name: Release
     needs: [update, test]
-    runs-on: macos-11
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
         with:
