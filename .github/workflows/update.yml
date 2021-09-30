@@ -29,10 +29,11 @@ jobs:
       - run: rm -rf bin
       - run: luamake
       - run: nix-shell -p nix-prefetch-git --run "nix-prefetch-git --url https://github.com/sumneko/lua-language-server.git --rev $(git rev-parse HEAD) --fetch-submodules > bin/hash.json"
-      - uses: actions/upload-artifact@v1.0.0
+      - uses: actions/upload-artifact@v2
         with:
           name: lua-language-server
           path: bin
+          retention-days: 1
 
   update:
     name: "Update dependencies"
