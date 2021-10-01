@@ -55,7 +55,6 @@
 
       vim-better-whitespace
       vim-dhall
-      vim-fugitive
       vim-json5
       vim-lastplace
       vim-nginx
@@ -63,7 +62,6 @@
       vim-rooter
       vim-sandwich
       vim-tabular
-      vim-vista
 
       # lua utils
       nvim-nui
@@ -99,7 +97,6 @@
       tree-sitter-grammars
 
       #themes
-      base16-vim
       nvim-onedark
     ];
   };
