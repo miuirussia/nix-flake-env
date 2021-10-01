@@ -23,7 +23,7 @@
       + " --abbrev-commit --date=relative --show-notes=*";
       s = "status";
       st = "status -sb";
-      feature = "!feature() { git checkout -b feature/$1 2>/dev/null || git checkout feature/$1; 2>/dev/null }; feature";
+      feature = "!feature() { git checkout -b feature/$1 2>/dev/null || git checkout feature/$1 2>/dev/null; }; feature";
     };
 
     extraConfig = {
