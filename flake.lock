@@ -742,11 +742,11 @@
     "nvim-matchup": {
       "flake": false,
       "locked": {
-        "lastModified": 1632959501,
-        "narHash": "sha256-6917PItGjoTJ9JU0t+Rg0UaFo+TY9Ad+3O+CRXMBPCE=",
+        "lastModified": 1633104381,
+        "narHash": "sha256-iHKEsOEHbpszwCdhhClpgT9+bwsBaWK8s3MnEsVbsqA=",
         "owner": "andymass",
         "repo": "vim-matchup",
-        "rev": "74cbb6b941efc91b236f655ed2f7ac4b6ab55c77",
+        "rev": "870df0bb741eed49d093268593bce385bd82a41a",
         "type": "github"
       },
       "original": {
@@ -870,11 +870,11 @@
     "nvim-treesitter": {
       "flake": false,
       "locked": {
-        "lastModified": 1633069498,
-        "narHash": "sha256-Ig1A3jaj360oNdzqkbwVN5bwE6SLO/J4ISXynY3BqVs=",
+        "lastModified": 1633107919,
+        "narHash": "sha256-t+W5qJo7VaC8yh+S4V2IS4FA0MmjEivF6XyQoAem7oM=",
         "owner": "nvim-treesitter",
         "repo": "nvim-treesitter",
-        "rev": "b12ab1d851b9e91983b3600fce1e4ebefb4f7f4b",
+        "rev": "f05f471185f6106a86c4ab5e57015db2faab31e0",
         "type": "github"
       },
       "original": {
