@@ -65,8 +65,6 @@ in
     ];
   } // (
     final.lib.genAttrs [
-      "coc-nvim"
-
       "vim-dhall"
       "vim-haskell"
       "vim-js"
@@ -109,14 +107,5 @@ in
       "nvim-web-devicons"
       "nvim-which-key"
     ] (name: buildVimPlugin name)
-  ) // (
-    final.lib.genAttrs [
-      "coc-tsserver"
-      "coc-json"
-      "coc-yaml"
-      "coc-git"
-      "coc-markdown-preview-enhanced"
-      "coc-webview"
-    ] (name: buildNodeVimPlugin name)
   );
 }

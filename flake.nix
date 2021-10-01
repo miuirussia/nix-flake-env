@@ -42,8 +42,6 @@
     neovim = { url = "github:neovim/neovim"; flake = false; };
     tree-sitter = { url = "github:tree-sitter/tree-sitter"; flake = false; };
 
-    coc-nvim = { url = "github:neoclide/coc.nvim/release"; flake = false; };
-
     vim-dhall = { url = "github:vmchale/dhall-vim"; flake = false; };
     vim-haskell = { url = "github:neovimhaskell/haskell-vim"; flake = false; };
     vim-js = { url = "github:yuezk/vim-js"; flake = false; };

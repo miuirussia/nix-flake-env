@@ -82,23 +82,6 @@
         "type": "github"
       }
     },
-    "coc-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1630862391,
-        "narHash": "sha256-xdFMk+YyTla9W2GBPJk+Yp/uTVxsjiqKQP+Tm+IXEqM=",
-        "owner": "neoclide",
-        "repo": "coc.nvim",
-        "rev": "287c743c9f227fdf0e1db452bbb8ae3c5caffc36",
-        "type": "github"
-      },
-      "original": {
-        "owner": "neoclide",
-        "ref": "release",
-        "repo": "coc.nvim",
-        "type": "github"
-      }
-    },
     "darwin": {
       "inputs": {
         "nixpkgs": [
@@ -952,7 +935,6 @@
     "root": {
       "inputs": {
         "base16-shell": "base16-shell",
-        "coc-nvim": "coc-nvim",
         "darwin": "darwin",
         "fast-syntax-highlighting": "fast-syntax-highlighting",
         "flake-compat": "flake-compat",
