@@ -382,18 +382,31 @@ if vim.lsp.setup then
 else
 	vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
 		severity_sort = true,
-		virtual_text = false,
+		virtual_text = {
+			prefix = "▎",
+			spacing = 2,
+		},
 		signs = true,
 		underline = true,
 		update_in_insert = false,
 	})
 
-	local signs = { Error = " ", Warning = " ", Hint = " ", Information = " " }
+	local signs = {
+		Error = " ",
+		Warn = " ",
+		Warning = " ",
+		Hint = " ",
+		Information = " ",
+		Info = " ",
+	}
 
 	for type, icon in pairs(signs) do
 		local hl = "DiagnosticSign" .. type
 		vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+		local hl2 = "LspDiagnosticsSign" .. type
+		vim.fn.sign_define(hl2, { text = icon, texthl = hl2, numhl = "" })
 	end
+	vim.fn.sign_define("LspSagaLightBulb", { text = "", texthl = "DiagnosticSignInfo", numhl = "" })
 end
 
 require("lsp-colors").setup({
