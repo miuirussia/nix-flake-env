@@ -233,7 +233,7 @@ require("gitsigns").setup({
 })
 
 require("trouble").setup({
-  use_lsp_diagnostic_signs = true,
+	use_lsp_diagnostic_signs = true,
 })
 
 lualine.setup({
@@ -256,7 +256,8 @@ lualine.setup({
 			},
 		},
 		lualine_b = {
-			"b:gitsigns_status",
+			"branch",
+			"diff",
 		},
 		lualine_c = {
 			{
@@ -323,14 +324,14 @@ wk.register({
 
 wk.register({
 	["<C-p>"] = { "<cmd>Telescope find_files<cr>", "Find files" },
-  ["<C-t>"] = { "<cmd>TroubleToggle lsp_document_diagnostics<cr>", "Show diagnostics" },
+	["<C-t>"] = { "<cmd>TroubleToggle lsp_document_diagnostics<cr>", "Show diagnostics" },
 }, {
 	mode = "n",
 	noremap = true,
 	silent = true,
 })
 
-require("telescope").setup();
+require("telescope").setup()
 
 ts_configs.setup({
 	ensure_installed = {},
