@@ -156,6 +156,20 @@ lspkind.init()
 
 notify.setup()
 
+vim.cmd([[autocmd ColorScheme * highlight NormalFloat guibg=#1f2335]])
+vim.cmd([[autocmd ColorScheme * highlight FloatBorder guifg=white guibg=#1f2335]])
+
+local border = {
+	{ "╭", "FloatBorder" },
+	{ "─", "FloatBorder" },
+	{ "╮", "FloatBorder" },
+	{ "│", "FloatBorder" },
+	{ "╯", "FloatBorder" },
+	{ "─", "FloatBorder" },
+	{ "╰", "FloatBorder" },
+	{ "│", "FloatBorder" },
+}
+
 local function on_attach(client, buf)
 	lspstatus.on_attach(client)
 
@@ -164,11 +178,10 @@ local function on_attach(client, buf)
 			name = "Language server",
 			d = { "<cmd>lua require'lspsaga.provider'.lsp_finder()<cr>", "Show definition and references" },
 			sd = { "<cmd>lua require'lspsaga.provider'.preview_definition()<cr>", "Preview definition" },
-			r = { "<cmd>lua require('lspsaga.rename').rename()<cr>", "Rename" },
+			r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
 			a = { "<cmd>lua require('lspsaga.codeaction').code_action()<cr>", "Execute codeaction" },
-			h = { "<cmd>lua require('lspsaga.hover').render_hover_doc()<cr>", "Show hover info" },
-			s = { "<cmd>lua require('lspsaga.signaturehelp').signature_help()<cr>", "Signature help" },
-			ld = { "<cmd>lua require'lspsaga.diagnostic'.show_line_diagnostics()<cr>", "Show line diagnostic" },
+			h = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Show hover info" },
+			s = { "<cmd>lua vim.lsp.buf.signature_help()<cr>", "Signature help" },
 			f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format document" },
 		},
 	}, {
@@ -179,13 +192,16 @@ local function on_attach(client, buf)
 	})
 
 	wk.register({
-		["["] = { "<cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_prev()<cr>", "Go to previous diagnostic" },
-		["]"] = { "<cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_next()<cr>", "Go to next diagnostic" },
+		["["] = { "<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>", "Go to previous diagnostic" },
+		["]"] = { "<cmd>lua vim.lsp.diagnostic.goto_next()<cr>", "Go to next diagnostic" },
 	}, {
 		mode = "n",
 		silent = true,
 		buffer = buf,
 	})
+
+	vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = border })
+	vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = border })
 end
 
 cmp.setup({
