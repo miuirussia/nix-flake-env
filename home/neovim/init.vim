@@ -47,8 +47,6 @@ nnoremap Q <nop>
 highlight WhitespaceErrors ctermbg=Red guibg=#ff6a6a
 autocmd BufEnter * match WhitespaceErrors /\s\+$\|[^\t]\@<=\t\+/
 
-nnoremap <expr><silent> <C-p> (len(system('git rev-parse')) ? ':Files' : ':GFiles')."\<cr>"
-
 " Make Y yank everything from the cursor to the end of the line. This makes Y
 " act more like C or D because by default, Y yanks the current line (i.e. the
 " same as yy).

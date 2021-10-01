@@ -50,8 +50,6 @@
 
     plugins = with pkgs.vimPlugins; [
       editorconfig-vim
-      fzf-vim
-      fzfWrapper
 
       vim-better-whitespace
       vim-dhall
@@ -79,13 +77,14 @@
       nvim-lsp-colors
       nvim-lspconfig
       nvim-lspkind
-      nvim-lspsaga
       nvim-lspstatus
       nvim-lualine
       nvim-matchup
       nvim-notify
       nvim-null-ls
       nvim-package-info
+      nvim-telescope
+      nvim-trouble
       nvim-vsnip
       nvim-which-key
 

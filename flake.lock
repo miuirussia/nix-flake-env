@@ -691,22 +691,6 @@
         "type": "github"
       }
     },
-    "nvim-lspsaga": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1632857038,
-        "narHash": "sha256-58lWaAzgKW6aSRLBO4U3ccNE7IEkah7S4j9WQnvnvpk=",
-        "owner": "miuirussia",
-        "repo": "lspsaga.nvim",
-        "rev": "fdd2a86e916ffebe62715cd05fd96e49ee5f6c42",
-        "type": "github"
-      },
-      "original": {
-        "owner": "miuirussia",
-        "repo": "lspsaga.nvim",
-        "type": "github"
-      }
-    },
     "nvim-lspstatus": {
       "flake": false,
       "locked": {
@@ -851,6 +835,22 @@
         "type": "github"
       }
     },
+    "nvim-telescope": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1633009986,
+        "narHash": "sha256-ZkajZlh1560k927OsmG4uwjIBabcSn7kDfaAfJo0OyM=",
+        "owner": "nvim-telescope",
+        "repo": "telescope.nvim",
+        "rev": "440c598de419858a056e7d9d42a0a6829cd5bb05",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-telescope",
+        "repo": "telescope.nvim",
+        "type": "github"
+      }
+    },
     "nvim-treesitter": {
       "flake": false,
       "locked": {
@@ -864,6 +864,22 @@
       "original": {
         "owner": "nvim-treesitter",
         "repo": "nvim-treesitter",
+        "type": "github"
+      }
+    },
+    "nvim-trouble": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1628159479,
+        "narHash": "sha256-4bFFrrbUcNZCnRVyw/tm80QhzG8cAdI38jtizWPsozE=",
+        "owner": "folke",
+        "repo": "trouble.nvim",
+        "rev": "51dd9175eb506b026189c70f81823dfa77defe86",
+        "type": "github"
+      },
+      "original": {
+        "owner": "folke",
+        "repo": "trouble.nvim",
         "type": "github"
       }
     },
@@ -957,7 +973,6 @@
         "nvim-lsp-colors": "nvim-lsp-colors",
         "nvim-lspconfig": "nvim-lspconfig",
         "nvim-lspkind": "nvim-lspkind",
-        "nvim-lspsaga": "nvim-lspsaga",
         "nvim-lspstatus": "nvim-lspstatus",
         "nvim-lualine": "nvim-lualine",
         "nvim-matchup": "nvim-matchup",
@@ -967,7 +982,9 @@
         "nvim-onedark": "nvim-onedark",
         "nvim-package-info": "nvim-package-info",
         "nvim-plenary": "nvim-plenary",
+        "nvim-telescope": "nvim-telescope",
         "nvim-treesitter": "nvim-treesitter",
+        "nvim-trouble": "nvim-trouble",
         "nvim-vsnip": "nvim-vsnip",
         "nvim-web-devicons": "nvim-web-devicons",
         "nvim-which-key": "nvim-which-key",
@@ -983,11 +1000,9 @@
         "vim-rooter": "vim-rooter",
         "vim-rust": "vim-rust",
         "vim-sandwich": "vim-sandwich",
-        "vim-styled-components": "vim-styled-components",
         "vim-tabular": "vim-tabular",
         "vim-toml": "vim-toml",
         "vim-typescript": "vim-typescript",
-        "vim-vista": "vim-vista",
         "zsh-history-substring-search": "zsh-history-substring-search",
         "zsh-syntax-highlighting": "zsh-syntax-highlighting"
       }
@@ -1184,22 +1199,6 @@
         "type": "github"
       }
     },
-    "vim-styled-components": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1616055031,
-        "narHash": "sha256-cvb3BVuPV9npFSWJqc9z//a8uFjB5YyMH8qiwpcmA2c=",
-        "owner": "styled-components",
-        "repo": "vim-styled-components",
-        "rev": "75e178916fc3e61385350933a23055927f5f60b7",
-        "type": "github"
-      },
-      "original": {
-        "owner": "styled-components",
-        "repo": "vim-styled-components",
-        "type": "github"
-      }
-    },
     "vim-tabular": {
       "flake": false,
       "locked": {
@@ -1245,22 +1244,6 @@
       "original": {
         "owner": "herringtondarkholme",
         "repo": "yats.vim",
-        "type": "github"
-      }
-    },
-    "vim-vista": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1632137348,
-        "narHash": "sha256-E5spFZIxci48FWoylpUT8Ar3mjA8OE4m34VWqLe0Zt0=",
-        "owner": "liuchengxu",
-        "repo": "vista.vim",
-        "rev": "f49ca3dbf334ac33d2629c510524285335031706",
-        "type": "github"
-      },
-      "original": {
-        "owner": "liuchengxu",
-        "repo": "vista.vim",
         "type": "github"
       }
     },

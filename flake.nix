@@ -52,11 +52,9 @@
     vim-rooter = { url = "github:airblade/vim-rooter"; flake = false; };
     vim-rust = { url = "github:rust-lang/rust.vim"; flake = false; };
     vim-sandwich = { url = "github:machakann/vim-sandwich"; flake = false; };
-    vim-styled-components = { url = "github:styled-components/vim-styled-components"; flake = false; };
     vim-tabular = { url = "github:godlygeek/tabular"; flake = false; };
     vim-toml = { url = "github:cespare/vim-toml"; flake = false; };
     vim-typescript = { url = "github:herringtondarkholme/yats.vim"; flake = false; };
-    vim-vista = { url = "github:liuchengxu/vista.vim"; flake = false; };
 
     nvim-bufferline = { url = "github:akinsho/bufferline.nvim"; flake = false; };
     nvim-cmp = { url = "github:hrsh7th/nvim-cmp"; flake = false; };
@@ -69,7 +67,6 @@
     nvim-lsp-colors = { url = "github:folke/lsp-colors.nvim"; flake = false; };
     nvim-lspconfig = { url = "github:neovim/nvim-lspconfig"; flake = false; };
     nvim-lspkind = { url = "github:onsails/lspkind-nvim"; flake = false; };
-    nvim-lspsaga = { url = "github:miuirussia/lspsaga.nvim"; flake = false; };
     nvim-lspstatus = { url = "github:nvim-lua/lsp-status.nvim"; flake = false; };
     nvim-lualine = { url = "github:shadmansaleh/lualine.nvim"; flake = false; };
     nvim-matchup = { url = "github:andymass/vim-matchup"; flake = false; };
@@ -79,7 +76,9 @@
     nvim-onedark = { url = "github:monsonjeremy/onedark.nvim"; flake = false; };
     nvim-package-info = { url = "github:vuki656/package-info.nvim"; flake = false; };
     nvim-plenary = { url = "github:nvim-lua/plenary.nvim"; flake = false; };
+    nvim-telescope = { url = "github:nvim-telescope/telescope.nvim"; flake = false; };
     nvim-treesitter = { url = "github:nvim-treesitter/nvim-treesitter"; flake = false; };
+    nvim-trouble = { url = "github:folke/trouble.nvim"; flake = false; };
     nvim-vsnip = { url = "github:hrsh7th/vim-vsnip"; flake = false; };
     nvim-web-devicons = { url = "github:kyazdani42/nvim-web-devicons"; flake = false; };
     nvim-which-key = { url = "github:folke/which-key.nvim"; flake = false; };

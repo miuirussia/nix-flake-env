@@ -83,7 +83,6 @@ local ts_configs = require("nvim-treesitter.configs")
 local ts_parsers = require("nvim-treesitter.parsers")
 local package_info = require("package-info")
 local wk = require("which-key")
-local saga = require("lspsaga")
 
 local capabilities = vim.tbl_extend(
 	"keep",
@@ -117,25 +116,6 @@ lspstatus.config({
 			return require("lsp-status.util").in_range(cursor_pos, value_range)
 		end
 	end,
-})
-
-saga.init_lsp_saga({
-	code_action_keys = {
-		quit = "<esc>",
-		exec = "<CR>",
-	},
-	rename_action_keys = {
-		quit = "<esc>",
-		exec = "<CR>",
-	},
-	finder_action_keys = {
-		open = "<CR>",
-		vsplit = "v",
-		split = "s",
-		quit = "<esc>",
-		scroll_down = "<C-f>",
-		scroll_up = "<C-b>",
-	},
 })
 
 bufferline.setup({
@@ -176,11 +156,10 @@ local function on_attach(client, buf)
 	wk.register({
 		l = {
 			name = "Language server",
-			d = { "<cmd>lua require'lspsaga.provider'.lsp_finder()<cr>", "Show definition and references" },
-			sd = { "<cmd>lua require'lspsaga.provider'.preview_definition()<cr>", "Preview definition" },
+			d = { "<cmd>Telescope lsp_definitions<cr>", "Definitions" },
 			r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
-			a = { "<cmd>lua require('lspsaga.codeaction').code_action()<cr>", "Execute codeaction" },
-			h = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Show hover info" },
+			a = { "<cmd>Telescope lsp_code_actions<cr>", "Execute codeaction" },
+			h = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Hover info" },
 			s = { "<cmd>lua vim.lsp.buf.signature_help()<cr>", "Signature help" },
 			f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format document" },
 		},
@@ -192,8 +171,8 @@ local function on_attach(client, buf)
 	})
 
 	wk.register({
-		["["] = { "<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>", "Go to previous diagnostic" },
-		["]"] = { "<cmd>lua vim.lsp.diagnostic.goto_next()<cr>", "Go to next diagnostic" },
+		["["] = { "<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>", "Previous diagnostic" },
+		["]"] = { "<cmd>lua vim.lsp.diagnostic.goto_next()<cr>", "Next diagnostic" },
 	}, {
 		mode = "n",
 		silent = true,
@@ -251,6 +230,10 @@ require("gitsigns").setup({
 				status.removed and status.removed > 0 and " %#StatusLineGitRemoved# " .. status.removed or ""
 			)
 	end,
+})
+
+require("trouble").setup({
+  use_lsp_diagnostic_signs = true,
 })
 
 lualine.setup({
@@ -338,6 +321,17 @@ wk.register({
 	silent = true,
 })
 
+wk.register({
+	["<C-p>"] = { "<cmd>Telescope find_files<cr>", "Find files" },
+  ["<C-t>"] = { "<cmd>TroubleToggle lsp_document_diagnostics<cr>", "Show diagnostics" },
+}, {
+	mode = "n",
+	noremap = true,
+	silent = true,
+})
+
+require("telescope").setup();
+
 ts_configs.setup({
 	ensure_installed = {},
 	highlight = {
@@ -422,7 +416,6 @@ else
 		local hl2 = "LspDiagnosticsSign" .. type
 		vim.fn.sign_define(hl2, { text = icon, texthl = hl2, numhl = "" })
 	end
-	vim.fn.sign_define("LspSagaLightBulb", { text = "", texthl = "DiagnosticSignInfo", numhl = "" })
 end
 
 require("lsp-colors").setup({
