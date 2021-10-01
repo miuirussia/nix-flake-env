@@ -643,6 +643,22 @@
         "type": "github"
       }
     },
+    "nvim-impatient": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1632911090,
+        "narHash": "sha256-poZAzULHDrR8Exy3q081hg4M0UUcev9bd4XVAoc53Qc=",
+        "owner": "lewis6991",
+        "repo": "impatient.nvim",
+        "rev": "561b86e5602def047010d451c3e7977a65982788",
+        "type": "github"
+      },
+      "original": {
+        "owner": "lewis6991",
+        "repo": "impatient.nvim",
+        "type": "github"
+      }
+    },
     "nvim-lsp-colors": {
       "flake": false,
       "locked": {
@@ -970,6 +986,7 @@
         "nvim-cmp-vsnip": "nvim-cmp-vsnip",
         "nvim-gitsigns": "nvim-gitsigns",
         "nvim-gps": "nvim-gps",
+        "nvim-impatient": "nvim-impatient",
         "nvim-lsp-colors": "nvim-lsp-colors",
         "nvim-lspconfig": "nvim-lspconfig",
         "nvim-lspkind": "nvim-lspkind",
