@@ -87,6 +87,7 @@ in
       "nvim-cmp-vsnip"
       "nvim-gitsigns"
       "nvim-gps"
+      "nvim-impatient"
       "nvim-lsp-colors"
       "nvim-lspconfig"
       "nvim-lspkind"

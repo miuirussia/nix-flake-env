@@ -45,6 +45,7 @@
     in
       ''
         source ${vimInit}
+        lua require('impatient')
         luafile ${luaInit}
       '';
 
@@ -62,6 +63,7 @@
       vim-tabular
 
       # lua utils
+      nvim-impatient
       nvim-nui
       nvim-plenary
 

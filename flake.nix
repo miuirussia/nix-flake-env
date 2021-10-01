@@ -64,6 +64,7 @@
     nvim-cmp-vsnip = { url = "github:hrsh7th/cmp-vsnip"; flake = false; };
     nvim-gitsigns = { url = "github:lewis6991/gitsigns.nvim"; flake = false; };
     nvim-gps = { url = "github:SmiteshP/nvim-gps"; flake = false; };
+    nvim-impatient = { url = "github:lewis6991/impatient.nvim"; flake = false; };
     nvim-lsp-colors = { url = "github:folke/lsp-colors.nvim"; flake = false; };
     nvim-lspconfig = { url = "github:neovim/nvim-lspconfig"; flake = false; };
     nvim-lspkind = { url = "github:onsails/lspkind-nvim"; flake = false; };
