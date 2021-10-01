@@ -202,7 +202,7 @@ cmp.setup({
 			-- set a name for each source
 			vim_item.menu = ({
 				buffer = "[Buffer]",
-        path = "[Path]",
+				path = "[Path]",
 				nvim_lsp = "[LSP]",
 				nvim_lua = "[Lua]",
 			})[entry.source.name]
@@ -219,7 +219,7 @@ cmp.setup({
 	sources = {
 		{ name = "nvim_lsp" },
 		{ name = "buffer" },
-    { name = "path" },
+		{ name = "path" },
 	},
 })
 
@@ -349,7 +349,7 @@ if vim.lsp.setup then
 			display = {
 				underline = true,
 				update_in_insert = false,
-				virtual_text = { spacing = 4, prefix = "●" },
+				virtual_text = false,
 				severity_sort = true,
 			},
 		},
@@ -381,10 +381,11 @@ if vim.lsp.setup then
 	})
 else
 	vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+		severity_sort = true,
+		virtual_text = { spacing = 4, prefix = "●" },
+		signs = true,
 		underline = true,
 		update_in_insert = false,
-		virtual_text = { spacing = 4, prefix = "●" },
-		severity_sort = true,
 	})
 
 	local signs = { Error = " ", Warning = " ", Hint = " ", Information = " " }
@@ -551,3 +552,5 @@ vim.api.nvim_exec(
   ]],
 	false
 )
+
+vim.cmd([[autocmd CursorHold,CursorHoldI * lua vim.lsp.diagnostic.show_line_diagnostics({ focusable=false })]])
