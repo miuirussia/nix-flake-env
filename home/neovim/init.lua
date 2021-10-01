@@ -218,23 +218,9 @@ cmp.setup({
 	},
 })
 
-require("gitsigns").setup({
-	keymaps = {},
-	preview_config = { border = { "", "", "", " ", "", "", "", " " } },
-	status_formatter = function(status)
-		return "  "
-			.. (status.head == "" and "detached HEAD" or status.head)
-			.. (status.added and status.added > 0 and " %#StatusLineGitAdded# " .. status.added or "")
-			.. (status.changed and status.changed > 0 and " %#StatusLineGitChanged# " .. status.changed or "")
-			.. (
-				status.removed and status.removed > 0 and " %#StatusLineGitRemoved# " .. status.removed or ""
-			)
-	end,
-})
+require("gitsigns").setup()
 
-require("trouble").setup({
-	use_lsp_diagnostic_signs = true,
-})
+require("trouble").setup()
 
 lualine.setup({
 	options = {
