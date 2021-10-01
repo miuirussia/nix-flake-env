@@ -300,6 +300,25 @@ wk.register({
 })
 
 wk.register({
+  h = {
+    name = "git",
+    s = { "<cmd>lua require'gitsigns'.stage_hunk()<cr>", "Stage hunk" },
+    u = { "<cmd>lua require'gitsigns'.undo_stage_hunk()<cr>", "Undo stage hunk" },
+    r = { "<cmd>lua require'gitsigns'.reset_hunk()<cr>", "Reset hunk" },
+    R = { "<cmd>lua require'gitsigns'.reset_buffer()<cr>", "Reset buffer" },
+    p = { "<cmd>lua require'gitsigns'.preview_hunk()<cr>", "Preview hunk" },
+    b = { "<cmd>lua require'gitsigns'.blame_line(true)<cr>", "Blame line" },
+    S = { "<cmd>lua require'gitsigns'.stage_buffer()<cr>", "Stage buffer" },
+    U = { "<cmd>lua require'gitsigns'.reset_buffer_index()<cr>", "Reset buffer index" },
+    B = { "<cmd>Gitsigns toggle_current_line_blame<cr>", "Toggle blame" },
+  },
+}, {
+  mode = "n",
+  prefix = "<leader>",
+  silent = true,
+})
+
+wk.register({
 	["<space>"] = { "<cmd>noh<cr>", "Clean search" },
 	b = { "<cmd>bw<cr>", "Wipeout buffer" },
 }, {
