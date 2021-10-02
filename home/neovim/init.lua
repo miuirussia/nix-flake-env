@@ -300,22 +300,22 @@ wk.register({
 })
 
 wk.register({
-  h = {
-    name = "git",
-    s = { "<cmd>lua require'gitsigns'.stage_hunk()<cr>", "Stage hunk" },
-    u = { "<cmd>lua require'gitsigns'.undo_stage_hunk()<cr>", "Undo stage hunk" },
-    r = { "<cmd>lua require'gitsigns'.reset_hunk()<cr>", "Reset hunk" },
-    R = { "<cmd>lua require'gitsigns'.reset_buffer()<cr>", "Reset buffer" },
-    p = { "<cmd>lua require'gitsigns'.preview_hunk()<cr>", "Preview hunk" },
-    b = { "<cmd>lua require'gitsigns'.blame_line(true)<cr>", "Blame line" },
-    S = { "<cmd>lua require'gitsigns'.stage_buffer()<cr>", "Stage buffer" },
-    U = { "<cmd>lua require'gitsigns'.reset_buffer_index()<cr>", "Reset buffer index" },
-    B = { "<cmd>Gitsigns toggle_current_line_blame<cr>", "Toggle blame" },
-  },
+	h = {
+		name = "git",
+		s = { "<cmd>lua require'gitsigns'.stage_hunk()<cr>", "Stage hunk" },
+		u = { "<cmd>lua require'gitsigns'.undo_stage_hunk()<cr>", "Undo stage hunk" },
+		r = { "<cmd>lua require'gitsigns'.reset_hunk()<cr>", "Reset hunk" },
+		R = { "<cmd>lua require'gitsigns'.reset_buffer()<cr>", "Reset buffer" },
+		p = { "<cmd>lua require'gitsigns'.preview_hunk()<cr>", "Preview hunk" },
+		b = { "<cmd>lua require'gitsigns'.blame_line(true)<cr>", "Blame line" },
+		S = { "<cmd>lua require'gitsigns'.stage_buffer()<cr>", "Stage buffer" },
+		U = { "<cmd>lua require'gitsigns'.reset_buffer_index()<cr>", "Reset buffer index" },
+		B = { "<cmd>Gitsigns toggle_current_line_blame<cr>", "Toggle blame" },
+	},
 }, {
-  mode = "n",
-  prefix = "<leader>",
-  silent = true,
+	mode = "n",
+	prefix = "<leader>",
+	silent = true,
 })
 
 wk.register({
@@ -436,9 +436,7 @@ table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
 
 lspconfig.sumneko_lua.setup({
-	capabilities = capabilities,
 	cmd = { "@sumneko_lua_language_server@/bin/lua-language-server" },
-	on_attach = on_attach,
 	settings = {
 		Lua = {
 			runtime = {
@@ -463,32 +461,40 @@ lspconfig.sumneko_lua.setup({
 			},
 		},
 	},
+
+	capabilities = capabilities,
+	on_attach = on_attach,
 })
 
 lspconfig.flow.setup({
-	capabilities = capabilities,
 	cmd = { "@flow@/bin/flow", "lsp", "--from", "nvim-lsp" },
-	on_attach = on_attach,
 	flags = {
 		debounce_text_changes = 150,
 	},
+
+	capabilities = capabilities,
+	on_attach = on_attach,
 })
 
 lspconfig.hls.setup({
-	capabilities = capabilities,
 	cmd = { "@haskell_language_server_wrapper@/bin/haskell-language-server-wrapper", "--lsp" },
+
+	capabilities = capabilities,
 	on_attach = on_attach,
 })
 
 lspconfig.tsserver.setup({
-	capabilities = capabilities,
 	cmd = { "@typescript_language_server@/bin/typescript-language-server", "--stdio" },
 	root_dir = lspconfig.util.root_pattern("tsconfig.json", "jsconfig.json"),
+
+	capabilities = capabilities,
+	on_attach = on_attach,
 })
 
 lspconfig.rnix.setup({
-	capabilities = capabilities,
 	cmd = { "@rnix_lsp@/bin/rnix-lsp" },
+
+	capabilities = capabilities,
 	on_attach = on_attach,
 })
 
@@ -522,7 +528,6 @@ local eslint_formatter = {
 }
 
 lspconfig.diagnosticls.setup({
-	capabilities = capabilities,
 	cmd = { "@diagnosticls@/bin/diagnostic-languageserver", "--stdio" },
 	filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
 	root_dir = lspconfig.util.root_pattern("package.json", "jsconfig.json"),
@@ -551,6 +556,8 @@ lspconfig.diagnosticls.setup({
 
 		os.execute("@eslint_d@/bin/eslint_d restart")
 	end,
+
+	capabilities = capabilities,
 	on_attach = on_attach,
 })
 
