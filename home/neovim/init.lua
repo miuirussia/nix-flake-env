@@ -95,6 +95,9 @@ require("onedark").setup()
 gps.setup()
 
 lspstatus.register_progress()
+local function lsp_status()
+    return require('lsp-status').status()
+end
 
 lspstatus.config({
 	diagnostics = false,
@@ -252,7 +255,7 @@ lualine.setup({
 				shorting_target = 40,
 			},
 			{ "diagnostics", sources = { "nvim_lsp" } },
-			lspstatus.status,
+			lsp_status,
 			{ gps.get_location, cond = gps.is_available },
 			package_info.get_status,
 		},
