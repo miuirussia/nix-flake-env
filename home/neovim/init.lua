@@ -75,6 +75,7 @@ local lspstatus = require("lsp-status")
 local lspkind = require("lspkind")
 local notify = require("notify")
 local null_ls = require("null-ls")
+local telescope = require("telescope")
 local nb = null_ls.builtins
 
 local bufferline = require("bufferline")
@@ -96,7 +97,7 @@ gps.setup()
 
 lspstatus.register_progress()
 local function lsp_status()
-    return require('lsp-status').status()
+	return require("lsp-status").status()
 end
 
 lspstatus.config({
@@ -330,16 +331,26 @@ wk.register({
 	silent = true,
 })
 
+telescope.setup()
+
+local function project_files(opts)
+	local options = opts or {}
+	local git = pcall(require'telescope.builtin'.git_files, options)
+	if git then
+		return require'telescope.builtin'.git_files(options)
+	else
+		return require'telescope.builtin'.find_files(options)
+	end
+end
+
 wk.register({
-	["<C-p>"] = { "<cmd>Telescope find_files<cr>", "Find files" },
+	["<C-p>"] = { project_files, "Find files" },
 	["<C-t>"] = { "<cmd>TroubleToggle lsp_document_diagnostics<cr>", "Show diagnostics" },
 }, {
 	mode = "n",
 	noremap = true,
 	silent = true,
 })
-
-require("telescope").setup()
 
 ts_configs.setup({
 	ensure_installed = {},
