@@ -66,6 +66,7 @@
         nvim-kdevlab-luaconfig
 
         editorconfig-vim
+        telescope-fzf-native-nvim
 
         vim-better-whitespace
         vim-dhall

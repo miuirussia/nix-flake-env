@@ -332,6 +332,7 @@ wk.register({
 })
 
 telescope.setup()
+telescope.load_extension('fzf')
 
 local function project_files(opts)
 	local options = opts or {}
