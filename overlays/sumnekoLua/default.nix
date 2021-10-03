@@ -29,7 +29,7 @@ inputs: final: prev: {
         cp -R test $out/share/sumneko-lua-language-server/
         cp -R meta $out/share/sumneko-lua-language-server/
 
-        cp main.lua platform.lua test.lua debugger.lua $out/share/sumneko-lua-language-server/
+        cp main.lua test.lua debugger.lua $out/share/sumneko-lua-language-server/
 
         mkdir -p $out/bin
         chmod a+x $out/share/sumneko-lua-language-server/bin/$platform/lua-language-server
