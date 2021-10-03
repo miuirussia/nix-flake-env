@@ -1,27 +1,33 @@
 { config, pkgs, ... }: {
   programs.neovim = let
+    dependencies = {
+      sumneko_lua_language_server = pkgs.sumneko-lua-language-server;
+      flow = pkgs.flow;
+      haskell_language_server_wrapper = pkgs.hls;
+      rnix_lsp = pkgs.rnix-lsp;
+      typescript_language_server = pkgs.nodePackages.typescript-language-server;
+      eslint_d = pkgs.nodePackages.eslint_d;
+      shellcheck = pkgs.shellcheck;
+      prettier = pkgs.nodePackages.prettier;
+      stylua = pkgs.stylua;
+      diagnosticls = pkgs.nodePackages.diagnostic-languageserver;
+    };
+
     nvim-kdevlab-luaconfig = pkgs.vimUtils.buildVimPluginFrom2Nix {
       name = "nvim-kdevlab-luaconfig";
       version = "0.0.0";
+
+      buildInputs = pkgs.lib.mapAttrsToList (name: value: value) dependencies;
 
       src = pkgs.writeTextFile {
         name = "init.lua";
         destination = "/lua/nvim-kdevlab-luaconfig/init.lua";
         text = builtins.readFile (
-          pkgs.substituteAll {
-            src = ./init.lua;
-
-            sumneko_lua_language_server = pkgs.sumneko-lua-language-server;
-            flow = pkgs.flow;
-            haskell_language_server_wrapper = pkgs.hls;
-            rnix_lsp = pkgs.rnix-lsp;
-            typescript_language_server = pkgs.nodePackages.typescript-language-server;
-            eslint_d = pkgs.nodePackages.eslint_d;
-            shellcheck = pkgs.shellcheck;
-            prettier = pkgs.nodePackages.prettier;
-            stylua = pkgs.stylua;
-            diagnosticls = pkgs.nodePackages.diagnostic-languageserver;
-          }
+          pkgs.substituteAll (
+            {
+              src = ./init.lua;
+            } // dependencies
+          )
         );
       };
     };
