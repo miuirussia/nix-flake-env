@@ -515,6 +515,38 @@
         "type": "github"
       }
     },
+    "nvim-actionmenu": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1633213676,
+        "narHash": "sha256-kgt2vy5RccMDBZrwmoF4ijQCz2z7OV+KfwPwJeTtc9o=",
+        "owner": "weilbith",
+        "repo": "nvim-code-action-menu",
+        "rev": "f616a37d1be4bab330d5f1ea3ae5fc4b275a1fad",
+        "type": "github"
+      },
+      "original": {
+        "owner": "weilbith",
+        "repo": "nvim-code-action-menu",
+        "type": "github"
+      }
+    },
+    "nvim-base16": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1633188578,
+        "narHash": "sha256-AivvDLcKYdJp8j+sn1R5BiSxUtB/y2SPQrdZzTi9U40=",
+        "owner": "RRethy",
+        "repo": "nvim-base16",
+        "rev": "dc4fad8f5f3d6f4ae3f58a6917fbb89cd84f82b2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "RRethy",
+        "repo": "nvim-base16",
+        "type": "github"
+      }
+    },
     "nvim-bufferline": {
       "flake": false,
       "locked": {
@@ -659,6 +691,22 @@
         "type": "github"
       }
     },
+    "nvim-lightbulb": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1632233670,
+        "narHash": "sha256-MEVlHamaloxK5OO7fwyMHyreUlttoIMacnFmoDPAU1Q=",
+        "owner": "kosayoda",
+        "repo": "nvim-lightbulb",
+        "rev": "5b265fe19a3a60b6429b34c8cfdb0284ce52de33",
+        "type": "github"
+      },
+      "original": {
+        "owner": "kosayoda",
+        "repo": "nvim-lightbulb",
+        "type": "github"
+      }
+    },
     "nvim-lsp-colors": {
       "flake": false,
       "locked": {
@@ -800,22 +848,6 @@
       "original": {
         "owner": "jose-elias-alvarez",
         "repo": "null-ls.nvim",
-        "type": "github"
-      }
-    },
-    "nvim-onedark": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1628698393,
-        "narHash": "sha256-Pv/r4oduRTlS5anpUDIPpbBXcEHFJwkJ1v3VubZDHA4=",
-        "owner": "monsonjeremy",
-        "repo": "onedark.nvim",
-        "rev": "86c704ae07a032adf25cbc8bb73a88f42810df74",
-        "type": "github"
-      },
-      "original": {
-        "owner": "monsonjeremy",
-        "repo": "onedark.nvim",
         "type": "github"
       }
     },
@@ -978,6 +1010,8 @@
         "jetbrains-mono": "jetbrains-mono",
         "neovim": "neovim",
         "nixpkgs": "nixpkgs",
+        "nvim-actionmenu": "nvim-actionmenu",
+        "nvim-base16": "nvim-base16",
         "nvim-bufferline": "nvim-bufferline",
         "nvim-cmp": "nvim-cmp",
         "nvim-cmp-buffer": "nvim-cmp-buffer",
@@ -987,6 +1021,7 @@
         "nvim-gitsigns": "nvim-gitsigns",
         "nvim-gps": "nvim-gps",
         "nvim-impatient": "nvim-impatient",
+        "nvim-lightbulb": "nvim-lightbulb",
         "nvim-lsp-colors": "nvim-lsp-colors",
         "nvim-lspconfig": "nvim-lspconfig",
         "nvim-lspkind": "nvim-lspkind",
@@ -996,7 +1031,6 @@
         "nvim-notify": "nvim-notify",
         "nvim-nui": "nvim-nui",
         "nvim-null-ls": "nvim-null-ls",
-        "nvim-onedark": "nvim-onedark",
         "nvim-package-info": "nvim-package-info",
         "nvim-plenary": "nvim-plenary",
         "nvim-telescope": "nvim-telescope",

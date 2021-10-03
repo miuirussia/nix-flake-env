@@ -91,7 +91,26 @@ local capabilities = vim.tbl_extend(
   lspstatus.capabilities
 )
 
-require("onedark").setup()
+require("base16-colorscheme").setup({
+  base00 = "#282c34",
+  base01 = "#353b45",
+  base02 = "#3e4451",
+  base03 = "#545862",
+  base04 = "#565c64",
+  base05 = "#abb2bf",
+  base06 = "#b6bdca",
+  base07 = "#c8ccd4",
+  base08 = "#e06c75",
+  base09 = "#d19a66",
+  base0A = "#e5c07b",
+  base0B = "#98c379",
+  base0C = "#56b6c2",
+  base0D = "#61afef",
+  base0E = "#c678dd",
+  base0F = "#be5046",
+})
+
+require("nvim-lightbulb")
 
 gps.setup()
 
@@ -162,7 +181,7 @@ local function on_attach(client, buf)
       name = "Language server",
       d = { "<cmd>Telescope lsp_definitions<cr>", "Definitions" },
       r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
-      a = { "<cmd>Telescope lsp_code_actions<cr>", "Execute codeaction" },
+      a = { "<cmd>CodeActionMenu<cr>", "Code action" },
       h = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Hover info" },
       s = { "<cmd>lua vim.lsp.buf.signature_help()<cr>", "Signature help" },
       f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format document" },
@@ -607,3 +626,4 @@ vim.api.nvim_exec(
 )
 
 vim.cmd([[autocmd CursorHold,CursorHoldI * lua vim.lsp.diagnostic.show_line_diagnostics({ focusable=false })]])
+vim.cmd([[autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()]])

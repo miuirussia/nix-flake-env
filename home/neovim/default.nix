@@ -84,6 +84,7 @@
         nvim-plenary
 
         # lua plugins
+        nvim-actionmenu
         nvim-bufferline
         nvim-cmp
         nvim-cmp-buffer
@@ -92,6 +93,7 @@
         nvim-cmp-vsnip
         nvim-gitsigns
         nvim-gps
+        nvim-lightbulb
         nvim-lsp-colors
         nvim-lspconfig
         nvim-lspkind
@@ -114,7 +116,7 @@
         tree-sitter-grammars
 
         #themes
-        nvim-onedark
+        nvim-base16
       ];
     };
 }

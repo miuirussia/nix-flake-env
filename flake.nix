@@ -56,6 +56,8 @@
     vim-toml = { url = "github:cespare/vim-toml"; flake = false; };
     vim-typescript = { url = "github:herringtondarkholme/yats.vim"; flake = false; };
 
+    nvim-actionmenu = { url = "github:weilbith/nvim-code-action-menu"; flake = false; };
+    nvim-base16 = { url = "github:RRethy/nvim-base16"; flake = false; };
     nvim-bufferline = { url = "github:akinsho/bufferline.nvim"; flake = false; };
     nvim-cmp = { url = "github:hrsh7th/nvim-cmp"; flake = false; };
     nvim-cmp-buffer = { url = "github:hrsh7th/cmp-buffer"; flake = false; };
@@ -65,6 +67,7 @@
     nvim-gitsigns = { url = "github:lewis6991/gitsigns.nvim"; flake = false; };
     nvim-gps = { url = "github:SmiteshP/nvim-gps"; flake = false; };
     nvim-impatient = { url = "github:lewis6991/impatient.nvim"; flake = false; };
+    nvim-lightbulb = { url = "github:kosayoda/nvim-lightbulb"; flake = false; };
     nvim-lsp-colors = { url = "github:folke/lsp-colors.nvim"; flake = false; };
     nvim-lspconfig = { url = "github:neovim/nvim-lspconfig"; flake = false; };
     nvim-lspkind = { url = "github:onsails/lspkind-nvim"; flake = false; };
@@ -74,7 +77,6 @@
     nvim-notify = { url = "github:rcarriga/nvim-notify"; flake = false; };
     nvim-nui = { url = "github:MunifTanjim/nui.nvim"; flake = false; };
     nvim-null-ls = { url = "github:jose-elias-alvarez/null-ls.nvim"; flake = false; };
-    nvim-onedark = { url = "github:monsonjeremy/onedark.nvim"; flake = false; };
     nvim-package-info = { url = "github:vuki656/package-info.nvim"; flake = false; };
     nvim-plenary = { url = "github:nvim-lua/plenary.nvim"; flake = false; };
     nvim-telescope = { url = "github:nvim-telescope/telescope.nvim"; flake = false; };
