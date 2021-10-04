@@ -46,9 +46,12 @@
       withRuby = true;
 
       extraPackages = with pkgs; [
-        nodejs
         (yarn.override { nodejs = nodejs; })
+        fd
         git
+        nodejs
+        ripgrep
+        tree-sitter
       ];
 
       extraPython3Packages = (
