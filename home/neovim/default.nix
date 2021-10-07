@@ -125,6 +125,7 @@
         tree-sitter-grammars
 
         #themes
+        vim-edge
         nvim-base16
       ];
     };

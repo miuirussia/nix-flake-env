@@ -43,6 +43,7 @@
     tree-sitter = { url = "github:tree-sitter/tree-sitter"; flake = false; };
 
     vim-dhall = { url = "github:vmchale/dhall-vim"; flake = false; };
+    vim-edge = { url = "github:sainnhe/edge"; flake = false; };
     vim-haskell = { url = "github:neovimhaskell/haskell-vim"; flake = false; };
     vim-js = { url = "github:yuezk/vim-js"; flake = false; };
     vim-json5 = { url = "github:gutenye/json5.vim"; flake = false; };

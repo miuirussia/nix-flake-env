@@ -66,6 +66,7 @@ in
   } // (
     final.lib.genAttrs [
       "vim-dhall"
+      "vim-edge"
       "vim-haskell"
       "vim-js"
       "vim-json5"

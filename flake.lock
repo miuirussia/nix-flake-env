@@ -1042,6 +1042,7 @@
         "stackage": "stackage",
         "tree-sitter": "tree-sitter",
         "vim-dhall": "vim-dhall",
+        "vim-edge": "vim-edge",
         "vim-haskell": "vim-haskell",
         "vim-js": "vim-js",
         "vim-json5": "vim-json5",
@@ -1103,6 +1104,22 @@
       "original": {
         "owner": "vmchale",
         "repo": "dhall-vim",
+        "type": "github"
+      }
+    },
+    "vim-edge": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1633309793,
+        "narHash": "sha256-rO0yOoQc9WJgtHcu20Ubaf7tpCBlmJaIZyACGkAyf1U=",
+        "owner": "sainnhe",
+        "repo": "edge",
+        "rev": "73671fbfc70f0b78c743894b31c009b22a6ddaa3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "sainnhe",
+        "repo": "edge",
         "type": "github"
       }
     },
