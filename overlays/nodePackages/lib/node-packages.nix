@@ -4264,10 +4264,10 @@ in
   npm = nodeEnv.buildNodePackage {
     name = "npm";
     packageName = "npm";
-    version = "7.24.2";
+    version = "8.0.0";
     src = fetchurl {
-      url = "https://registry.npmjs.org/npm/-/npm-7.24.2.tgz";
-      sha512 = "120p116CE8VMMZ+hk8IAb1inCPk4Dj3VZw29/n2g6UI77urJKVYb7FZUDW8hY+EBnfsjI/2yrobBgFyzo7YpVQ==";
+      url = "https://registry.npmjs.org/npm/-/npm-8.0.0.tgz";
+      sha512 = "bhZ8L73aloy8CEEhRjkyJp55icQzpsOqdWWA95xZyyLwL52ASgVOm8CsXKcZgIlrh4/cQTeJMuIK6krBju43HA==";
     };
     buildInputs = globalBuildInputs;
     meta = {
