@@ -3829,13 +3829,13 @@ let
         sha512 = "sdeUoAawceQdgIfTI+sdcwkiK2KU+2cbEYA0agzM2uqaUy2UpnnGHtWTHVEtS0ES4zHU0eMFRGN+oQgDxlD66A==";
       };
     };
-    "vscode-languageserver-textdocument-1.0.1" = {
+    "vscode-languageserver-textdocument-1.0.2" = {
       name = "vscode-languageserver-textdocument";
       packageName = "vscode-languageserver-textdocument";
-      version = "1.0.1";
+      version = "1.0.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/vscode-languageserver-textdocument/-/vscode-languageserver-textdocument-1.0.1.tgz";
-        sha512 = "UIcJDjX7IFkck7cSkNNyzIz5FyvpQfY7sdzVy+wkKN/BLaD4DQ0ppXQrKePomCxTS7RrolK1I0pey0bG9eh8dA==";
+        url = "https://registry.npmjs.org/vscode-languageserver-textdocument/-/vscode-languageserver-textdocument-1.0.2.tgz";
+        sha512 = "T7uPC18+f8mYE4lbVZwb3OSmvwTZm3cuFhrdx9Bn2l11lmp3SvSuSVjy2JtvrghzjAo4G6Trqny2m9XGnFnWVA==";
       };
     };
     "vscode-languageserver-types-3.16.0" = {
@@ -4047,7 +4047,7 @@ in
       sources."vscode-jsonrpc-6.0.0"
       sources."vscode-languageserver-6.1.1"
       sources."vscode-languageserver-protocol-3.16.0"
-      sources."vscode-languageserver-textdocument-1.0.1"
+      sources."vscode-languageserver-textdocument-1.0.2"
       sources."vscode-languageserver-types-3.16.0"
       sources."vscode-uri-2.1.2"
       sources."wrappy-1.0.2"
@@ -4264,10 +4264,10 @@ in
   npm = nodeEnv.buildNodePackage {
     name = "npm";
     packageName = "npm";
-    version = "7.24.2";
+    version = "8.0.0";
     src = fetchurl {
-      url = "https://registry.npmjs.org/npm/-/npm-7.24.2.tgz";
-      sha512 = "120p116CE8VMMZ+hk8IAb1inCPk4Dj3VZw29/n2g6UI77urJKVYb7FZUDW8hY+EBnfsjI/2yrobBgFyzo7YpVQ==";
+      url = "https://registry.npmjs.org/npm/-/npm-8.0.0.tgz";
+      sha512 = "bhZ8L73aloy8CEEhRjkyJp55icQzpsOqdWWA95xZyyLwL52ASgVOm8CsXKcZgIlrh4/cQTeJMuIK6krBju43HA==";
     };
     buildInputs = globalBuildInputs;
     meta = {
@@ -4952,7 +4952,7 @@ in
           sources."vscode-jsonrpc-6.0.0"
         ];
       })
-      sources."vscode-languageserver-textdocument-1.0.1"
+      sources."vscode-languageserver-textdocument-1.0.2"
       sources."vscode-languageserver-types-3.16.0"
       sources."vscode-uri-2.1.2"
       sources."which-2.0.2"
@@ -5133,7 +5133,7 @@ in
       sources."vscode-jsonrpc-6.0.0"
       sources."vscode-languageserver-7.0.0"
       sources."vscode-languageserver-protocol-3.16.0"
-      sources."vscode-languageserver-textdocument-1.0.1"
+      sources."vscode-languageserver-textdocument-1.0.2"
       sources."vscode-languageserver-types-3.16.0"
       sources."vscode-uri-1.0.8"
       sources."wrappy-1.0.2"
