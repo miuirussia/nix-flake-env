@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs = { url = "github:miuirussia/nixpkgs/nixpkgs-unstable"; };
+    nixUnstable = { url = "github:NixOS/nix/6bd74a6beaabcf8fe73d2d48894f9870648e0eb1"; inputs.nixpkgs.follows = "nixpkgs"; };
 
     # dotenv management
     darwin = { url = "github:LnL7/nix-darwin/master"; inputs.nixpkgs.follows = "nixpkgs"; };
@@ -98,16 +99,17 @@
 
       forAllSystems = f: nixpkgs.lib.genAttrs supportedSystem (system: f system);
 
-      nixpkgsOverlays = let
-        path = ./overlays;
-      in
+      nixpkgsOverlays =
+        let
+          path = ./overlays;
+        in
         with builtins;
         map (n: (import (path + ("/" + n)) inputs)) (
           filter
             (
               n:
-                match ".*\\.nix" n != null
-                || pathExists (path + ("/" + n + "/default.nix"))
+              match ".*\\.nix" n != null
+              || pathExists (path + ("/" + n + "/default.nix"))
             )
             (attrNames (readDir path))
         );
@@ -158,61 +160,61 @@
           }
         ];
     in
-      {
-        darwinConfigurations = {
-          bootstrap = darwin.lib.darwinSystem {
-            inputs = inputs;
-            modules = [
-              ./hosts/darwin-bootstrap.nix
-            ];
-            system = "x86_64-darwin";
-          };
-
-          ghActions = darwin.lib.darwinSystem {
-            inputs = inputs;
-            modules = mkDarwinModules {
-              user = "runner";
-              host = "mac-gh";
-            };
-            system = "x86_64-darwin";
-          };
-
-          home = darwin.lib.darwinSystem {
-            inputs = inputs;
-            modules = mkDarwinModules {
-              user = "kirill";
-              host = "kirill-imac";
-            };
-            system = "x86_64-darwin";
-          };
-
-          macbook = darwin.lib.darwinSystem {
-            inputs = inputs;
-            modules = mkDarwinModules {
-              user = "kirill";
-              host = "kirill-macbook";
-              hostLink = "kirill-imac";
-            };
-            system = "x86_64-darwin";
-          };
-
-          work = darwin.lib.darwinSystem {
-            inputs = inputs;
-            modules = mkDarwinModules {
-              user = "kirill";
-              host = "kkuznetsov";
-            };
-            system = "x86_64-darwin";
-          };
+    {
+      darwinConfigurations = {
+        bootstrap = darwin.lib.darwinSystem {
+          inputs = inputs;
+          modules = [
+            ./hosts/darwin-bootstrap.nix
+          ];
+          system = "x86_64-darwin";
         };
 
-        pkgs = forAllSystems (
-          system:
-            import nixpkgs {
-              inherit (nixpkgsConfig) config overlays;
-              inherit system;
-            }
-        );
+        ghActions = darwin.lib.darwinSystem {
+          inputs = inputs;
+          modules = mkDarwinModules {
+            user = "runner";
+            host = "mac-gh";
+          };
+          system = "x86_64-darwin";
+        };
 
+        home = darwin.lib.darwinSystem {
+          inputs = inputs;
+          modules = mkDarwinModules {
+            user = "kirill";
+            host = "kirill-imac";
+          };
+          system = "x86_64-darwin";
+        };
+
+        macbook = darwin.lib.darwinSystem {
+          inputs = inputs;
+          modules = mkDarwinModules {
+            user = "kirill";
+            host = "kirill-macbook";
+            hostLink = "kirill-imac";
+          };
+          system = "x86_64-darwin";
+        };
+
+        work = darwin.lib.darwinSystem {
+          inputs = inputs;
+          modules = mkDarwinModules {
+            user = "kirill";
+            host = "kkuznetsov";
+          };
+          system = "x86_64-darwin";
+        };
       };
+
+      pkgs = forAllSystems (
+        system:
+        import nixpkgs {
+          inherit (nixpkgsConfig) config overlays;
+          inherit system;
+        }
+      );
+
+    };
 }

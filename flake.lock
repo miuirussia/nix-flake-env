@@ -387,6 +387,22 @@
         "type": "github"
       }
     },
+    "lowdown-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1633514407,
+        "narHash": "sha256-Dw32tiMjdK9t3ETl5fzGrutQTzh2rufgZV4A/BbxuD4=",
+        "owner": "kristapsdz",
+        "repo": "lowdown",
+        "rev": "d2c2b44ff6c27b936ec27358a2653caaef8f73b8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "kristapsdz",
+        "repo": "lowdown",
+        "type": "github"
+      }
+    },
     "neovim": {
       "flake": false,
       "locked": {
@@ -432,6 +448,28 @@
       "original": {
         "owner": "input-output-hk",
         "repo": "nix-tools",
+        "type": "github"
+      }
+    },
+    "nixUnstable": {
+      "inputs": {
+        "lowdown-src": "lowdown-src",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1633675287,
+        "narHash": "sha256-4DH0KG9Q/Y9+51zyvmrV2BGk7319NB4jns4Xg3jGnnw=",
+        "owner": "NixOS",
+        "repo": "nix",
+        "rev": "6bd74a6beaabcf8fe73d2d48894f9870648e0eb1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nix",
+        "rev": "6bd74a6beaabcf8fe73d2d48894f9870648e0eb1",
         "type": "github"
       }
     },
@@ -1009,6 +1047,7 @@
         "home-manager": "home-manager",
         "jetbrains-mono": "jetbrains-mono",
         "neovim": "neovim",
+        "nixUnstable": "nixUnstable",
         "nixpkgs": "nixpkgs",
         "nvim-actionmenu": "nvim-actionmenu",
         "nvim-base16": "nvim-base16",
