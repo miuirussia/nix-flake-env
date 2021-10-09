@@ -3,6 +3,7 @@
 let
   tmp_directory = "/tmp";
   home_directory = "${config.home.homeDirectory}";
+  cache_directory = "${config.xdg.cacheHome}";
 in
 {
   imports = [
@@ -29,24 +30,28 @@ in
 
   home.activation = {
     linkAppsAction = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-      if [ -f $HOME/.linked-apps ]; then
+      if [ -f ${home_directory}/.linked-apps ]; then
         while read p; do
           $DRY_RUN_CMD rm -rf "$p"
-        done < $HOME/.linked-apps
+        done < ${home_directory}/.linked-apps
       fi
-      $DRY_RUN_CMD rm -f $HOME/.linked-apps
-      $DRY_RUN_CMD mkdir -p $HOME/Applications
+      $DRY_RUN_CMD rm -f ${home_directory}/.linked-apps
+      $DRY_RUN_CMD mkdir -p ${home_directory}/Applications
       for f in /nix/var/nix/profiles/per-user/$USER/profile/Applications/* ; do
         if [ -d "$f" ]; then
           target="/Applications/''${f##*/}"
           $DRY_RUN_CMD cp ''${VERBOSE_ARG:+-v} -fHRL "$f" "$target"
           $DRY_RUN_CMD chmod ''${VERBOSE_ARG:+-v} -R +w "$target"
-          echo "$target" >> $HOME/.linked-apps
+          echo "$target" >> ${home_directory}/.linked-apps
         fi
       done
-      mv $HOME/.linked-apps $HOME/.linked-apps.unsorted
-      cat $HOME/.linked-apps.unsorted | sort -u > $HOME/.linked-apps
-      rm $HOME/.linked-apps.unsorted
+      mv ${home_directory}/.linked-apps ${home_directory}/.linked-apps.unsorted
+      cat ${home_directory}/.linked-apps.unsorted | sort -u > ${home_directory}/.linked-apps
+      rm ${home_directory}/.linked-apps.unsorted
+    '';
+
+    removeNeovimCache = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+      rm ${cache_directory}/nvim/luacache
     '';
   };
 
