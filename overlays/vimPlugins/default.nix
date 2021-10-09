@@ -88,6 +88,7 @@ in
       "nvim-cmp-lsp"
       "nvim-cmp-path"
       "nvim-cmp-vsnip"
+      "nvim-crates"
       "nvim-dap"
       "nvim-gitsigns"
       "nvim-gps"

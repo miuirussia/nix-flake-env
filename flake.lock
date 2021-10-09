@@ -702,6 +702,22 @@
         "type": "github"
       }
     },
+    "nvim-crates": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1633349312,
+        "narHash": "sha256-+V+3Uv8KKRUlaUP9GbCiklXIauru+Y7b7k6xIkpELUE=",
+        "owner": "saecki",
+        "repo": "crates.nvim",
+        "rev": "ab2c491a941dda7fcec50fe58f472c024fac96e9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "saecki",
+        "repo": "crates.nvim",
+        "type": "github"
+      }
+    },
     "nvim-dap": {
       "flake": false,
       "locked": {
@@ -1111,6 +1127,7 @@
         "nvim-cmp-lsp": "nvim-cmp-lsp",
         "nvim-cmp-path": "nvim-cmp-path",
         "nvim-cmp-vsnip": "nvim-cmp-vsnip",
+        "nvim-crates": "nvim-crates",
         "nvim-dap": "nvim-dap",
         "nvim-gitsigns": "nvim-gitsigns",
         "nvim-gps": "nvim-gps",
