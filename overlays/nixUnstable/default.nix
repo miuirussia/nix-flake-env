@@ -1,3 +1,3 @@
 inputs: final: prev: {
-  nixUnstable = inputs.nixUnstable.defaultPackage.${final.system};
+  nixUnstable = final.lowPrio inputs.nixUnstable.defaultPackage.${final.system};
 }
