@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs = { url = "github:miuirussia/nixpkgs/nixpkgs-unstable"; };
+    fenix = { url = "github:nix-community/fenix"; inputs.nixpkgs.follows = "nixpkgs"; };
     nixUnstable = { url = "github:NixOS/nix/6bd74a6beaabcf8fe73d2d48894f9870648e0eb1"; inputs.nixpkgs.follows = "nixpkgs"; };
 
     # dotenv management
@@ -66,6 +67,7 @@
     nvim-cmp-lsp = { url = "github:hrsh7th/cmp-nvim-lsp"; flake = false; };
     nvim-cmp-path = { url = "github:hrsh7th/cmp-path"; flake = false; };
     nvim-cmp-vsnip = { url = "github:hrsh7th/cmp-vsnip"; flake = false; };
+    nvim-dap = { url = "github:mfussenegger/nvim-dap"; flake = false; };
     nvim-gitsigns = { url = "github:lewis6991/gitsigns.nvim"; flake = false; };
     nvim-gps = { url = "github:SmiteshP/nvim-gps"; flake = false; };
     nvim-impatient = { url = "github:lewis6991/impatient.nvim"; flake = false; };
@@ -81,6 +83,7 @@
     nvim-null-ls = { url = "github:jose-elias-alvarez/null-ls.nvim"; flake = false; };
     nvim-package-info = { url = "github:vuki656/package-info.nvim"; flake = false; };
     nvim-plenary = { url = "github:nvim-lua/plenary.nvim"; flake = false; };
+    nvim-rust-tools = { url = "github:simrat39/rust-tools.nvim"; flake = false; };
     nvim-telescope = { url = "github:nvim-telescope/telescope.nvim"; flake = false; };
     nvim-treesitter = { url = "github:nvim-treesitter/nvim-treesitter"; flake = false; };
     nvim-trouble = { url = "github:folke/trouble.nvim"; flake = false; };
@@ -93,7 +96,7 @@
     flake-compat = { url = "github:edolstra/flake-compat"; flake = false; };
   };
 
-  outputs = inputs @ { self, nixpkgs, darwin, home-manager, flake-utils, haskell-nix, ... }:
+  outputs = inputs @ { self, nixpkgs, darwin, home-manager, flake-utils, fenix, haskell-nix, ... }:
     let
       supportedSystem = [ "aarch64-darwin" "x86_64-linux" "x86_64-darwin" ];
 
@@ -120,6 +123,7 @@
         };
         overlays = nixpkgsOverlays ++ [
           haskell-nix.overlay
+          fenix.overlay
         ];
       };
 

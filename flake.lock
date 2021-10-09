@@ -119,6 +119,27 @@
         "type": "github"
       }
     },
+    "fenix": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "rust-analyzer-src": "rust-analyzer-src"
+      },
+      "locked": {
+        "lastModified": 1633746512,
+        "narHash": "sha256-H3C4bkZu1UaIMuBvcDJDfQP4i+s7Ae+QriTu+Tzk65o=",
+        "owner": "nix-community",
+        "repo": "fenix",
+        "rev": "7b7660ccdf0dba08c018bb39763571b59a70969c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "fenix",
+        "type": "github"
+      }
+    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -681,6 +702,22 @@
         "type": "github"
       }
     },
+    "nvim-dap": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1633642802,
+        "narHash": "sha256-ovY7S8Yo1BiqLNJZJkzGDT0XQDnetN1/VnjCgqR6t6A=",
+        "owner": "mfussenegger",
+        "repo": "nvim-dap",
+        "rev": "5a7bfe318f7527a790c6c4546f0634bbcb81eba9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mfussenegger",
+        "repo": "nvim-dap",
+        "type": "github"
+      }
+    },
     "nvim-gitsigns": {
       "flake": false,
       "locked": {
@@ -921,6 +958,22 @@
         "type": "github"
       }
     },
+    "nvim-rust-tools": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1633556322,
+        "narHash": "sha256-rxDXreFhs0eL1KtFO+q7stNXHsvDaVdHNO0t262aCBQ=",
+        "owner": "simrat39",
+        "repo": "rust-tools.nvim",
+        "rev": "4a9c749bee7956cd54322ed04749bb7be329eddd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "simrat39",
+        "repo": "rust-tools.nvim",
+        "type": "github"
+      }
+    },
     "nvim-telescope": {
       "flake": false,
       "locked": {
@@ -1039,6 +1092,7 @@
         "base16-shell": "base16-shell",
         "darwin": "darwin",
         "fast-syntax-highlighting": "fast-syntax-highlighting",
+        "fenix": "fenix",
         "flake-compat": "flake-compat",
         "flake-utils": "flake-utils",
         "hackage": "hackage",
@@ -1057,6 +1111,7 @@
         "nvim-cmp-lsp": "nvim-cmp-lsp",
         "nvim-cmp-path": "nvim-cmp-path",
         "nvim-cmp-vsnip": "nvim-cmp-vsnip",
+        "nvim-dap": "nvim-dap",
         "nvim-gitsigns": "nvim-gitsigns",
         "nvim-gps": "nvim-gps",
         "nvim-impatient": "nvim-impatient",
@@ -1072,6 +1127,7 @@
         "nvim-null-ls": "nvim-null-ls",
         "nvim-package-info": "nvim-package-info",
         "nvim-plenary": "nvim-plenary",
+        "nvim-rust-tools": "nvim-rust-tools",
         "nvim-telescope": "nvim-telescope",
         "nvim-treesitter": "nvim-treesitter",
         "nvim-trouble": "nvim-trouble",
@@ -1096,6 +1152,23 @@
         "vim-typescript": "vim-typescript",
         "zsh-history-substring-search": "zsh-history-substring-search",
         "zsh-syntax-highlighting": "zsh-syntax-highlighting"
+      }
+    },
+    "rust-analyzer-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1633619382,
+        "narHash": "sha256-PK1mtld3Ema0of2lhR5jFo2zbvlUe+M3Arpgcve4h1w=",
+        "owner": "rust-analyzer",
+        "repo": "rust-analyzer",
+        "rev": "545b068a7720374a13e04db24e0bef6237822f2a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rust-analyzer",
+        "ref": "nightly",
+        "repo": "rust-analyzer",
+        "type": "github"
       }
     },
     "stackage": {

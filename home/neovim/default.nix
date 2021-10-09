@@ -11,6 +11,7 @@
       prettier = pkgs.nodePackages.prettier;
       stylua = pkgs.stylua;
       diagnosticls = pkgs.nodePackages.diagnostic-languageserver;
+      rust_analyzer = pkgs.rust-analyzer-nightly-with-shell;
     };
 
     nvim-kdevlab-luaconfig = pkgs.vimUtils.buildVimPluginFrom2Nix {
@@ -100,6 +101,7 @@
         nvim-cmp-lsp
         nvim-cmp-path
         nvim-cmp-vsnip
+        nvim-dap
         nvim-gitsigns
         nvim-gps
         nvim-lightbulb
@@ -112,6 +114,7 @@
         nvim-notify
         nvim-null-ls
         nvim-package-info
+        nvim-rust-tools
         nvim-telescope
         nvim-trouble
         nvim-vsnip
