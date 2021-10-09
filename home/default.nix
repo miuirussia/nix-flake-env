@@ -47,8 +47,8 @@ in
         fi
       done
       $DRY_RUN_CMD mv ${home_directory}/.linked-apps ${home_directory}/.linked-apps.unsorted
-      $DRY_RUN_CMD cat ${home_directory}/.linked-apps.unsorted | sort -u > ${home_directory}/.linked-apps
-      $DRY_RUN_CMD rm ${home_directory}/.linked-apps.unsorted
+      $DRY_RUN_CMD sort -u < ${home_directory}/.linked-apps.unsorted > ${home_directory}/.linked-apps
+      $DRY_RUN_CMD rm -f ${home_directory}/.linked-apps.unsorted
     '';
 
     removeNeovimCache = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
