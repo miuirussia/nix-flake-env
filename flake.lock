@@ -1151,6 +1151,7 @@
         "nvim-vsnip": "nvim-vsnip",
         "nvim-web-devicons": "nvim-web-devicons",
         "nvim-which-key": "nvim-which-key",
+        "rust-overlay": "rust-overlay",
         "stackage": "stackage",
         "tree-sitter": "tree-sitter",
         "vim-dhall": "vim-dhall",
@@ -1185,6 +1186,29 @@
         "owner": "rust-analyzer",
         "ref": "nightly",
         "repo": "rust-analyzer",
+        "type": "github"
+      }
+    },
+    "rust-overlay": {
+      "inputs": {
+        "flake-utils": [
+          "flake-utils"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1633918674,
+        "narHash": "sha256-OZpPK4/SxEkkUMCsnlvQU/cZR8aWX0hEjzeaiEoifQg=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "23cce8b8a5ba7b01f69e344ea6f5e380988955f3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxalica",
+        "repo": "rust-overlay",
         "type": "github"
       }
     },

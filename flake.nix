@@ -5,6 +5,7 @@
     nixpkgs = { url = "github:miuirussia/nixpkgs/nixpkgs-unstable"; };
     fenix = { url = "github:nix-community/fenix"; inputs.nixpkgs.follows = "nixpkgs"; };
     nixUnstable = { url = "github:NixOS/nix/6bd74a6beaabcf8fe73d2d48894f9870648e0eb1"; inputs.nixpkgs.follows = "nixpkgs"; };
+    rust-overlay = { url = "github:oxalica/rust-overlay"; inputs = { nixpkgs.follows = "nixpkgs"; flake-utils.follows = "flake-utils"; }; };
 
     # dotenv management
     darwin = { url = "github:LnL7/nix-darwin/master"; inputs.nixpkgs.follows = "nixpkgs"; };
@@ -97,7 +98,7 @@
     flake-compat = { url = "github:edolstra/flake-compat"; flake = false; };
   };
 
-  outputs = inputs @ { self, nixpkgs, darwin, home-manager, flake-utils, fenix, haskell-nix, ... }:
+  outputs = inputs @ { self, nixpkgs, darwin, home-manager, flake-utils, fenix, rust-overlay, haskell-nix, ... }:
     let
       supportedSystem = [ "aarch64-darwin" "x86_64-linux" "x86_64-darwin" ];
 
@@ -124,6 +125,7 @@
         };
         overlays = nixpkgsOverlays ++ [
           haskell-nix.overlay
+          rust-overlay.overlay
           fenix.overlay
         ];
       };
