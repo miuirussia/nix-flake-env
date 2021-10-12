@@ -74,8 +74,8 @@
   {
     "name": "rust-analyzer",
     "publisher": "matklad",
-    "sha256": "0pgw9q46wg7adkfafwdbr1fgw62zv3kdxi2zzjlylrs3yd1drfrs",
-    "version": "0.2.768"
+    "sha256": "063zk1yfxz6mvi58klcn3rgkxw46ch340pn90hn12aifn1vy4z3x",
+    "version": "0.2.776"
   },
   {
     "name": "vscode-docker",
@@ -140,8 +140,8 @@
   {
     "name": "shellcheck",
     "publisher": "timonwong",
-    "sha256": "1njd10v1rc0swdncw1722bxjyzhwz1dmhj60fyxpmmlp5qbprw76",
-    "version": "0.16.2"
+    "sha256": "0fn0nz7x8f0c3zwq23md7vh6v50h214p21zkcs1nfm2kmcwa3vf2",
+    "version": "0.17.0"
   },
   {
     "name": "vscode-thunder-client",
