@@ -20,8 +20,8 @@
   {
     "name": "vscode-jest",
     "publisher": "orta",
-    "sha256": "0j4gws0y4i8lwddac60p8zdgca24j54gb585a9my0yn7c5rdpgnx",
-    "version": "4.1.2"
+    "sha256": "1ccm4gxwca9i0j2c5b8nk25vj9x25jq4qvgpcl00r0cp4v8cb9l5",
+    "version": "4.2.1"
   },
   {
     "name": "flow-for-vscode",
@@ -68,8 +68,8 @@
   {
     "name": "nix-ide",
     "publisher": "jnoortheen",
-    "sha256": "04ky1mzyjjr1mrwv3sxz4mgjcq5ylh6n01lvhb19h3fmwafkdxbp",
-    "version": "0.1.16"
+    "sha256": "1v3j67j8bydyqba20b2wzsfximjnbhknk260zkc0fid1xzzb2sbn",
+    "version": "0.1.18"
   },
   {
     "name": "rust-analyzer",
@@ -86,8 +86,8 @@
   {
     "name": "remote-containers",
     "publisher": "ms-vscode-remote",
-    "sha256": "0wgy1v31x49a0h59l1qi86hmlc854gpgr7j26y3h8jkdyvlwbf5s",
-    "version": "0.202.1"
+    "sha256": "0dlv3nrw9lg1x5nmndqhvwaka27vxaa43zjqil3iq7qi904wz71b",
+    "version": "0.202.3"
   },
   {
     "name": "remote-ssh",
