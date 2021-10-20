@@ -1,4 +1,5 @@
-inputs: final: prev: let
+inputs: final: prev:
+let
   stack-with-args = args: (
     final.writeScriptBin "stack" ''
       #!${final.runtimeShell}
@@ -7,6 +8,9 @@ inputs: final: prev: let
   ) // {
     name = "stack-with-args";
     version = final.stack.version;
+    passthru = {
+      ghcFromStack = stackYaml: final.haskell-nix.compiler.${(final.haskell-nix.stackage.${(final.lib.readYAML stackYaml).resolver} final.haskell-nix.hackage).compiler.nix-name};
+    };
     meta.description = "Haskell Stack with args: ${args}";
     meta.longDescription = ''
       	This package provides a wrapper script around the Haskell Stack
@@ -14,6 +18,7 @@ inputs: final: prev: let
               call.  This forces disablment of Nix across all platforms.
     '';
   };
-in {
+in
+{
   stack-in-nix = stack-with-args "--no-nix --system-ghc --no-install-ghc";
 }
