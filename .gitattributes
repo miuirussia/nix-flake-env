@@ -1,5 +1,6 @@
 hosts/host-*/default.nix filter=git-crypt diff=git-crypt
 hosts/host-*/user-*.nix filter=git-crypt diff=git-crypt
+hosts/ssh/* filter=git-crypt diff=git-crypt
 home/user-*/default.nix filter=git-crypt diff=git-crypt
 home/user-*/configs/tmuxinator/*.yml filter=git-crypt diff=git-crypt
 .gitattributes !filter !diff

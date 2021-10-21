@@ -164,6 +164,27 @@
             };
           }
         ];
+
+      mkNixosModules =
+        args @ { user
+        , host
+        ,
+        }: [
+          home-manager.nixosModules.home-manager
+          ({ pkgs, ... }: {
+            nixpkgs = nixpkgsConfig;
+            users.users.${user} = {
+              createHome = true;
+              extraGroups = [ "wheel" ];
+              group = "${user}";
+              home = "/home/${user}";
+              isNormalUser = true;
+              shell = pkgs.zsh;
+            };
+            home-manager.useGlobalPkgs = true;
+            home-manager.users.${user} = homeManagerConfig args;
+          })
+        ];
     in
     {
       darwinConfigurations = {
@@ -210,6 +231,17 @@
             host = "kkuznetsov";
           };
           system = "x86_64-darwin";
+        };
+      };
+
+      nixosConfigurations = {
+        test = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = { inherit inputs; };
+          modules = mkNixosModules {
+            user = "kirill";
+            host = "test";
+          };
         };
       };
 

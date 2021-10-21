@@ -8,7 +8,11 @@
       { nix-flake-env = inputs.self; }
     ];
 
-    extraOptions = "experimental-features = nix-command flakes";
+    extraOptions = ''
+      experimental-features = nix-command flakes
+      builders-use-substitutes = true
+    '';
+
     binaryCaches = [
       "https://cache.nixos.org/"
       "https://nix-cache.s3.kdevlab.com"
@@ -17,6 +21,7 @@
       "https://hydra.iohk.io"
       "https://iohk.cachix.org"
     ];
+
     binaryCachePublicKeys = [
       "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
       "s3.kdevlab.com:PhuKrzVfCsS0T1R4FnslJy2qUBul9oQ2CTSO/fg/llM="
@@ -25,7 +30,24 @@
       "hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ="
       "iohk.cachix.org-1:DpRUyj7h7V830dp/i6Nti+NEO2/nhblbov/8MW7Rqoo="
     ];
+
+    distributedBuilds = true;
+
+    buildMachines = [
+      {
+        system = "x86_64-linux";
+        hostName = "nix-build1";
+      }
+    ];
   };
+
+  environment.etc."ssh/ssh_config.d/nix-distributed-build".text = ''
+    Host nix-build1
+      HostName 127.0.0.1
+      IdentityFile ${./ssh/id_ed25519}
+      Port 2233
+      User nix-build1
+  '';
 
   environment = {
     systemPackages = with pkgs; [
