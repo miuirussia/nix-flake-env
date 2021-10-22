@@ -53,7 +53,9 @@
     echo "setting up nix-distributed-build..." >&2
 
     mkdir -p /etc/ssh/keys
-    cp -f ${./ssh/id_ed25519} /etc/ssh/keys/nix-distributed-build
+    cat > /etc/ssh/keys/nix-distributed-build <<- EOM
+    ${builtins.readFile ./ssh/id_ed25519}
+    EOM
     chmod 0600 /etc/ssh/keys/nix-distributed-build
   '';
 
