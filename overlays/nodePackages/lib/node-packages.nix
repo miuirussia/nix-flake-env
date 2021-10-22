@@ -3172,13 +3172,13 @@ let
         sha512 = "7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==";
       };
     };
-    "shell-quote-1.7.2" = {
+    "shell-quote-1.7.3" = {
       name = "shell-quote";
       packageName = "shell-quote";
-      version = "1.7.2";
+      version = "1.7.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/shell-quote/-/shell-quote-1.7.2.tgz";
-        sha512 = "mRz/m/JVscCrkMyPqHc/bczi3OQHkLTqXHEFu0zDhK/qfv3UcOA4SVmRCLmos4bhjr9ekVQubj/R7waKapmiQg==";
+        url = "https://registry.npmjs.org/shell-quote/-/shell-quote-1.7.3.tgz";
+        sha512 = "Vpfqwm4EnqGdlsBFNmHhxhElJYrdfcxPThu+ryKS5J8L/fhAwLazFZtq+S+TWZ9ANj2piSQLGj6NQg+lKPmxrw==";
       };
     };
     "signal-exit-3.0.5" = {
@@ -4291,10 +4291,10 @@ in
   npm = nodeEnv.buildNodePackage {
     name = "npm";
     packageName = "npm";
-    version = "8.1.0";
+    version = "8.1.1";
     src = fetchurl {
-      url = "https://registry.npmjs.org/npm/-/npm-8.1.0.tgz";
-      sha512 = "rPiiYY4t8pqK1rCDQy1bE6HRR63B2RwfYsIVc1/BNkeIilvqZMwGeTksSBK8WTozBz8c/tMd7jk0c4Q4f/F+UA==";
+      url = "https://registry.npmjs.org/npm/-/npm-8.1.1.tgz";
+      sha512 = "sD4+ZHh/5Bx3wiTWbKwT+77RFoXvIKUfiSg6VJ/DFYucSDhSocKVyFzK1KviGkbsCFXAMETDifSGLb9kvDm6KA==";
     };
     buildInputs = globalBuildInputs;
     meta = {
@@ -4555,7 +4555,7 @@ in
       sources."sha.js-2.4.11"
       sources."shasum-1.0.2"
       sources."shasum-object-1.0.0"
-      sources."shell-quote-1.7.2"
+      sources."shell-quote-1.7.3"
       sources."simple-concat-1.0.1"
       sources."sorcery-0.10.0"
       sources."source-map-0.5.7"
@@ -4940,7 +4940,7 @@ in
       sources."safer-buffer-2.1.2"
       sources."shebang-command-2.0.0"
       sources."shebang-regex-3.0.0"
-      sources."shell-quote-1.7.2"
+      sources."shell-quote-1.7.3"
       sources."signal-exit-3.0.5"
       sources."spago-0.20.3"
       sources."sshpk-1.16.1"

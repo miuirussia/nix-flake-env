@@ -1,9 +1,9 @@
 {
   "url": "https://github.com/sumneko/lua-language-server.git",
-  "rev": "cbb233f8725e580ee591302a82e672879e994036",
-  "date": "2021-10-19T11:27:48+08:00",
-  "path": "/nix/store/8yyw3v223cs64kw77hy1dax04l8wr6f7-lua-language-server-cbb233f",
-  "sha256": "1cnm2dcynd7pb6pn364kdaq1wdsfpcq28nwyy9yz0vi59hr90dp7",
+  "rev": "7891bd1f332b6cff17524b97084d1c05144bbf02",
+  "date": "2021-10-22T11:42:13+08:00",
+  "path": "/nix/store/j29cqannb2610pks73qfbpcbfm8v51kj-lua-language-server-7891bd1",
+  "sha256": "0rldfnccx1mnrw7pcjp73rkdgszi1aj9fc5nh84f9l09lx08408k",
   "fetchLFS": false,
   "fetchSubmodules": true,
   "deepClone": false,
