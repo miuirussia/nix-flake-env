@@ -44,9 +44,17 @@
   environment.etc."ssh/ssh_config.d/nix-distributed-build".text = ''
     Host nix-build1
       HostName 127.0.0.1
-      IdentityFile ${./ssh/id_ed25519}
+      IdentityFile /etc/ssh/keys/nix-distributed-build
       Port 2233
       User nix-build1
+  '';
+
+  system.activationScripts.postActivation.text = ''
+    echo "setting up nix-distributed-build..." >&2
+
+    mkdir -p /etc/ssh/keys
+    cp -f ${./ssh/id_ed25519} /etc/ssh/keys/nix-distributed-build
+    chmod 0600 /etc/ssh/keys/nix-distributed-build
   '';
 
   environment = {
