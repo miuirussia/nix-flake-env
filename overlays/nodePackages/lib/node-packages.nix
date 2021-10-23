@@ -4309,10 +4309,10 @@ in
   pnpm = nodeEnv.buildNodePackage {
     name = "pnpm";
     packageName = "pnpm";
-    version = "6.18.0";
+    version = "6.19.0";
     src = fetchurl {
-      url = "https://registry.npmjs.org/pnpm/-/pnpm-6.18.0.tgz";
-      sha512 = "YGm1Dz8IG7szmYkpGx9WXXeidn340oSjrquCizkr9R2Pmp4NyPB8815xvaL8n0EI0fTe5+0Edx4KVAbHYF1ItA==";
+      url = "https://registry.npmjs.org/pnpm/-/pnpm-6.19.0.tgz";
+      sha512 = "sRSTETIg4RI+5jitvA2a9iDqay7EtSxy3cJP24o0AeJAH2p6LEdtmp7Y5kZosdnxTz00JTHSi3MJg6mYzpJYUw==";
     };
     buildInputs = globalBuildInputs;
     meta = {
@@ -4614,10 +4614,10 @@ in
   purescript = nodeEnv.buildNodePackage {
     name = "purescript";
     packageName = "purescript";
-    version = "0.14.4";
+    version = "0.14.5";
     src = fetchurl {
-      url = "https://registry.npmjs.org/purescript/-/purescript-0.14.4.tgz";
-      sha512 = "9Lq2qvyVkQoKUBSNOEBKIJjtD5sDwThurSt3SRdtSseaA03p1Fk7VxbUr9HV/gHLVZPIkOhPtjvZGUNs5U2PDA==";
+      url = "https://registry.npmjs.org/purescript/-/purescript-0.14.5.tgz";
+      sha512 = "bJriK+8MssEsk++itpHL1FgqbgqxoWPgyLIkoC54k7g2Wfsj8M1svQcXcRSu1UZRixu+pg7COQF7uDref/nO2Q==";
     };
     dependencies = [
       sources."ajv-6.12.6"
