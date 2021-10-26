@@ -1237,13 +1237,13 @@ let
         sha512 = "39nnKffWz8xN1BU/2c79n9nB9HDzo0niYUqx6xyqUnyoAnQyyWpOTdZEeiCch8BBu515t4wp9ZmgVfVhn9EBpw==";
       };
     };
-    "estraverse-5.2.0" = {
+    "estraverse-5.3.0" = {
       name = "estraverse";
       packageName = "estraverse";
-      version = "5.2.0";
+      version = "5.3.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/estraverse/-/estraverse-5.2.0.tgz";
-        sha512 = "BxbNGGNm0RyRYvUdHpIwv9IWzeM9XClbOxwoATuFdOE7ZE6wHL+HQ5T8hoPM+zHvmKzzsEqhgy0GrQ5X13afiQ==";
+        url = "https://registry.npmjs.org/estraverse/-/estraverse-5.3.0.tgz";
+        sha512 = "MMdARuVEQziNTeJD8DgMqmhwR11BRQ/cBP+pLtYdSTnf3MIO8fFeiINEbX36ZdNlfU/7A9f3gUw49B3oQsvwBA==";
       };
     };
     "esutils-2.0.3" = {
@@ -4157,12 +4157,12 @@ in
       sources."esprima-4.0.1"
       (sources."esquery-1.4.0" // {
         dependencies = [
-          sources."estraverse-5.2.0"
+          sources."estraverse-5.3.0"
         ];
       })
       (sources."esrecurse-4.3.0" // {
         dependencies = [
-          sources."estraverse-5.2.0"
+          sources."estraverse-5.3.0"
         ];
       })
       sources."estraverse-4.3.0"
