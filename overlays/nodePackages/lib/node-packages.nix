@@ -4291,10 +4291,10 @@ in
   npm = nodeEnv.buildNodePackage {
     name = "npm";
     packageName = "npm";
-    version = "8.1.1";
+    version = "8.1.2";
     src = fetchurl {
-      url = "https://registry.npmjs.org/npm/-/npm-8.1.1.tgz";
-      sha512 = "sD4+ZHh/5Bx3wiTWbKwT+77RFoXvIKUfiSg6VJ/DFYucSDhSocKVyFzK1KviGkbsCFXAMETDifSGLb9kvDm6KA==";
+      url = "https://registry.npmjs.org/npm/-/npm-8.1.2.tgz";
+      sha512 = "9awPeSZ+3sS4cBwGsJQnbt3M+ZyBRBokEJYdm2nmu9n8HSuGEEOR1cLy7NLB08veoj21I6ZtMhwM1ARz6HWYHg==";
     };
     buildInputs = globalBuildInputs;
     meta = {
