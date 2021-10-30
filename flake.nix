@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs = { url = "github:miuirussia/nixpkgs/nixpkgs-unstable"; };
     fenix = { url = "github:nix-community/fenix"; inputs.nixpkgs.follows = "nixpkgs"; };
-    nixUnstable = { url = "github:NixOS/nix/4c0cde95ad8dc95f876e5cf32790e73e08f49b28"; inputs.nixpkgs.follows = "nixpkgs"; };
+    nixUnstable = { url = "github:NixOS/nix/5667822edc24598788a1f90b923b6b41b733cb8b"; inputs.nixpkgs.follows = "nixpkgs"; };
 
     # dotenv management
     darwin = { url = "github:LnL7/nix-darwin/master"; inputs.nixpkgs.follows = "nixpkgs"; };
