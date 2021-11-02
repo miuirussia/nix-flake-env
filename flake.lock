@@ -237,11 +237,11 @@
     "hackage": {
       "flake": false,
       "locked": {
-        "lastModified": 1635734237,
-        "narHash": "sha256-Ulyesnr6HAIc/EEtCrO2wV23NzlgR4NHWckjrMGEK0o=",
+        "lastModified": 1635837027,
+        "narHash": "sha256-l7r07G/j27kLZFcTD1m1SAVdizEOKq3RbDYZkP0S5ZA=",
         "owner": "miuirussia",
         "repo": "hackage.nix",
-        "rev": "af52e9d59a4d847b3a92126937d95773ebeb83e2",
+        "rev": "ca27dbeae079eebff4691b1753e28f9702c1d578",
         "type": "github"
       },
       "original": {
@@ -496,11 +496,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1635610180,
-        "narHash": "sha256-OVFp7Mc8OsPMNsttqENOPQaoGT2e9FfOXCUIpkGBJtw=",
+        "lastModified": 1635836260,
+        "narHash": "sha256-mj9CRvFDFLQBx6Fhd7FmkEb9u6w5A04u8PbepMDqyOQ=",
         "owner": "miuirussia",
         "repo": "nixpkgs",
-        "rev": "79a5da07c7136e5702495239203117b64fab9e10",
+        "rev": "973766800c38f68232ddbc2ec1de5c60dd9e1b1a",
         "type": "github"
       },
       "original": {
@@ -625,11 +625,11 @@
     "nvim-cmp": {
       "flake": false,
       "locked": {
-        "lastModified": 1635823451,
-        "narHash": "sha256-BU3MQw2xZEbwPYs7nhTSVuojo5d4cCixTDe1LJx0R6o=",
+        "lastModified": 1635835561,
+        "narHash": "sha256-WlDc4q6fOEPhTeoxZOao4OSgrxUMt/CaVy/G+UzVKCY=",
         "owner": "hrsh7th",
         "repo": "nvim-cmp",
-        "rev": "bf0dd907d6ae2a9250171cb74dc557a4e58470d3",
+        "rev": "b4622ed7d286732f58eda08d96f59d39ccde0349",
         "type": "github"
       },
       "original": {
