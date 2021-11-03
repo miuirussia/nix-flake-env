@@ -49,13 +49,13 @@ let
         sha512 = "FagtKFz74XrTl7y6HCzQpwDfXP0yhxe9lHLD1UZxjvZIcbyRz8zTFF/yYNfSfzU414eDwZ1SrO0Qvtyf+wFMQg==";
       };
     };
-    "@humanwhocodes/object-schema-1.2.0" = {
+    "@humanwhocodes/object-schema-1.2.1" = {
       name = "_at_humanwhocodes_slash_object-schema";
       packageName = "@humanwhocodes/object-schema";
-      version = "1.2.0";
+      version = "1.2.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@humanwhocodes/object-schema/-/object-schema-1.2.0.tgz";
-        sha512 = "wdppn25U8z/2yiaT6YGquE6X8sSv7hNMWSXYSSU1jGv/yd6XqjXgTDJ8KP4NgjTXfJ3GbRjeeb8RTV7a/VpM+w==";
+        url = "https://registry.npmjs.org/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz";
+        sha512 = "ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==";
       };
     };
     "@medv/blessed-2.0.1" = {
@@ -4110,7 +4110,7 @@ in
       })
       sources."@eslint/eslintrc-0.4.3"
       sources."@humanwhocodes/config-array-0.5.0"
-      sources."@humanwhocodes/object-schema-1.2.0"
+      sources."@humanwhocodes/object-schema-1.2.1"
       sources."acorn-7.4.1"
       sources."acorn-jsx-5.3.2"
       sources."ajv-6.12.6"
