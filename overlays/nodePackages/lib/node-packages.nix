@@ -265,13 +265,13 @@ let
         sha512 = "HGyxoOTYUyCM6stUe6EJgnd4EoewAI7zMdfqO+kGjnlZmBDz/cR5pf8r/cR4Wq60sL/p0IkcjUEEPwS3GFrIyw==";
       };
     };
-    "asn1-0.2.4" = {
+    "asn1-0.2.6" = {
       name = "asn1";
       packageName = "asn1";
-      version = "0.2.4";
+      version = "0.2.6";
       src = fetchurl {
-        url = "https://registry.npmjs.org/asn1/-/asn1-0.2.4.tgz";
-        sha512 = "jxwzQpLQjSmWXgwaCZE9Nz+glAG01yF1QnWgbhGwHI5A6FRIEY6IVqtHhIepHqI7/kyEyQEagBC5mBEFlIYvdg==";
+        url = "https://registry.npmjs.org/asn1/-/asn1-0.2.6.tgz";
+        sha512 = "ix/FxPn0MDjeyJ7i/yoHGFt/EX6LyNbxSEhPPXODPL+KB0VPk86UYfL0lMdy+KCnv+fmvIzySwaK5COwqVbWTQ==";
       };
     };
     "asn1.js-5.4.1" = {
@@ -4309,10 +4309,10 @@ in
   pnpm = nodeEnv.buildNodePackage {
     name = "pnpm";
     packageName = "pnpm";
-    version = "6.20.1";
+    version = "6.20.2";
     src = fetchurl {
-      url = "https://registry.npmjs.org/pnpm/-/pnpm-6.20.1.tgz";
-      sha512 = "Yoaw5M3zq4Bh7biOeF6zurnoixtFB7EjCQd4dPYoHnGPafwawy/thcCg0Ady8CKyBYXu35VnkEgP/DXE3A84bA==";
+      url = "https://registry.npmjs.org/pnpm/-/pnpm-6.20.2.tgz";
+      sha512 = "G0hjGnROVLQ3hkVWL0FQkliKX5Mc/p2RBUL3oEHSn+AOHbXwE3ILd2pyAATt8BQ+OFnJt7ZCwMTFx+nFWOq04g==";
     };
     buildInputs = globalBuildInputs;
     meta = {
@@ -4626,7 +4626,7 @@ in
       sources."ansi-styles-3.2.1"
       sources."aproba-1.2.0"
       sources."arch-2.2.0"
-      sources."asn1-0.2.4"
+      sources."asn1-0.2.6"
       sources."assert-plus-1.0.0"
       sources."asynckit-0.4.0"
       sources."aws-sign2-0.7.0"
@@ -4814,7 +4814,7 @@ in
       sources."ansi-styles-3.2.1"
       sources."aproba-1.2.0"
       sources."arch-2.2.0"
-      sources."asn1-0.2.4"
+      sources."asn1-0.2.6"
       sources."assert-plus-1.0.0"
       sources."asynckit-0.4.0"
       sources."aws-sign2-0.7.0"
@@ -5024,7 +5024,7 @@ in
     };
     dependencies = [
       sources."ajv-6.12.6"
-      sources."asn1-0.2.4"
+      sources."asn1-0.2.6"
       sources."assert-plus-1.0.0"
       sources."asynckit-0.4.0"
       sources."aws-sign2-0.7.0"
@@ -5092,10 +5092,10 @@ in
   typescript-language-server = nodeEnv.buildNodePackage {
     name = "typescript-language-server";
     packageName = "typescript-language-server";
-    version = "0.6.4";
+    version = "0.6.5";
     src = fetchurl {
-      url = "https://registry.npmjs.org/typescript-language-server/-/typescript-language-server-0.6.4.tgz";
-      sha512 = "tcN3Kyq/tHF79rNdueFNOyY3fTFTj9t0oneoLzkAhV35QBghxwX1eDi6oOnzIglZjSbJWosdnedHHfyjqQ62ig==";
+      url = "https://registry.npmjs.org/typescript-language-server/-/typescript-language-server-0.6.5.tgz";
+      sha512 = "gcNm+rxgehKU6Vy+UWwWOHjPAtyqsxAquslzlS1JdmvsRb//nzFXbwIsGRZ8DDaZ5mijfH7PR2BCTysg2nBAIQ==";
     };
     dependencies = [
       sources."@nodelib/fs.scandir-2.1.5"
