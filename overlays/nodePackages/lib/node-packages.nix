@@ -2119,15 +2119,6 @@ let
         sha512 = "v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==";
       };
     };
-    "lodash.clonedeep-4.5.0" = {
-      name = "lodash.clonedeep";
-      packageName = "lodash.clonedeep";
-      version = "4.5.0";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz";
-        sha1 = "e23f3f9c4f8fbdde872529c1071857a086e5ccef";
-      };
-    };
     "lodash.memoize-3.0.4" = {
       name = "lodash.memoize";
       packageName = "lodash.memoize";
@@ -3451,13 +3442,13 @@ let
         sha512 = "YPPlu67mdnHGTup2A8ff7BC2Pjq0e0Yp/IyTFN03zWO0RcK07uLcbi7C2KpGR2FvWbaB0+bfE27a+sBKebSo7w==";
       };
     };
-    "table-6.7.2" = {
+    "table-6.7.3" = {
       name = "table";
       packageName = "table";
-      version = "6.7.2";
+      version = "6.7.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/table/-/table-6.7.2.tgz";
-        sha512 = "UFZK67uvyNivLeQbVtkiUs8Uuuxv24aSL4/Vil2PJVtMgU8Lx0CYkP12uCGa3kjyQzOSgV1+z9Wkb82fCGsO0g==";
+        url = "https://registry.npmjs.org/table/-/table-6.7.3.tgz";
+        sha512 = "5DkIxeA7XERBqMwJq0aHZOdMadBx4e6eDoFRuyT5VR82J0Ycg2DwM6GfA/EQAhJ+toRTaS1lIdSQCqgrmhPnlw==";
       };
     };
     "tar-4.4.19" = {
@@ -4193,7 +4184,6 @@ in
       sources."json-schema-traverse-0.4.1"
       sources."json-stable-stringify-without-jsonify-1.0.1"
       sources."levn-0.4.1"
-      sources."lodash.clonedeep-4.5.0"
       sources."lodash.merge-4.6.2"
       sources."lodash.truncate-4.4.2"
       sources."lru-cache-6.0.0"
@@ -4228,7 +4218,7 @@ in
       sources."strip-ansi-6.0.1"
       sources."strip-json-comments-3.1.1"
       sources."supports-color-8.1.1"
-      (sources."table-6.7.2" // {
+      (sources."table-6.7.3" // {
         dependencies = [
           sources."ajv-8.6.3"
           sources."json-schema-traverse-1.0.0"
@@ -4291,10 +4281,10 @@ in
   npm = nodeEnv.buildNodePackage {
     name = "npm";
     packageName = "npm";
-    version = "8.1.2";
+    version = "8.1.3";
     src = fetchurl {
-      url = "https://registry.npmjs.org/npm/-/npm-8.1.2.tgz";
-      sha512 = "9awPeSZ+3sS4cBwGsJQnbt3M+ZyBRBokEJYdm2nmu9n8HSuGEEOR1cLy7NLB08veoj21I6ZtMhwM1ARz6HWYHg==";
+      url = "https://registry.npmjs.org/npm/-/npm-8.1.3.tgz";
+      sha512 = "7AnYyaVdF3vEpHMb+tq5ALbmsE9CIJYu0KJvGawn03yc1HGw778H7UNLV2tcHTAa6VjJk4c1yKbovOC0674PAw==";
     };
     buildInputs = globalBuildInputs;
     meta = {
@@ -4309,10 +4299,10 @@ in
   pnpm = nodeEnv.buildNodePackage {
     name = "pnpm";
     packageName = "pnpm";
-    version = "6.20.2";
+    version = "6.20.3";
     src = fetchurl {
-      url = "https://registry.npmjs.org/pnpm/-/pnpm-6.20.2.tgz";
-      sha512 = "G0hjGnROVLQ3hkVWL0FQkliKX5Mc/p2RBUL3oEHSn+AOHbXwE3ILd2pyAATt8BQ+OFnJt7ZCwMTFx+nFWOq04g==";
+      url = "https://registry.npmjs.org/pnpm/-/pnpm-6.20.3.tgz";
+      sha512 = "t16XiTxKTO+QdpsT3hBnlNN33T1JDCi+dtcVrT8ckJHt8bDQW4ax9hOYe4jtz9tUIxT0JhzYeDiyd5fiGMnu+w==";
     };
     buildInputs = globalBuildInputs;
     meta = {
