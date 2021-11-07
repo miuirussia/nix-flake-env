@@ -38,8 +38,8 @@
   {
     "name": "toml",
     "publisher": "be5invis",
-    "sha256": "1r1y6krqw5rrdhia9xbs3bx9gibd1ky4bm709231m9zvbqqwwq2j",
-    "version": "0.5.1"
+    "sha256": "0q8blfihawmqfbyy68lv932mdac1miph5cs8i6d0w8wh9jwdnkna",
+    "version": "0.6.0"
   },
   {
     "name": "dhall-lang",
