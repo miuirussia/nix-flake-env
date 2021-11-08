@@ -140,8 +140,8 @@
   {
     "name": "shellcheck",
     "publisher": "timonwong",
-    "sha256": "11lbk6azr22bpnlklsjg6dv5wd27xr4h8vrasc30p7mfaf2nxa3z",
-    "version": "0.18.1"
+    "sha256": "1cmm645x2lxizn8x1kxpnr71dxq1hhv6xhfz48ms1n956xsmsbzx",
+    "version": "0.18.2"
   },
   {
     "name": "vscode-thunder-client",
