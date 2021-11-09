@@ -496,11 +496,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1636354288,
-        "narHash": "sha256-ByRgcIXYu52mtRwFFEMyBg+VNlVwAtiZ2bH2tikaldg=",
+        "lastModified": 1636438786,
+        "narHash": "sha256-UEYp2xxOLDBXa6m2a3o+ro9XsHCaCoGxq4PWZCsv2Tk=",
         "owner": "miuirussia",
         "repo": "nixpkgs",
-        "rev": "d22367e07384177dade6cc04ee0d3ece75815729",
+        "rev": "8ca549446a39d43454bc9a6fe6d647fa024cb37c",
         "type": "github"
       },
       "original": {
@@ -625,11 +625,11 @@
     "nvim-cmp": {
       "flake": false,
       "locked": {
-        "lastModified": 1636377833,
-        "narHash": "sha256-56L4WIPXfmw1gRK1amCwEQ9jMcfsHi9yK0cYenUJBPQ=",
+        "lastModified": 1636439516,
+        "narHash": "sha256-HVRoeQrRK4ZeZh/fng4BXNDctUkpaBbdob+as9PTR6k=",
         "owner": "hrsh7th",
         "repo": "nvim-cmp",
-        "rev": "453a62f88208def57de0c0a077d083070fdf7f65",
+        "rev": "c7a1b9f7c041e40f1cb36e9d19304d0f4e15f133",
         "type": "github"
       },
       "original": {
@@ -929,11 +929,11 @@
     "nvim-null-ls": {
       "flake": false,
       "locked": {
-        "lastModified": 1636429734,
-        "narHash": "sha256-C4WQWpePBxuN6I4f29YEXJ1Scfrr97AM17vKvX9px6Y=",
+        "lastModified": 1636433852,
+        "narHash": "sha256-cdvZKUJRy8Ydb9Fs5lVKWE0Rq6+1XOTdNNUPw5bCYkQ=",
         "owner": "jose-elias-alvarez",
         "repo": "null-ls.nvim",
-        "rev": "41a55b05109004ae0059b60a60b65e6007ecd83a",
+        "rev": "2faae9c70997485caef0feaf15e8729e821977e9",
         "type": "github"
       },
       "original": {
