@@ -74,8 +74,8 @@
   {
     "name": "rust-analyzer",
     "publisher": "matklad",
-    "sha256": "19lsnis5wmskpkpiyngbdpa9cpczn9mww6v5xcvlwhfjbfh63hhm",
-    "version": "0.2.801"
+    "sha256": "1km36nsjg7dm4s033qc17fz7jkpq9vnh6ymvk6ry9y4p1xpb17yd",
+    "version": "0.2.809"
   },
   {
     "name": "vscode-docker",
