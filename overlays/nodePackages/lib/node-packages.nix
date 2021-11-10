@@ -1408,13 +1408,13 @@ let
         sha512 = "dm9s5Pw7Jc0GvMYbshN6zchCA9RgQlzzEZX3vylR9IqFfS8XciblUXOKfW6SiuJ0e13eDYZoZV5wdrev7P3Nwg==";
       };
     };
-    "flatted-3.2.2" = {
+    "flatted-3.2.4" = {
       name = "flatted";
       packageName = "flatted";
-      version = "3.2.2";
+      version = "3.2.4";
       src = fetchurl {
-        url = "https://registry.npmjs.org/flatted/-/flatted-3.2.2.tgz";
-        sha512 = "JaTY/wtrcSyvXJl4IMFHPKyFur1sE9AUqc0QnhOaJ0CxHtAoIV8pYDzeEfAaNEtGkOfq4gr3LBFmdXW5mOQFnA==";
+        url = "https://registry.npmjs.org/flatted/-/flatted-3.2.4.tgz";
+        sha512 = "8/sOawo8tJ4QOBX8YlQBMxL8+RLZfxMQOif9o0KUKTNTjMYElWPE0r/m5VNFxTRd0NSw8qSy8dajrwX4RYI1Hw==";
       };
     };
     "flush-write-stream-1.1.1" = {
@@ -4163,7 +4163,7 @@ in
       sources."fast-levenshtein-2.0.6"
       sources."file-entry-cache-6.0.1"
       sources."flat-cache-3.0.4"
-      sources."flatted-3.2.2"
+      sources."flatted-3.2.4"
       sources."fs.realpath-1.0.0"
       sources."functional-red-black-tree-1.0.1"
       sources."glob-7.2.0"
@@ -4299,10 +4299,10 @@ in
   pnpm = nodeEnv.buildNodePackage {
     name = "pnpm";
     packageName = "pnpm";
-    version = "6.20.4";
+    version = "6.21.0";
     src = fetchurl {
-      url = "https://registry.npmjs.org/pnpm/-/pnpm-6.20.4.tgz";
-      sha512 = "t50posttANTjAqBfEapojvrD4JKPTcOiPOHxKIGLlcMYke4mKbOhDY+4asSToZI6e7fwQfQpPDPGFI+/qz7Z4A==";
+      url = "https://registry.npmjs.org/pnpm/-/pnpm-6.21.0.tgz";
+      sha512 = "Emhpjbr7MiINYUP6d/X5c2vPa5ltkA1EhJ0wmGotrYZs7DCFvy6SW+RKTGNddedqLhL14LTK+4pE1rHWcQnnfg==";
     };
     buildInputs = globalBuildInputs;
     meta = {
@@ -5082,10 +5082,10 @@ in
   typescript-language-server = nodeEnv.buildNodePackage {
     name = "typescript-language-server";
     packageName = "typescript-language-server";
-    version = "0.6.5";
+    version = "0.7.1";
     src = fetchurl {
-      url = "https://registry.npmjs.org/typescript-language-server/-/typescript-language-server-0.6.5.tgz";
-      sha512 = "gcNm+rxgehKU6Vy+UWwWOHjPAtyqsxAquslzlS1JdmvsRb//nzFXbwIsGRZ8DDaZ5mijfH7PR2BCTysg2nBAIQ==";
+      url = "https://registry.npmjs.org/typescript-language-server/-/typescript-language-server-0.7.1.tgz";
+      sha512 = "pxPFvsDQolUTJTBdr8e9Qo+SBCYU8RIUO0l8eODMjBDvG9rTl6NTME+OEzMiR8LQ8siZ2jdQUq4K+6a/+20JCQ==";
     };
     dependencies = [
       sources."@nodelib/fs.scandir-2.1.5"
@@ -5123,6 +5123,7 @@ in
       sources."is-path-inside-3.0.3"
       sources."is-stream-2.0.1"
       sources."jsonfile-6.1.0"
+      sources."lru-cache-6.0.0"
       sources."merge2-1.4.1"
       sources."micromatch-4.0.4"
       sources."minimatch-3.0.4"
@@ -5136,6 +5137,7 @@ in
       sources."reusify-1.0.4"
       sources."rimraf-3.0.2"
       sources."run-parallel-1.2.0"
+      sources."semver-7.3.5"
       sources."slash-3.0.0"
       sources."temp-dir-2.0.0"
       sources."tempy-1.0.1"
@@ -5150,6 +5152,7 @@ in
       sources."vscode-languageserver-types-3.16.0"
       sources."vscode-uri-1.0.8"
       sources."wrappy-1.0.2"
+      sources."yallist-4.0.0"
     ];
     buildInputs = globalBuildInputs;
     meta = {
