@@ -116,8 +116,8 @@
   {
     "name": "language-purescript",
     "publisher": "nwolverson",
-    "sha256": "1v406f7b7hg8fdjfm6nq09sdaz5zfyc6y0lanfq42awqkkxqcyd1",
-    "version": "0.2.6"
+    "sha256": "1n4z3258lilxg47fdhgrfx8wakw3dlqii69qiidy1qc079dwa2bi",
+    "version": "0.2.7"
   },
   {
     "name": "rust",
