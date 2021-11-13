@@ -166,13 +166,13 @@ let
         sha512 = "j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==";
       };
     };
-    "ajv-8.7.1" = {
+    "ajv-8.8.0" = {
       name = "ajv";
       packageName = "ajv";
-      version = "8.7.1";
+      version = "8.8.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/ajv/-/ajv-8.7.1.tgz";
-        sha512 = "gPpOObTO1QjbnN1sVMjJcp1TF9nggMfO4MBR5uQl6ZVTOaEPq5i4oq/6R9q2alMMPB3eg53wFv1RuJBLuxf3Hw==";
+        url = "https://registry.npmjs.org/ajv/-/ajv-8.8.0.tgz";
+        sha512 = "L+cJ/+pkdICMueKR6wIx3VP2fjIx3yAhuvadUv/osv9yFD7OVZy442xFF+Oeu3ZvmhBGQzoF6mTSt+LUWBmGQg==";
       };
     };
     "ansi-colors-4.1.1" = {
@@ -4220,7 +4220,7 @@ in
       sources."supports-color-8.1.1"
       (sources."table-6.7.3" // {
         dependencies = [
-          sources."ajv-8.7.1"
+          sources."ajv-8.8.0"
           sources."json-schema-traverse-1.0.0"
         ];
       })
@@ -4299,10 +4299,10 @@ in
   pnpm = nodeEnv.buildNodePackage {
     name = "pnpm";
     packageName = "pnpm";
-    version = "6.21.0";
+    version = "6.21.1";
     src = fetchurl {
-      url = "https://registry.npmjs.org/pnpm/-/pnpm-6.21.0.tgz";
-      sha512 = "Emhpjbr7MiINYUP6d/X5c2vPa5ltkA1EhJ0wmGotrYZs7DCFvy6SW+RKTGNddedqLhL14LTK+4pE1rHWcQnnfg==";
+      url = "https://registry.npmjs.org/pnpm/-/pnpm-6.21.1.tgz";
+      sha512 = "cekH8bFgZbHerGsmW4JYY5bi0jYyi/K7WZpSf8TQFlP3Kxc50KhCwNWPUzgLVImYyX8SCJcVhyNOoYQKDnmYCw==";
     };
     buildInputs = globalBuildInputs;
     meta = {
