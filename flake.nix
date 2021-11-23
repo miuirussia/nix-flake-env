@@ -41,7 +41,7 @@
     zsh-history-substring-search = { url = "github:zsh-users/zsh-history-substring-search"; flake = false; };
 
     # neovim
-    neovim = { url = "github:neovim/neovim"; flake = false; };
+    neovim = { url = "github:neovim/neovim/release-0.5"; flake = false; };
     tree-sitter = { url = "github:tree-sitter/tree-sitter"; flake = false; };
 
     vim-dhall = { url = "github:vmchale/dhall-vim"; flake = false; };
