@@ -110,8 +110,8 @@
   {
     "name": "ide-purescript",
     "publisher": "nwolverson",
-    "sha256": "1h113rmd4y7hfhmizkxg18yx65azb9sq01bd827b4xr1yhjdcvir",
-    "version": "0.25.4"
+    "sha256": "160c9fgycc6566bzb0v9nfqn7kyg6kixnkgp7hh3s6lkfmjvzbsz",
+    "version": "0.25.5"
   },
   {
     "name": "language-purescript",

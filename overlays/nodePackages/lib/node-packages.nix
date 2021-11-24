@@ -4828,10 +4828,10 @@ in
   purescript-language-server = nodeEnv.buildNodePackage {
     name = "purescript-language-server";
     packageName = "purescript-language-server";
-    version = "0.15.8";
+    version = "0.16.0";
     src = fetchurl {
-      url = "https://registry.npmjs.org/purescript-language-server/-/purescript-language-server-0.15.8.tgz";
-      sha512 = "eXOOG0c7nCKtxPOJVScZTXwxVx/of515wSQY4zqiqEvVbmd7y1+ldnFUJKq1wJmKjimGA447n2QFF6S38NwjXg==";
+      url = "https://registry.npmjs.org/purescript-language-server/-/purescript-language-server-0.16.0.tgz";
+      sha512 = "G+Ky8G6TZKnRsuSl8U9yozo4A/2nnn5pOupf/qTbvJ70XWOS8lwr48ALzkWivwJ+qQd4EoIjUGx7GFq/PQjiGQ==";
     };
     dependencies = [
       sources."ajv-6.12.6"
