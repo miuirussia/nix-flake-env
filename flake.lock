@@ -818,19 +818,11 @@
     "nvim-lspconfig": {
       "flake": false,
       "locked": {
-<<<<<<< HEAD
         "lastModified": 1637900936,
         "narHash": "sha256-sq9iqt2b1m39e5gyF0PwIV1+EQw2WvSuAi8x4MmweZA=",
         "owner": "neovim",
         "repo": "nvim-lspconfig",
         "rev": "10ad0cca1b83713ed98ed4cb7ea60f2ea8e55c49",
-=======
-        "lastModified": 1637864563,
-        "narHash": "sha256-0f7QT3e9KqovxLWkbTftLDmijGQ0sAk6zHcnp2nuF9g=",
-        "owner": "neovim",
-        "repo": "nvim-lspconfig",
-        "rev": "767f863b65b535d1ef235495ebda52237ddd4452",
->>>>>>> bba0503 (Release v0.1.1637866107)
         "type": "github"
       },
       "original": {
@@ -874,19 +866,11 @@
     "nvim-lualine": {
       "flake": false,
       "locked": {
-<<<<<<< HEAD
         "lastModified": 1637899160,
         "narHash": "sha256-4/nC0lLC4tS57Ojx38FyPXBXYPKGFfn0PsFR34qwIRI=",
         "owner": "nvim-lualine",
         "repo": "lualine.nvim",
         "rev": "cf75e1af5a1cafaa0866cf8a11632f48b430115d",
-=======
-        "lastModified": 1637826255,
-        "narHash": "sha256-J2vHnLsLoi3UIcMa7tSCgV00Fc+B2CnyjTDDH6tEHw0=",
-        "owner": "nvim-lualine",
-        "repo": "lualine.nvim",
-        "rev": "b7cf5067856cd85a3287c86d92610288535c0e93",
->>>>>>> bba0503 (Release v0.1.1637866107)
         "type": "github"
       },
       "original": {
@@ -1026,19 +1010,11 @@
     "nvim-treesitter": {
       "flake": false,
       "locked": {
-<<<<<<< HEAD
         "lastModified": 1637880821,
         "narHash": "sha256-mPrFbcln/9wX83eeMffUO1ZacBS0BlsNl9rqzg5G6V8=",
         "owner": "nvim-treesitter",
         "repo": "nvim-treesitter",
         "rev": "fbbcfa7b6c0841e19f39836a7c5561fd9cc6900f",
-=======
-        "lastModified": 1637851344,
-        "narHash": "sha256-GuetpjBRdp4DZLdq6Jd2CXAfmWSBXWIXvlwixmsDsKI=",
-        "owner": "nvim-treesitter",
-        "repo": "nvim-treesitter",
-        "rev": "bbbb2f1f3286394003dd840dcbf6838e0b0ec7a2",
->>>>>>> bba0503 (Release v0.1.1637866107)
         "type": "github"
       },
       "original": {
