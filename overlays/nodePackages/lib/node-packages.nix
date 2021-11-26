@@ -4353,10 +4353,10 @@ in
   prettier = nodeEnv.buildNodePackage {
     name = "prettier";
     packageName = "prettier";
-    version = "2.4.1";
+    version = "2.5.0";
     src = fetchurl {
-      url = "https://registry.npmjs.org/prettier/-/prettier-2.4.1.tgz";
-      sha512 = "9fbDAXSBcc6Bs1mZrDYb3XKzDLm4EXXL9sC1LqKP5rZkT6KRr/rf9amVUcODVXgguK/isJz0d0hP72WeaKWsvA==";
+      url = "https://registry.npmjs.org/prettier/-/prettier-2.5.0.tgz";
+      sha512 = "FM/zAKgWTxj40rH03VxzIPdXmj39SwSjwG0heUcNFwI+EMZJnY93yAiKXM3dObIKAM5TA88werc8T/EwhB45eg==";
     };
     buildInputs = globalBuildInputs;
     meta = {
@@ -5118,10 +5118,10 @@ in
   typescript-language-server = nodeEnv.buildNodePackage {
     name = "typescript-language-server";
     packageName = "typescript-language-server";
-    version = "0.8.0";
+    version = "0.8.1";
     src = fetchurl {
-      url = "https://registry.npmjs.org/typescript-language-server/-/typescript-language-server-0.8.0.tgz";
-      sha512 = "b58jKxffILXp7jCiYSLNFgmOKKkEE/+wpZkdKYneP45abu3f7XbaqREyOB+qVeJVUgq96458QyBnZIvGqbaqNg==";
+      url = "https://registry.npmjs.org/typescript-language-server/-/typescript-language-server-0.8.1.tgz";
+      sha512 = "n2KwWC8fNKzEyTz+H2HXbVCCoqaEvzgVeR6ERL6DYQe2Rdynj+s/YkyuStVzV2MqW9j+v4xV2xFik+kTOYpkGg==";
     };
     dependencies = [
       sources."@nodelib/fs.scandir-2.1.5"

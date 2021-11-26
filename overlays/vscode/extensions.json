@@ -14,8 +14,8 @@
   {
     "name": "material-icon-theme",
     "publisher": "pkief",
-    "sha256": "119zpdx2hx9d1xb3d9d773b88i2awr62ivmmnhxm9zp77x9y6b70",
-    "version": "4.10.0"
+    "sha256": "1l2s8j645riqjmj09i3v71s8ycin5vd6brdp35z472fnk6wyi1y6",
+    "version": "4.11.0"
   },
   {
     "name": "vscode-jest",
