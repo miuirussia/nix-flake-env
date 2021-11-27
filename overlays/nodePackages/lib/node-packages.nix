@@ -4033,10 +4033,10 @@ in
   diagnostic-languageserver = nodeEnv.buildNodePackage {
     name = "diagnostic-languageserver";
     packageName = "diagnostic-languageserver";
-    version = "1.13.0";
+    version = "1.14.0";
     src = fetchurl {
-      url = "https://registry.npmjs.org/diagnostic-languageserver/-/diagnostic-languageserver-1.13.0.tgz";
-      sha512 = "ye07E+B6IpwUx3eBvZ9Ug0dVloNDzefTWlxkYnP+kB2nB17tjU07wiWzy2FamWIXIlL6THBtY74ZmvoVQ3Bn7w==";
+      url = "https://registry.npmjs.org/diagnostic-languageserver/-/diagnostic-languageserver-1.14.0.tgz";
+      sha512 = "nR5VV/KqlsbrkkOrk+NlnDwVOfHviMHC3zYhD1I2Tko6xXuw6t/zqo3xbbvHoCTECqoWeIOGseECObMP6hFeug==";
     };
     dependencies = [
       sources."@nodelib/fs.scandir-2.1.5"
@@ -4119,10 +4119,10 @@ in
   eslint_d = nodeEnv.buildNodePackage {
     name = "eslint_d";
     packageName = "eslint_d";
-    version = "11.1.0";
+    version = "11.1.1";
     src = fetchurl {
-      url = "https://registry.npmjs.org/eslint_d/-/eslint_d-11.1.0.tgz";
-      sha512 = "uhrQhFPG7L/81j90+QKaDImDJriqCdPY4ZcN9exFs9sdeF28Cdv/vD2XuRhjD5FxVbA/nNpFL37QsTSQwtjdjA==";
+      url = "https://registry.npmjs.org/eslint_d/-/eslint_d-11.1.1.tgz";
+      sha512 = "PaNWblwIa10KZUt9EObGBzrsaxB+CPtk5d99sTveXmAtQrPSmrntKpWqxN/Mwot0qnI5gCllzkPZi6tO710KUA==";
     };
     dependencies = [
       sources."@babel/code-frame-7.12.11"
