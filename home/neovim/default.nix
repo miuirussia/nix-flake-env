@@ -128,9 +128,8 @@
         nvim-treesitter
         tree-sitter-grammars
 
-        #themes
-        vim-edge
-        nvim-base16
+        # themes
+        nvim-onedark
       ];
     };
 }

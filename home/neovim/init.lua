@@ -68,6 +68,8 @@ o.formatoptions = o.formatoptions
   + "j" -- Auto-remove comments if possible.
   - "2" -- I'm not in gradeschool anymore
 
+require("onedark").setup()
+
 local cmp = require("cmp")
 local gps = require("nvim-gps")
 local lspconfig = require("lspconfig")
@@ -229,7 +231,7 @@ require("trouble").setup()
 lualine.setup({
   options = {
     icons_enabled = true,
-    theme = "auto",
+    theme = "onedark",
     component_separators = { left = "╲", right = "╱" },
     section_separators = { left = "", right = "" },
     disabled_filetypes = {},

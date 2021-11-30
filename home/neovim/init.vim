@@ -34,10 +34,6 @@ if os == 'Darwin' || os == 'Mac'
   set clipboard^=unnamedplus"
 endif
 
-let g:edge_style = 'aura'
-let g:edge_enable_italic = 1
-colorscheme edge
-
 " remap leader
 " map leader key to space
 let g:mapleader = ","
