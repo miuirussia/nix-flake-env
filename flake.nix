@@ -77,8 +77,8 @@
     nvim-lsp-colors = { url = "github:folke/lsp-colors.nvim"; flake = false; };
     nvim-lspconfig = { url = "github:neovim/nvim-lspconfig"; flake = false; };
     nvim-lspkind = { url = "github:onsails/lspkind-nvim"; flake = false; };
-    nvim-lspstatus = { url = "github:nvim-lua/lsp-status.nvim"; flake = false; };
     nvim-lualine = { url = "github:nvim-lualine/lualine.nvim"; flake = false; };
+    nvim-lualine-lsp-progress = { url = "github:arkav/lualine-lsp-progress"; flake = false; };
     nvim-matchup = { url = "github:andymass/vim-matchup"; flake = false; };
     nvim-notify = { url = "github:rcarriga/nvim-notify"; flake = false; };
     nvim-nui = { url = "github:MunifTanjim/nui.nvim"; flake = false; };

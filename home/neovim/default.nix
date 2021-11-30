@@ -109,8 +109,8 @@
         nvim-lsp-colors
         nvim-lspconfig
         nvim-lspkind
-        nvim-lspstatus
         nvim-lualine
+        nvim-lualine-lsp-progress
         nvim-matchup
         nvim-notify
         nvim-null-ls

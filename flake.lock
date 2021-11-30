@@ -847,22 +847,6 @@
         "type": "github"
       }
     },
-    "nvim-lspstatus": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1631735121,
-        "narHash": "sha256-otDFYc9Sl1OYmkrWFCzgAG0XkXyvR/ebRe2zAOwQ1IA=",
-        "owner": "nvim-lua",
-        "repo": "lsp-status.nvim",
-        "rev": "e8e5303f9ee3d8dc327c97891eaa1257ba5d4eee",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nvim-lua",
-        "repo": "lsp-status.nvim",
-        "type": "github"
-      }
-    },
     "nvim-lualine": {
       "flake": false,
       "locked": {
@@ -876,6 +860,22 @@
       "original": {
         "owner": "nvim-lualine",
         "repo": "lualine.nvim",
+        "type": "github"
+      }
+    },
+    "nvim-lualine-lsp-progress": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1634947677,
+        "narHash": "sha256-8HMtydFDzTxsuKvce+bIra9vZ9zHfEBHyR346W635b8=",
+        "owner": "arkav",
+        "repo": "lualine-lsp-progress",
+        "rev": "56842d097245a08d77912edf5f2a69ba29f275d7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "arkav",
+        "repo": "lualine-lsp-progress",
         "type": "github"
       }
     },
@@ -1153,8 +1153,8 @@
         "nvim-lsp-colors": "nvim-lsp-colors",
         "nvim-lspconfig": "nvim-lspconfig",
         "nvim-lspkind": "nvim-lspkind",
-        "nvim-lspstatus": "nvim-lspstatus",
         "nvim-lualine": "nvim-lualine",
+        "nvim-lualine-lsp-progress": "nvim-lualine-lsp-progress",
         "nvim-matchup": "nvim-matchup",
         "nvim-notify": "nvim-notify",
         "nvim-nui": "nvim-nui",

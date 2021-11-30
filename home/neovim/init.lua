@@ -73,7 +73,6 @@ require("onedark").setup()
 local cmp = require("cmp")
 local gps = require("nvim-gps")
 local lspconfig = require("lspconfig")
-local lspstatus = require("lsp-status")
 local lspkind = require("lspkind")
 local notify = require("notify")
 local null_ls = require("null-ls")
@@ -87,42 +86,11 @@ local ts_parsers = require("nvim-treesitter.parsers")
 local package_info = require("package-info")
 local wk = require("which-key")
 
-local capabilities = vim.tbl_extend(
-  "keep",
-  require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()),
-  lspstatus.capabilities
-)
+local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 require("nvim-lightbulb")
 
 gps.setup()
-
-lspstatus.register_progress()
-local function lsp_status()
-  return require("lsp-status").status()
-end
-
-lspstatus.config({
-  diagnostics = false,
-  current_function = false,
-  status_symbol = "⏻",
-  select_symbol = function(cursor_pos, symbol)
-    if symbol.valueRange then
-      local value_range = {
-        ["start"] = {
-          character = 0,
-          line = vim.fn.byte2line(symbol.valueRange[1]),
-        },
-        ["end"] = {
-          character = 0,
-          line = vim.fn.byte2line(symbol.valueRange[2]),
-        },
-      }
-
-      return require("lsp-status.util").in_range(cursor_pos, value_range)
-    end
-  end,
-})
 
 bufferline.setup({
   diagnostics = "nvim_lsp",
@@ -156,9 +124,7 @@ local border = {
   { "│", "FloatBorder" },
 }
 
-local function on_attach(client, buf)
-  lspstatus.on_attach(client)
-
+local function on_attach(_, buf)
   wk.register({
     l = {
       name = "Language server",
@@ -258,7 +224,7 @@ lualine.setup({
         shorting_target = 40,
       },
       { "diagnostics", sources = { "nvim_lsp" } },
-      lsp_status,
+      "lsp_progress",
       { gps.get_location, cond = gps.is_available },
       package_info.get_status,
     },

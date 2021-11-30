@@ -96,7 +96,7 @@ in
       "nvim-lsp-colors"
       "nvim-lspconfig"
       "nvim-lspkind"
-      "nvim-lspstatus"
+      "nvim-lualine-lsp-progress"
       "nvim-lualine"
       "nvim-matchup"
       "nvim-notify"
