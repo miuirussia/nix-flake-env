@@ -4033,10 +4033,10 @@ in
   diagnostic-languageserver = nodeEnv.buildNodePackage {
     name = "diagnostic-languageserver";
     packageName = "diagnostic-languageserver";
-    version = "1.14.0";
+    version = "1.14.1";
     src = fetchurl {
-      url = "https://registry.npmjs.org/diagnostic-languageserver/-/diagnostic-languageserver-1.14.0.tgz";
-      sha512 = "nR5VV/KqlsbrkkOrk+NlnDwVOfHviMHC3zYhD1I2Tko6xXuw6t/zqo3xbbvHoCTECqoWeIOGseECObMP6hFeug==";
+      url = "https://registry.npmjs.org/diagnostic-languageserver/-/diagnostic-languageserver-1.14.1.tgz";
+      sha512 = "68I1b1ZRLYn9IDKJ03r+AGYWu5aI7KmAGf4nnxUXUiAerf5+vI3hcKtgJcmQKD+bURPQ/tQ1pBxlUAsKArAvxw==";
     };
     dependencies = [
       sources."@nodelib/fs.scandir-2.1.5"
@@ -4335,10 +4335,10 @@ in
   pnpm = nodeEnv.buildNodePackage {
     name = "pnpm";
     packageName = "pnpm";
-    version = "6.23.2";
+    version = "6.23.1";
     src = fetchurl {
-      url = "https://registry.npmjs.org/pnpm/-/pnpm-6.23.2.tgz";
-      sha512 = "mb18ZY03mn1wxxco5COfyZgqAxBOfO8F3UU41p1XVSNnkVEUXHIKLRh9UBZjjZS2vO92EqgXd0ewsE3syDmfYw==";
+      url = "https://registry.npmjs.org/pnpm/-/pnpm-6.23.1.tgz";
+      sha512 = "4IFtNC3d/TXc1YGtl+SOpI442S0cJQpZa9FgVdNpiy3x/UGpzQNI7Cz9dbsqWFFDukG7K81gI5LyhIWyOT6J/A==";
     };
     buildInputs = globalBuildInputs;
     meta = {
@@ -4828,10 +4828,10 @@ in
   purescript-language-server = nodeEnv.buildNodePackage {
     name = "purescript-language-server";
     packageName = "purescript-language-server";
-    version = "0.16.0";
+    version = "0.16.1";
     src = fetchurl {
-      url = "https://registry.npmjs.org/purescript-language-server/-/purescript-language-server-0.16.0.tgz";
-      sha512 = "G+Ky8G6TZKnRsuSl8U9yozo4A/2nnn5pOupf/qTbvJ70XWOS8lwr48ALzkWivwJ+qQd4EoIjUGx7GFq/PQjiGQ==";
+      url = "https://registry.npmjs.org/purescript-language-server/-/purescript-language-server-0.16.1.tgz";
+      sha512 = "TX18OnuIZYDySoYxENH7dTQmjwewyoSt8x4chQcLd/zZjgYyiJCr7rDs7LP7Z8bse3iyvQte+HS1OoEIQnauqw==";
     };
     dependencies = [
       sources."ajv-6.12.6"

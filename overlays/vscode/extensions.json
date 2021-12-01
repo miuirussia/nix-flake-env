@@ -86,8 +86,8 @@
   {
     "name": "remote-containers",
     "publisher": "ms-vscode-remote",
-    "sha256": "1v58ph4w5d0hkqqs3piay99sl6kik8pc2arssm5lpq4wx5sq22nl",
-    "version": "0.207.0"
+    "sha256": "1n2imc1h13fad8drnkjp8s6z95d07xa8rqh7kja6cd8bycgjfwd3",
+    "version": "0.208.0"
   },
   {
     "name": "remote-ssh",
@@ -110,8 +110,8 @@
   {
     "name": "ide-purescript",
     "publisher": "nwolverson",
-    "sha256": "160c9fgycc6566bzb0v9nfqn7kyg6kixnkgp7hh3s6lkfmjvzbsz",
-    "version": "0.25.5"
+    "sha256": "0gblldm88b9qz410hwfha9wxkc5gl7bb3kbi0fmihwyna9q27xda",
+    "version": "0.25.6"
   },
   {
     "name": "language-purescript",
