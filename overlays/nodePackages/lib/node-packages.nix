@@ -3478,13 +3478,13 @@ let
         sha512 = "YPPlu67mdnHGTup2A8ff7BC2Pjq0e0Yp/IyTFN03zWO0RcK07uLcbi7C2KpGR2FvWbaB0+bfE27a+sBKebSo7w==";
       };
     };
-    "table-6.7.3" = {
+    "table-6.7.5" = {
       name = "table";
       packageName = "table";
-      version = "6.7.3";
+      version = "6.7.5";
       src = fetchurl {
-        url = "https://registry.npmjs.org/table/-/table-6.7.3.tgz";
-        sha512 = "5DkIxeA7XERBqMwJq0aHZOdMadBx4e6eDoFRuyT5VR82J0Ycg2DwM6GfA/EQAhJ+toRTaS1lIdSQCqgrmhPnlw==";
+        url = "https://registry.npmjs.org/table/-/table-6.7.5.tgz";
+        sha512 = "LFNeryOqiQHqCVKzhkymKwt6ozeRhlm8IL1mE8rNUurkir4heF6PzMyRgaTa4tlyPTGGgXuvVOF/OLWiH09Lqw==";
       };
     };
     "tar-4.4.19" = {
@@ -4254,7 +4254,7 @@ in
       sources."strip-ansi-6.0.1"
       sources."strip-json-comments-3.1.1"
       sources."supports-color-8.1.1"
-      (sources."table-6.7.3" // {
+      (sources."table-6.7.5" // {
         dependencies = [
           sources."ajv-8.8.2"
           sources."json-schema-traverse-1.0.0"
