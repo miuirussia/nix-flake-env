@@ -32,7 +32,8 @@
     fontLigatures = true;
     fontSize = 12;
     formatOnPaste = true;
-    formatOnSave = true;
+    formatOnSave = false;
+    formatOnSaveMode = "modifications";
     lineNumbers = "relative";
     minimap.enabled = false;
     renderControlCharacters = true;
