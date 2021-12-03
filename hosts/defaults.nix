@@ -1,6 +1,15 @@
 # This file contains configuration that is shared across all hosts.
 { inputs, pkgs, lib, options, ... }: {
-  nix = {
+  nix = let
+    caches = [
+      { url = "https://cache.nixos.org"; key = "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="; }
+      { url = "https://nix-cache.s3.kdevlab.com"; key = "s3.kdevlab.com:PhuKrzVfCsS0T1R4FnslJy2qUBul9oQ2CTSO/fg/llM="; }
+      { url = "https://kdevlab.cachix.org"; key = "kdevlab.cachix.org-1:/Mxmbtc6KwP9ifFmetjkadaeeqTAtvzBXI81DGLAVIo="; }
+      { url = "https://hardselius.cachix.org"; key = "hardselius.cachix.org-1:PoN90aQw2eVMwfAy0MS6V9T2exWlgtHOUBBSnthXAl4="; }
+      { url = "https://hydra.iohk.io"; key = "hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ="; }
+      { url = "https://iohk.cachix.org"; key = "iohk.cachix.org-1:DpRUyj7h7V830dp/i6Nti+NEO2/nhblbov/8MW7Rqoo="; }
+    ];
+  in {
     package = pkgs.nixUnstable;
 
     nixPath = [
@@ -13,23 +22,8 @@
       builders-use-substitutes = true
     '';
 
-    binaryCaches = [
-      "https://cache.nixos.org/"
-      "https://nix-cache.s3.kdevlab.com"
-      "https://kdevlab.cachix.org"
-      "https://hardselius.cachix.org"
-      "https://hydra.iohk.io"
-      "https://iohk.cachix.org"
-    ];
-
-    binaryCachePublicKeys = [
-      "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
-      "s3.kdevlab.com:PhuKrzVfCsS0T1R4FnslJy2qUBul9oQ2CTSO/fg/llM="
-      "kdevlab.cachix.org-1:/Mxmbtc6KwP9ifFmetjkadaeeqTAtvzBXI81DGLAVIo="
-      "hardselius.cachix.org-1:PoN90aQw2eVMwfAy0MS6V9T2exWlgtHOUBBSnthXAl4="
-      "hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ="
-      "iohk.cachix.org-1:DpRUyj7h7V830dp/i6Nti+NEO2/nhblbov/8MW7Rqoo="
-    ];
+    binaryCaches = builtins.map (a: a.url) caches;
+    binaryCachePublicKeys = builtins.map (a: a.key) caches;
 
     distributedBuilds = true;
 
