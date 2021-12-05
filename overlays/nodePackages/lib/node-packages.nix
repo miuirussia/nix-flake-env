@@ -4353,10 +4353,10 @@ in
   prettier = nodeEnv.buildNodePackage {
     name = "prettier";
     packageName = "prettier";
-    version = "2.5.0";
+    version = "2.5.1";
     src = fetchurl {
-      url = "https://registry.npmjs.org/prettier/-/prettier-2.5.0.tgz";
-      sha512 = "FM/zAKgWTxj40rH03VxzIPdXmj39SwSjwG0heUcNFwI+EMZJnY93yAiKXM3dObIKAM5TA88werc8T/EwhB45eg==";
+      url = "https://registry.npmjs.org/prettier/-/prettier-2.5.1.tgz";
+      sha512 = "vBZcPRUR5MZJwoyi3ZoyQlc1rXeEck8KgeC9AwwOn+exuxLxq5toTRDTSaVrXHxelDMHy9zlicw8u66yxoSUFg==";
     };
     buildInputs = globalBuildInputs;
     meta = {
