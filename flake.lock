@@ -16,6 +16,24 @@
         "type": "github"
       }
     },
+    "agenix": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1638319138,
+        "narHash": "sha256-ve33f4nTKQluyvm5URQwL019x0Fnrg8urqzvymNeD+s=",
+        "owner": "ryantm",
+        "repo": "agenix",
+        "rev": "52ea2f8c3231cc2b5302fa28c63588aacb77ea29",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ryantm",
+        "repo": "agenix",
+        "type": "github"
+      }
+    },
     "base16-shell": {
       "flake": false,
       "locked": {
@@ -497,18 +515,15 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1638042473,
-        "narHash": "sha256-k5mqX/ehioAcsi7iidAnLaRalU9JEtlzsWcSY9beTn0=",
-        "owner": "miuirussia",
-        "repo": "nixpkgs",
-        "rev": "d02ec579e75fc42e9199f4d4a8755f11fb22df13",
-        "type": "github"
+        "lastModified": 1618628710,
+        "narHash": "sha256-9xIoU+BrCpjs5nfWcd/GlU7XCVdnNKJPffoNTxgGfhs=",
+        "path": "/nix/store/z1rf17q0fxj935cmplzys4gg6nxj1as0-source",
+        "rev": "7919518f0235106d050c77837df5e338fb94de5d",
+        "type": "path"
       },
       "original": {
-        "owner": "miuirussia",
-        "ref": "nixpkgs-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
+        "id": "nixpkgs",
+        "type": "indirect"
       }
     },
     "nixpkgs-2003": {
@@ -570,6 +585,22 @@
       },
       "original": {
         "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1638042473,
+        "narHash": "sha256-k5mqX/ehioAcsi7iidAnLaRalU9JEtlzsWcSY9beTn0=",
+        "owner": "miuirussia",
+        "repo": "nixpkgs",
+        "rev": "d02ec579e75fc42e9199f4d4a8755f11fb22df13",
+        "type": "github"
+      },
+      "original": {
+        "owner": "miuirussia",
         "ref": "nixpkgs-unstable",
         "repo": "nixpkgs",
         "type": "github"
@@ -1122,6 +1153,7 @@
     },
     "root": {
       "inputs": {
+        "agenix": "agenix",
         "base16-shell": "base16-shell",
         "darwin": "darwin",
         "fast-syntax-highlighting": "fast-syntax-highlighting",
@@ -1135,7 +1167,7 @@
         "jetbrains-mono": "jetbrains-mono",
         "neovim": "neovim",
         "nixUnstable": "nixUnstable",
-        "nixpkgs": "nixpkgs",
+        "nixpkgs": "nixpkgs_2",
         "nvim-actionmenu": "nvim-actionmenu",
         "nvim-base16": "nvim-base16",
         "nvim-bufferline": "nvim-bufferline",
