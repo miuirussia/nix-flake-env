@@ -120,16 +120,8 @@ jobs:
           authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
       - name: Build ghc${{ matrix.ghc }}
         run: |
-          nix-env -f ./default.nix -iA pkgs.x86_64-darwin.nix-cache-tools
-          snapshot-nix-store
           nix build --print-build-logs --no-link .#pkgs.x86_64-darwin.haskell-nix.compiler.ghc${{ matrix.ghc }}
           nix build --print-build-logs --no-link .#pkgs.x86_64-darwin.stack-in-nix
-          push-snapshot-nix-to-cache
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          NIX_UPLOAD_SECRET_KEY: ${{ secrets.NIX_UPLOAD_SECRET_KEY }}
-          NIX_UPLOAD_STORE_URL: ${{ secrets.NIX_UPLOAD_STORE_URL }}
 
   build-hls:
     strategy:
@@ -160,15 +152,7 @@ jobs:
           authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
       - name: Build hls${{ matrix.ghc }}
         run: |
-          nix-env -f ./default.nix -iA pkgs.x86_64-darwin.nix-cache-tools
-          snapshot-nix-store
           nix build --print-build-logs --no-link .#pkgs.x86_64-darwin.hls${{ matrix.ghc }}
-          push-snapshot-nix-to-cache
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          NIX_UPLOAD_SECRET_KEY: ${{ secrets.NIX_UPLOAD_SECRET_KEY }}
-          NIX_UPLOAD_STORE_URL: ${{ secrets.NIX_UPLOAD_STORE_URL }}
 
   test:
     name: Test
@@ -205,17 +189,9 @@ jobs:
           nix flake show
       - name: Build
         run: |
-          nix-env -f ./default.nix -iA pkgs.x86_64-darwin.nix-cache-tools
-          snapshot-nix-store
           nix build --print-build-logs --no-link .#darwinConfigurations.home.system
           nix build --print-build-logs --no-link .#darwinConfigurations.work.system
           nix build --print-build-logs --no-link .#darwinConfigurations.macbook.system
-          push-snapshot-nix-to-cache
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          NIX_UPLOAD_SECRET_KEY: ${{ secrets.NIX_UPLOAD_SECRET_KEY }}
-          NIX_UPLOAD_STORE_URL: ${{ secrets.NIX_UPLOAD_STORE_URL }}
 
   release:
     name: Release
