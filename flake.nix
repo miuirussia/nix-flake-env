@@ -7,6 +7,11 @@
     nixUnstable = { url = "github:NixOS/nix/5fcf7f04a91c5cd0d49f833fe21991da89776a22"; inputs.nixpkgs.follows = "nixpkgs"; };
 
     agenix.url = "github:ryantm/agenix";
+    ragenix = {
+      url = "github:yaxitech/ragenix";
+      inputs.agenix.follows = "agenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # dotenv management
     darwin = { url = "github:LnL7/nix-darwin/master"; inputs.nixpkgs.follows = "nixpkgs"; };
@@ -100,7 +105,7 @@
     flake-compat = { url = "github:edolstra/flake-compat"; flake = false; };
   };
 
-  outputs = inputs @ { self, agenix, nixpkgs, darwin, home-manager, flake-utils, fenix, haskell-nix, ... }:
+  outputs = inputs @ { self, ragenix, nixpkgs, darwin, home-manager, flake-utils, fenix, haskell-nix, ... }:
     let
       supportedSystem = [ "aarch64-darwin" "x86_64-linux" "x86_64-darwin" ];
 
@@ -167,7 +172,7 @@
             };
           }
           {
-            environment.systemPackages = [ agenix.defaultPackage.x86_64-darwin ];
+            environment.systemPackages = [ ragenix.defaultPackage.x86_64-darwin ];
           }
         ];
 
