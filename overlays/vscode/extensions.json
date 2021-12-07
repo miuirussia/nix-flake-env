@@ -56,8 +56,8 @@
   {
     "name": "haskell",
     "publisher": "haskell",
-    "sha256": "11myrk3hcc2hdw2n07w092s78aa6igpm7rgvn7ac9rbkkvc66rsi",
-    "version": "1.7.1"
+    "sha256": "0yzcibigxlvh6ilba1jpri2irsjnvyy74vzn3rydcywfc17ifkzs",
+    "version": "1.8.0"
   },
   {
     "name": "language-haskell",
@@ -74,8 +74,8 @@
   {
     "name": "rust-analyzer",
     "publisher": "matklad",
-    "sha256": "1q5al9gbnw5vklpq4r3rkhq33dwsanv0hvaknzbr9p766wf836qv",
-    "version": "0.2.834"
+    "sha256": "0zafpmz8bbmc60p2rw1q6znkxq4hgg4zkwhwgd5ji0pl3adyjgci",
+    "version": "0.2.842"
   },
   {
     "name": "vscode-docker",
@@ -86,8 +86,8 @@
   {
     "name": "remote-containers",
     "publisher": "ms-vscode-remote",
-    "sha256": "1mayr0kc20zfw21y13k35zbd65ir5cq3yw1n9kci73bbyhlg84fh",
-    "version": "0.209.0"
+    "sha256": "03ad8jrvl291lmhpw87np49791fnrnnqlwkjy4gv1pd16dcia4xz",
+    "version": "0.209.1"
   },
   {
     "name": "remote-ssh",
