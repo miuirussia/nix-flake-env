@@ -3,7 +3,6 @@
   nix = let
     caches = [
       { url = "https://cache.nixos.org"; key = "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="; }
-      { url = "https://nix-cache.s3.kdevlab.com"; key = "s3.kdevlab.com:PhuKrzVfCsS0T1R4FnslJy2qUBul9oQ2CTSO/fg/llM="; }
       { url = "https://kdevlab.cachix.org"; key = "kdevlab.cachix.org-1:/Mxmbtc6KwP9ifFmetjkadaeeqTAtvzBXI81DGLAVIo="; }
       { url = "https://hardselius.cachix.org"; key = "hardselius.cachix.org-1:PoN90aQw2eVMwfAy0MS6V9T2exWlgtHOUBBSnthXAl4="; }
       { url = "https://hydra.iohk.io"; key = "hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ="; }
