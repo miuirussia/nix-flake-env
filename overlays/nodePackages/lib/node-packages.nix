@@ -4317,10 +4317,10 @@ in
   npm = nodeEnv.buildNodePackage {
     name = "npm";
     packageName = "npm";
-    version = "8.2.0";
+    version = "8.3.0";
     src = fetchurl {
-      url = "https://registry.npmjs.org/npm/-/npm-8.2.0.tgz";
-      sha512 = "doYfni7IWhc5xJdikZK3PKENz3QcTcV5Y2EtF8HA3eEPePeemdgGl3j2OyNPT25+UBschVWSVgz4ER1/wnjF7Q==";
+      url = "https://registry.npmjs.org/npm/-/npm-8.3.0.tgz";
+      sha512 = "ug4xToae4Dh3yZh8Fp6MOnAPSS3fqCTANpJx1fXP2C4LTUzoZf7rEantHQR/ANPVYDBe5qQT4tGVsoPqqiYZMw==";
     };
     buildInputs = globalBuildInputs;
     meta = {
