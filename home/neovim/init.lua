@@ -223,7 +223,7 @@ lualine.setup({
         path = 1,
         shorting_target = 40,
       },
-      { "diagnostics", sources = { "nvim_lsp" } },
+      { "diagnostics", sources = { "nvim_diagnostic" } },
       "lsp_progress",
       { gps.get_location, cond = gps.is_available },
       package_info.get_status,

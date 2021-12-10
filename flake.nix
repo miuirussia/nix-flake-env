@@ -6,11 +6,18 @@
     fenix = { url = "github:nix-community/fenix"; inputs.nixpkgs.follows = "nixpkgs"; };
     nixUnstable = { url = "github:NixOS/nix/5fcf7f04a91c5cd0d49f833fe21991da89776a22"; inputs.nixpkgs.follows = "nixpkgs"; };
 
-    agenix.url = "github:ryantm/agenix";
+    agenix = {
+      url = "github:ryantm/agenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     ragenix = {
       url = "github:yaxitech/ragenix";
       inputs.agenix.follows = "agenix";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs."rust-overlay/nixpkgs".follows = "nixpkgs";
+      inputs."rust-overlay/flake-utils".follows = "flake-utils";
+      inputs."naersk/nixpkgs".follows = "nixpkgs";
+      inputs."agenix/nixpkgs".follows = "nixpkgs";
     };
 
     # dotenv management
