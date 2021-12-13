@@ -553,7 +553,7 @@ lspconfig.diagnosticls.setup({
   on_attach = on_attach,
 })
 
-null_ls.config({
+null_ls.setup({
   diagnostics_format = "[#{c}] #{m} (#{s})",
   sources = {
     nb.diagnostics.shellcheck.with({ command = "@shellcheck@/bin/shellcheck" }),
@@ -566,10 +566,6 @@ null_ls.config({
       filetypes = { "vue", "svelte", "css", "scss", "html", "json", "yaml", "markdown" },
     }),
   },
-})
-
-lspconfig["null-ls"].setup({
-  capabilities = capabilities,
   on_attach = on_attach,
 })
 
