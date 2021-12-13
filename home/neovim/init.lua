@@ -556,7 +556,9 @@ lspconfig.diagnosticls.setup({
 null_ls.setup({
   diagnostics_format = "[#{c}] #{m} (#{s})",
   sources = {
-    nb.diagnostics.shellcheck.with({ command = "@shellcheck@/bin/shellcheck" }),
+    nb.diagnostics.shellcheck.with({
+      command = "@shellcheck@/bin/shellcheck",
+    }),
     nb.formatting.stylua.with({
       command = "@stylua@/bin/stylua",
       extra_args = { "--config-path", vim.fn.expand("~/.config/stylua.toml") },
