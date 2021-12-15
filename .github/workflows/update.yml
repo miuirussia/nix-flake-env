@@ -28,6 +28,7 @@ jobs:
       - uses: actboy168/setup-luamake@master
       - run: rm -rf bin
       - run: luamake
+      - run: mv bin/lua-language-server bin/lua-language-server-${{ matrix.os }}
       - run: nix-shell -p nix-prefetch-git --run "nix-prefetch-git --url https://github.com/sumneko/lua-language-server.git --rev $(git rev-parse HEAD) --fetch-submodules > bin/hash.json"
       - uses: actions/upload-artifact@v2
         with:

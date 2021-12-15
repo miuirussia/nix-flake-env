@@ -14,7 +14,7 @@ inputs: final: prev: {
         makeWrapper
       ];
 
-      platform = if final.stdenv.isDarwin then "macOS" else "Linux";
+      platform = if final.stdenv.isDarwin then "macos-latest" else "ubuntu-latest";
 
       buildPhase = ''
         cp -R ${./lua-language-server} ./bin/
@@ -32,8 +32,8 @@ inputs: final: prev: {
         cp main.lua test.lua debugger.lua $out/share/sumneko-lua-language-server/
 
         mkdir -p $out/bin
-        chmod a+x $out/share/sumneko-lua-language-server/bin/$platform/lua-language-server
-        makeWrapper $out/share/sumneko-lua-language-server/bin/$platform/lua-language-server \
+        chmod a+x $out/share/sumneko-lua-language-server/bin/lua-language-server-$platform
+        makeWrapper $out/share/sumneko-lua-language-server/bin/lua-language-server-$platform \
           $out/bin/lua-language-server \
           --add-flags "-E -e LANG=en $out/share/sumneko-lua-language-server/main.lua \
           --logpath='~/.cache/sumneko_lua/log' \
