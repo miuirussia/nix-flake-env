@@ -66,6 +66,7 @@
       gnutar
       htop
       jq
+      rage
       rename
       rsync
       shellcheck
