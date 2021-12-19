@@ -1732,13 +1732,13 @@ let
         sha512 = "cyFDKrqc/YdcWFniJhzI42+AzS+gNwmUzOSFcRCQYwySuBBBy/KjuxWLZ/FHEH6Moq1NizMOBWyTcv8O4OZIMg==";
       };
     };
-    "ignore-5.1.9" = {
+    "ignore-5.2.0" = {
       name = "ignore";
       packageName = "ignore";
-      version = "5.1.9";
+      version = "5.2.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/ignore/-/ignore-5.1.9.tgz";
-        sha512 = "2zeMQpbKz5dhZ9IwL0gbxSW5w0NK/MSAMtNuhgIHEPmaU3vPdKPL0UdvUCXs5SS4JAwsBxysK5sFMW8ocFiVjQ==";
+        url = "https://registry.npmjs.org/ignore/-/ignore-5.2.0.tgz";
+        sha512 = "CmxgYGiEPCLhfLnpPp1MoRmifwEIOgjcHXxOBjv7mY96c+eWScsOP9c112ZyLdWHi0FxHjI+4uVhKYp/gcdRmQ==";
       };
     };
     "import-fresh-3.3.0" = {
@@ -4062,7 +4062,7 @@ in
       sources."glob-parent-5.1.2"
       sources."globby-11.0.4"
       sources."graceful-fs-4.2.8"
-      sources."ignore-5.1.9"
+      sources."ignore-5.2.0"
       sources."indent-string-4.0.0"
       sources."inflight-1.0.6"
       sources."inherits-2.0.4"
@@ -5148,7 +5148,7 @@ in
       sources."glob-parent-5.1.2"
       sources."globby-11.0.4"
       sources."graceful-fs-4.2.8"
-      sources."ignore-5.1.9"
+      sources."ignore-5.2.0"
       sources."indent-string-4.0.0"
       sources."inflight-1.0.6"
       sources."inherits-2.0.4"
