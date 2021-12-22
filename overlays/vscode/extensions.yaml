@@ -32,6 +32,8 @@
   publisher: ms-vscode-remote
 - name: rust-analyzer
   publisher: matklad
+  overrides:
+    0.3.872: sha256-taDKD549JdYLv7JVavARw+/1S+4N9gHNRXVarahQh94=
 - name: ide-purescript
   publisher: nwolverson
 - name: language-purescript

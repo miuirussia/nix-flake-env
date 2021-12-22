@@ -45,15 +45,15 @@ def prefetchUrl(url):
     o = subprocess.check_output(args).decode("utf-8")
     return o.strip()
 
-def getExtension(name, publisher):
+def getExtension(name, publisher, overrides):
     ver, url = getLatestVersionInfo(publisher, name)
-    sha256 = prefetchUrl(url)
+    sha256 = overrides[ver] if overrides != None and ver in overrides else prefetchUrl(url)
     return {'name': name, 'publisher': publisher, 'version': ver, 'sha256': sha256}
 
 def main():
     with open('extensions.yaml') as f:
         exts = load(f.read(), Loader=Loader)
-        result = [getExtension(name=ext['name'], publisher=ext['publisher']) for ext in exts]
+        result = [getExtension(name=ext['name'], publisher=ext['publisher'], overrides=ext.get('overrides')) for ext in exts]
         with open('extensions.json', 'w+') as target:
             json.dump(result, target, indent=2, sort_keys=True)
 
