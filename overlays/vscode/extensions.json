@@ -96,10 +96,10 @@
     "version": "0.71.2021121615"
   },
   {
-    "name": "debugger-for-chrome",
-    "publisher": "msjsdiag",
-    "sha256": "0r6l804dyinqfk012bmaynv73f07kgnvvxf74nc83pw61vvk5jk9",
-    "version": "4.13.0"
+    "name": "rust-analyzer",
+    "publisher": "matklad",
+    "sha256": "sha256-3/oJmJo3XDzO9nv26OW3MjQsC+USkjKcqKH6KwyIXzg=",
+    "version": "0.3.872"
   },
   {
     "name": "ide-purescript",

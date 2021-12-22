@@ -30,8 +30,8 @@
   publisher: ms-vscode-remote
 - name: remote-ssh-edit
   publisher: ms-vscode-remote
-- name: debugger-for-chrome
-  publisher: msjsdiag
+- name: rust-analyzer
+  publisher: matklad
 - name: ide-purescript
   publisher: nwolverson
 - name: language-purescript
