@@ -22,8 +22,6 @@
   publisher: justusadam
 - name: nix-ide
   publisher: jnoortheen
-- name: rust-analyzer
-  publisher: matklad
 - name: vscode-docker
   publisher: ms-azuretools
 - name: remote-containers
