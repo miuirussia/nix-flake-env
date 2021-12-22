@@ -114,12 +114,6 @@
     "version": "0.2.7"
   },
   {
-    "name": "rust",
-    "publisher": "rust-lang",
-    "sha256": "039ns854v1k4jb9xqknrjkj8lf62nfcpfn0716ancmjc4f0xlzb3",
-    "version": "0.7.8"
-  },
-  {
     "name": "crates",
     "publisher": "serayuzgur",
     "sha256": "1dbhd6xbawbnf9p090lpmn8i5gg1f7y8xk2whc9zhg4432kdv3vd",

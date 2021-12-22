@@ -38,8 +38,6 @@
   publisher: nwolverson
 - name: language-purescript
   publisher: nwolverson
-- name: rust
-  publisher: rust-lang
 - name: crates
   publisher: serayuzgur
 - name: vscode-nginx

@@ -102,8 +102,6 @@
 
   flow.pathToFlow = "${pkgs.flow}/bin/flow";
 
-  rust-client.rustupPath = "${pkgs.rustup}/bin/rustup";
-
   purescript.pursExe = "${pkgs.nodePackages.purescript}/bin/purs";
 
   hadolint.hadolintPath = "${pkgs.hadolint}/bin/hadolint";
