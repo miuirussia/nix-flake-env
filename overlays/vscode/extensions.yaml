@@ -34,6 +34,7 @@
   publisher: matklad
   overrides:
     0.3.872: sha256-taDKD549JdYLv7JVavARw+/1S+4N9gHNRXVarahQh94=
+    0.3.873: sha256-b5Ou9+RTXv7r4XsUobZJzDVVFVlRQXGEY5VOIYtidcI=
 - name: ide-purescript
   publisher: nwolverson
 - name: language-purescript
