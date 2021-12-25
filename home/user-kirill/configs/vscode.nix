@@ -106,5 +106,5 @@
 
   hadolint.hadolintPath = "${pkgs.hadolint}/bin/hadolint";
 
-  rust-analyzer.server.path = "${pkgs.rust-analyzer}/bin/rust-analyzer";
+  rust-analyzer.server.path = "${pkgs.rust-analyzer-nightly-with-shell}/bin/rust-analyzer";
 }
