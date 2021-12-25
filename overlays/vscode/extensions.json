@@ -98,8 +98,8 @@
   {
     "name": "rust-analyzer",
     "publisher": "matklad",
-    "sha256": "sha256-b5Ou9+RTXv7r4XsUobZJzDVVFVlRQXGEY5VOIYtidcI=",
-    "version": "0.3.873"
+    "sha256": "0phsxfbq7kbh1964wnr7fhr07yb31r9pzszyd6nifypwkjzmw65s",
+    "version": "0.3.875"
   },
   {
     "name": "ide-purescript",
