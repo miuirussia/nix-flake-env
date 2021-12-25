@@ -96,12 +96,6 @@
     "version": "0.71.2021121615"
   },
   {
-    "name": "rust-analyzer",
-    "publisher": "matklad",
-    "sha256": "sha256-b5Ou9+RTXv7r4XsUobZJzDVVFVlRQXGEY5VOIYtidcI=",
-    "version": "0.3.873"
-  },
-  {
     "name": "ide-purescript",
     "publisher": "nwolverson",
     "sha256": "0gblldm88b9qz410hwfha9wxkc5gl7bb3kbi0fmihwyna9q27xda",
