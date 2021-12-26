@@ -3,7 +3,6 @@ inputs: final: prev: {
     vscodeExtensions = with builtins;(
       [
         (prev.callPackage ./codelldb { })
-        final.vscode-extensions.matklad.rust-analyzer-nightly
       ]
     ) ++ prev.vscode-utils.extensionsFromVscodeMarketplace (fromJSON (readFile ./extensions.json));
   };

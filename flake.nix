@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs = { url = "github:miuirussia/nixpkgs/bcb11050f434cbb2538db37e1e6771a7af45165f"; };
-    fenix = { url = "github:nix-community/fenix"; inputs.nixpkgs.follows = "nixpkgs"; };
     nixUnstable = { url = "github:NixOS/nix/6e6e998930f0d7361d64644eb37d9134e74e8501"; inputs.nixpkgs.follows = "nixpkgs"; };
 
     agenix.url = "github:yaxitech/ragenix";
@@ -87,7 +86,6 @@
     nvim-null-ls = { url = "github:jose-elias-alvarez/null-ls.nvim"; flake = false; };
     nvim-package-info = { url = "github:vuki656/package-info.nvim"; flake = false; };
     nvim-plenary = { url = "github:nvim-lua/plenary.nvim"; flake = false; };
-    nvim-rust-tools = { url = "github:simrat39/rust-tools.nvim"; flake = false; };
     nvim-telescope = { url = "github:nvim-telescope/telescope.nvim"; flake = false; };
     nvim-treesitter = { url = "github:nvim-treesitter/nvim-treesitter"; flake = false; };
     nvim-trouble = { url = "github:folke/trouble.nvim"; flake = false; };
@@ -100,7 +98,7 @@
     flake-compat = { url = "github:edolstra/flake-compat"; flake = false; };
   };
 
-  outputs = inputs @ { self, agenix, nixpkgs, darwin, home-manager, flake-utils, fenix, haskell-nix, ... }:
+  outputs = inputs @ { self, agenix, nixpkgs, darwin, home-manager, flake-utils, haskell-nix, ... }:
     let
       supportedSystem = [ "aarch64-darwin" "x86_64-linux" "x86_64-darwin" ];
 
@@ -127,7 +125,6 @@
         };
         overlays = nixpkgsOverlays ++ [
           haskell-nix.overlay
-          fenix.overlay
         ];
       };
 
