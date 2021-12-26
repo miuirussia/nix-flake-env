@@ -5,7 +5,7 @@ let
     if ${final.nixUnstable}/bin/nix eval --raw .#devShell.${prev.system}; then
       wrapper=(${final.nixUnstable}/bin/nix develop -c)
     fi
-    "''${wrapper[@]}" ${pkg}/bin/rust-analyzer
+    "''${wrapper[@]}" ${pkg}/bin/rust-analyzer "$@"
   '';
 in
 {
