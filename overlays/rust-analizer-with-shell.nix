@@ -9,5 +9,6 @@ let
   '';
 in
 {
+  rust-analyzer-nightly-with-shell = mkRustAnalyzerShell final.rust-analyzer-nightly;
   rust-analyzer-with-shell = mkRustAnalyzerShell final.rust-analyzer;
 }

@@ -481,6 +481,15 @@ lspconfig.rnix.setup({
   on_attach = on_attach,
 })
 
+require("rust-tools").setup({
+  server = {
+    cmd = { "@rust_analyzer@/bin/rust-analyzer" },
+
+    capabilities = capabilities,
+    on_attach = on_attach,
+  },
+})
+
 local eslint_linter = {
   command = "@eslint_d@/bin/eslint_d",
   rootPatterns = { "package.json" },
