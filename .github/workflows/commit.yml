@@ -1,0 +1,40 @@
+name: "Test commit"
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    name: Build
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install nix
+        uses: miuirussia/install-nix-action@master
+        with:
+          nix_path: nixpkgs=channel:nixpkgs-unstable
+          install_url: https://github.com/miuirussia/nix-unstable-installer/releases/latest/download/install
+          extra_nix_config: |
+            access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
+            experimental-features = nix-command flakes
+            substituters = https://hydra.iohk.io https://cache.nixos.org/
+            trusted-public-keys = hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ= cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=
+      - name: Unlock secrets
+        run: |
+          brew install git-crypt
+          echo "${{ secrets.GIT_CRYPT_KEY }}" | base64  -d > /tmp/git-crypt-key
+          git-crypt unlock /tmp/git-crypt-key
+          rm /tmp/git-crypt-key
+      - uses: cachix/cachix-action@v10
+        with:
+          name: kdevlab
+          authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
+      - name: Check flakes
+        run: |
+          nix flake show
+      - name: Build
+        run: |
+          nix build --print-build-logs --show-trace --no-link .#darwinConfigurations.home.system
+          nix build --print-build-logs --show-trace --no-link .#darwinConfigurations.work.system
+          nix build --print-build-logs --show-trace --no-link .#darwinConfigurations.macbook.system
