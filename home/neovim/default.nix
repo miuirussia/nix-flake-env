@@ -114,7 +114,6 @@
         nvim-notify
         nvim-null-ls
         nvim-package-info
-        nvim-rust-tools
         nvim-telescope
         nvim-trouble
         nvim-vsnip

@@ -104,7 +104,6 @@ in
       "nvim-null-ls"
       "nvim-package-info"
       "nvim-plenary"
-      "nvim-rust-tools"
       "nvim-telescope"
       "nvim-treesitter"
       "nvim-trouble"
