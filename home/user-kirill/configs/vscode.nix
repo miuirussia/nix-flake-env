@@ -105,4 +105,6 @@
   purescript.pursExe = "${pkgs.nodePackages.purescript}/bin/purs";
 
   hadolint.hadolintPath = "${pkgs.hadolint}/bin/hadolint";
+
+  rust-analyzer.server.path = "${pkgs.rust-analyzer-with-shell}/bin/rust-analyzer";
 }
