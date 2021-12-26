@@ -25,6 +25,13 @@
     "**/bazel*" = true;
   };
 
+  emmet = {
+    includeLanguages = {
+      javascript = "javascriptreact";
+    };
+    triggerExpansionOnTab = true;
+  };
+
   editor = {
     accessibilitySupport = "off";
     cursorBlinking = "solid";
