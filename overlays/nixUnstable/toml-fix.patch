@@ -1,0 +1,13 @@
+diff --git a/src/libexpr/primops/fromTOML.cc b/src/libexpr/primops/fromTOML.cc
+index 221c40db9..30466fc5b 100644
+--- a/src/libexpr/primops/fromTOML.cc
++++ b/src/libexpr/primops/fromTOML.cc
+@@ -31,6 +31,8 @@ static void prim_fromTOML(EvalState & state, const Pos & pos, Value * * args, Va
+                         auto & v2 = *state.allocAttr(v, state.symbols.create(elem.first));
+                         visit(v2, elem.second);
+                     }
++
++                    v.attrs->sort();
+                 }
+                 break;;
+             case toml::value_t::array:
