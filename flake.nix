@@ -154,10 +154,12 @@
           home-manager.darwinModules.home-manager
           ./hosts/darwin.nix
           ./hosts/tmux.nix
+          ./hosts/nginx
           hostConfig
           {
             nixpkgs = nixpkgsConfig;
             users.users.${user}.home = "/Users/${user}";
+            nginx.includePath = "/Users/${user}/nginx";
             home-manager.useGlobalPkgs = true;
             home-manager.users.${user} = homeManagerConfig args;
             networking = {
