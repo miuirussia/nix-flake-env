@@ -9,7 +9,7 @@ let
     pid /run/nginx/nginx.pid;
     error_log stderr;
     daemon off;
-    worker_processes 1;
+    worker_processes auto;
 
     events {
       worker_connections 1024;
