@@ -152,9 +152,9 @@
         , ...
         }: [
           home-manager.darwinModules.home-manager
+          ./lib/nginx
           ./hosts/darwin.nix
           ./hosts/tmux.nix
-          ./hosts/nginx
           hostConfig
           {
             nixpkgs = nixpkgsConfig;
