@@ -5,8 +5,28 @@ with lib;
 let
   cfg = config.nginx;
 
+  nextConfigureFlags = {
+    error-log-path = "/usr/local/var/log/nginx/error.log";
+    http-log-path = "/usr/local/var/log/nginx/access.log";
+    http-client-body-temp-path = "/usr/local/var/cache/nginx/client_body";
+    pid-path = "/usr/local/var/log/nginx/nginx.pid";
+    http-proxy-temp-path = "/usr/local/var/cache/nginx/proxy";
+    http-fastcgi-temp-path = "/usr/local/var/cache/nginx/fastcgi";
+    http-uwsgi-temp-path = "/usr/local/var/cache/nginx/uwsgi";
+    http-scgi-temp-path = "/usr/local/var/cache/nginx/scgi";
+  };
+
+  nginxPkg = cfg.package.overrideAttrs (prev:
+    let
+      removeFlags = lib.mapAttrsToList (name: _: "--${name}") nextConfigureFlags;
+    in
+    {
+      configureFlags = (lib.filter
+        (flag: !lib.any (prefix: lib.strings.hasPrefix prefix flag) removeFlags)
+        prev.configureFlags) ++ lib.mapAttrsToList (name: value: "--${name}=${value}") nextConfigureFlags;
+    });
+
   configFile = pkgs.writers.writeNginxConfig "nginx.conf" ''
-    pid /run/nginx/nginx.pid;
     error_log stderr;
     daemon off;
     worker_processes auto;
@@ -16,7 +36,7 @@ let
     }
 
     http {
-        include       ${cfg.package}/conf/mime.types;
+        include       ${nginxPkg}/conf/mime.types;
         default_type  application/octet-stream;
 
         sendfile        on;
@@ -55,10 +75,10 @@ in
   };
   config = {
     launchd.daemons.nginx = {
-      path = with pkgs; [ coreutils cfg.package ];
+      path = with pkgs; [ coreutils nginxPkg ];
       script = ''
-        mkdir -p /var/log/nginx /var/cache/nginx /run/nginx
-        ${cfg.package}/bin/nginx -c ${configFile} -p /tmp
+        mkdir -p /usr/local/var/log/nginx /usr/local/var/cache/nginx
+        ${nginxPkg}/bin/nginx -c ${configFile}
       '';
       serviceConfig = {
         RunAtLoad = true;
