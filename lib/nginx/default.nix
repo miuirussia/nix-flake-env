@@ -3,7 +3,7 @@
 with lib;
 
 let
-  cfg = config.nginx;
+  cfg = config.services.nginx;
 
   nextConfigureFlags = {
     error-log-path = "/usr/local/var/log/nginx/error.log";
@@ -30,6 +30,7 @@ let
     error_log stderr;
     daemon off;
     worker_processes auto;
+    user nginx nginx;
 
     events {
       worker_connections 1024;
@@ -55,7 +56,7 @@ let
 in
 {
   options = {
-    nginx = {
+    services.nginx = {
       package = mkOption {
         type = types.either types.package types.path;
         default = pkgs.nginxMainline;
@@ -84,6 +85,20 @@ in
         RunAtLoad = true;
         KeepAlive = true;
       };
+    };
+
+    users.knownUsers = [ "nginx" ];
+    users.knownGroups = [ "nginx" ];
+
+    users.users = {
+      nginx = {
+        gid = 42000;
+        uid = 42000;
+      };
+    };
+
+    users.groups = {
+      nginx.gid = 42000;
     };
   };
 }
