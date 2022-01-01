@@ -19,7 +19,7 @@ jobs:
         uses: miuirussia/install-nix-action@master
         with:
           nix_path: nixpkgs=channel:nixpkgs-unstable
-          install_url: https://github.com/miuirussia/nix-unstable-installer/releases/download/nix-2.6.0pre20211217_6e6e998/install
+          install_url: https://github.com/miuirussia/nix-unstable-installer/releases/latest/download/install
           extra_nix_config: |
             access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
             experimental-features = nix-command flakes
@@ -54,7 +54,7 @@ jobs:
         uses: miuirussia/install-nix-action@master
         with:
           nix_path: nixpkgs=channel:nixpkgs-unstable
-          install_url: https://github.com/miuirussia/nix-unstable-installer/releases/download/nix-2.6.0pre20211217_6e6e998/install
+          install_url: https://github.com/miuirussia/nix-unstable-installer/releases/latest/download/install
           extra_nix_config: |
             access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
             experimental-features = nix-command flakes
@@ -109,7 +109,7 @@ jobs:
         uses: miuirussia/install-nix-action@master
         with:
           nix_path: nixpkgs=channel:nixpkgs-unstable
-          install_url: https://github.com/miuirussia/nix-unstable-installer/releases/download/nix-2.6.0pre20211217_6e6e998/install
+          install_url: https://github.com/miuirussia/nix-unstable-installer/releases/latest/download/install
           extra_nix_config: |
             access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
             experimental-features = nix-command flakes
@@ -141,7 +141,7 @@ jobs:
         uses: miuirussia/install-nix-action@master
         with:
           nix_path: nixpkgs=channel:nixpkgs-unstable
-          install_url: https://github.com/miuirussia/nix-unstable-installer/releases/download/nix-2.6.0pre20211217_6e6e998/install
+          install_url: https://github.com/miuirussia/nix-unstable-installer/releases/latest/download/install
           extra_nix_config: |
             access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
             experimental-features = nix-command flakes
@@ -169,7 +169,7 @@ jobs:
         uses: miuirussia/install-nix-action@master
         with:
           nix_path: nixpkgs=channel:nixpkgs-unstable
-          install_url: https://github.com/miuirussia/nix-unstable-installer/releases/download/nix-2.6.0pre20211217_6e6e998/install
+          install_url: https://github.com/miuirussia/nix-unstable-installer/releases/latest/download/install
           extra_nix_config: |
             access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
             experimental-features = nix-command flakes
