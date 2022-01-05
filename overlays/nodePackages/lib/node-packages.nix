@@ -1597,13 +1597,13 @@ let
         sha512 = "mb1aYtDbIjTu4ShMB85m3UzjX9BVKe9WCzsnfMSZk+K5GpIbBOexgg4PPCt5eHDEG5/ZQAUX2Kct02zfiPLsKg==";
       };
     };
-    "graceful-fs-4.2.8" = {
+    "graceful-fs-4.2.9" = {
       name = "graceful-fs";
       packageName = "graceful-fs";
-      version = "4.2.8";
+      version = "4.2.9";
       src = fetchurl {
-        url = "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.8.tgz";
-        sha512 = "qkIilPUYcNhJpd33n0GBXTB1MMPp14TxEsEs0pTrsSVucApsYzW5V+Q8Qxhik6KU3evy+qkAAowTByymK0avdg==";
+        url = "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.9.tgz";
+        sha512 = "NtNxqUcXgpW2iMrfqSfR73Glt39K+BLwWsPs94yR63v45T0Wbej7eRmL5cWfwEgqXnmjQp3zaJTshdRW/qC2ZQ==";
       };
     };
     "har-schema-2.0.0" = {
@@ -3001,13 +3001,13 @@ let
         sha512 = "Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw==";
       };
     };
-    "resolve-1.20.0" = {
+    "resolve-1.21.0" = {
       name = "resolve";
       packageName = "resolve";
-      version = "1.20.0";
+      version = "1.21.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/resolve/-/resolve-1.20.0.tgz";
-        sha512 = "wENBPt4ySzg4ybFQW2TT1zMQucPK95HSh/nq2CFTZVOGut2+pQvSsgtda4d26YrYcr067wjbmzOG8byDPBX63A==";
+        url = "https://registry.npmjs.org/resolve/-/resolve-1.21.0.tgz";
+        sha512 = "3wCbTpk5WJlyE4mSOtDLhqQmGFi0/TD9VPwmiolnk8U0wRgMEktqCXd3vy5buTO3tljvalNvKrjHEfrd2WpEKA==";
       };
     };
     "resolve-from-4.0.0" = {
@@ -3449,6 +3449,15 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/supports-color/-/supports-color-8.1.1.tgz";
         sha512 = "MpUEN2OodtUzxvKQl72cUF7RQ5EiHsGvSsVG0ia9c5RbWGL2CI4C7EpPS8UTBIplnlzZiNuV56w+FuNxy3ty2Q==";
+      };
+    };
+    "supports-preserve-symlinks-flag-1.0.0" = {
+      name = "supports-preserve-symlinks-flag";
+      packageName = "supports-preserve-symlinks-flag";
+      version = "1.0.0";
+      src = fetchurl {
+        url = "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz";
+        sha512 = "ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==";
       };
     };
     "syntax-error-1.4.0" = {
@@ -4043,7 +4052,7 @@ in
       sources."glob-7.2.0"
       sources."glob-parent-5.1.2"
       sources."globby-11.0.4"
-      sources."graceful-fs-4.2.8"
+      sources."graceful-fs-4.2.9"
       sources."ignore-5.2.0"
       sources."indent-string-4.0.0"
       sources."inflight-1.0.6"
@@ -4462,7 +4471,7 @@ in
           sources."glob-7.1.7"
         ];
       })
-      sources."graceful-fs-4.2.8"
+      sources."graceful-fs-4.2.9"
       sources."has-1.0.3"
       (sources."hash-base-3.1.0" // {
         dependencies = [
@@ -4554,7 +4563,7 @@ in
           sources."string_decoder-1.1.1"
         ];
       })
-      sources."resolve-1.20.0"
+      sources."resolve-1.21.0"
       sources."rimraf-2.7.1"
       sources."ripemd160-2.0.2"
       sources."safe-buffer-5.2.1"
@@ -4578,6 +4587,7 @@ in
       sources."stream-splicer-2.0.1"
       sources."string_decoder-1.3.0"
       sources."subarg-1.0.0"
+      sources."supports-preserve-symlinks-flag-1.0.0"
       sources."syntax-error-1.4.0"
       (sources."temp-0.9.4" // {
         dependencies = [
@@ -4688,7 +4698,7 @@ in
       sources."get-stream-5.2.0"
       sources."getpass-0.1.7"
       sources."glob-7.2.0"
-      sources."graceful-fs-4.2.8"
+      sources."graceful-fs-4.2.9"
       sources."har-schema-2.0.0"
       sources."har-validator-5.1.5"
       sources."has-flag-3.0.0"
@@ -4962,7 +4972,7 @@ in
       sources."glob-7.2.0"
       sources."glob-parent-5.1.2"
       sources."globby-11.0.4"
-      sources."graceful-fs-4.2.8"
+      sources."graceful-fs-4.2.9"
       sources."ignore-5.2.0"
       sources."indent-string-4.0.0"
       sources."inflight-1.0.6"
