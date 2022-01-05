@@ -20,8 +20,8 @@
   {
     "name": "vscode-jest",
     "publisher": "orta",
-    "sha256": "1ccm4gxwca9i0j2c5b8nk25vj9x25jq4qvgpcl00r0cp4v8cb9l5",
-    "version": "4.2.1"
+    "sha256": "02qf2igf1i7xn2xrmrsygym8fqih81bv9q47falnxm2fqzznq810",
+    "version": "4.3.1"
   },
   {
     "name": "flow-for-vscode",
@@ -80,8 +80,8 @@
   {
     "name": "remote-containers",
     "publisher": "ms-vscode-remote",
-    "sha256": "1dvma7mm0g6mr6yjfy0zbn0k143ag8p40r0kcb9n441w2r817rj8",
-    "version": "0.209.6"
+    "sha256": "0s74dvgw3prrs86qb9j4i8y697mrd180qf3wnsypq8r14nqlsxs1",
+    "version": "0.210.0"
   },
   {
     "name": "remote-ssh",
