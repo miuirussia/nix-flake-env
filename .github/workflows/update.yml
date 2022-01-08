@@ -68,7 +68,7 @@ jobs:
       - name: Update flakes and nodePackages
         run: |
           nix flake update
-          nix-env -iA nodePackages.node2nix -f https://github.com/miuirussia/nixpkgs/tarball/nixpkgs-unstable
+          nix-env -iA pkgs.x86_64-darwin.nodePackages_latest.node2nix -f .
           (cd $GITHUB_WORKSPACE/overlays/vscode && ./update-vscode-plugins.py)
           (cd $GITHUB_WORKSPACE/overlays/nodePackages/lib && node2nix -i node-packages.json --nodejs-16)
           rm -rf $GITHUB_WORKSPACE/overlays/sumnekoLua/lua-language-server
