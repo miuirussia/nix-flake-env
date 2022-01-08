@@ -25,7 +25,6 @@ inputs: final: prev: let
     phases = [ "unpackPhase" "buildPhase" "installPhase" "fixupPhase" ];
     propagatedBuildInputs = with final; [
       (python3.withPackages (ps: with ps; [ fontforge fonttools configparser ]))
-      ttfautohint
     ];
 
     buildPhase = ''
