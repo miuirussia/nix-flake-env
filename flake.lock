@@ -385,11 +385,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1641675383,
-        "narHash": "sha256-Fn2SpHBMW2HJkKxgDMdkOhzJ0ZmAGmpkuk9FE+HIjqA=",
+        "lastModified": 1641677958,
+        "narHash": "sha256-h/0aAX8cS29LiwHWp88I8ay84vnm4FbItV7mgAbR/4Q=",
         "owner": "miuirussia",
         "repo": "hls-nix",
-        "rev": "84dd906889950773d97b50ff75c5d53cc5ba24b4",
+        "rev": "247de762dd91d3e9a38c9b765f93546d6735a57d",
         "type": "github"
       },
       "original": {
