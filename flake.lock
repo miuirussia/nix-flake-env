@@ -1223,15 +1223,16 @@
     "nvim-which-key": {
       "flake": false,
       "locked": {
-        "lastModified": 1639755215,
-        "narHash": "sha256-T9Chtv1ITHItYGKFu+bIufzTmckEGsiqO8peuI7KtGw=",
-        "owner": "folke",
+        "lastModified": 1641261425,
+        "narHash": "sha256-vumqkTgHN6PJgeiyq9oFqm4uw2NUzzu6/1pHS/uxH/0=",
+        "owner": "zeertzjq",
         "repo": "which-key.nvim",
-        "rev": "312c386ee0eafc925c27869d2be9c11ebdb807eb",
+        "rev": "7815ae48927420f49e3826ae4c98d2d467c9fe7f",
         "type": "github"
       },
       "original": {
-        "owner": "folke",
+        "owner": "zeertzjq",
+        "ref": "patch-1",
         "repo": "which-key.nvim",
         "type": "github"
       }

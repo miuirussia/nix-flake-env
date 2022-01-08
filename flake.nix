@@ -93,7 +93,7 @@
     nvim-trouble = { url = "github:folke/trouble.nvim"; flake = false; };
     nvim-vsnip = { url = "github:hrsh7th/vim-vsnip"; flake = false; };
     nvim-web-devicons = { url = "github:kyazdani42/nvim-web-devicons"; flake = false; };
-    nvim-which-key = { url = "github:folke/which-key.nvim"; flake = false; };
+    nvim-which-key = { url = "github:zeertzjq/which-key.nvim/patch-1"; flake = false; };
 
     # flakes
     flake-utils = { url = "github:numtide/flake-utils"; };
