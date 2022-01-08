@@ -385,11 +385,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1641664009,
-        "narHash": "sha256-u2X5f7L8yTcGZWdg5xf/rElrv+uCRt1VPTpvpiVYcAU=",
+        "lastModified": 1641666724,
+        "narHash": "sha256-oYt/8z5QmN87pVvSVQKpXMjkjFyLybpXlB23iZ9X3Ic=",
         "owner": "miuirussia",
         "repo": "hls-nix",
-        "rev": "6236d116588044f9f4494450951d4d31f52c9503",
+        "rev": "fba2e1d57ab4c67b4d47dfc8462f8cefb9a5c272",
         "type": "github"
       },
       "original": {
@@ -1021,11 +1021,11 @@
     "nvim-null-ls": {
       "flake": false,
       "locked": {
-        "lastModified": 1641657215,
-        "narHash": "sha256-3vQc72JGUcvSB7DCcTgjyJoz0RImgWXoHcPAR8tsCEU=",
+        "lastModified": 1641665622,
+        "narHash": "sha256-bmhE1NgNo4SXsBNDYIq0lRNI2w6pln+NZ0qxxpbQvJM=",
         "owner": "jose-elias-alvarez",
         "repo": "null-ls.nvim",
-        "rev": "5d2ca75eca24686bf68cf87928f784f66c648e96",
+        "rev": "23a81b4b338625e11dae2a06272495e5c655358f",
         "type": "github"
       },
       "original": {
