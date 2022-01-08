@@ -1300,13 +1300,13 @@ let
         sha512 = "f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==";
       };
     };
-    "fast-glob-3.2.7" = {
+    "fast-glob-3.2.9" = {
       name = "fast-glob";
       packageName = "fast-glob";
-      version = "3.2.7";
+      version = "3.2.9";
       src = fetchurl {
-        url = "https://registry.npmjs.org/fast-glob/-/fast-glob-3.2.7.tgz";
-        sha512 = "rYGMRwip6lUMvYD3BTScMwT1HtAs2d71SMv66Vrxs0IekGZEjhM0pcMfjQPnknBt2zeCwQMEupiN02ZP4DiT1Q==";
+        url = "https://registry.npmjs.org/fast-glob/-/fast-glob-3.2.9.tgz";
+        sha512 = "MBwILhhD92sziIrMQwpqcuGERF+BH99ei2a3XsGJuqEKcSycAL+w0HWokFenZXona+kjFr82Lf71eTxNRC06XQ==";
       };
     };
     "fast-json-stable-stringify-2.1.0" = {
@@ -1579,13 +1579,13 @@ let
         sha512 = "uS8X6lSKN2JumVoXrbUz+uG4BYG+eiawqm3qFcT7ammfbUHeCBoJMlHcec/S3krSk73/AE/f0szYFmgAA3kYZg==";
       };
     };
-    "globby-11.0.4" = {
+    "globby-11.1.0" = {
       name = "globby";
       packageName = "globby";
-      version = "11.0.4";
+      version = "11.1.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/globby/-/globby-11.0.4.tgz";
-        sha512 = "9O4MVG9ioZJ08ffbcyVYyLOJLk5JQ688pJ4eMGLpdWLHq/Wr1D9BlriLQyL0E+jbkuePVZXYFj47QM/v093wHg==";
+        url = "https://registry.npmjs.org/globby/-/globby-11.1.0.tgz";
+        sha512 = "jhIXaOzy1sb8IyocaruWSn1TjmnBVs8Ayhcy83rmxNJ8q2uWKCAj3CnJY+KpGSXCueAPc0i05kVvVKtP1t9S3g==";
       };
     };
     "globule-1.3.3" = {
@@ -3271,13 +3271,13 @@ let
         sha1 = "04e6926f662895354f3dd015203633b857297e2c";
       };
     };
-    "sshpk-1.16.1" = {
+    "sshpk-1.17.0" = {
       name = "sshpk";
       packageName = "sshpk";
-      version = "1.16.1";
+      version = "1.17.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/sshpk/-/sshpk-1.16.1.tgz";
-        sha512 = "HXXqVUq7+pcKeLqqZj6mHFUMvXtOJt1uoUx09pFW6011inTMxqI8BA8PM95myrIyyKwdnzjdFjLiE6KBPVtJIg==";
+        url = "https://registry.npmjs.org/sshpk/-/sshpk-1.17.0.tgz";
+        sha512 = "/9HIEs1ZXGhSPE8X6Ccm7Nam1z8KcoCqPdI7ecm1N33EzAetWahvQWVqLZtaZQ+IDKX4IyA2o0gBzqIMkAagHQ==";
       };
     };
     "ssri-6.0.2" = {
@@ -4044,14 +4044,14 @@ in
       sources."crypto-random-string-2.0.0"
       sources."del-6.0.0"
       sources."dir-glob-3.0.1"
-      sources."fast-glob-3.2.7"
+      sources."fast-glob-3.2.9"
       sources."fastq-1.13.0"
       sources."fill-range-7.0.1"
       sources."find-up-4.1.0"
       sources."fs.realpath-1.0.0"
       sources."glob-7.2.0"
       sources."glob-parent-5.1.2"
-      sources."globby-11.0.4"
+      sources."globby-11.1.0"
       sources."graceful-fs-4.2.9"
       sources."ignore-5.2.0"
       sources."indent-string-4.0.0"
@@ -4770,7 +4770,7 @@ in
       sources."shebang-command-2.0.0"
       sources."shebang-regex-3.0.0"
       sources."signal-exit-3.0.6"
-      sources."sshpk-1.16.1"
+      sources."sshpk-1.17.0"
       sources."ssri-6.0.2"
       sources."stream-each-1.2.3"
       sources."stream-shift-1.0.1"
@@ -4920,7 +4920,7 @@ in
       sources."request-2.88.2"
       sources."safe-buffer-5.2.1"
       sources."safer-buffer-2.1.2"
-      sources."sshpk-1.16.1"
+      sources."sshpk-1.17.0"
       sources."tar-4.4.19"
       sources."tough-cookie-2.5.0"
       sources."tunnel-agent-0.6.0"
@@ -4943,10 +4943,10 @@ in
   typescript-language-server = nodeEnv.buildNodePackage {
     name = "typescript-language-server";
     packageName = "typescript-language-server";
-    version = "0.8.1";
+    version = "0.9.1";
     src = fetchurl {
-      url = "https://registry.npmjs.org/typescript-language-server/-/typescript-language-server-0.8.1.tgz";
-      sha512 = "n2KwWC8fNKzEyTz+H2HXbVCCoqaEvzgVeR6ERL6DYQe2Rdynj+s/YkyuStVzV2MqW9j+v4xV2xFik+kTOYpkGg==";
+      url = "https://registry.npmjs.org/typescript-language-server/-/typescript-language-server-0.9.1.tgz";
+      sha512 = "97voOnTi/rXs21uDK3chpk54IN+4J+RV/BjruAZRmrvY/zkdQEzoUdZ51mGLdJwpN//o3+nu9mG4Mw5rZOetHw==";
     };
     dependencies = [
       sources."@nodelib/fs.scandir-2.1.5"
@@ -4963,7 +4963,7 @@ in
       sources."crypto-random-string-2.0.0"
       sources."del-6.0.0"
       sources."dir-glob-3.0.1"
-      sources."fast-glob-3.2.7"
+      sources."fast-glob-3.2.9"
       sources."fastq-1.13.0"
       sources."fill-range-7.0.1"
       sources."find-up-3.0.0"
@@ -4971,7 +4971,7 @@ in
       sources."fs.realpath-1.0.0"
       sources."glob-7.2.0"
       sources."glob-parent-5.1.2"
-      sources."globby-11.0.4"
+      sources."globby-11.1.0"
       sources."graceful-fs-4.2.9"
       sources."ignore-5.2.0"
       sources."indent-string-4.0.0"
