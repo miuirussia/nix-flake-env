@@ -68,7 +68,7 @@ o.formatoptions = o.formatoptions
   + "j" -- Auto-remove comments if possible.
   - "2" -- I'm not in gradeschool anymore
 
-require("onedark").setup()
+require("onedark").load()
 
 local cmp = require("cmp")
 local gps = require("nvim-gps")
