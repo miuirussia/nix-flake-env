@@ -50,6 +50,10 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
+      - name: Install node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
       - name: Install nix
         uses: miuirussia/install-nix-action@master
         with:
@@ -68,9 +72,8 @@ jobs:
       - name: Update flakes and nodePackages
         run: |
           nix flake update
-          nix-env -iA pkgs.x86_64-darwin.nodePackages_latest.node2nix -f .
           (cd $GITHUB_WORKSPACE/overlays/vscode && ./update-vscode-plugins.py)
-          (cd $GITHUB_WORKSPACE/overlays/nodePackages/lib && node2nix -i node-packages.json --nodejs-16)
+          (cd $GITHUB_WORKSPACE/overlays/nodePackages/lib && npx -y node2nix -- -i node-packages.json --nodejs-16)
           rm -rf $GITHUB_WORKSPACE/overlays/sumnekoLua/lua-language-server
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
