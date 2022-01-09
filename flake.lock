@@ -682,22 +682,6 @@
         "type": "github"
       }
     },
-    "nvim-base16": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1638481370,
-        "narHash": "sha256-y3kA7zRmC+bvl8fE9GPCccC7jYsPQhZP4USi5w7lXmM=",
-        "owner": "RRethy",
-        "repo": "nvim-base16",
-        "rev": "7344e741b459c527b84df05a231b7e76d8b4fde9",
-        "type": "github"
-      },
-      "original": {
-        "owner": "RRethy",
-        "repo": "nvim-base16",
-        "type": "github"
-      }
-    },
     "nvim-bufferline": {
       "flake": false,
       "locked": {
@@ -823,6 +807,22 @@
       "original": {
         "owner": "mfussenegger",
         "repo": "nvim-dap",
+        "type": "github"
+      }
+    },
+    "nvim-fzf": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1641659568,
+        "narHash": "sha256-wMfLNSuRsx5Av9mDXnB35ScNQhSyffjhrkjiQlXZxLY=",
+        "owner": "ibhagwan",
+        "repo": "fzf-lua",
+        "rev": "2122c2cd05c709a939a204b039e979588699e66a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ibhagwan",
+        "repo": "fzf-lua",
         "type": "github"
       }
     },
@@ -1230,7 +1230,6 @@
         "nixUnstable": "nixUnstable",
         "nixpkgs": "nixpkgs_2",
         "nvim-actionmenu": "nvim-actionmenu",
-        "nvim-base16": "nvim-base16",
         "nvim-bufferline": "nvim-bufferline",
         "nvim-cmp": "nvim-cmp",
         "nvim-cmp-buffer": "nvim-cmp-buffer",
@@ -1239,6 +1238,7 @@
         "nvim-cmp-vsnip": "nvim-cmp-vsnip",
         "nvim-crates": "nvim-crates",
         "nvim-dap": "nvim-dap",
+        "nvim-fzf": "nvim-fzf",
         "nvim-gitsigns": "nvim-gitsigns",
         "nvim-gps": "nvim-gps",
         "nvim-impatient": "nvim-impatient",
