@@ -810,22 +810,6 @@
         "type": "github"
       }
     },
-    "nvim-fzf": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1641659568,
-        "narHash": "sha256-wMfLNSuRsx5Av9mDXnB35ScNQhSyffjhrkjiQlXZxLY=",
-        "owner": "ibhagwan",
-        "repo": "fzf-lua",
-        "rev": "2122c2cd05c709a939a204b039e979588699e66a",
-        "type": "github"
-      },
-      "original": {
-        "owner": "ibhagwan",
-        "repo": "fzf-lua",
-        "type": "github"
-      }
-    },
     "nvim-gitsigns": {
       "flake": false,
       "locked": {
@@ -1238,7 +1222,6 @@
         "nvim-cmp-vsnip": "nvim-cmp-vsnip",
         "nvim-crates": "nvim-crates",
         "nvim-dap": "nvim-dap",
-        "nvim-fzf": "nvim-fzf",
         "nvim-gitsigns": "nvim-gitsigns",
         "nvim-gps": "nvim-gps",
         "nvim-impatient": "nvim-impatient",

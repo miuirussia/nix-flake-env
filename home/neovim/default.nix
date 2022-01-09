@@ -103,7 +103,6 @@
         nvim-cmp-vsnip
         nvim-crates
         nvim-dap
-        nvim-fzf
         nvim-gitsigns
         nvim-gps
         nvim-lightbulb

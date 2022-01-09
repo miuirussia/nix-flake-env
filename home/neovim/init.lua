@@ -302,8 +302,10 @@ wk.register({
 telescope.setup()
 telescope.load_extension("fzf")
 
-local function project_files(opts)
-  local options = opts or {}
+local function project_files()
+  local options = {
+    previewer = false,
+  }
   local git = pcall(require("telescope.builtin").git_files, options)
   if git then
     return require("telescope.builtin").git_files(options)

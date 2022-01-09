@@ -71,7 +71,6 @@
     nvim-cmp-vsnip = { url = "github:hrsh7th/cmp-vsnip"; flake = false; };
     nvim-crates = { url = "github:saecki/crates.nvim"; flake = false; };
     nvim-dap = { url = "github:mfussenegger/nvim-dap"; flake = false; };
-    nvim-fzf = { url = "github:ibhagwan/fzf-lua"; flake = false; };
     nvim-gitsigns = { url = "github:lewis6991/gitsigns.nvim"; flake = false; };
     nvim-gps = { url = "github:SmiteshP/nvim-gps"; flake = false; };
     nvim-impatient = { url = "github:lewis6991/impatient.nvim"; flake = false; };
