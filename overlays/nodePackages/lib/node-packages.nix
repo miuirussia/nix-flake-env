@@ -706,13 +706,13 @@ let
         sha512 = "dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==";
       };
     };
-    "colors-1.4.1" = {
+    "colors-1.4.2" = {
       name = "colors";
       packageName = "colors";
-      version = "1.4.1";
+      version = "1.4.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/colors/-/colors-1.4.1.tgz";
-        sha512 = "urbBmMVnD1vk0mUwCpnWv06P3f16EF+RMTtIXTkylJk5mAdfrMepu9B3hhSnL8DGkc1Ra6pENJHrXTKvcAZ0wA==";
+        url = "https://registry.npmjs.org/colors/-/colors-1.4.2.tgz";
+        sha512 = "5QhJWPFZqkKIieXJPpCprdOytvH7v0AGWpu9K2jZ4LWkGg3dVBNoYPgGGRpEsc0jb8Boy0ElYrdjH9uXfhRSqw==";
       };
     };
     "combine-source-map-0.8.0" = {
@@ -1300,13 +1300,13 @@ let
         sha512 = "f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==";
       };
     };
-    "fast-glob-3.2.9" = {
+    "fast-glob-3.2.10" = {
       name = "fast-glob";
       packageName = "fast-glob";
-      version = "3.2.9";
+      version = "3.2.10";
       src = fetchurl {
-        url = "https://registry.npmjs.org/fast-glob/-/fast-glob-3.2.9.tgz";
-        sha512 = "MBwILhhD92sziIrMQwpqcuGERF+BH99ei2a3XsGJuqEKcSycAL+w0HWokFenZXona+kjFr82Lf71eTxNRC06XQ==";
+        url = "https://registry.npmjs.org/fast-glob/-/fast-glob-3.2.10.tgz";
+        sha512 = "s9nFhFnvR63wls6/kM88kQqDhMu0AfdjqouE2l5GVQPbqLgyFjjU5ry/r2yKsJxpb9Py1EYNqieFrmMaX4v++A==";
       };
     };
     "fast-json-stable-stringify-2.1.0" = {
@@ -4044,7 +4044,7 @@ in
       sources."crypto-random-string-2.0.0"
       sources."del-6.0.0"
       sources."dir-glob-3.0.1"
-      sources."fast-glob-3.2.9"
+      sources."fast-glob-3.2.10"
       sources."fastq-1.13.0"
       sources."fill-range-7.0.1"
       sources."find-up-4.1.0"
@@ -4420,7 +4420,7 @@ in
       sources."builtin-status-codes-3.0.0"
       sources."cached-path-relative-1.0.2"
       sources."cipher-base-1.0.4"
-      sources."colors-1.4.1"
+      sources."colors-1.4.2"
       sources."combine-source-map-0.8.0"
       sources."concat-map-0.0.1"
       (sources."concat-stream-2.0.0" // {
@@ -4963,7 +4963,7 @@ in
       sources."crypto-random-string-2.0.0"
       sources."del-6.0.0"
       sources."dir-glob-3.0.1"
-      sources."fast-glob-3.2.9"
+      sources."fast-glob-3.2.10"
       sources."fastq-1.13.0"
       sources."fill-range-7.0.1"
       sources."find-up-3.0.0"
