@@ -1,0 +1,231 @@
+From 08ff11836d1814dc3a75108933238e37a13f83bc Mon Sep 17 00:00:00 2001
+From: Robert Hensing <robert@roberthensing.nl>
+Date: Thu, 6 Jan 2022 01:20:12 +0100
+Subject: [PATCH 1/4] Fix segfault or stack overflow caused by large derivation
+ fields
+
+This removes a dynamic stack allocation, making the derivation
+unparsing logic robust against overflows when large strings are
+added to a derivation.
+Overflow behavior depends on the platform and stack configuration.
+
+For instance, x86_64-linux/glibc behaves as (somewhat) expected:
+
+$ (ulimit -s 20000; nix-instantiate tests/lang/eval-okay-big-derivation-attr.nix)
+error: stack overflow (possible infinite recursion)
+
+$ (ulimit -s 40000; nix-instantiate tests/lang/eval-okay-big-derivation-attr.nix)
+error: expression does not evaluate to a derivation (or a set or list of those)
+
+However, on aarch64-darwin:
+
+$ nix-instantiate big-attr.nix                                                                                                                                                                                                                                                       ~
+zsh: segmentation fault  nix-instantiate big-attr.nix
+
+This indicates a slight flaw in the single stack protection page
+approach that is not encountered with normal stack frames.
+---
+ src/libstore/derivations.cc   | 10 +++++++++-
+ tests/big-derivation-attr.nix | 13 +++++++++++++
+ tests/simple.sh               |  6 ++++++
+ 3 files changed, 28 insertions(+), 1 deletion(-)
+ create mode 100644 tests/big-derivation-attr.nix
+
+diff --git a/src/libstore/derivations.cc b/src/libstore/derivations.cc
+index b926bb71112..616e78076cf 100644
+--- a/src/libstore/derivations.cc
++++ b/src/libstore/derivations.cc
+@@ -272,7 +272,15 @@ Derivation parseDerivation(const Store & store, std::string && s, std::string_vi
+ 
+ static void printString(string & res, std::string_view s)
+ {
+-    char buf[s.size() * 2 + 2];
++    char * buf;
++    size_t bufSize = s.size() * 2 + 2;
++    std::unique_ptr<char[]> dynBuf;
++    if (bufSize < 0x10000) {
++        buf = (char *)alloca(bufSize);
++    } else {
++        dynBuf = decltype(dynBuf)(new char[bufSize]);
++        buf = dynBuf.get();
++    }
+     char * p = buf;
+     *p++ = '"';
+     for (auto c : s)
+diff --git a/tests/big-derivation-attr.nix b/tests/big-derivation-attr.nix
+new file mode 100644
+index 00000000000..35c1187f665
+--- /dev/null
++++ b/tests/big-derivation-attr.nix
+@@ -0,0 +1,13 @@
++let
++  sixteenBytes = "0123456789abcdef";
++  times16 = s: builtins.concatStringsSep "" [s s s s s s s s s s s s s s s s];
++  exp = n: x: if n == 1 then x else times16 (exp (n - 1) x);
++  sixteenMegabyte = exp 6 sixteenBytes;
++in
++assert builtins.stringLength sixteenMegabyte == 16777216;
++derivation {
++  name = "big-derivation-attr";
++  builder = "/x";
++  system = "y";
++  bigAttr = sixteenMegabyte;
++}
+diff --git a/tests/simple.sh b/tests/simple.sh
+index 15bd2bd163e..50d44f93f21 100644
+--- a/tests/simple.sh
++++ b/tests/simple.sh
+@@ -25,3 +25,9 @@ if test "$outPath" != "/foo/lfy1s6ca46rm5r6w4gg9hc0axiakjcnm-dependencies.drv";
+     echo "hashDerivationModulo appears broken, got $outPath"
+     exit 1
+ fi
++
++outPath="$(NIX_REMOTE=local?store=/foo\&real=$TEST_ROOT/real-store nix-instantiate --readonly-mode big-derivation-attr.nix)"
++if test "$outPath" != "/foo/xxiwa5zlaajv6xdjynf9yym9g319d6mn-big-derivation-attr.drv"; then
++    echo "big-derivation-attr.nix hash appears broken, got $outPath. Memory corruption in large drv attr?"
++    exit 1
++fi
+
+From 9fa06ab8c68d3499352c8e7f7b46306c3e1fcad9 Mon Sep 17 00:00:00 2001
+From: Robert Hensing <robert@roberthensing.nl>
+Date: Thu, 6 Jan 2022 14:31:23 +0100
+Subject: [PATCH 2/4] Add withBuffer
+
+... to avoid non-standard, unidiomatic alloca.
+---
+ src/libstore/derivations.cc | 30 ++++++++++++------------------
+ src/libutil/util.hh         |  9 +++++++++
+ 2 files changed, 21 insertions(+), 18 deletions(-)
+
+diff --git a/src/libstore/derivations.cc b/src/libstore/derivations.cc
+index 616e78076cf..21ea84dbf97 100644
+--- a/src/libstore/derivations.cc
++++ b/src/libstore/derivations.cc
+@@ -272,25 +272,19 @@ Derivation parseDerivation(const Store & store, std::string && s, std::string_vi
+ 
+ static void printString(string & res, std::string_view s)
+ {
+-    char * buf;
+     size_t bufSize = s.size() * 2 + 2;
+-    std::unique_ptr<char[]> dynBuf;
+-    if (bufSize < 0x10000) {
+-        buf = (char *)alloca(bufSize);
+-    } else {
+-        dynBuf = decltype(dynBuf)(new char[bufSize]);
+-        buf = dynBuf.get();
+-    }
+-    char * p = buf;
+-    *p++ = '"';
+-    for (auto c : s)
+-        if (c == '\"' || c == '\\') { *p++ = '\\'; *p++ = c; }
+-        else if (c == '\n') { *p++ = '\\'; *p++ = 'n'; }
+-        else if (c == '\r') { *p++ = '\\'; *p++ = 'r'; }
+-        else if (c == '\t') { *p++ = '\\'; *p++ = 't'; }
+-        else *p++ = c;
+-    *p++ = '"';
+-    res.append(buf, p - buf);
++    withBuffer<void, char>(bufSize, [&](char buf[]) {
++        char * p = buf;
++        *p++ = '"';
++        for (auto c : s)
++            if (c == '\"' || c == '\\') { *p++ = '\\'; *p++ = c; }
++            else if (c == '\n') { *p++ = '\\'; *p++ = 'n'; }
++            else if (c == '\r') { *p++ = '\\'; *p++ = 'r'; }
++            else if (c == '\t') { *p++ = '\\'; *p++ = 't'; }
++            else *p++ = c;
++        *p++ = '"';
++        res.append(buf, p - buf);
++    });
+ }
+ 
+ 
+diff --git a/src/libutil/util.hh b/src/libutil/util.hh
+index d08f428267e..210034858bf 100644
+--- a/src/libutil/util.hh
++++ b/src/libutil/util.hh
+@@ -655,5 +655,14 @@ template<class... Ts> overloaded(Ts...) -> overloaded<Ts...>;
+ 
+ std::string showBytes(uint64_t bytes);
+ 
++template<typename R = void, typename T = char> inline R withBuffer(size_t size, std::function<R (T[])> fun) {
++    if (size < 0x10000) {
++        T buf[size];
++        return fun(buf);
++    } else {
++        auto buf = std::unique_ptr<T[]>(new T[size]);
++        return fun(buf.get());
++    }
++}
+ 
+ }
+
+From 7f7a2abb149c43f5ad2de5a415cf53ad194e5801 Mon Sep 17 00:00:00 2001
+From: Robert Hensing <robert@roberthensing.nl>
+Date: Thu, 6 Jan 2022 15:11:37 +0100
+Subject: [PATCH 3/4] withBuffer: avoid allocating a std::function
+
+---
+ src/libstore/derivations.cc | 2 +-
+ src/libutil/util.hh         | 5 ++++-
+ 2 files changed, 5 insertions(+), 2 deletions(-)
+
+diff --git a/src/libstore/derivations.cc b/src/libstore/derivations.cc
+index 21ea84dbf97..f8fe6a59c11 100644
+--- a/src/libstore/derivations.cc
++++ b/src/libstore/derivations.cc
+@@ -273,7 +273,7 @@ Derivation parseDerivation(const Store & store, std::string && s, std::string_vi
+ static void printString(string & res, std::string_view s)
+ {
+     size_t bufSize = s.size() * 2 + 2;
+-    withBuffer<void, char>(bufSize, [&](char buf[]) {
++    withBuffer(bufSize, [&](char *buf) {
+         char * p = buf;
+         *p++ = '"';
+         for (auto c : s)
+diff --git a/src/libutil/util.hh b/src/libutil/util.hh
+index 210034858bf..6e9d5f61fb9 100644
+--- a/src/libutil/util.hh
++++ b/src/libutil/util.hh
+@@ -655,7 +655,10 @@ template<class... Ts> overloaded(Ts...) -> overloaded<Ts...>;
+ 
+ std::string showBytes(uint64_t bytes);
+ 
+-template<typename R = void, typename T = char> inline R withBuffer(size_t size, std::function<R (T[])> fun) {
++template<typename T = char, typename Fn>
++inline auto withBuffer(size_t size, Fn fun)
++  -> std::invoke_result_t<Fn, T *>
++{
+     if (size < 0x10000) {
+         T buf[size];
+         return fun(buf);
+
+From 961b680611abf0d1922b468158fa4b0bc95b04ab Mon Sep 17 00:00:00 2001
+From: Robert Hensing <robert@roberthensing.nl>
+Date: Mon, 10 Jan 2022 21:17:17 +0100
+Subject: [PATCH 4/4] withBuffer: Make sure to hit the stack protector
+
+---
+ src/libutil/util.hh | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+
+diff --git a/src/libutil/util.hh b/src/libutil/util.hh
+index 6e9d5f61fb9..ae41c2c0c43 100644
+--- a/src/libutil/util.hh
++++ b/src/libutil/util.hh
+@@ -659,7 +659,15 @@ template<typename T = char, typename Fn>
+ inline auto withBuffer(size_t size, Fn fun)
+   -> std::invoke_result_t<Fn, T *>
+ {
+-    if (size < 0x10000) {
++    // Large stack allocations can skip past the stack protection page.
++    const size_t stack_protection_size = 4096;
++    // We reduce the max stack allocated buffer by an extra amount to increase
++    // the chance of hitting it, even when `fun`'s first access is some distance
++    // into its *further* stack frame, particularly if the call was inlined and
++    // therefore not writing a frame pointer.
++    const size_t play = 64 * sizeof(char *); // 512B on 64b archs
++
++    if (size < stack_protection_size - play) {
+         T buf[size];
+         return fun(buf);
+     } else {
