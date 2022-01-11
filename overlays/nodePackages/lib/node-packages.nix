@@ -706,13 +706,13 @@ let
         sha512 = "dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==";
       };
     };
-    "colors-1.4.2" = {
+    "colors-1.4.0" = {
       name = "colors";
       packageName = "colors";
-      version = "1.4.2";
+      version = "1.4.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/colors/-/colors-1.4.2.tgz";
-        sha512 = "5QhJWPFZqkKIieXJPpCprdOytvH7v0AGWpu9K2jZ4LWkGg3dVBNoYPgGGRpEsc0jb8Boy0ElYrdjH9uXfhRSqw==";
+        url = "https://registry.npmjs.org/colors/-/colors-1.4.0.tgz";
+        sha512 = "a+UqTh4kgZg/SlGvfbzDHpgRu7AAQOmmqRHJnxhRZICKFUT91brVhNNt58CMWU9PsBbv3PDCZUHbVxuDiH2mtA==";
       };
     };
     "combine-source-map-0.8.0" = {
@@ -4420,7 +4420,7 @@ in
       sources."builtin-status-codes-3.0.0"
       sources."cached-path-relative-1.0.2"
       sources."cipher-base-1.0.4"
-      sources."colors-1.4.2"
+      sources."colors-1.4.0"
       sources."combine-source-map-0.8.0"
       sources."concat-map-0.0.1"
       (sources."concat-stream-2.0.0" // {
