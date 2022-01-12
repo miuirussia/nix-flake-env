@@ -2884,13 +2884,13 @@ let
         sha512 = "fQAWWP5a7scuchXecjpU4r4KEgSPuS6bBnaP01k9f71qqD28HaJ2m4PXHFkhkR4oATAxTPIGCtmTwtVoiBOHog==";
       };
     };
-    "qs-6.5.2" = {
+    "qs-6.5.3" = {
       name = "qs";
       packageName = "qs";
-      version = "6.5.2";
+      version = "6.5.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/qs/-/qs-6.5.2.tgz";
-        sha512 = "N5ZAX4/LxJmF+7wN74pUD6qAh9/wnvdQcjq9TZjevvXzSUo7bfmw91saqMjzGS2xq91/odN2dW/WOl7qQHNDGA==";
+        url = "https://registry.npmjs.org/qs/-/qs-6.5.3.tgz";
+        sha512 = "qxXIEh4pCGfHICj1mAJQ2/2XVZkjCDTcEgfoSQxc/fYivUZxTkk7L3bDBJSoNrEzXI17oUO5Dp07ktqE5KzczA==";
       };
     };
     "querystring-0.2.0" = {
@@ -4754,7 +4754,7 @@ in
       })
       sources."punycode-2.1.1"
       sources."purescript-installer-0.2.5"
-      sources."qs-6.5.2"
+      sources."qs-6.5.3"
       sources."readable-stream-2.3.7"
       sources."request-2.88.2"
       (sources."restore-cursor-2.0.0" // {
@@ -4916,7 +4916,7 @@ in
       sources."performance-now-2.1.0"
       sources."psl-1.8.0"
       sources."punycode-2.1.1"
-      sources."qs-6.5.2"
+      sources."qs-6.5.3"
       sources."request-2.88.2"
       sources."safe-buffer-5.2.1"
       sources."safer-buffer-2.1.2"
