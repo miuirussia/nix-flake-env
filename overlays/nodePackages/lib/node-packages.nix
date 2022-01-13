@@ -4326,10 +4326,10 @@ in
   pnpm = nodeEnv.buildNodePackage {
     name = "pnpm";
     packageName = "pnpm";
-    version = "6.25.1";
+    version = "6.26.0";
     src = fetchurl {
-      url = "https://registry.npmjs.org/pnpm/-/pnpm-6.25.1.tgz";
-      sha512 = "/jvwDU8XJ3ntw1fJ5pYGN+nMqxHuXoarajc/95CrAB9+lVfjTJooiOc5BmxT7GrZzcEwdpJKMCdN3yR1ItGFMw==";
+      url = "https://registry.npmjs.org/pnpm/-/pnpm-6.26.0.tgz";
+      sha512 = "/ZRkBFts6AguZZgzz3lzvmsaae1QajC01BPd+jDAeajzEMO+q6q5VjxZKaM8JjCusBlmaVaAlIQICg7pyHNkwA==";
     };
     buildInputs = globalBuildInputs;
     meta = {
