@@ -2,7 +2,7 @@
   description = "KDeveloper system config";
 
   inputs = {
-    nixpkgs = { url = "github:miuirussia/nixpkgs/229407c252a3673ac1f967eb2288fd6ebaa82770"; };
+    nixpkgs = { url = "github:miuirussia/nixpkgs/978338eb4f5ba13db2f4384812845833bd38c56a"; };
     nixUnstable = { url = "github:NixOS/nix/f39d94a55be7db1759e3fcd8aea24bfb0da7b8c2"; inputs.nixpkgs.follows = "nixpkgs"; };
     fenix = { url = "github:nix-community/fenix"; inputs.nixpkgs.follows = "nixpkgs"; };
 
