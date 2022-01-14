@@ -4308,10 +4308,10 @@ in
   npm = nodeEnv.buildNodePackage {
     name = "npm";
     packageName = "npm";
-    version = "8.3.0";
+    version = "8.3.1";
     src = fetchurl {
-      url = "https://registry.npmjs.org/npm/-/npm-8.3.0.tgz";
-      sha512 = "ug4xToae4Dh3yZh8Fp6MOnAPSS3fqCTANpJx1fXP2C4LTUzoZf7rEantHQR/ANPVYDBe5qQT4tGVsoPqqiYZMw==";
+      url = "https://registry.npmjs.org/npm/-/npm-8.3.1.tgz";
+      sha512 = "f552vKhT3r+PpCRnH7UferrrbcnvcFnGusN2T1mQqq/0UQd3pF1+ok4n0WahT0ZKxj10YU3b2VdhGrf39djHAA==";
     };
     buildInputs = globalBuildInputs;
     meta = {
@@ -4326,10 +4326,10 @@ in
   pnpm = nodeEnv.buildNodePackage {
     name = "pnpm";
     packageName = "pnpm";
-    version = "6.26.0";
+    version = "6.26.1";
     src = fetchurl {
-      url = "https://registry.npmjs.org/pnpm/-/pnpm-6.26.0.tgz";
-      sha512 = "/ZRkBFts6AguZZgzz3lzvmsaae1QajC01BPd+jDAeajzEMO+q6q5VjxZKaM8JjCusBlmaVaAlIQICg7pyHNkwA==";
+      url = "https://registry.npmjs.org/pnpm/-/pnpm-6.26.1.tgz";
+      sha512 = "LsBJ+mJLenS4bmbA2xLWUTpWEXIThxPQy0uePEsplBdUUFvgrTDccyIcKDepE8EY8e5QSks67IOMI7bDRySgbQ==";
     };
     buildInputs = globalBuildInputs;
     meta = {
