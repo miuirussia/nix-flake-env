@@ -1300,13 +1300,13 @@ let
         sha512 = "f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==";
       };
     };
-    "fast-glob-3.2.10" = {
+    "fast-glob-3.2.11" = {
       name = "fast-glob";
       packageName = "fast-glob";
-      version = "3.2.10";
+      version = "3.2.11";
       src = fetchurl {
-        url = "https://registry.npmjs.org/fast-glob/-/fast-glob-3.2.10.tgz";
-        sha512 = "s9nFhFnvR63wls6/kM88kQqDhMu0AfdjqouE2l5GVQPbqLgyFjjU5ry/r2yKsJxpb9Py1EYNqieFrmMaX4v++A==";
+        url = "https://registry.npmjs.org/fast-glob/-/fast-glob-3.2.11.tgz";
+        sha512 = "xrO3+1bxSo3ZVHAnqzyuewYT6aMFHRAd4Kcs92MAonjwQZLsK9d0SF1IyQ3k5PoirxTW0Oe/RqFgMQ6TcNE5Ew==";
       };
     };
     "fast-json-stable-stringify-2.1.0" = {
@@ -4044,7 +4044,7 @@ in
       sources."crypto-random-string-2.0.0"
       sources."del-6.0.0"
       sources."dir-glob-3.0.1"
-      sources."fast-glob-3.2.10"
+      sources."fast-glob-3.2.11"
       sources."fastq-1.13.0"
       sources."fill-range-7.0.1"
       sources."find-up-4.1.0"
@@ -4943,10 +4943,10 @@ in
   typescript-language-server = nodeEnv.buildNodePackage {
     name = "typescript-language-server";
     packageName = "typescript-language-server";
-    version = "0.9.1";
+    version = "0.9.2";
     src = fetchurl {
-      url = "https://registry.npmjs.org/typescript-language-server/-/typescript-language-server-0.9.1.tgz";
-      sha512 = "97voOnTi/rXs21uDK3chpk54IN+4J+RV/BjruAZRmrvY/zkdQEzoUdZ51mGLdJwpN//o3+nu9mG4Mw5rZOetHw==";
+      url = "https://registry.npmjs.org/typescript-language-server/-/typescript-language-server-0.9.2.tgz";
+      sha512 = "gyaEwpxuypDfdgrdRAje0itG16tixYH3S26EQY3FuXIKP5FE3A/TQzzSIQ6SIMqR4pYvSm5c9fpCyLk9WN3AQw==";
     };
     dependencies = [
       sources."@nodelib/fs.scandir-2.1.5"
@@ -4963,7 +4963,7 @@ in
       sources."crypto-random-string-2.0.0"
       sources."del-6.0.0"
       sources."dir-glob-3.0.1"
-      sources."fast-glob-3.2.10"
+      sources."fast-glob-3.2.11"
       sources."fastq-1.13.0"
       sources."fill-range-7.0.1"
       sources."find-up-3.0.0"
