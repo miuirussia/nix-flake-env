@@ -2,6 +2,7 @@
   "diagnostic-languageserver",
   "eslint_d",
   "fx",
+  "intelephense",
   "npm",
   "pnpm",
   "prettier",

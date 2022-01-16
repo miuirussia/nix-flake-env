@@ -44,3 +44,5 @@
   publisher: rangav
 - name: hadolint
   publisher: exiasr
+- name: vscode-intelephense-client
+  publisher: bmewburn

@@ -136,5 +136,11 @@
     "publisher": "exiasr",
     "sha256": "11pf45fbq1rfxa68n8hy7z3iwi3sxfykla20d942wd7faymddk54",
     "version": "1.1.0"
+  },
+  {
+    "name": "vscode-intelephense-client",
+    "publisher": "bmewburn",
+    "sha256": "0jzj50c0kpa7qmdgdl2n4c6hd8jhs2j01jbxv0120h51h7rwp64g",
+    "version": "1.8.0"
   }
 ]

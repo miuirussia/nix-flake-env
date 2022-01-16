@@ -4,6 +4,7 @@
   telemetry = {
     enableCrashReporter = false;
     enableTelemetry = false;
+    telemetryLevel = "off";
   };
 
   files = {
@@ -114,4 +115,9 @@
   hadolint.hadolintPath = "${pkgs.hadolint}/bin/hadolint";
 
   rust-analyzer.server.path = "${pkgs.rust-analyzer-nightly}/bin/rust-analyzer";
+
+  intelephense = {
+    telemetry.enabled = false;
+    runtime = "${pkgs.nodejs}/bin/node";
+  };
 }
