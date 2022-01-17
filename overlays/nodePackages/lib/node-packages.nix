@@ -5727,10 +5727,10 @@ in
   typescript-language-server = nodeEnv.buildNodePackage {
     name = "typescript-language-server";
     packageName = "typescript-language-server";
-    version = "0.9.2";
+    version = "0.9.3";
     src = fetchurl {
-      url = "https://registry.npmjs.org/typescript-language-server/-/typescript-language-server-0.9.2.tgz";
-      sha512 = "gyaEwpxuypDfdgrdRAje0itG16tixYH3S26EQY3FuXIKP5FE3A/TQzzSIQ6SIMqR4pYvSm5c9fpCyLk9WN3AQw==";
+      url = "https://registry.npmjs.org/typescript-language-server/-/typescript-language-server-0.9.3.tgz";
+      sha512 = "RZtrmY8DpSbjjs9K9V9ptlGj7Qi5hkP/NfIbKa3ob7jDCzbnhDFhG10/zOjNHuAKp91RdJUOAHuPm3F5LKjiMw==";
     };
     dependencies = [
       sources."@nodelib/fs.scandir-2.1.5"
