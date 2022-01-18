@@ -98,8 +98,8 @@
   {
     "name": "ide-purescript",
     "publisher": "nwolverson",
-    "sha256": "0gblldm88b9qz410hwfha9wxkc5gl7bb3kbi0fmihwyna9q27xda",
-    "version": "0.25.6"
+    "sha256": "135f3wz166fzl24b2kjww3hdnjj4x6vcrq4cmj01zxfvz44zp2hw",
+    "version": "0.25.7"
   },
   {
     "name": "language-purescript",
@@ -128,8 +128,8 @@
   {
     "name": "vscode-thunder-client",
     "publisher": "rangav",
-    "sha256": "1m642xpym1a80xz0nq4h3y6z6qlvk45y7rlfn00yajylpfgjygig",
-    "version": "1.9.1"
+    "sha256": "1yzpbrrzc8bmnf456aar7vaf930ircnb8glxf1rp4dsx8fwafjg5",
+    "version": "1.10.0"
   },
   {
     "name": "hadolint",
