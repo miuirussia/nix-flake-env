@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs = { url = "github:miuirussia/nixpkgs/59f2f06543fca946a2650582ae5b6593be18552e"; };
-    nixUnstable = { url = "github:NixOS/nix/4af88a4c91e45f1b0f51c5f49c09a4c829d83c39"; inputs.nixpkgs.follows = "nixpkgs"; };
+    nixUnstable = { url = "github:NixOS/nix/bc443511eb65420b51d10708e25427fe50de37a8"; inputs.nixpkgs.follows = "nixpkgs"; };
     fenix = { url = "github:nix-community/fenix"; inputs.nixpkgs.follows = "nixpkgs"; };
 
     agenix.url = "github:yaxitech/ragenix";
