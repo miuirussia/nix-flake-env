@@ -22,13 +22,13 @@ let
         sha512 = "hsEnFemeiW4D08A5gUAZxLBTXpZ39P+a+DGDsHw1yxqyQ/jzFEnxf5uTEGp+3bzAbNOxU1paTgYS4ECU/IgfDw==";
       };
     };
-    "@babel/highlight-7.16.7" = {
+    "@babel/highlight-7.16.10" = {
       name = "_at_babel_slash_highlight";
       packageName = "@babel/highlight";
-      version = "7.16.7";
+      version = "7.16.10";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@babel/highlight/-/highlight-7.16.7.tgz";
-        sha512 = "aKpPMfLvGO3Q97V0qhw/V2SWNWlwfJknuwAunU7wZLSfrM4xTBvg7E5opUVi1kJTBKihE38CPg4nBiqX83PWYw==";
+        url = "https://registry.npmjs.org/@babel/highlight/-/highlight-7.16.10.tgz";
+        sha512 = "5FnTQLSLswEj6IkgVw5KusNUUFY9ZGqe/TRFnP/BKYHYgfh7tc+C7mwiy95/yNP7Dh9x580Vv8r7u7ZfTBFxdw==";
       };
     };
     "@bmewburn/js-beautify-1.13.0" = {
@@ -787,13 +787,13 @@ let
         sha512 = "p8WcneCytvzPxhDvYp31PD039vi77I12W+/KfR9S8AZbaiARFBCpsPJS+9uhWfeBfeAtW7o/4vt3MUqLkbY6nA==";
       };
     };
-    "cached-path-relative-1.0.2" = {
+    "cached-path-relative-1.1.0" = {
       name = "cached-path-relative";
       packageName = "cached-path-relative";
-      version = "1.0.2";
+      version = "1.1.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/cached-path-relative/-/cached-path-relative-1.0.2.tgz";
-        sha512 = "5r2GqsoEb4qMTTN9J+WzXfjov+hjxT+j3u5K+kIVNIwAd99DLCJE9pBIMP1qVeybV6JiijL385Oz0DcYxfbOIg==";
+        url = "https://registry.npmjs.org/cached-path-relative/-/cached-path-relative-1.1.0.tgz";
+        sha512 = "WF0LihfemtesFcJgO7xfOoOcnWzY/QHR4qeDqV44jPU3HTI54+LnfXK3SA27AVVGCdZFgjjFFaqUA9Jx7dMJZA==";
       };
     };
     "callsites-3.1.0" = {
@@ -4685,7 +4685,7 @@ in
     dependencies = [
       sources."@babel/code-frame-7.12.11"
       sources."@babel/helper-validator-identifier-7.16.7"
-      (sources."@babel/highlight-7.16.7" // {
+      (sources."@babel/highlight-7.16.10" // {
         dependencies = [
           sources."chalk-2.4.2"
           sources."escape-string-regexp-1.0.5"
@@ -5110,10 +5110,10 @@ in
   pnpm = nodeEnv.buildNodePackage {
     name = "pnpm";
     packageName = "pnpm";
-    version = "6.26.1";
+    version = "6.27.1";
     src = fetchurl {
-      url = "https://registry.npmjs.org/pnpm/-/pnpm-6.26.1.tgz";
-      sha512 = "LsBJ+mJLenS4bmbA2xLWUTpWEXIThxPQy0uePEsplBdUUFvgrTDccyIcKDepE8EY8e5QSks67IOMI7bDRySgbQ==";
+      url = "https://registry.npmjs.org/pnpm/-/pnpm-6.27.1.tgz";
+      sha512 = "aW+oDXiMk9mzInmIaRv9v9+FSNkXBs60rVUO6QBpalPja0eO3J5ePSyBxAbLsuhGGbEOpwRq0aNywFq8yIi9HQ==";
     };
     buildInputs = globalBuildInputs;
     meta = {
@@ -5202,7 +5202,7 @@ in
       sources."buffer-from-1.1.2"
       sources."buffer-xor-1.0.3"
       sources."builtin-status-codes-3.0.0"
-      sources."cached-path-relative-1.0.2"
+      sources."cached-path-relative-1.1.0"
       sources."cipher-base-1.0.4"
       sources."colors-1.4.0"
       sources."combine-source-map-0.8.0"
@@ -5604,10 +5604,10 @@ in
   purescript-language-server = nodeEnv.buildNodePackage {
     name = "purescript-language-server";
     packageName = "purescript-language-server";
-    version = "0.16.2";
+    version = "0.16.3";
     src = fetchurl {
-      url = "https://registry.npmjs.org/purescript-language-server/-/purescript-language-server-0.16.2.tgz";
-      sha512 = "d1pKF+nfbHKbsmnJGPt/VKWfDz2+x0dUHNN/A6pL2efJK8UQi3vOSd/mk+/vHH571eG0x2lFU8SP9pvzP/4pmg==";
+      url = "https://registry.npmjs.org/purescript-language-server/-/purescript-language-server-0.16.3.tgz";
+      sha512 = "wD3xxZUwPqZTG1OZNEq6kr/yKpKjCTY4JDYLlj5wyippho3cvABhf6INxlzA8h2+ZM3G4+pDmdjQOmp5UWw6rA==";
     };
     dependencies = [
       sources."isexe-2.0.0"
@@ -5727,10 +5727,10 @@ in
   typescript-language-server = nodeEnv.buildNodePackage {
     name = "typescript-language-server";
     packageName = "typescript-language-server";
-    version = "0.9.3";
+    version = "0.9.4";
     src = fetchurl {
-      url = "https://registry.npmjs.org/typescript-language-server/-/typescript-language-server-0.9.3.tgz";
-      sha512 = "RZtrmY8DpSbjjs9K9V9ptlGj7Qi5hkP/NfIbKa3ob7jDCzbnhDFhG10/zOjNHuAKp91RdJUOAHuPm3F5LKjiMw==";
+      url = "https://registry.npmjs.org/typescript-language-server/-/typescript-language-server-0.9.4.tgz";
+      sha512 = "Ku40l2JQyj4rB/qHLRMm/k2nqAppR6equ4LCqiLSOH/tDypsSPjgQfeYJ+gterQbdYOpCqLimiL2AP1BeHpTQw==";
     };
     dependencies = [
       sources."@nodelib/fs.scandir-2.1.5"
