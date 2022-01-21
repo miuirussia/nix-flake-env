@@ -4153,13 +4153,13 @@ let
         sha1 = "867ac74e3864187b1d3d47d996a78ec5c8830777";
       };
     };
-    "typescript-4.5.4" = {
+    "typescript-4.5.5" = {
       name = "typescript";
       packageName = "typescript";
-      version = "4.5.4";
+      version = "4.5.5";
       src = fetchurl {
-        url = "https://registry.npmjs.org/typescript/-/typescript-4.5.4.tgz";
-        sha512 = "VgYs2A2QIRuGphtzFV7aQJduJ2gyfTljngLzjpfW9FoYZF6xuw1W0vW9ghCKLfcWrCFxK81CSGRAvS1pn4fIUg==";
+        url = "https://registry.npmjs.org/typescript/-/typescript-4.5.5.tgz";
+        sha512 = "TCTIul70LyWe6IJWT8QSYeA54WQe8EjQFU4wY52Fasj5UKx88LNYKCgBEHcOMOrFF1rKGbD8v/xcNWVUq9SymA==";
       };
     };
     "umd-3.0.3" = {
@@ -5045,7 +5045,7 @@ in
       sources."tough-cookie-2.5.0"
       sources."tunnel-agent-0.6.0"
       sources."tweetnacl-0.14.5"
-      sources."typescript-4.5.4"
+      sources."typescript-4.5.5"
       sources."universalify-2.0.0"
       sources."uri-js-4.4.1"
       sources."uuid-3.4.0"
@@ -5092,10 +5092,10 @@ in
   npm = nodeEnv.buildNodePackage {
     name = "npm";
     packageName = "npm";
-    version = "8.3.1";
+    version = "8.3.2";
     src = fetchurl {
-      url = "https://registry.npmjs.org/npm/-/npm-8.3.1.tgz";
-      sha512 = "f552vKhT3r+PpCRnH7UferrrbcnvcFnGusN2T1mQqq/0UQd3pF1+ok4n0WahT0ZKxj10YU3b2VdhGrf39djHAA==";
+      url = "https://registry.npmjs.org/npm/-/npm-8.3.2.tgz";
+      sha512 = "xZAC9GpWNOyiS1TtBqBy0HJpjIVI8zsVXEOEwcmgqYFtqOy7sXUL0ByOrkhfcGmf+akSXz3uOxLYB8aLlYivQQ==";
     };
     buildInputs = globalBuildInputs;
     meta = {
