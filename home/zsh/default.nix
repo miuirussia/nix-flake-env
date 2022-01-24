@@ -33,11 +33,6 @@
       zsh-history-substring-search
     ];
 
-    oh-my-zsh = {
-      enable = true;
-      plugins = [ "git-auto-fetch" ];
-    };
-
     shellAliases = {
       # Recursively remove Apple meta files
       cleanupds = "find . -type f -name '*.DS_Store' -ls -delete";
