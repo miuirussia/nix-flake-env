@@ -5092,10 +5092,10 @@ in
   npm = nodeEnv.buildNodePackage {
     name = "npm";
     packageName = "npm";
-    version = "8.3.2";
+    version = "8.4.0";
     src = fetchurl {
-      url = "https://registry.npmjs.org/npm/-/npm-8.3.2.tgz";
-      sha512 = "xZAC9GpWNOyiS1TtBqBy0HJpjIVI8zsVXEOEwcmgqYFtqOy7sXUL0ByOrkhfcGmf+akSXz3uOxLYB8aLlYivQQ==";
+      url = "https://registry.npmjs.org/npm/-/npm-8.4.0.tgz";
+      sha512 = "j32JsNpXI0TwuZd2p67X+U83lEqHrc0+CGIUGNwQqubMPj610+BongAfX0SmTCvyz7PzSIkxftuInNSmweF0hQ==";
     };
     buildInputs = globalBuildInputs;
     meta = {
@@ -5727,10 +5727,10 @@ in
   typescript-language-server = nodeEnv.buildNodePackage {
     name = "typescript-language-server";
     packageName = "typescript-language-server";
-    version = "0.9.4";
+    version = "0.9.5";
     src = fetchurl {
-      url = "https://registry.npmjs.org/typescript-language-server/-/typescript-language-server-0.9.4.tgz";
-      sha512 = "Ku40l2JQyj4rB/qHLRMm/k2nqAppR6equ4LCqiLSOH/tDypsSPjgQfeYJ+gterQbdYOpCqLimiL2AP1BeHpTQw==";
+      url = "https://registry.npmjs.org/typescript-language-server/-/typescript-language-server-0.9.5.tgz";
+      sha512 = "ixEYxmOFUfbx5soEDQpPDlOlOqyLZBmtyO4IhJPmRIxxcK0lNqQThOqtgJ8M7W//cMtU0sRhWzYlb9GRNCeK2A==";
     };
     dependencies = [
       sources."@nodelib/fs.scandir-2.1.5"
