@@ -13,7 +13,7 @@
     home-manager = { url = "github:nix-community/home-manager"; inputs.nixpkgs.follows = "nixpkgs"; };
 
     # haskell-nix
-    hackage = { url = "github:miuirussia/hackage.nix"; flake = false; };
+    hackage = { url = "github:input-output-hk/hackage.nix"; flake = false; };
     stackage = { url = "github:input-output-hk/stackage.nix"; flake = false; };
     haskell-nix = {
       url = "github:input-output-hk/haskell.nix";

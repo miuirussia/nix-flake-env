@@ -311,15 +311,15 @@
     "hackage": {
       "flake": false,
       "locked": {
-        "lastModified": 1641781465,
-        "narHash": "sha256-O7FfscZEZDxJCoiwyRa+t75dfYiNXJEZJgBpdAVIO50=",
-        "owner": "miuirussia",
+        "lastModified": 1643678362,
+        "narHash": "sha256-9f/vcqfRylAvbnfbXAXa6aKIYIDg5QDGCm6w8JLhqZ8=",
+        "owner": "input-output-hk",
         "repo": "hackage.nix",
-        "rev": "47cd2162a7a42462f7eef5fde10786934aa581d1",
+        "rev": "75f75372897bbc65a940f87c2d21f8625d92cb1d",
         "type": "github"
       },
       "original": {
-        "owner": "miuirussia",
+        "owner": "input-output-hk",
         "repo": "hackage.nix",
         "type": "github"
       }
