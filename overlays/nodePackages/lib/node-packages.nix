@@ -4693,13 +4693,13 @@ let
         sha512 = "/65lxR/CuLJoOdzTjOTYUPWS7k5qzaWese4PObnWc6jwLryUrSa7DslYfaRXigh5/xr1nlaUZCcJwkpgM0wFvw==";
       };
     };
-    "vscode-languageserver-8.0.0-next.7" = {
+    "vscode-languageserver-8.0.0-next.8" = {
       name = "vscode-languageserver";
       packageName = "vscode-languageserver";
-      version = "8.0.0-next.7";
+      version = "8.0.0-next.8";
       src = fetchurl {
-        url = "https://registry.npmjs.org/vscode-languageserver/-/vscode-languageserver-8.0.0-next.7.tgz";
-        sha512 = "KZsW7oXEVWVQSH8RyJbRVjd05OXI44hDraK4fH2VS/Ww/Hw4+ESqlAQRCW/HTl3p04vorgxwGkGylwRVnLPKjw==";
+        url = "https://registry.npmjs.org/vscode-languageserver/-/vscode-languageserver-8.0.0-next.8.tgz";
+        sha512 = "Gq0uqKbOgw7YNwPxMoNCeh7mHKMhG5j6EuoSh+w5pnKd7Eu9a74cagqf9aZDVFWW6GRpqR/Z+1o6EXqDK+g2Tg==";
       };
     };
     "vscode-languageserver-protocol-3.16.0" = {
@@ -4711,13 +4711,13 @@ let
         sha512 = "sdeUoAawceQdgIfTI+sdcwkiK2KU+2cbEYA0agzM2uqaUy2UpnnGHtWTHVEtS0ES4zHU0eMFRGN+oQgDxlD66A==";
       };
     };
-    "vscode-languageserver-protocol-3.17.0-next.13" = {
+    "vscode-languageserver-protocol-3.17.0-next.14" = {
       name = "vscode-languageserver-protocol";
       packageName = "vscode-languageserver-protocol";
-      version = "3.17.0-next.13";
+      version = "3.17.0-next.14";
       src = fetchurl {
-        url = "https://registry.npmjs.org/vscode-languageserver-protocol/-/vscode-languageserver-protocol-3.17.0-next.13.tgz";
-        sha512 = "QsCf/aZP/uVZSvrlLq8K7adkEesvFZL0azz6/AjfubFCBPfMLD7KRoJX4XO/tw9RhgAr8RlBnbiVniopgmmOWQ==";
+        url = "https://registry.npmjs.org/vscode-languageserver-protocol/-/vscode-languageserver-protocol-3.17.0-next.14.tgz";
+        sha512 = "iangobY8dL6sFZkOx4OhRPJM9gN0I1caUsOVR+MnPozsqQUtwMXmbIcfaIf0Akp0pd3KhJDPf/tdwRX68QGeeA==";
       };
     };
     "vscode-languageserver-protocol-3.17.0-next.5" = {
@@ -5938,8 +5938,8 @@ in
       sources."shell-quote-1.7.3"
       sources."uuid-3.4.0"
       sources."vscode-jsonrpc-8.0.0-next.6"
-      sources."vscode-languageserver-8.0.0-next.7"
-      sources."vscode-languageserver-protocol-3.17.0-next.13"
+      sources."vscode-languageserver-8.0.0-next.8"
+      sources."vscode-languageserver-protocol-3.17.0-next.14"
       sources."vscode-languageserver-textdocument-1.0.4"
       sources."vscode-languageserver-types-3.17.0-next.7"
       sources."vscode-uri-2.1.2"

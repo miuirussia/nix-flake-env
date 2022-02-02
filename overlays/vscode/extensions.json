@@ -86,14 +86,14 @@
   {
     "name": "remote-ssh",
     "publisher": "ms-vscode-remote",
-    "sha256": "0l81gdjapxnv1llcbjydf12fr5pr6cfi9gvckkbini5ppyxfzlgz",
-    "version": "0.71.2022013115"
+    "sha256": "1pdpwdvlrvl5bk38xx0fxrxi6kiivvlq7fm790lf985npna4qrk5",
+    "version": "0.72.0"
   },
   {
     "name": "remote-ssh-edit",
     "publisher": "ms-vscode-remote",
-    "sha256": "19g3al3hkd6a665bqkmifsgvfl9nr3mrkp83w13w4f8d44ci7siq",
-    "version": "0.71.2022013115"
+    "sha256": "0nrjfjg2w2prvl9jvk9yf0pfy0zl0p59pvymg6sh6hqlp8ckhy5x",
+    "version": "0.72.0"
   },
   {
     "name": "ide-purescript",

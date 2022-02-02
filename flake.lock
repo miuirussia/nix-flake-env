@@ -311,11 +311,11 @@
     "hackage": {
       "flake": false,
       "locked": {
-        "lastModified": 1643678362,
-        "narHash": "sha256-9f/vcqfRylAvbnfbXAXa6aKIYIDg5QDGCm6w8JLhqZ8=",
+        "lastModified": 1643764476,
+        "narHash": "sha256-Jx8rnosHvDmSCqwstjIfOUFUMvGJDYqlUR5Lrek9vO4=",
         "owner": "input-output-hk",
         "repo": "hackage.nix",
-        "rev": "75f75372897bbc65a940f87c2d21f8625d92cb1d",
+        "rev": "94448e81a86f8cc679148ab182fe972ee711233c",
         "type": "github"
       },
       "original": {
@@ -351,11 +351,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1643709421,
-        "narHash": "sha256-alHsyyPKXghT5BfCddf9uxWVfAO27OroJzdSrdA25hs=",
+        "lastModified": 1643764652,
+        "narHash": "sha256-gluTDdsVDSA5/yjMtOg3LCGk86UraUEL+TR7LC/ljGc=",
         "owner": "input-output-hk",
         "repo": "haskell.nix",
-        "rev": "08ef71453642750531db2bb86447888a547c6f9c",
+        "rev": "1c23c7e3cb2c719ae212a7bc72a403ae5dae79eb",
         "type": "github"
       },
       "original": {
@@ -385,11 +385,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1643707513,
-        "narHash": "sha256-HwyQcb8m0I9Ujfe7djkPB5cFtNKuwg/zo0fzRKa+LNo=",
+        "lastModified": 1643773898,
+        "narHash": "sha256-Tg/A584HtQjuzvR5QE0WNXMDgjmJCjfZWopKdGiMykM=",
         "owner": "miuirussia",
         "repo": "hls-nix",
-        "rev": "b863f7c615db33c6f398a8a20637dced47019f95",
+        "rev": "de84945ae356d5469fa0fe63f6142e0d33c89285",
         "type": "github"
       },
       "original": {
@@ -418,11 +418,11 @@
     "hls-unstable": {
       "flake": false,
       "locked": {
-        "lastModified": 1643664578,
-        "narHash": "sha256-oWQu0xj1ceCMlj8unim3DEBDAUInhIdZzS86TbOZY90=",
+        "lastModified": 1643739885,
+        "narHash": "sha256-/KjmOrONoFmpiSg5m3uTvRwatAKOluZ8PI/vAT90YYU=",
         "owner": "haskell",
         "repo": "haskell-language-server",
-        "rev": "9cd1fdd4fa5581456bb4e0a3dbf14a68faffa49d",
+        "rev": "47cb213ac70dabb567461ac93af6933f79c39f4f",
         "type": "github"
       },
       "original": {
@@ -829,11 +829,11 @@
     "nvim-gitsigns": {
       "flake": false,
       "locked": {
-        "lastModified": 1643667405,
-        "narHash": "sha256-dC2ZJ/udkv3N5LyBDEmyB/nWpMnXLAjRYxD0SV1v/JI=",
+        "lastModified": 1643736437,
+        "narHash": "sha256-MCOXHosPctZ+rBBTeKNmgkk4vGkD6S26a0Rb10b16jw=",
         "owner": "lewis6991",
         "repo": "gitsigns.nvim",
-        "rev": "e91fda815a5f7d20d7e4c89cd1f07f3497fe200d",
+        "rev": "0cba66ab9ef2316eea742dc9d17f1b7a5bf17f54",
         "type": "github"
       },
       "original": {
@@ -909,11 +909,11 @@
     "nvim-lspconfig": {
       "flake": false,
       "locked": {
-        "lastModified": 1643407102,
-        "narHash": "sha256-2Z4wqycfRfgLe67rU/tYa+vGvZ3fKITRJPMg/8+W2A4=",
+        "lastModified": 1643761925,
+        "narHash": "sha256-U8F1PADXsAghROFZC9zNFNso7P0oO2YDsktdMDKi7sc=",
         "owner": "neovim",
         "repo": "nvim-lspconfig",
-        "rev": "e7df7ecae0b0d2f997ea65e951ddbe98ca3e154b",
+        "rev": "531751ef03d77bf094f1fc07844b6c03ec4862bb",
         "type": "github"
       },
       "original": {
@@ -1117,11 +1117,11 @@
     "nvim-treesitter": {
       "flake": false,
       "locked": {
-        "lastModified": 1643702925,
-        "narHash": "sha256-iCo3ftRqoVYTECbBgd6E4nufekjRAiR5h+d9u4I6ntI=",
+        "lastModified": 1643734509,
+        "narHash": "sha256-bIxeqWzM0WohLWIwyt9qb5/bjmbZTNeyFJMTDDxepAA=",
         "owner": "nvim-treesitter",
         "repo": "nvim-treesitter",
-        "rev": "3041e32701c253122c7bbd366a97990d0fb718e6",
+        "rev": "647c55cb6f0bc6c81968ba9581d470455efe1548",
         "type": "github"
       },
       "original": {
@@ -1324,11 +1324,11 @@
     "stackage": {
       "flake": false,
       "locked": {
-        "lastModified": 1643678832,
-        "narHash": "sha256-T4eP/lPinufXnzVvWyn00jRyUOSGN3GTqTXXSNb0wVk=",
+        "lastModified": 1643764602,
+        "narHash": "sha256-aiwoJ1Ut3kGiDwS+D7ujzd7PLmanS2Kfrr5FJzXh4Kg=",
         "owner": "input-output-hk",
         "repo": "stackage.nix",
-        "rev": "1f612813e2294f5c84e8fdc5a6091a583fcce8ce",
+        "rev": "ce7bf2a5b014c58f7fdf3220984cf2917c54159b",
         "type": "github"
       },
       "original": {
