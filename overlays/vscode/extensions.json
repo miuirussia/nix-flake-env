@@ -80,20 +80,20 @@
   {
     "name": "remote-containers",
     "publisher": "ms-vscode-remote",
-    "sha256": "01l4xdp8lfhrpq52cvyvxni8qlz2v053802ck5ml0k4cs90mw2vj",
-    "version": "0.216.0"
+    "sha256": "1x0dzp8snyynyq1qp8k6qhyhdahqsgqbcjcikx6c4fn7hyqv9f70",
+    "version": "0.218.0"
   },
   {
     "name": "remote-ssh",
     "publisher": "ms-vscode-remote",
-    "sha256": "1pdpwdvlrvl5bk38xx0fxrxi6kiivvlq7fm790lf985npna4qrk5",
-    "version": "0.72.0"
+    "sha256": "10ia4qapbglz77iyb1kmdzkhi8n1ksnzz6f7ay987b6a86hmyd45",
+    "version": "0.73.2022020215"
   },
   {
     "name": "remote-ssh-edit",
     "publisher": "ms-vscode-remote",
-    "sha256": "0nrjfjg2w2prvl9jvk9yf0pfy0zl0p59pvymg6sh6hqlp8ckhy5x",
-    "version": "0.72.0"
+    "sha256": "15llfxcnpafnxbzrzwjrcaz6iy9g30j64i14dz0f9smvw9zlzj3l",
+    "version": "0.73.2022020215"
   },
   {
     "name": "ide-purescript",

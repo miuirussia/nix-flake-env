@@ -1030,13 +1030,13 @@ let
         sha512 = "P0CysNDQ7rtVw4QIQtm+MRxV66vKFSvlsQvGYXZWR3qFU0jlMKHZZZgw8e+8DSah4UDKMqnknRDQz+xuQXQ/Zg==";
       };
     };
-    "commander-8.3.0" = {
+    "commander-9.0.0" = {
       name = "commander";
       packageName = "commander";
-      version = "8.3.0";
+      version = "9.0.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/commander/-/commander-8.3.0.tgz";
-        sha512 = "OkTL9umf+He2DZkUq8f8J9of7yL6RJKI24dVITBmNfZBmri9zYZQrKkuXiKhyfPSu8tUhnVBB1iKXevvnlR4Ww==";
+        url = "https://registry.npmjs.org/commander/-/commander-9.0.0.tgz";
+        sha512 = "JJfP2saEKbQqvW+FI93OYUB4ByV5cizMpFMiiJI8xDbBvQvSkIk0VvQdn1CZ8mqAO8Loq2h0gYTYtDFUZUeERw==";
       };
     };
     "concat-map-0.0.1" = {
@@ -2020,13 +2020,13 @@ let
         sha512 = "AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==";
       };
     };
-    "globals-13.12.0" = {
+    "globals-13.12.1" = {
       name = "globals";
       packageName = "globals";
-      version = "13.12.0";
+      version = "13.12.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/globals/-/globals-13.12.0.tgz";
-        sha512 = "uS8X6lSKN2JumVoXrbUz+uG4BYG+eiawqm3qFcT7ammfbUHeCBoJMlHcec/S3krSk73/AE/f0szYFmgAA3kYZg==";
+        url = "https://registry.npmjs.org/globals/-/globals-13.12.1.tgz";
+        sha512 = "317dFlgY2pdJZ9rspXDks7073GpDmXdfbM3vYYp0HAMKGDh1FfWPleI2ljVNLQX5M5lXcAslTcPTrOrMEFOjyw==";
       };
     };
     "globby-11.1.0" = {
@@ -5086,7 +5086,7 @@ in
       sources."functional-red-black-tree-1.0.1"
       sources."glob-7.2.0"
       sources."glob-parent-5.1.2"
-      sources."globals-13.12.0"
+      sources."globals-13.12.1"
       sources."has-flag-4.0.0"
       sources."ignore-4.0.6"
       sources."import-fresh-3.3.0"
@@ -6059,10 +6059,10 @@ in
   typescript-language-server = nodeEnv.buildNodePackage {
     name = "typescript-language-server";
     packageName = "typescript-language-server";
-    version = "0.9.5";
+    version = "0.9.6";
     src = fetchurl {
-      url = "https://registry.npmjs.org/typescript-language-server/-/typescript-language-server-0.9.5.tgz";
-      sha512 = "ixEYxmOFUfbx5soEDQpPDlOlOqyLZBmtyO4IhJPmRIxxcK0lNqQThOqtgJ8M7W//cMtU0sRhWzYlb9GRNCeK2A==";
+      url = "https://registry.npmjs.org/typescript-language-server/-/typescript-language-server-0.9.6.tgz";
+      sha512 = "nLB9qvCFq/jRj21tC6SPZgde8JkNbCQZVjoeBHYsCZvzBgSyNh1A1k5puAM9g/kWlEvAlN/G4J8tETbnJySVpg==";
     };
     dependencies = [
       sources."@nodelib/fs.scandir-2.1.5"
@@ -6074,7 +6074,7 @@ in
       sources."brace-expansion-1.1.11"
       sources."braces-3.0.2"
       sources."clean-stack-2.2.0"
-      sources."commander-8.3.0"
+      sources."commander-9.0.0"
       sources."concat-map-0.0.1"
       sources."crypto-random-string-2.0.0"
       sources."del-6.0.0"
