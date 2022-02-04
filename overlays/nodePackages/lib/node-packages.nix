@@ -3955,13 +3955,13 @@ let
         sha1 = "3ff21f198cad2175f9f3b781853fd94d0d19b590";
       };
     };
-    "signal-exit-3.0.6" = {
+    "signal-exit-3.0.7" = {
       name = "signal-exit";
       packageName = "signal-exit";
-      version = "3.0.6";
+      version = "3.0.7";
       src = fetchurl {
-        url = "https://registry.npmjs.org/signal-exit/-/signal-exit-3.0.6.tgz";
-        sha512 = "sDl4qMFpijcGw22U5w63KmD3cZJfBuFlVNbVMKje2keoKML7X2UzWbc4XrmEbDwg0NXJc3yv4/ox7b+JWb57kQ==";
+        url = "https://registry.npmjs.org/signal-exit/-/signal-exit-3.0.7.tgz";
+        sha512 = "wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==";
       };
     };
     "simple-concat-1.0.1" = {
@@ -5416,10 +5416,10 @@ in
   npm = nodeEnv.buildNodePackage {
     name = "npm";
     packageName = "npm";
-    version = "8.4.0";
+    version = "8.4.1";
     src = fetchurl {
-      url = "https://registry.npmjs.org/npm/-/npm-8.4.0.tgz";
-      sha512 = "j32JsNpXI0TwuZd2p67X+U83lEqHrc0+CGIUGNwQqubMPj610+BongAfX0SmTCvyz7PzSIkxftuInNSmweF0hQ==";
+      url = "https://registry.npmjs.org/npm/-/npm-8.4.1.tgz";
+      sha512 = "Br6GQ6MGF06MhgBNhAJ4heYsCO5NJDKXnwHGaBgNDFz6HZiEOhc+sDGEcoXki4IlSUuAFdLY66BWaFI7BasMCA==";
     };
     buildInputs = globalBuildInputs;
     meta = {
@@ -5877,7 +5877,7 @@ in
       sources."safer-buffer-2.1.2"
       sources."shebang-command-2.0.0"
       sources."shebang-regex-3.0.0"
-      sources."signal-exit-3.0.6"
+      sources."signal-exit-3.0.7"
       sources."sshpk-1.17.0"
       sources."ssri-6.0.2"
       sources."stream-each-1.2.3"
