@@ -73,6 +73,7 @@ jobs:
         run: |
           nix flake update
           (cd $GITHUB_WORKSPACE/overlays/vscode && ./update-vscode-plugins.py)
+          (cd $GITHUB_WORKSPACE/overlays/fonts && ./apple-update)
           (cd $GITHUB_WORKSPACE/overlays/nodePackages/lib && npx -y node2nix -- -i node-packages.json --nodejs-16)
           rm -rf $GITHUB_WORKSPACE/overlays/sumnekoLua/lua-language-server
         env:
