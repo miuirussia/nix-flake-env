@@ -5976,10 +5976,10 @@ in
   spago = nodeEnv.buildNodePackage {
     name = "spago";
     packageName = "spago";
-    version = "0.20.4";
+    version = "0.20.5";
     src = fetchurl {
-      url = "https://registry.npmjs.org/spago/-/spago-0.20.4.tgz";
-      sha512 = "ooSzvU3qV5bIH2k40Rz6PVdT8XoaUifXCpqBLzWEVTOVBh8e78E5d0hr9WJHc/JBtpYSuKJ+qgNKqFbNLqA1Ag==";
+      url = "https://registry.npmjs.org/spago/-/spago-0.20.5.tgz";
+      sha512 = "qvEka4oqLu2cnowqh7UvNWzvKPlmQETjG2QPPVYDFC3QQqSJFopqIH6NBFDn/5lDbvzS1kPKQizfC+mTQChyPQ==";
     };
     dependencies = [
       sources."@gar/promisify-1.1.2"
