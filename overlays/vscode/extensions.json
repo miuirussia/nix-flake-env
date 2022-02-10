@@ -26,8 +26,8 @@
   {
     "name": "flow-for-vscode",
     "publisher": "flowtype",
-    "sha256": "1bdilg2cmgf06z8v7pcynmdg99887lpvcxmlzlqcp6zqf5vdcn0c",
-    "version": "1.9.2"
+    "sha256": "0as0bn7yzf8kv3ivvkg7208jcd9d5xvdwlcdhcfzbcf400dk8ss0",
+    "version": "2.0.0"
   },
   {
     "name": "Nix",
@@ -86,26 +86,26 @@
   {
     "name": "remote-ssh",
     "publisher": "ms-vscode-remote",
-    "sha256": "04479nszf7g121na59ryvgkf644h987hg2zlz4b018g68l3gcwh5",
-    "version": "0.73.2022020715"
+    "sha256": "1pw3ksvh4jcnmgnyljn2ldh7sid6kbpzdyvaqjnvfcjx70vqfr4x",
+    "version": "0.73.2022020915"
   },
   {
     "name": "remote-ssh-edit",
     "publisher": "ms-vscode-remote",
-    "sha256": "1fihi4labbl0pnz8knd2xhgiyn1454xml3k17pcvgig4hdfqhwxk",
-    "version": "0.73.2022020715"
+    "sha256": "188kjjnpqcx0j5zki77r7gsk1j051f07nfnn8j8w92vvfg5ijzq4",
+    "version": "0.73.2022020915"
   },
   {
     "name": "ide-purescript",
     "publisher": "nwolverson",
-    "sha256": "1c1pxf1q38ln3cjhy0wqbb41l3q9pqz0q8nxrv8r2jnhllxw77yg",
-    "version": "0.25.8"
+    "sha256": "16vzd47978jagakbvv9z64g4j1hxblsd4i9qk286pbq195cafq4c",
+    "version": "0.25.10"
   },
   {
     "name": "language-purescript",
     "publisher": "nwolverson",
-    "sha256": "1n4z3258lilxg47fdhgrfx8wakw3dlqii69qiidy1qc079dwa2bi",
-    "version": "0.2.7"
+    "sha256": "1nhzvjwxld53mlaflf8idyjj18r1dzdys9ygy86095g7gc4b1qys",
+    "version": "0.2.8"
   },
   {
     "name": "crates",

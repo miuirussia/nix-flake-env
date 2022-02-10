@@ -5434,10 +5434,10 @@ in
   pnpm = nodeEnv.buildNodePackage {
     name = "pnpm";
     packageName = "pnpm";
-    version = "6.30.0";
+    version = "6.30.1";
     src = fetchurl {
-      url = "https://registry.npmjs.org/pnpm/-/pnpm-6.30.0.tgz";
-      sha512 = "qsnc5wxI5nIkdh7lDv2mQiniPdsSD46a1A1Nz+qzcMuh4FFiXAq1Ntfszdm21bVm0OFEn/FSgaQDZxYXYPmCTw==";
+      url = "https://registry.npmjs.org/pnpm/-/pnpm-6.30.1.tgz";
+      sha512 = "vkhVrxj4tgDREV4feLovUx4PeKggcMi0jrs8lH88Cf+5wnWk6jAv9bTzIxVLTsQCIGDnj4+4rP+7zbYzs5HfPg==";
     };
     buildInputs = globalBuildInputs;
     meta = {
@@ -5928,10 +5928,10 @@ in
   purescript-language-server = nodeEnv.buildNodePackage {
     name = "purescript-language-server";
     packageName = "purescript-language-server";
-    version = "0.16.3";
+    version = "0.16.4";
     src = fetchurl {
-      url = "https://registry.npmjs.org/purescript-language-server/-/purescript-language-server-0.16.3.tgz";
-      sha512 = "wD3xxZUwPqZTG1OZNEq6kr/yKpKjCTY4JDYLlj5wyippho3cvABhf6INxlzA8h2+ZM3G4+pDmdjQOmp5UWw6rA==";
+      url = "https://registry.npmjs.org/purescript-language-server/-/purescript-language-server-0.16.4.tgz";
+      sha512 = "SGCmBgnXaturjrruQvJ35/gw+AtefmaUw+Z9yguTaMTcgzOHONgxeNPUBxwAlIuLJ0S4j3EIPNWpGT/iDYiJ1g==";
     };
     dependencies = [
       sources."isexe-2.0.0"
@@ -5976,10 +5976,10 @@ in
   spago = nodeEnv.buildNodePackage {
     name = "spago";
     packageName = "spago";
-    version = "0.20.5";
+    version = "0.20.6";
     src = fetchurl {
-      url = "https://registry.npmjs.org/spago/-/spago-0.20.5.tgz";
-      sha512 = "qvEka4oqLu2cnowqh7UvNWzvKPlmQETjG2QPPVYDFC3QQqSJFopqIH6NBFDn/5lDbvzS1kPKQizfC+mTQChyPQ==";
+      url = "https://registry.npmjs.org/spago/-/spago-0.20.6.tgz";
+      sha512 = "w0ix0fNqDrV7MfbEXWdjVDrvfO+Ma2rbfVZD1XickN/EmtYCPvK36FZsDdRUUeCOgrEDCKmSPL9vwjeTbXH0HA==";
     };
     dependencies = [
       sources."@gar/promisify-1.1.2"
