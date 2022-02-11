@@ -148,13 +148,13 @@ let
         sha512 = "oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==";
       };
     };
-    "@npmcli/fs-1.1.0" = {
+    "@npmcli/fs-1.1.1" = {
       name = "_at_npmcli_slash_fs";
       packageName = "@npmcli/fs";
-      version = "1.1.0";
+      version = "1.1.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@npmcli/fs/-/fs-1.1.0.tgz";
-        sha512 = "VhP1qZLXcrXRIaPoqb4YA55JQxLNF3jNR4T55IdOJa3+IFJKNYHtPvtXx8slmeMavj37vCzCfrqQM1vWLsYKLA==";
+        url = "https://registry.npmjs.org/@npmcli/fs/-/fs-1.1.1.tgz";
+        sha512 = "8KG5RD0GVP4ydEzRn/I4BNDuxDtqVbOdm8675T49OIG/NGhaK0pjPX7ZcDlvKYbA+ulvVK3ztfcF4uBdOxuJbQ==";
       };
     };
     "@npmcli/move-file-1.1.2" = {
@@ -4621,13 +4621,13 @@ let
         sha512 = "2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==";
       };
     };
-    "vscode-css-languageservice-5.1.12" = {
+    "vscode-css-languageservice-5.1.13" = {
       name = "vscode-css-languageservice";
       packageName = "vscode-css-languageservice";
-      version = "5.1.12";
+      version = "5.1.13";
       src = fetchurl {
-        url = "https://registry.npmjs.org/vscode-css-languageservice/-/vscode-css-languageservice-5.1.12.tgz";
-        sha512 = "293C5C2732Rbhh3opTs+nQBpC5Dd+oYrEA8lc0OWdyt40oYmJ331FV7NMF1SLFSIcOFB5XveLiWUZak2oyc49Q==";
+        url = "https://registry.npmjs.org/vscode-css-languageservice/-/vscode-css-languageservice-5.1.13.tgz";
+        sha512 = "FA0foqMzMmEoO0WJP+MjoD4dRERhKS+Ag+yBrtmWQDmw2OuZ1R/5FkvI/XdTkCpHmTD9VMczugpHRejQyTXCNQ==";
       };
     };
     "vscode-html-languageservice-4.2.1" = {
@@ -5374,7 +5374,7 @@ in
       sources."uri-js-4.4.1"
       sources."uuid-3.4.0"
       sources."verror-1.10.0"
-      (sources."vscode-css-languageservice-5.1.12" // {
+      (sources."vscode-css-languageservice-5.1.13" // {
         dependencies = [
           sources."vscode-languageserver-types-3.16.0"
         ];
@@ -5416,10 +5416,10 @@ in
   npm = nodeEnv.buildNodePackage {
     name = "npm";
     packageName = "npm";
-    version = "8.4.1";
+    version = "8.5.0";
     src = fetchurl {
-      url = "https://registry.npmjs.org/npm/-/npm-8.4.1.tgz";
-      sha512 = "Br6GQ6MGF06MhgBNhAJ4heYsCO5NJDKXnwHGaBgNDFz6HZiEOhc+sDGEcoXki4IlSUuAFdLY66BWaFI7BasMCA==";
+      url = "https://registry.npmjs.org/npm/-/npm-8.5.0.tgz";
+      sha512 = "L0yvQ8xkkM78YSZfO634auG0n4SleCa536n1rJ2uYJn6rzqyXnm6DpS2eQIq2g6b2JsA2XdZO41wkZWpsHNCAQ==";
     };
     buildInputs = globalBuildInputs;
     meta = {
@@ -5928,10 +5928,10 @@ in
   purescript-language-server = nodeEnv.buildNodePackage {
     name = "purescript-language-server";
     packageName = "purescript-language-server";
-    version = "0.16.4";
+    version = "0.16.5";
     src = fetchurl {
-      url = "https://registry.npmjs.org/purescript-language-server/-/purescript-language-server-0.16.4.tgz";
-      sha512 = "SGCmBgnXaturjrruQvJ35/gw+AtefmaUw+Z9yguTaMTcgzOHONgxeNPUBxwAlIuLJ0S4j3EIPNWpGT/iDYiJ1g==";
+      url = "https://registry.npmjs.org/purescript-language-server/-/purescript-language-server-0.16.5.tgz";
+      sha512 = "M9Ktn2/hVjWMN9vK+q8i8i4r0gnnhT0u+GpKPsrdjPjJFcTqKaH49TQNwf07eD8Sd+xlcuU3PSu5CRgXwH3gag==";
     };
     dependencies = [
       sources."isexe-2.0.0"
@@ -5983,7 +5983,7 @@ in
     };
     dependencies = [
       sources."@gar/promisify-1.1.2"
-      sources."@npmcli/fs-1.1.0"
+      sources."@npmcli/fs-1.1.1"
       sources."@npmcli/move-file-1.1.2"
       sources."@tootallnate/once-1.1.2"
       sources."agent-base-6.0.2"

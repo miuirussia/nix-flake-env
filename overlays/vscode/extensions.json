@@ -14,8 +14,8 @@
   {
     "name": "material-icon-theme",
     "publisher": "pkief",
-    "sha256": "1c434f2za01rrfbcfyk0k3pkr29bl12f8il1y7dsr4yxkafsfrd6",
-    "version": "4.12.1"
+    "sha256": "0b5z08v34q10xlbjbb5sn3zdwq6bflhd96z3dqsiakywhrsxi0jm",
+    "version": "4.13.0"
   },
   {
     "name": "vscode-jest",
@@ -80,20 +80,20 @@
   {
     "name": "remote-containers",
     "publisher": "ms-vscode-remote",
-    "sha256": "1jdcqk3sx4b7v2mv05lya4pzfbg0jf5r5l2rh66q6s0s7fwpykgw",
-    "version": "0.219.0"
+    "sha256": "1sxb9nmwa4ff3yhw5whn96zj9fiqmxybw2l5cmnyn4nd0hpbz2wr",
+    "version": "0.220.0"
   },
   {
     "name": "remote-ssh",
     "publisher": "ms-vscode-remote",
-    "sha256": "1pw3ksvh4jcnmgnyljn2ldh7sid6kbpzdyvaqjnvfcjx70vqfr4x",
-    "version": "0.73.2022020915"
+    "sha256": "18gwf9r9fsqxrgdjh70ii3b0fw9i1yvq9g978ww69mr25yai2p7j",
+    "version": "0.73.2022021015"
   },
   {
     "name": "remote-ssh-edit",
     "publisher": "ms-vscode-remote",
-    "sha256": "188kjjnpqcx0j5zki77r7gsk1j051f07nfnn8j8w92vvfg5ijzq4",
-    "version": "0.73.2022020915"
+    "sha256": "1vv9xhm3hksjx9bbx92ggn3qf3mbbaiszpzd3im2hvjca431539w",
+    "version": "0.73.2022021015"
   },
   {
     "name": "ide-purescript",
