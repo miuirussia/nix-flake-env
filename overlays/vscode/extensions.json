@@ -140,7 +140,7 @@
   {
     "name": "vscode-intelephense-client",
     "publisher": "bmewburn",
-    "sha256": "0jzj50c0kpa7qmdgdl2n4c6hd8jhs2j01jbxv0120h51h7rwp64g",
-    "version": "1.8.0"
+    "sha256": "13xlcgzzgqy7s4j4g7sldf1zp4wyvk1ahkj3531w40nis6nmsx00",
+    "version": "1.8.1"
   }
 ]
