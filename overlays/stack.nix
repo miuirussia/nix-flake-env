@@ -20,5 +20,6 @@ let
   };
 in
 {
+  inherit stack-with-args;
   stack-in-nix = stack-with-args "--no-nix --system-ghc --no-install-ghc";
 }

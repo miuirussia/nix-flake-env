@@ -23,15 +23,6 @@
         stackage.follows = "stackage";
       };
     };
-    hls-nix = {
-      url = "github:miuirussia/hls-nix";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        hackage.follows = "hackage";
-        stackage.follows = "stackage";
-        haskell-nix.follows = "haskell-nix";
-      };
-    };
 
     # fonts
     jetbrains-mono = { url = "github:JetBrains/JetBrainsMono"; flake = false; };

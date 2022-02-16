@@ -215,22 +215,6 @@
         "type": "github"
       }
     },
-    "flake-compat_2": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1641205782,
-        "narHash": "sha256-4jY7RCWUoZ9cKD8co0/4tFARpWB+57+r1bLLvXNJliY=",
-        "owner": "edolstra",
-        "repo": "flake-compat",
-        "rev": "b7547d3eed6f32d06102ead8991ec52ab0a4f1a7",
-        "type": "github"
-      },
-      "original": {
-        "owner": "edolstra",
-        "repo": "flake-compat",
-        "type": "github"
-      }
-    },
     "flake-utils": {
       "locked": {
         "lastModified": 1644229661,
@@ -262,21 +246,6 @@
       }
     },
     "flake-utils_3": {
-      "locked": {
-        "lastModified": 1644229661,
-        "narHash": "sha256-1YdnJAsNy69bpcjuoKdOYQX0YxZBiCYZo4Twxerqv7k=",
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "rev": "3cecb5b042f7f209c56ffd8371b2711a290ec797",
-        "type": "github"
-      },
-      "original": {
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "type": "github"
-      }
-    },
-    "flake-utils_4": {
       "locked": {
         "lastModified": 1644229661,
         "narHash": "sha256-1YdnJAsNy69bpcjuoKdOYQX0YxZBiCYZo4Twxerqv7k=",
@@ -364,73 +333,6 @@
         "type": "github"
       }
     },
-    "hls-nix": {
-      "inputs": {
-        "flake-compat": "flake-compat_2",
-        "flake-utils": "flake-utils_4",
-        "hackage": [
-          "hackage"
-        ],
-        "haskell-nix": [
-          "haskell-nix"
-        ],
-        "hls-stable": "hls-stable",
-        "hls-unstable": "hls-unstable",
-        "nix-project": "nix-project",
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "stackage": [
-          "stackage"
-        ]
-      },
-      "locked": {
-        "lastModified": 1644896501,
-        "narHash": "sha256-X/v60FaTUJE62gE11V77Z5t0zFxXk0iHdGY5TGv0+jU=",
-        "owner": "miuirussia",
-        "repo": "hls-nix",
-        "rev": "1400b26492f9855348e082b059d5db41e722e0db",
-        "type": "github"
-      },
-      "original": {
-        "owner": "miuirussia",
-        "repo": "hls-nix",
-        "type": "github"
-      }
-    },
-    "hls-stable": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1605076560,
-        "narHash": "sha256-AYeFitkJOcs2PACc1me9p8j+lJ3rlGsVdS/v16EGV9w=",
-        "owner": "haskell",
-        "repo": "haskell-language-server",
-        "rev": "372a12e797069dc3ac4fa33dcaabe3b992999d7c",
-        "type": "github"
-      },
-      "original": {
-        "owner": "haskell",
-        "ref": "0.6.0",
-        "repo": "haskell-language-server",
-        "type": "github"
-      }
-    },
-    "hls-unstable": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1644883223,
-        "narHash": "sha256-OMhftt6Bd046AsHihdscHq+xCNvAhhPTjHqcH3Lip4M=",
-        "owner": "haskell",
-        "repo": "haskell-language-server",
-        "rev": "34e9914f4edaa83c2e4a80dcba0c6375d4911da9",
-        "type": "github"
-      },
-      "original": {
-        "owner": "haskell",
-        "repo": "haskell-language-server",
-        "type": "github"
-      }
-    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -513,22 +415,6 @@
         "owner": "neovim",
         "ref": "nightly",
         "repo": "neovim",
-        "type": "github"
-      }
-    },
-    "nix-project": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1637398643,
-        "narHash": "sha256-m4ukfCHmXkZpXPo2HUd+ahZcMVgmsCeB2yCrQw7zEck=",
-        "owner": "shajra",
-        "repo": "nix-project",
-        "rev": "9ef234b7ad5813d15cc259c6229822c44335e950",
-        "type": "github"
-      },
-      "original": {
-        "owner": "shajra",
-        "repo": "nix-project",
         "type": "github"
       }
     },
@@ -1222,7 +1108,6 @@
         "flake-utils": "flake-utils_2",
         "hackage": "hackage",
         "haskell-nix": "haskell-nix",
-        "hls-nix": "hls-nix",
         "home-manager": "home-manager",
         "jetbrains-mono": "jetbrains-mono",
         "neovim": "neovim",

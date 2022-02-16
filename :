@@ -1,20 +1,5 @@
 inputs: final: prev:
 let
-  longDesc = suffix: ''
-    Haskell Language Server (HLS) is the latest attempt make an IDE-like
-    experience for Haskell that's compatible with different editors. HLS
-    implements Microsoft's Language Server Protocol (LSP). With this
-    approach, a background service is launched for a project that answers
-    questions needed by an editor for common IDE features.
-    Note that you need a version of HLS compiled specifically for the GHC
-    compiler used by your project.  If you have multiple versions of GHC and
-    HLS installed in your path, then a provided wrapper can be used to
-    select the right one for the version of GHC used by your project.
-    ${suffix}
-  '';
-
-  planConfigFor = ghcVersion: { compiler-nix-name = ghcVersion; name = "haskell-language-server"; version = "latest"; index-state = "2022-02-16T00:00:00Z"; };
-
   hls-renamed = ghcVersion:
     let
       trueVersion = {
@@ -38,7 +23,7 @@ let
         "ghc902" = "9.0.2";
         "ghc921" = "9.2.1";
       }."${ghcVersion}" or (throw "unsupported GHC Version: ${ghcVersion}");
-      hls = (final.haskell-nix.hackage-package (planConfigFor ghcVersion)).components.exes.haskell-language-server;
+      hls = (final.haskell-nix.hackage-package { compiler-nix-name = ghcVersion; name = "haskell-language-server"; version = "latest"; }).components.exes.haskell-language-server;
     in
     final.stdenv.mkDerivation {
       name = "haskell-language-server-${ghcVersion}";
@@ -67,13 +52,13 @@ let
 
   hls-wrapper = ghcVersion: injectPackages:
     let
-      wrapper = (final.haskell-nix.hackage-package (planConfigFor ghcVersion)).components.exes.haskell-language-server-wrapper;
+      wrapper = (final.haskell-nix.hackage-package { compiler-nix-name = ghcVersion; name = "haskell-language-server"; version = "latest"; }).components.exes.haskell-language-server-wrapper;
     in
     final.stdenv.mkDerivation {
       name = "haskell-language-server-wrapper-${ghcVersion}";
       version = wrapper.version;
       phases = [ "installPhase" ];
-      nativeBuildInputs = [ final.makeWrapper ];
+      nativeBuildInputs = [ pkgs.makeWrapper ];
       installPhase = ''
         mkdir --parents $out/bin
         makeWrapper \
