@@ -3,7 +3,7 @@ let
   planConfigFor = ghcVersion: {
     compiler-nix-name = ghcVersion;
     name = "haskell-language-server";
-    version = "latest";
+    version = "1.6.1.1";
     index-state = "2022-02-16T00:00:00Z";
     materialized = ./materialized + "/${final.system}/${ghcVersion}";
   };
