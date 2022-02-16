@@ -2902,22 +2902,22 @@ let
         sha1 = "f6c00c1c0b082246e5c4d99dfb8c7c083b2b582a";
       };
     };
-    "minimatch-3.0.7" = {
+    "minimatch-3.0.8" = {
       name = "minimatch";
       packageName = "minimatch";
-      version = "3.0.7";
+      version = "3.0.8";
       src = fetchurl {
-        url = "https://registry.npmjs.org/minimatch/-/minimatch-3.0.7.tgz";
-        sha512 = "pYjbG0o9W2Wb3KVBuV6s7R/bzS/iS3HPiHcFcDee5GGiN1M5MErXqgS4jGn8pwVwTZAoy7B8bYb/+AqQU0NhZA==";
+        url = "https://registry.npmjs.org/minimatch/-/minimatch-3.0.8.tgz";
+        sha512 = "6FsRAQsxQ61mw+qP1ZzbL9Bc78x2p5OqNgNpnoAFLTrX8n5Kxph0CsnhmKKNXTWjXqU5L0pGPR7hYk+XWZr60Q==";
       };
     };
-    "minimatch-3.1.1" = {
+    "minimatch-3.1.2" = {
       name = "minimatch";
       packageName = "minimatch";
-      version = "3.1.1";
+      version = "3.1.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/minimatch/-/minimatch-3.1.1.tgz";
-        sha512 = "reLxBcKUPNBnc/sVtAbxgRVFSegoGeLaSjmphNhcwcolhYLRgtJscn5mRl6YRZNQv40Y7P6JM2YhSIsbL9OB5A==";
+        url = "https://registry.npmjs.org/minimatch/-/minimatch-3.1.2.tgz";
+        sha512 = "J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==";
       };
     };
     "minimist-0.0.10" = {
@@ -5039,7 +5039,7 @@ in
       sources."lodash-4.17.21"
       sources."merge2-1.4.1"
       sources."micromatch-4.0.4"
-      sources."minimatch-3.1.1"
+      sources."minimatch-3.1.2"
       sources."once-1.4.0"
       sources."p-limit-2.3.0"
       sources."p-locate-4.1.0"
@@ -5186,7 +5186,7 @@ in
       sources."lodash.merge-4.6.2"
       sources."lodash.truncate-4.4.2"
       sources."lru-cache-6.0.0"
-      sources."minimatch-3.1.1"
+      sources."minimatch-3.1.2"
       sources."ms-2.1.2"
       sources."nanolru-1.0.0"
       sources."natural-compare-1.4.0"
@@ -5412,7 +5412,7 @@ in
       sources."micromatch-4.0.4"
       sources."mime-db-1.51.0"
       sources."mime-types-2.1.34"
-      sources."minimatch-3.1.1"
+      sources."minimatch-3.1.2"
       sources."minimist-1.2.5"
       sources."mkdirp-1.0.4"
       sources."moo-0.5.1"
@@ -5699,7 +5699,7 @@ in
       sources."mime-1.6.0"
       sources."minimalistic-assert-1.0.1"
       sources."minimalistic-crypto-utils-1.0.1"
-      sources."minimatch-3.0.7"
+      sources."minimatch-3.0.8"
       sources."minimist-1.2.5"
       sources."mkdirp-0.5.5"
       sources."mkdirp-classic-0.5.3"
@@ -5915,7 +5915,7 @@ in
       sources."mime-db-1.51.0"
       sources."mime-types-2.1.34"
       sources."mimic-fn-2.1.0"
-      sources."minimatch-3.1.1"
+      sources."minimatch-3.1.2"
       sources."minimist-1.2.5"
       sources."minipass-2.9.0"
       sources."minizlib-1.3.3"
@@ -6097,7 +6097,7 @@ in
       sources."is-lambda-1.0.1"
       sources."lru-cache-6.0.0"
       sources."make-fetch-happen-9.1.0"
-      sources."minimatch-3.1.1"
+      sources."minimatch-3.1.2"
       sources."minipass-3.1.6"
       sources."minipass-collect-1.0.2"
       sources."minipass-fetch-1.4.1"
@@ -6186,7 +6186,7 @@ in
       sources."lru-cache-6.0.0"
       sources."merge2-1.4.1"
       sources."micromatch-4.0.4"
-      sources."minimatch-3.1.1"
+      sources."minimatch-3.1.2"
       sources."once-1.4.0"
       sources."p-debounce-2.1.0"
       sources."p-limit-2.3.0"

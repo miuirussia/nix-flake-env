@@ -86,14 +86,14 @@
   {
     "name": "remote-ssh",
     "publisher": "ms-vscode-remote",
-    "sha256": "18gwf9r9fsqxrgdjh70ii3b0fw9i1yvq9g978ww69mr25yai2p7j",
-    "version": "0.73.2022021015"
+    "sha256": "1pl7l00409l9ns1ygyq7mjs87vgdb2d5nkhzrcdkjrv494525svr",
+    "version": "0.74.0"
   },
   {
     "name": "remote-ssh-edit",
     "publisher": "ms-vscode-remote",
-    "sha256": "1vv9xhm3hksjx9bbx92ggn3qf3mbbaiszpzd3im2hvjca431539w",
-    "version": "0.73.2022021015"
+    "sha256": "0x1y74jvr7ylh1kxks406ms2khkmvvnm57ha3v25n885h09x1599",
+    "version": "0.74.0"
   },
   {
     "name": "ide-purescript",
@@ -122,8 +122,8 @@
   {
     "name": "shellcheck",
     "publisher": "timonwong",
-    "sha256": "1wlqnzwds6rbqx3kw5zdrd8jjv7w31fs627gqhyi76h3max6g7bk",
-    "version": "0.18.7"
+    "sha256": "1r67rd8cxrf43z25f7wpp85jdmkpgki61kxp5r5dcpnrp51a3lvd",
+    "version": "0.18.8"
   },
   {
     "name": "vscode-thunder-client",
