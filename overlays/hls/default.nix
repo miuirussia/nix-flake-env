@@ -1,5 +1,13 @@
 inputs: final: prev:
 let
+  planConfigFor = ghcVersion: {
+    compiler-nix-name = ghcVersion;
+    name = "haskell-language-server";
+    version = "latest";
+    index-state = "2022-02-16T00:00:00Z";
+    materialized = ./materialized + "/${final.system}/${ghcVersion}";
+  };
+
   longDesc = suffix: ''
     Haskell Language Server (HLS) is the latest attempt make an IDE-like
     experience for Haskell that's compatible with different editors. HLS
@@ -12,8 +20,6 @@ let
     select the right one for the version of GHC used by your project.
     ${suffix}
   '';
-
-  planConfigFor = ghcVersion: { compiler-nix-name = ghcVersion; name = "haskell-language-server"; version = "latest"; index-state = "2022-02-16T00:00:00Z"; };
 
   hls-renamed = ghcVersion:
     let
