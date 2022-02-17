@@ -85,13 +85,13 @@ let
         sha512 = "J6KFFz5QCYUJq3pf0mjEcCJVERbzv71PUIDczuh9JkwGEzced6CO5ADLHB1rbf/+oPBtoPfMYNOpGDzCANlbXw==";
       };
     };
-    "@gar/promisify-1.1.2" = {
+    "@gar/promisify-1.1.3" = {
       name = "_at_gar_slash_promisify";
       packageName = "@gar/promisify";
-      version = "1.1.2";
+      version = "1.1.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@gar/promisify/-/promisify-1.1.2.tgz";
-        sha512 = "82cpyJyKRoQoRi+14ibCeGPu0CwypgtBAdBhq1WfvagpCZNKqwXbKwXllYSMG91DhmG4jt9gN8eP6lGOtozuaw==";
+        url = "https://registry.npmjs.org/@gar/promisify/-/promisify-1.1.3.tgz";
+        sha512 = "k2Ty1JcVojjJFwrg/ThKi2ujJ7XNLYaFGNB/bWT9wGR+oSMJHMa5w+CUq6p/pVrKeNNgA7pCqEcjSnHVoqJQFw==";
       };
     };
     "@humanwhocodes/config-array-0.5.0" = {
@@ -6063,7 +6063,7 @@ in
       sha512 = "STsS2FovSMefU00ctkqlqCv5SJ7faopa9n6Utnxq/QNlaAXpXu1YNdAQT+4J5triCUa53Ul/QWfVzwofoTzRfQ==";
     };
     dependencies = [
-      sources."@gar/promisify-1.1.2"
+      sources."@gar/promisify-1.1.3"
       sources."@npmcli/fs-1.1.1"
       sources."@npmcli/move-file-1.1.2"
       sources."@tootallnate/once-1.1.2"
