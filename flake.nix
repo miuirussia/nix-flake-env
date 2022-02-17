@@ -32,6 +32,7 @@
     zsh-syntax-highlighting = { url = "github:zsh-users/zsh-syntax-highlighting"; flake = false; };
     fast-syntax-highlighting = { url = "github:zdharma-continuum/fast-syntax-highlighting"; flake = false; };
     zsh-history-substring-search = { url = "github:zsh-users/zsh-history-substring-search"; flake = false; };
+    zsh-nix-shell = { url = "github:chisui/zsh-nix-shell"; flake = false; };
 
     # neovim
     neovim = { url = "github:neovim/neovim/nightly"; flake = false; };

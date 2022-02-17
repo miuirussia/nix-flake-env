@@ -14,5 +14,11 @@ inputs: final: prev: {
       name = "zsh-history-substring-search";
       src = inputs.zsh-history-substring-search;
     };
+
+    zsh-nix-shell = {
+      name = "zsh-nix-shell";
+      file = "nix-shell.plugin.zsh";
+      src = inputs.zsh-nix-shell;
+    };
   };
 }

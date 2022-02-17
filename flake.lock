@@ -1162,6 +1162,7 @@
         "vim-toml": "vim-toml",
         "vim-typescript": "vim-typescript",
         "zsh-history-substring-search": "zsh-history-substring-search",
+        "zsh-nix-shell": "zsh-nix-shell",
         "zsh-syntax-highlighting": "zsh-syntax-highlighting"
       }
     },
@@ -1460,6 +1461,22 @@
       "original": {
         "owner": "zsh-users",
         "repo": "zsh-history-substring-search",
+        "type": "github"
+      }
+    },
+    "zsh-nix-shell": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1628023704,
+        "narHash": "sha256-WNa8RljYhkOWk7AZbdTOvYhWw1fR8PjFxH/tnUCbems=",
+        "owner": "chisui",
+        "repo": "zsh-nix-shell",
+        "rev": "f8574f27e1d7772629c9509b2116d504798fe30a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "chisui",
+        "repo": "zsh-nix-shell",
         "type": "github"
       }
     },
