@@ -337,8 +337,9 @@ ts_configs.setup({
   },
 })
 
-local parser_config = ts_parsers.get_parser_configs()
-parser_config.typescript.used_by = { "javascript", "javascriptreact" }
+local ft_to_parser = ts_parsers.filetype_to_parsername
+ft_to_parser.javascript = "typescript"
+ft_to_parser.javascriptreact = "typescript"
 
 vim.notify = notify
 
