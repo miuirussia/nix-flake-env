@@ -56,7 +56,7 @@
 
     nvim-actionmenu = { url = "github:weilbith/nvim-code-action-menu"; flake = false; };
     nvim-bufferline = { url = "github:akinsho/bufferline.nvim"; flake = false; };
-    nvim-cmp = { url = "github:hrsh7th/nvim-cmp/9f6d2b42253dda8db950ab38795978e5420a93aa"; flake = false; };
+    nvim-cmp = { url = "github:hrsh7th/nvim-cmp"; flake = false; };
     nvim-cmp-buffer = { url = "github:hrsh7th/cmp-buffer"; flake = false; };
     nvim-cmp-lsp = { url = "github:hrsh7th/cmp-nvim-lsp"; flake = false; };
     nvim-cmp-path = { url = "github:hrsh7th/cmp-path"; flake = false; };
