@@ -52,7 +52,7 @@ in
     '';
 
     removeNeovimCache = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-      $DRY_RUN_CMD rm -f ${cache_directory}/nvim/luacache
+      $DRY_RUN_CMD rm -f ${cache_directory}/nvim/luacache*
     '';
   };
 
