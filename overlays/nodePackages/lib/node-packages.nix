@@ -364,13 +364,13 @@ let
         sha512 = "RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ==";
       };
     };
-    "agentkeepalive-4.2.0" = {
+    "agentkeepalive-4.2.1" = {
       name = "agentkeepalive";
       packageName = "agentkeepalive";
-      version = "4.2.0";
+      version = "4.2.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/agentkeepalive/-/agentkeepalive-4.2.0.tgz";
-        sha512 = "0PhAp58jZNw13UJv7NVdTGb0ZcghHUb3DrZ046JiiJY/BOaTTpbwdHq2VObPCBV8M2GPh7sgrJ3AQ8Ey468LJw==";
+        url = "https://registry.npmjs.org/agentkeepalive/-/agentkeepalive-4.2.1.tgz";
+        sha512 = "Zn4cw2NEqd+9fiSVWMscnjyQ1a8Yfoc5oBajLeo5w+YBHgDUcEBY2hS4YpTz6iN5f/2zQiktcuM6tS8x1p9dpA==";
       };
     };
     "aggregate-error-3.1.0" = {
@@ -5515,10 +5515,10 @@ in
   pnpm = nodeEnv.buildNodePackage {
     name = "pnpm";
     packageName = "pnpm";
-    version = "6.31.0";
+    version = "6.32.0";
     src = fetchurl {
-      url = "https://registry.npmjs.org/pnpm/-/pnpm-6.31.0.tgz";
-      sha512 = "YUCyLI2J2wQsHWgcRYR8wUrTWsE0E8GX46XKtdXcUiE0GJJYi5saRy2Y8BMfLtlDHshHLs2U/KO1e5gsftJTFA==";
+      url = "https://registry.npmjs.org/pnpm/-/pnpm-6.32.0.tgz";
+      sha512 = "04KwsfhUfc6+at4gQVD848R7/bj2lvweh1ZcE0BDlDvBNlvxpYz+ZbRRkS+lInG5vz95cOybnyNO55dxvsARWA==";
     };
     buildInputs = globalBuildInputs;
     meta = {
@@ -6068,7 +6068,7 @@ in
       sources."@npmcli/move-file-1.1.2"
       sources."@tootallnate/once-1.1.2"
       sources."agent-base-6.0.2"
-      sources."agentkeepalive-4.2.0"
+      sources."agentkeepalive-4.2.1"
       sources."aggregate-error-3.1.0"
       sources."balanced-match-1.0.2"
       sources."brace-expansion-1.1.11"
