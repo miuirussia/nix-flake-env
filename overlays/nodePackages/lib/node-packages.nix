@@ -5821,10 +5821,10 @@ in
   purescript = nodeEnv.buildNodePackage {
     name = "purescript";
     packageName = "purescript";
-    version = "0.14.5";
+    version = "0.14.6";
     src = fetchurl {
-      url = "https://registry.npmjs.org/purescript/-/purescript-0.14.5.tgz";
-      sha512 = "bJriK+8MssEsk++itpHL1FgqbgqxoWPgyLIkoC54k7g2Wfsj8M1svQcXcRSu1UZRixu+pg7COQF7uDref/nO2Q==";
+      url = "https://registry.npmjs.org/purescript/-/purescript-0.14.6.tgz";
+      sha512 = "qtorpV1OqXQlj/IpAz2g4XifpM9PxI0c+ynUUzMLEk6IWDn7oPfAOjdZSLKAIIk7bHAnqZTwV67Mo1QkC8TDRQ==";
     };
     dependencies = [
       sources."ajv-6.12.6"

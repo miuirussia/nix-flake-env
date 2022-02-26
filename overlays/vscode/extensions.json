@@ -86,14 +86,14 @@
   {
     "name": "remote-ssh",
     "publisher": "ms-vscode-remote",
-    "sha256": "1jifyklm5qikb2y099gr3flg5lmxdw6hb77gsm6mv7mmqzfal7n5",
-    "version": "0.75.2022022115"
+    "sha256": "1rgwg2q6l0y550hqbyiwj4g1grq03hm7m7xrv9xjiiymcdl0k5bx",
+    "version": "0.75.2022022515"
   },
   {
     "name": "remote-ssh-edit",
     "publisher": "ms-vscode-remote",
-    "sha256": "1aik03q5g79888d47hikbm0xhjaa40bxrqsyfvj1c2qf0pdbagzj",
-    "version": "0.75.2022022115"
+    "sha256": "1fxyya1hq5xjky234zwgxnpg7varpdih1dh4p8jb4llc6lxy8xkn",
+    "version": "0.75.2022022515"
   },
   {
     "name": "ide-purescript",
@@ -128,8 +128,8 @@
   {
     "name": "vscode-thunder-client",
     "publisher": "rangav",
-    "sha256": "1wx92ih9aqx4jnxv8qa4g8svzi0b1zpg4vp6a1505h3ds0vaci9b",
-    "version": "1.12.1"
+    "sha256": "0nxbbb8cwnsrh0y3d4j3gjddmr3gswsf2py9k5ydfiw9bm5w6cz6",
+    "version": "1.12.2"
   },
   {
     "name": "hadolint",
