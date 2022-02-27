@@ -134,8 +134,8 @@
   {
     "name": "hadolint",
     "publisher": "exiasr",
-    "sha256": "11pf45fbq1rfxa68n8hy7z3iwi3sxfykla20d942wd7faymddk54",
-    "version": "1.1.0"
+    "sha256": "0ls604nkahasny0kzh7677nr7mk9akcnljf4g41j0k47avza1hig",
+    "version": "1.1.1"
   },
   {
     "name": "vscode-intelephense-client",
