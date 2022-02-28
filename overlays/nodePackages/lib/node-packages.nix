@@ -5515,10 +5515,10 @@ in
   pnpm = nodeEnv.buildNodePackage {
     name = "pnpm";
     packageName = "pnpm";
-    version = "6.32.1";
+    version = "6.32.2";
     src = fetchurl {
-      url = "https://registry.npmjs.org/pnpm/-/pnpm-6.32.1.tgz";
-      sha512 = "vca5B8nbIHSCEIaV7UG1C15v54txazI9u3HhQ0OJad2u8DSzBaFnWiHN7D6EoDg6t5bu/yC1/lShtt+0uFJXFg==";
+      url = "https://registry.npmjs.org/pnpm/-/pnpm-6.32.2.tgz";
+      sha512 = "uPZDMVfB4SEygvfUJHBTNXUCrMCxkXV5QHaoEURCeHP5GDojKH21L1Onk2Qft+kYBmLCmipV3JCGfojSQV3epw==";
     };
     buildInputs = globalBuildInputs;
     meta = {
@@ -6140,10 +6140,10 @@ in
   typescript-language-server = nodeEnv.buildNodePackage {
     name = "typescript-language-server";
     packageName = "typescript-language-server";
-    version = "0.9.6";
+    version = "0.9.7";
     src = fetchurl {
-      url = "https://registry.npmjs.org/typescript-language-server/-/typescript-language-server-0.9.6.tgz";
-      sha512 = "nLB9qvCFq/jRj21tC6SPZgde8JkNbCQZVjoeBHYsCZvzBgSyNh1A1k5puAM9g/kWlEvAlN/G4J8tETbnJySVpg==";
+      url = "https://registry.npmjs.org/typescript-language-server/-/typescript-language-server-0.9.7.tgz";
+      sha512 = "xjw6C9PctpLSwKEqaavSKfeH1CRmx1sD/DWXjig4xA/e9Y9/Mr70ViOinq5grFzexzDcdqdb7VDdkf7Ke+eZFg==";
     };
     dependencies = [
       sources."@nodelib/fs.scandir-2.1.5"
