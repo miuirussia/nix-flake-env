@@ -31,7 +31,6 @@
     plugins = with pkgs.zshPlugins; [
       fast-syntax-highlighting
       zsh-history-substring-search
-      zsh-nix-shell
     ];
 
     shellAliases = {
