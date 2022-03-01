@@ -4558,13 +4558,13 @@ let
         sha1 = "867ac74e3864187b1d3d47d996a78ec5c8830777";
       };
     };
-    "typescript-4.5.5" = {
+    "typescript-4.6.2" = {
       name = "typescript";
       packageName = "typescript";
-      version = "4.5.5";
+      version = "4.6.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/typescript/-/typescript-4.5.5.tgz";
-        sha512 = "TCTIul70LyWe6IJWT8QSYeA54WQe8EjQFU4wY52Fasj5UKx88LNYKCgBEHcOMOrFF1rKGbD8v/xcNWVUq9SymA==";
+        url = "https://registry.npmjs.org/typescript/-/typescript-4.6.2.tgz";
+        sha512 = "HM/hFigTBHZhLXshn9sN37H085+hQGeJHJ/X7LpBWLID/fbc2acUMfU+lGD98X81sKP+pFa9f0DZmCwB9GnbAg==";
       };
     };
     "umd-3.0.3" = {
@@ -5450,7 +5450,7 @@ in
       sources."tough-cookie-2.5.0"
       sources."tunnel-agent-0.6.0"
       sources."tweetnacl-0.14.5"
-      sources."typescript-4.5.5"
+      sources."typescript-4.6.2"
       sources."universalify-2.0.0"
       sources."uri-js-4.4.1"
       sources."uuid-3.4.0"
