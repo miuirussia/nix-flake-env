@@ -50,8 +50,8 @@
   {
     "name": "gitlens",
     "publisher": "eamodio",
-    "sha256": "1gw6clk94izhp52lnxhj6limvxw4a9vgvm84snmncc52i2m12ynl",
-    "version": "12.0.0"
+    "sha256": "1xv1vzx643qa8jhjpnpv2wrymz38w130vm0idkcl77lh209r5i8x",
+    "version": "12.0.1"
   },
   {
     "name": "haskell",
@@ -86,14 +86,14 @@
   {
     "name": "remote-ssh",
     "publisher": "ms-vscode-remote",
-    "sha256": "1rnk6g833ipf07xrs6h4g5z3fv484rlr4gkjhmqbxiv1zy8hdf48",
-    "version": "0.76.1"
+    "sha256": "1wyz3lnz821znsbdwjigndy3pq43f31v0jg8hfnhgmj05a4y8kjn",
+    "version": "0.77.2022030315"
   },
   {
     "name": "remote-ssh-edit",
     "publisher": "ms-vscode-remote",
-    "sha256": "0vqbvmk2pgkw1fbcmmz943wd9idgc2j01rrwz78ywp8fzsbpmsal",
-    "version": "0.76.1"
+    "sha256": "0vn0z4f2hsp95c06w9gl53j3f553xigy1kpm8q834rf927c0bajz",
+    "version": "0.77.2022030315"
   },
   {
     "name": "ide-purescript",
@@ -128,8 +128,8 @@
   {
     "name": "vscode-thunder-client",
     "publisher": "rangav",
-    "sha256": "0hfhk5hcsx98yh4r8xrz3vlz7yixpvwcqigys002qkgzmsingkvx",
-    "version": "1.13.0"
+    "sha256": "1zq4pxpi75wr6hf7f02zn2jyii1666gwr4j6zllpyxn1bcvbl63v",
+    "version": "1.13.1"
   },
   {
     "name": "hadolint",
