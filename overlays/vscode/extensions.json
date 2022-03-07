@@ -128,8 +128,8 @@
   {
     "name": "vscode-thunder-client",
     "publisher": "rangav",
-    "sha256": "1zq4pxpi75wr6hf7f02zn2jyii1666gwr4j6zllpyxn1bcvbl63v",
-    "version": "1.13.1"
+    "sha256": "0065zsax1xfqr2vq5xmx5mj63kgfaf6nyrqyg6nbxjgijp1hi6nr",
+    "version": "1.13.3"
   },
   {
     "name": "hadolint",
