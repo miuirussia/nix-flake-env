@@ -50,8 +50,8 @@
   {
     "name": "gitlens",
     "publisher": "eamodio",
-    "sha256": "1xv1vzx643qa8jhjpnpv2wrymz38w130vm0idkcl77lh209r5i8x",
-    "version": "12.0.1"
+    "sha256": "16l2wy6zyh11mq7d1r1qg668d5c637yd3arzqlqhjf91drmaxpbs",
+    "version": "12.0.2"
   },
   {
     "name": "haskell",
