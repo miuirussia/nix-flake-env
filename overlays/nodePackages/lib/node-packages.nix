@@ -5497,10 +5497,10 @@ in
   npm = nodeEnv.buildNodePackage {
     name = "npm";
     packageName = "npm";
-    version = "8.5.3";
+    version = "8.5.4";
     src = fetchurl {
-      url = "https://registry.npmjs.org/npm/-/npm-8.5.3.tgz";
-      sha512 = "O+1j66Alx7ZQgWnUSSTaz8rTqQrJnqNb8Num5uQw2vYvc2RrxLaX7cWtRkDhvkPIL8Nf2WU9gx1oSu268QConA==";
+      url = "https://registry.npmjs.org/npm/-/npm-8.5.4.tgz";
+      sha512 = "VnGLT4t88cUE78lLw5kxBwtLn2/Sx6O7Uw9dYwmq6AnF/taWHyMYQgDzUEsLhaXAVH7prG+sjG+MvxlHdIasgg==";
     };
     buildInputs = globalBuildInputs;
     meta = {
