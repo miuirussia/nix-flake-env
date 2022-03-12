@@ -418,13 +418,13 @@ let
         sha512 = "cBhpre4ma+U0T1oM5fXg7Dy1Jw7zzwv7lt/GoCpr+hDQJoYnKVPLL4dCvSEFMmQurOQvSrwT7SL/DAlhBI97RQ==";
       };
     };
-    "ansi-regex-4.1.0" = {
+    "ansi-regex-4.1.1" = {
       name = "ansi-regex";
       packageName = "ansi-regex";
-      version = "4.1.0";
+      version = "4.1.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/ansi-regex/-/ansi-regex-4.1.0.tgz";
-        sha512 = "1apePfXM1UOSqw0o9IiFAovVz9M5S1Dg+4TrDwfMewQ6p/rmMueb7tWZjQ1rx4Loy1ArBggoqGpfqqdI4rondg==";
+        url = "https://registry.npmjs.org/ansi-regex/-/ansi-regex-4.1.1.tgz";
+        sha512 = "ILlv4k/3f6vfQ4OoP2AGvirOktlQ98ZEL1k9FaQjxa3L1abBgbuTDAdPOpvbGncC0BTVQrl+OM8xZGK6tWXt7g==";
       };
     };
     "ansi-regex-5.0.1" = {
@@ -5551,10 +5551,10 @@ in
   pulp = nodeEnv.buildNodePackage {
     name = "pulp";
     packageName = "pulp";
-    version = "15.0.0";
+    version = "16.0.0-0";
     src = fetchurl {
-      url = "https://registry.npmjs.org/pulp/-/pulp-15.0.0.tgz";
-      sha512 = "JPzDiSjxwySAFOFnpevZO7YzzDgGdJP/SQap1UJbK0rsrfUVQC+zOHDkm7A8T3gR/0el4ft6KwB6fcDl2bTzVw==";
+      url = "https://registry.npmjs.org/pulp/-/pulp-16.0.0-0.tgz";
+      sha512 = "6nG6qg/p5IGa0k4w9EkBVBX3+7Ra1mjbOCYwbn85kjUC6x1jkyP+hAP7xAwBxTPgxSD8x5IZtoX9sbrNeKecnQ==";
     };
     dependencies = [
       sources."JSONStream-1.3.5"
@@ -5829,7 +5829,7 @@ in
     dependencies = [
       sources."ajv-6.12.6"
       sources."ansi-escapes-3.2.0"
-      sources."ansi-regex-4.1.0"
+      sources."ansi-regex-4.1.1"
       sources."ansi-styles-3.2.1"
       sources."aproba-1.2.0"
       sources."arch-2.2.0"
