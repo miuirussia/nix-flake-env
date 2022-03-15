@@ -62,8 +62,8 @@
   {
     "name": "language-haskell",
     "publisher": "justusadam",
-    "sha256": "0ab7m5jzxakjxaiwmg0jcck53vnn183589bbxh3iiylkpicrv67y",
-    "version": "3.4.0"
+    "sha256": "0jznhc3l404p36149l62d5a5qm2k1wp4x0s0ii5s84cvyv2967iy",
+    "version": "3.5.0"
   },
   {
     "name": "nix-ide",
