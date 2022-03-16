@@ -2029,13 +2029,13 @@ let
         sha512 = "AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==";
       };
     };
-    "globals-13.12.1" = {
+    "globals-13.13.0" = {
       name = "globals";
       packageName = "globals";
-      version = "13.12.1";
+      version = "13.13.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/globals/-/globals-13.12.1.tgz";
-        sha512 = "317dFlgY2pdJZ9rspXDks7073GpDmXdfbM3vYYp0HAMKGDh1FfWPleI2ljVNLQX5M5lXcAslTcPTrOrMEFOjyw==";
+        url = "https://registry.npmjs.org/globals/-/globals-13.13.0.tgz";
+        sha512 = "EQ7Q18AJlPwp3vUDL4mKA0KXrXyNIQyWon6T6XQiBQF0XHvRsiCSrWmmeATpUzdJN2HhWZU6Pdl0a9zdep5p6A==";
       };
     };
     "globby-11.1.0" = {
@@ -5167,7 +5167,7 @@ in
       sources."functional-red-black-tree-1.0.1"
       sources."glob-7.2.0"
       sources."glob-parent-5.1.2"
-      sources."globals-13.12.1"
+      sources."globals-13.13.0"
       sources."has-flag-4.0.0"
       sources."ignore-4.0.6"
       sources."import-fresh-3.3.0"
@@ -5533,10 +5533,10 @@ in
   prettier = nodeEnv.buildNodePackage {
     name = "prettier";
     packageName = "prettier";
-    version = "2.5.1";
+    version = "2.6.0";
     src = fetchurl {
-      url = "https://registry.npmjs.org/prettier/-/prettier-2.5.1.tgz";
-      sha512 = "vBZcPRUR5MZJwoyi3ZoyQlc1rXeEck8KgeC9AwwOn+exuxLxq5toTRDTSaVrXHxelDMHy9zlicw8u66yxoSUFg==";
+      url = "https://registry.npmjs.org/prettier/-/prettier-2.6.0.tgz";
+      sha512 = "m2FgJibYrBGGgQXNzfd0PuDGShJgRavjUoRCw1mZERIWVSXF0iLzLm+aOqTAbLnC3n6JzUhAA8uZnFVghHJ86A==";
     };
     buildInputs = globalBuildInputs;
     meta = {

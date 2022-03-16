@@ -26,8 +26,8 @@
   {
     "name": "flow-for-vscode",
     "publisher": "flowtype",
-    "sha256": "0as0bn7yzf8kv3ivvkg7208jcd9d5xvdwlcdhcfzbcf400dk8ss0",
-    "version": "2.0.0"
+    "sha256": "050wrjicwsn5ky490rpqnlq5m7q3y1h6k4ckrivxxpwmy8scfiak",
+    "version": "2.1.0"
   },
   {
     "name": "Nix",
@@ -62,8 +62,8 @@
   {
     "name": "language-haskell",
     "publisher": "justusadam",
-    "sha256": "0jznhc3l404p36149l62d5a5qm2k1wp4x0s0ii5s84cvyv2967iy",
-    "version": "3.5.0"
+    "sha256": "115y86w6n2bi33g1xh6ipz92jz5797d3d00mr4k8dv5fz76d35dd",
+    "version": "3.6.0"
   },
   {
     "name": "nix-ide",
