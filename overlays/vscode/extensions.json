@@ -50,8 +50,8 @@
   {
     "name": "gitlens",
     "publisher": "eamodio",
-    "sha256": "1s1wrrp5i7cqm8c4x67c9b19mf1sjpcxklyl58rfsnmjbrlnazsg",
-    "version": "12.0.4"
+    "sha256": "0zfawv9nn88x8m30h7ryax0c7p68najl23a51r88a70hqppzxshw",
+    "version": "12.0.5"
   },
   {
     "name": "haskell",
@@ -80,8 +80,8 @@
   {
     "name": "remote-containers",
     "publisher": "ms-vscode-remote",
-    "sha256": "191sgvbz8jwawr9c7bi28mp84zh6vsbzksgwfzhzw3rav7rr8qg8",
-    "version": "0.226.0"
+    "sha256": "15bkjy1wnp1xsf3pgymss9cq029na9cqrwss1fh0li8q0di9s4jq",
+    "version": "0.227.0"
   },
   {
     "name": "remote-ssh",

@@ -1237,13 +1237,13 @@ let
         sha1 = "853cfa0f7cbe2fed5de20326b8dd581035f6e2f0";
       };
     };
-    "debug-4.3.3" = {
+    "debug-4.3.4" = {
       name = "debug";
       packageName = "debug";
-      version = "4.3.3";
+      version = "4.3.4";
       src = fetchurl {
-        url = "https://registry.npmjs.org/debug/-/debug-4.3.3.tgz";
-        sha512 = "/zxw5+vh1Tfv+4Qn7a5nsbcJKPaSvCDhojn6FEl9vupwK2VCSDtEiEtqr8DFtzYFOdz63LBkxec7DYuc2jon6Q==";
+        url = "https://registry.npmjs.org/debug/-/debug-4.3.4.tgz";
+        sha512 = "PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==";
       };
     };
     "deep-is-0.1.4" = {
@@ -4774,13 +4774,13 @@ let
         sha512 = "/65lxR/CuLJoOdzTjOTYUPWS7k5qzaWese4PObnWc6jwLryUrSa7DslYfaRXigh5/xr1nlaUZCcJwkpgM0wFvw==";
       };
     };
-    "vscode-languageserver-8.0.0-next.9" = {
+    "vscode-languageserver-8.0.0-next.10" = {
       name = "vscode-languageserver";
       packageName = "vscode-languageserver";
-      version = "8.0.0-next.9";
+      version = "8.0.0-next.10";
       src = fetchurl {
-        url = "https://registry.npmjs.org/vscode-languageserver/-/vscode-languageserver-8.0.0-next.9.tgz";
-        sha512 = "PO+ijJdI9NGXklkZlvEHLpVloBd0iBiOi2EXuh2QfT4bOlx2qvsWu+nBISuw0X8ZfXA4grtaPPGcrXudmlezLg==";
+        url = "https://registry.npmjs.org/vscode-languageserver/-/vscode-languageserver-8.0.0-next.10.tgz";
+        sha512 = "sdjldl9ipuBSWVw5ENVMRcOVQwF0o+J6+lNA7FrB8MiLmzflnfjRoJMqA5tCEY8S/J/+P56ZR/dqiQnRYg5m8w==";
       };
     };
     "vscode-languageserver-protocol-3.16.0" = {
@@ -4792,13 +4792,13 @@ let
         sha512 = "sdeUoAawceQdgIfTI+sdcwkiK2KU+2cbEYA0agzM2uqaUy2UpnnGHtWTHVEtS0ES4zHU0eMFRGN+oQgDxlD66A==";
       };
     };
-    "vscode-languageserver-protocol-3.17.0-next.15" = {
+    "vscode-languageserver-protocol-3.17.0-next.16" = {
       name = "vscode-languageserver-protocol";
       packageName = "vscode-languageserver-protocol";
-      version = "3.17.0-next.15";
+      version = "3.17.0-next.16";
       src = fetchurl {
-        url = "https://registry.npmjs.org/vscode-languageserver-protocol/-/vscode-languageserver-protocol-3.17.0-next.15.tgz";
-        sha512 = "73LffxyP/0TRyk3J7bCYt0BuFBzk4Qvo5TqZndOsP+uBDbRV4IT7ebu4M/XoPDSCyZ+jDIxW7if/JbhBznmwBg==";
+        url = "https://registry.npmjs.org/vscode-languageserver-protocol/-/vscode-languageserver-protocol-3.17.0-next.16.tgz";
+        sha512 = "tx4DnXw9u3N7vw+bx6n2NKp6FoxoNwiP/biH83AS30I2AnTGyLd7afSeH6Oewn2E8jvB7K15bs12sMppkKOVeQ==";
       };
     };
     "vscode-languageserver-protocol-3.17.0-next.5" = {
@@ -4837,13 +4837,13 @@ let
         sha512 = "VGzh06oynbYa6JbTKUbxOEZN7CYEtWhN7DK5wfzUpeCJl8X8xZX39g2PVfpqXrIEduu7dcJgK007KgnX9tHNKA==";
       };
     };
-    "vscode-languageserver-types-3.17.0-next.8" = {
+    "vscode-languageserver-types-3.17.0-next.9" = {
       name = "vscode-languageserver-types";
       packageName = "vscode-languageserver-types";
-      version = "3.17.0-next.8";
+      version = "3.17.0-next.9";
       src = fetchurl {
-        url = "https://registry.npmjs.org/vscode-languageserver-types/-/vscode-languageserver-types-3.17.0-next.8.tgz";
-        sha512 = "Mwj+FemiEk4QUUms1GGvXwDC+laJGVFuA4glbMVJTxfXdfOFZaEuyVlLobjccBo+NzD+5oEzzejTX7nWGNajjQ==";
+        url = "https://registry.npmjs.org/vscode-languageserver-types/-/vscode-languageserver-types-3.17.0-next.9.tgz";
+        sha512 = "9/PeDNPYduaoXRUzYpqmu4ZV9L01HGo0wH9FUt+sSHR7IXwA7xoXBfNUlv8gB9H0D2WwEmMomSy1NmhjKQyn3A==";
       };
     };
     "vscode-nls-5.0.0" = {
@@ -5125,7 +5125,7 @@ in
       sources."concat-map-0.0.1"
       sources."core_d-3.2.0"
       sources."cross-spawn-7.0.3"
-      sources."debug-4.3.3"
+      sources."debug-4.3.4"
       sources."deep-is-0.1.4"
       sources."doctrine-3.0.0"
       sources."emoji-regex-8.0.0"
@@ -5497,10 +5497,10 @@ in
   npm = nodeEnv.buildNodePackage {
     name = "npm";
     packageName = "npm";
-    version = "8.5.4";
+    version = "8.5.5";
     src = fetchurl {
-      url = "https://registry.npmjs.org/npm/-/npm-8.5.4.tgz";
-      sha512 = "VnGLT4t88cUE78lLw5kxBwtLn2/Sx6O7Uw9dYwmq6AnF/taWHyMYQgDzUEsLhaXAVH7prG+sjG+MvxlHdIasgg==";
+      url = "https://registry.npmjs.org/npm/-/npm-8.5.5.tgz";
+      sha512 = "a1vl26nokCNlD+my/iNYmOUPx/hpYR4ZyZk8gb7/A2XXtrPZf2gTSJOnVjS77jQS+BSfIVQpipZwXWCL0+5wzg==";
     };
     buildInputs = globalBuildInputs;
     meta = {
@@ -6019,10 +6019,10 @@ in
       sources."shell-quote-1.7.3"
       sources."uuid-3.4.0"
       sources."vscode-jsonrpc-8.0.0-next.7"
-      sources."vscode-languageserver-8.0.0-next.9"
-      sources."vscode-languageserver-protocol-3.17.0-next.15"
+      sources."vscode-languageserver-8.0.0-next.10"
+      sources."vscode-languageserver-protocol-3.17.0-next.16"
       sources."vscode-languageserver-textdocument-1.0.4"
-      sources."vscode-languageserver-types-3.17.0-next.8"
+      sources."vscode-languageserver-types-3.17.0-next.9"
       sources."vscode-uri-2.1.2"
       sources."which-2.0.2"
     ];
@@ -6076,7 +6076,7 @@ in
       sources."chownr-2.0.0"
       sources."clean-stack-2.2.0"
       sources."concat-map-0.0.1"
-      sources."debug-4.3.3"
+      sources."debug-4.3.4"
       sources."depd-1.1.2"
       sources."encoding-0.1.13"
       sources."err-code-2.0.3"
