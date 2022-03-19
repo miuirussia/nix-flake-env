@@ -1039,13 +1039,13 @@ let
         sha512 = "P0CysNDQ7rtVw4QIQtm+MRxV66vKFSvlsQvGYXZWR3qFU0jlMKHZZZgw8e+8DSah4UDKMqnknRDQz+xuQXQ/Zg==";
       };
     };
-    "commander-9.0.0" = {
+    "commander-9.1.0" = {
       name = "commander";
       packageName = "commander";
-      version = "9.0.0";
+      version = "9.1.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/commander/-/commander-9.0.0.tgz";
-        sha512 = "JJfP2saEKbQqvW+FI93OYUB4ByV5cizMpFMiiJI8xDbBvQvSkIk0VvQdn1CZ8mqAO8Loq2h0gYTYtDFUZUeERw==";
+        url = "https://registry.npmjs.org/commander/-/commander-9.1.0.tgz";
+        sha512 = "i0/MaqBtdbnJ4XQs4Pmyb+oFQl+q0lsAmokVUH92SlSw4fkeAcG3bVon+Qt7hmtF+u3Het6o4VgrcY3qAoEB6w==";
       };
     };
     "concat-map-0.0.1" = {
@@ -4702,22 +4702,22 @@ let
         sha512 = "2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==";
       };
     };
-    "vscode-css-languageservice-5.1.13" = {
+    "vscode-css-languageservice-5.2.0" = {
       name = "vscode-css-languageservice";
       packageName = "vscode-css-languageservice";
-      version = "5.1.13";
+      version = "5.2.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/vscode-css-languageservice/-/vscode-css-languageservice-5.1.13.tgz";
-        sha512 = "FA0foqMzMmEoO0WJP+MjoD4dRERhKS+Ag+yBrtmWQDmw2OuZ1R/5FkvI/XdTkCpHmTD9VMczugpHRejQyTXCNQ==";
+        url = "https://registry.npmjs.org/vscode-css-languageservice/-/vscode-css-languageservice-5.2.0.tgz";
+        sha512 = "FR5yDEfzbXJtYmZYrA7JWFcRSLHsJw3nv55XAmx7qdwRpFj9yy0ulKfN/NUUdiZW2jZU2fD/+Y4VJYPdafHDag==";
       };
     };
-    "vscode-html-languageservice-4.2.2" = {
+    "vscode-html-languageservice-4.2.4" = {
       name = "vscode-html-languageservice";
       packageName = "vscode-html-languageservice";
-      version = "4.2.2";
+      version = "4.2.4";
       src = fetchurl {
-        url = "https://registry.npmjs.org/vscode-html-languageservice/-/vscode-html-languageservice-4.2.2.tgz";
-        sha512 = "4ICwlpplGbiNQq6D/LZr4qLbPZuMmnSQeX/57UAYP7jD1LOvKeru4lVI+f6d6Eyd7uS46nLJ5DUY4AAlq35C0g==";
+        url = "https://registry.npmjs.org/vscode-html-languageservice/-/vscode-html-languageservice-4.2.4.tgz";
+        sha512 = "1HqvXKOq9WlZyW4HTD+0XzrjZoZ/YFrgQY2PZqktbRloHXVAUKm6+cAcvZi4YqKPVn05/CK7do+KBHfuSaEdbg==";
       };
     };
     "vscode-jsonrpc-6.0.0" = {
@@ -5455,12 +5455,12 @@ in
       sources."uri-js-4.4.1"
       sources."uuid-3.4.0"
       sources."verror-1.10.0"
-      (sources."vscode-css-languageservice-5.1.13" // {
+      (sources."vscode-css-languageservice-5.2.0" // {
         dependencies = [
           sources."vscode-languageserver-types-3.16.0"
         ];
       })
-      (sources."vscode-html-languageservice-4.2.2" // {
+      (sources."vscode-html-languageservice-4.2.4" // {
         dependencies = [
           sources."vscode-languageserver-types-3.16.0"
         ];
@@ -6155,7 +6155,7 @@ in
       sources."brace-expansion-1.1.11"
       sources."braces-3.0.2"
       sources."clean-stack-2.2.0"
-      sources."commander-9.0.0"
+      sources."commander-9.1.0"
       sources."concat-map-0.0.1"
       sources."crypto-random-string-2.0.0"
       sources."del-6.0.0"
