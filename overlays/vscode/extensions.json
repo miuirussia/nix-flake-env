@@ -74,14 +74,14 @@
   {
     "name": "vscode-docker",
     "publisher": "ms-azuretools",
-    "sha256": "0a1v8hqbrl51pxbzvjd69azqcyqid4gmva3dnk440q7szr61hy4b",
-    "version": "1.20.0"
+    "sha256": "12rll1wn6xs1fzb391598pih3qw8dq4vdmyvmcind0ns42hsmlan",
+    "version": "1.21.0"
   },
   {
     "name": "remote-containers",
     "publisher": "ms-vscode-remote",
-    "sha256": "15bkjy1wnp1xsf3pgymss9cq029na9cqrwss1fh0li8q0di9s4jq",
-    "version": "0.227.0"
+    "sha256": "1bpswvicnyqbfj5pyq7a5fg5k27vilmmfk1pd9isl098hkfc08m7",
+    "version": "0.228.0"
   },
   {
     "name": "remote-ssh",
@@ -98,8 +98,8 @@
   {
     "name": "ide-purescript",
     "publisher": "nwolverson",
-    "sha256": "1s1mkr5q82nvbq9d9q2qnvy0s794jlx5010ympghwx68aw0hzj7l",
-    "version": "0.25.11"
+    "sha256": "1f9064w18wwp3iy8ciajad8vlshnzyhnqy8h516k0j5bflz781mn",
+    "version": "0.25.12"
   },
   {
     "name": "language-purescript",

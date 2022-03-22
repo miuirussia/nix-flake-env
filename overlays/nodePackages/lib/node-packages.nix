@@ -2929,13 +2929,13 @@ let
         sha1 = "de3f98543dbf96082be48ad1a0c7cda836301dcf";
       };
     };
-    "minimist-1.2.5" = {
+    "minimist-1.2.6" = {
       name = "minimist";
       packageName = "minimist";
-      version = "1.2.5";
+      version = "1.2.6";
       src = fetchurl {
-        url = "https://registry.npmjs.org/minimist/-/minimist-1.2.5.tgz";
-        sha512 = "FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==";
+        url = "https://registry.npmjs.org/minimist/-/minimist-1.2.6.tgz";
+        sha512 = "Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==";
       };
     };
     "minipass-2.9.0" = {
@@ -5413,7 +5413,7 @@ in
       sources."mime-db-1.52.0"
       sources."mime-types-2.1.35"
       sources."minimatch-3.1.2"
-      sources."minimist-1.2.5"
+      sources."minimist-1.2.6"
       sources."mkdirp-1.0.4"
       sources."moo-0.5.1"
       sources."nearley-2.20.1"
@@ -5700,7 +5700,7 @@ in
       sources."minimalistic-assert-1.0.1"
       sources."minimalistic-crypto-utils-1.0.1"
       sources."minimatch-3.0.8"
-      sources."minimist-1.2.5"
+      sources."minimist-1.2.6"
       sources."mkdirp-0.5.5"
       sources."mkdirp-classic-0.5.3"
       (sources."module-deps-6.2.3" // {
@@ -5916,7 +5916,7 @@ in
       sources."mime-types-2.1.35"
       sources."mimic-fn-2.1.0"
       sources."minimatch-3.1.2"
-      sources."minimist-1.2.5"
+      sources."minimist-1.2.6"
       sources."minipass-2.9.0"
       sources."minizlib-1.3.3"
       sources."mississippi-3.0.0"
@@ -6009,10 +6009,10 @@ in
   purescript-language-server = nodeEnv.buildNodePackage {
     name = "purescript-language-server";
     packageName = "purescript-language-server";
-    version = "0.16.5";
+    version = "0.16.6";
     src = fetchurl {
-      url = "https://registry.npmjs.org/purescript-language-server/-/purescript-language-server-0.16.5.tgz";
-      sha512 = "M9Ktn2/hVjWMN9vK+q8i8i4r0gnnhT0u+GpKPsrdjPjJFcTqKaH49TQNwf07eD8Sd+xlcuU3PSu5CRgXwH3gag==";
+      url = "https://registry.npmjs.org/purescript-language-server/-/purescript-language-server-0.16.6.tgz";
+      sha512 = "oFxJ0Q59ZmEAwfwgf0nHn5twogTYNqrLDi8mNDnxQcu6Q9XhhagNgLNvPyZNvhO8ELL5UvURG7xZk+GKCKkxOg==";
     };
     dependencies = [
       sources."isexe-2.0.0"
