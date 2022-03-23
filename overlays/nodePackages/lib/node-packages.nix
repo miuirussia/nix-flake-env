@@ -391,13 +391,13 @@ let
         sha512 = "j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==";
       };
     };
-    "ajv-8.10.0" = {
+    "ajv-8.11.0" = {
       name = "ajv";
       packageName = "ajv";
-      version = "8.10.0";
+      version = "8.11.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/ajv/-/ajv-8.10.0.tgz";
-        sha512 = "bzqAEZOjkrUMl2afH8dknrq5KEk2SrwdBROR+vH1EKVQTqaUbJVPdc/gEdggTMM0Se+s+Ja4ju4TlNcStKl2Hw==";
+        url = "https://registry.npmjs.org/ajv/-/ajv-8.11.0.tgz";
+        sha512 = "wGgprdCvMalC0BztXvitD2hC04YffAvtsUn93JbGXYLAtCUO4xd17mCCZQxUOItiBwZvJScWo8NIvQMQ71rdpg==";
       };
     };
     "ansi-colors-4.1.1" = {
@@ -3028,13 +3028,13 @@ let
         sha512 = "x471SsVjUtBRtcvd4BzKE9kFC+/2TeWgKCgw0bZcw1b9l2X3QX5vCWgF+KaZaYm87Ss//rHnWryupDrgLvmSkA==";
       };
     };
-    "mkdirp-0.5.5" = {
+    "mkdirp-0.5.6" = {
       name = "mkdirp";
       packageName = "mkdirp";
-      version = "0.5.5";
+      version = "0.5.6";
       src = fetchurl {
-        url = "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.5.tgz";
-        sha512 = "NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==";
+        url = "https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.6.tgz";
+        sha512 = "FP+p8RB8OWpF3YZBCrP5gtADmtXApB5AMLn+vdyA+PyxCjrCs00mjyUozssO33cwDeT3wNGdLxJ5M//YqtHAJw==";
       };
     };
     "mkdirp-1.0.4" = {
@@ -5219,7 +5219,7 @@ in
       sources."supports-color-8.1.1"
       (sources."table-6.8.0" // {
         dependencies = [
-          sources."ajv-8.10.0"
+          sources."ajv-8.11.0"
           sources."json-schema-traverse-1.0.0"
         ];
       })
@@ -5701,7 +5701,7 @@ in
       sources."minimalistic-crypto-utils-1.0.1"
       sources."minimatch-3.0.8"
       sources."minimist-1.2.6"
-      sources."mkdirp-0.5.5"
+      sources."mkdirp-0.5.6"
       sources."mkdirp-classic-0.5.3"
       (sources."module-deps-6.2.3" // {
         dependencies = [
@@ -5920,7 +5920,7 @@ in
       sources."minipass-2.9.0"
       sources."minizlib-1.3.3"
       sources."mississippi-3.0.0"
-      sources."mkdirp-0.5.5"
+      sources."mkdirp-0.5.6"
       sources."move-concurrently-1.0.1"
       sources."ms-2.1.3"
       sources."npm-run-path-3.1.0"

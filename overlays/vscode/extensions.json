@@ -80,8 +80,8 @@
   {
     "name": "remote-containers",
     "publisher": "ms-vscode-remote",
-    "sha256": "1bpswvicnyqbfj5pyq7a5fg5k27vilmmfk1pd9isl098hkfc08m7",
-    "version": "0.228.0"
+    "sha256": "1hnc0rql7a8j74rci3im26sx4m7ccqdcdr5y9c9hrfbsh7fzhbn6",
+    "version": "0.229.0"
   },
   {
     "name": "remote-ssh",
