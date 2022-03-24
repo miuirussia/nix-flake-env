@@ -43,6 +43,7 @@
       commit.verbose = true;
       diff.submodule = "log";
       diff.tool = "nvim -d";
+      diff.algorithm = "histogram";
       difftool.prompt = false;
       http.sslCAinfo = "${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt";
       http.sslverify = true;
