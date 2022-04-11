@@ -79,7 +79,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Get lua-language-server
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: lua-language-server
           path: overlays/sumnekoLua/lua-language-server
