@@ -1,25 +1,47 @@
 inputs: final: prev:
 let
-  stack-with-args = args: (
+  yamlFormat = (final.formats.yaml { }).generate;
+
+  defaultStackConfig = yamlFormat "stack.yaml" {
+    templates = {
+      params = {
+        author-name = "Kirill Kuznetsov";
+        author-email = "kirill.desirehd@gmail.com";
+        copyright = "(C) 2022 KDevLab";
+        github-username = "miuirussia";
+      };
+    };
+    recommend-stack-upgrade = false;
+    system-ghc = true;
+    install-ghc = false;
+    nix.enable = false;
+  };
+
+  stackWithConfig = config: (
     final.writeScriptBin "stack" ''
       #!${final.runtimeShell}
-      exec "${final.stack}/bin/stack" ${args} "$@"
+
+      xdg_config_home_config_yaml="${config}"
+      stack_root="$HOME/.stack"
+      stack_root_config_yaml="$stack_root/config.yaml"
+      if [ -f "$xdg_config_home_config_yaml" ]; then
+        mkdir -p "$stack_root"
+        rm -f "$stack_root_config_yaml"
+        ln -sf "$xdg_config_home_config_yaml" "$stack_root_config_yaml"
+      fi
+
+      exec "${prev.stack}/bin/stack" "$@"
     ''
   ) // {
-    name = "stack-with-args";
-    version = final.stack.version;
-    passthru = {
-      ghcFromStack = stackYaml: final.haskell-nix.compiler.${(final.haskell-nix.stackage.${(final.lib.readYAML stackYaml).resolver} final.haskell-nix.hackage).compiler.nix-name};
-    };
-    meta.description = "Haskell Stack with args: ${args}";
-    meta.longDescription = ''
-      	This package provides a wrapper script around the Haskell Stack
-              executable that tacks on `${args}` to every
-              call.  This forces disablment of Nix across all platforms.
-    '';
+    name = "stack-with-config";
+    version = prev.stack.version;
+    meta.description = "Haskell Stack with config: ${config}";
   };
 in
 {
-  inherit stack-with-args;
-  stack-in-nix = stack-with-args "--no-nix --system-ghc --no-install-ghc";
+  lib = prev.lib // {
+    inherit stackWithConfig;
+  };
+
+  stack = stackWithConfig defaultStackConfig;
 }

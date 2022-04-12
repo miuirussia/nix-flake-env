@@ -56,7 +56,7 @@ let
         makeWrapper \
           "${hls}/bin/haskell-language-server" \
           "$out/bin/haskell-language-server-${trueVersion}" \
-          --prefix PATH : ${final.lib.makeBinPath [(final.stack-with-args "--no-nix --system-ghc --no-install-ghc") final.haskell-nix.compiler."${ghcVersion}" final.cabal-install]}
+          --prefix PATH : ${final.lib.makeBinPath [final.stack final.haskell-nix.compiler."${ghcVersion}" final.cabal-install]}
       '';
       meta = hls.meta // {
         description =
