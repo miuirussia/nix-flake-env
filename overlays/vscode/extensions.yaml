@@ -46,3 +46,5 @@
   publisher: exiasr
 - name: vscode-intelephense-client
   publisher: bmewburn
+- name: vim
+  publisher: vscodevim
