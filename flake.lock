@@ -1251,10 +1251,10 @@
         "vim-tabular": "vim-tabular",
         "vim-toml": "vim-toml",
         "vim-typescript": "vim-typescript",
-        "yarn-completion": "yarn-completion",
         "zsh-history-substring-search": "zsh-history-substring-search",
         "zsh-nix-shell": "zsh-nix-shell",
-        "zsh-syntax-highlighting": "zsh-syntax-highlighting"
+        "zsh-syntax-highlighting": "zsh-syntax-highlighting",
+        "zsh-yarn-completions": "zsh-yarn-completions"
       }
     },
     "rust-analyzer-src": {
@@ -1539,22 +1539,6 @@
         "type": "github"
       }
     },
-    "yarn-completion": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1651262829,
-        "narHash": "sha256-tcetQcRk/n2l2vZXNNzohfTFZw/6VZxFnn9l8GqSmS8=",
-        "owner": "buonomo",
-        "repo": "yarn-completion",
-        "rev": "abc052f0bbfdd29e7c6742d3f64e6d1a3361bea4",
-        "type": "github"
-      },
-      "original": {
-        "owner": "buonomo",
-        "repo": "yarn-completion",
-        "type": "github"
-      }
-    },
     "zsh-history-substring-search": {
       "flake": false,
       "locked": {
@@ -1600,6 +1584,22 @@
       "original": {
         "owner": "zsh-users",
         "repo": "zsh-syntax-highlighting",
+        "type": "github"
+      }
+    },
+    "zsh-yarn-completions": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1634059193,
+        "narHash": "sha256-S8NPSI0ItL/AmU+O8/KYqhv5HZ+F1j8Tg3sqOSEzXok=",
+        "owner": "chrisands",
+        "repo": "zsh-yarn-completions",
+        "rev": "1ddb8ea6209b7c4a55b9accaea5460bec27ec8a7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "chrisands",
+        "repo": "zsh-yarn-completions",
         "type": "github"
       }
     }

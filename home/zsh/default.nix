@@ -30,8 +30,8 @@
 
     plugins = with pkgs.zshPlugins; [
       fast-syntax-highlighting
-      yarn-completion
       zsh-history-substring-search
+      zsh-yarn-completions
     ];
 
     shellAliases = {
