@@ -20,5 +20,11 @@ inputs: final: prev: {
       file = "nix-shell.plugin.zsh";
       src = inputs.zsh-nix-shell;
     };
+
+    yarn-completion = {
+      name = "yarn-completion";
+      file = "yarn-completion.plugin.zsh";
+      src = inputs.yarn-completion;
+    };
   };
 }
