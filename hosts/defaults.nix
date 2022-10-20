@@ -23,15 +23,6 @@
 
     binaryCaches = builtins.map (a: a.url) caches;
     binaryCachePublicKeys = builtins.map (a: a.key) caches;
-
-    distributedBuilds = true;
-
-    buildMachines = [
-      {
-        system = "x86_64-linux";
-        hostName = "nix-build1";
-      }
-    ];
   };
 
   environment = {
