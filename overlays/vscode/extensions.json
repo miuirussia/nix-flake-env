@@ -2,32 +2,32 @@
   {
     "name": "vscode-theme-onedark",
     "publisher": "akamud",
-    "sha256": "1m6f6p7x8vshhb03ml7sra3v01a7i2p3064mvza800af7cyj3w5m",
-    "version": "2.2.3"
+    "sha256": "1km3hznw8k0jk9sp3r81c89fxa311lc6gw20fqikd899pvhayqgh",
+    "version": "2.3.0"
   },
   {
     "name": "vscode-theme-onelight",
     "publisher": "akamud",
-    "sha256": "1mzd77sv6lb6kfv5fvdvzggs488q553cf752byrml981ys9r7khz",
-    "version": "2.2.3"
+    "sha256": "198fhna68aqpmln0wvjwqyvfznjjyp9ykar1b2zjhc2id6rz8c09",
+    "version": "2.3.0"
   },
   {
     "name": "material-icon-theme",
     "publisher": "pkief",
-    "sha256": "1dmmqc003v45pmiz6yccpnvw94hbvbg7fhy24njii0kwpxbv4q7l",
-    "version": "4.17.0"
+    "sha256": "15bilv7ck3538dxkjnsqwgw3y1dqbyd9y9qhghysj4fxc367h0hk",
+    "version": "4.21.0"
   },
   {
     "name": "vscode-jest",
     "publisher": "orta",
-    "sha256": "172c9fczadhnnrbssa2825z35szn8lg3cv4sg9649hxbjbxafyk6",
-    "version": "4.5.0"
+    "sha256": "0qwivdhjx8y8rx7s0dssqzqcgrgd9qmdjc00fihkfjbgrxn6zb9s",
+    "version": "5.0.0"
   },
   {
     "name": "flow-for-vscode",
     "publisher": "flowtype",
-    "sha256": "050wrjicwsn5ky490rpqnlq5m7q3y1h6k4ckrivxxpwmy8scfiak",
-    "version": "2.1.0"
+    "sha256": "0mp10h68a47hwi6vw9807f65qv9mkzdgs6hwya0dglbc35p2y11p",
+    "version": "2.2.0"
   },
   {
     "name": "Nix",
@@ -50,14 +50,14 @@
   {
     "name": "gitlens",
     "publisher": "eamodio",
-    "sha256": "1d7gzxsyxrhvvx2md6gbcwiawd8f3jarxfbv2qhj7xl1phd7zja3",
-    "version": "12.0.6"
+    "sha256": "1xwcjsmdi0dzydn55k6ck0iijcmshlmhy8kc431cq471agrvld6m",
+    "version": "2022.10.2005"
   },
   {
     "name": "haskell",
     "publisher": "haskell",
-    "sha256": "0qgp93m5d5kz7bxlnvlshcd8ms5ag48nk5hb37x02giqcavg4qv0",
-    "version": "2.2.0"
+    "sha256": "14p9g07zsb3da4ilaasgsdvh3wagfzayqr8ichsf6k5c952zi8fk",
+    "version": "2.2.1"
   },
   {
     "name": "language-haskell",
@@ -68,38 +68,38 @@
   {
     "name": "nix-ide",
     "publisher": "jnoortheen",
-    "sha256": "16mmivdssjky11gmih7zp99d41m09r0ii43n17d4i6xwivagi9a3",
-    "version": "0.1.20"
+    "sha256": "0bibb3r4cb7chnx6vpyl41ig12pc0cbg0sb8f2khs52c71nk4bn8",
+    "version": "0.2.1"
   },
   {
     "name": "vscode-docker",
     "publisher": "ms-azuretools",
-    "sha256": "12qfwfqaa6nxm6gg2g7g4m001lh57bbhhbpyawxqk81qnjw3vipr",
-    "version": "1.22.0"
+    "sha256": "13scns5iazzsjx8rli311ym2z8i8f4nvbcd5w8hqj5z0rzsds6xi",
+    "version": "1.22.2"
   },
   {
     "name": "remote-containers",
     "publisher": "ms-vscode-remote",
-    "sha256": "0syfy058kxccwbmgqj9pm9rrldrz9panbm234abpwgnz4l71mnli",
-    "version": "0.236.1"
+    "sha256": "1gpqcv4hmd6sy8vny7s3cb2i958mrc1vjc0m1hfgw46bswsk8xij",
+    "version": "0.260.0"
   },
   {
     "name": "remote-ssh",
     "publisher": "ms-vscode-remote",
-    "sha256": "00dznn0dzdq43cdkpdxjlp61ssmm3ncin8jb8q57ycwya3qynfcj",
-    "version": "0.81.2022052015"
+    "sha256": "19lrw5107d1ji80g6pm98213gfsryg6qdl5y5f360dny31p38pn4",
+    "version": "0.90.1"
   },
   {
     "name": "remote-ssh-edit",
     "publisher": "ms-vscode-remote",
-    "sha256": "0zgrd2909xpr3416cji0ha3yl6gl2ry2f38bvx4lsjfmgik0ic6s",
-    "version": "0.80.0"
+    "sha256": "0rw2klz1f4sy1xzwg4bilcm2sjk0lxdfh9ly3f4kbl8a5xccfy6z",
+    "version": "0.84.0"
   },
   {
     "name": "ide-purescript",
     "publisher": "nwolverson",
-    "sha256": "1f9064w18wwp3iy8ciajad8vlshnzyhnqy8h516k0j5bflz781mn",
-    "version": "0.25.12"
+    "sha256": "0hhgfaywsjrkkkvmk215552dpxxq12pzyh80crxmdcbphm47117c",
+    "version": "0.26.0"
   },
   {
     "name": "language-purescript",
@@ -122,20 +122,20 @@
   {
     "name": "shellcheck",
     "publisher": "timonwong",
-    "sha256": "0l8fbim19jgcdgxxgidnhdczxvhls920vrffwrac8k1y34lgfl3v",
-    "version": "0.19.3"
+    "sha256": "1y1z81q3ajssvr55lr2bdz28s23mpybx7ngy823bhg69hh2q2n63",
+    "version": "0.25.0"
   },
   {
     "name": "vscode-thunder-client",
     "publisher": "rangav",
-    "sha256": "0x1bgsc4jl8dzhpxysnkyxh5wnzj78irgim7npj8jw8n3nx7w00b",
-    "version": "1.16.4"
+    "sha256": "1madyn5r6l6ypy2ndkakcdwp41iby0c3j2i02sw9jr2wm33iqsq2",
+    "version": "1.20.1"
   },
   {
     "name": "hadolint",
     "publisher": "exiasr",
-    "sha256": "0ls604nkahasny0kzh7677nr7mk9akcnljf4g41j0k47avza1hig",
-    "version": "1.1.1"
+    "sha256": "00x6bnjm0yk0fcw91c47g8c5shgbcvxyyz49r4y23q4gqizvaqz8",
+    "version": "1.1.2"
   },
   {
     "name": "vscode-intelephense-client",
@@ -146,7 +146,7 @@
   {
     "name": "vim",
     "publisher": "vscodevim",
-    "sha256": "1d85dwlnfgn7d32ivza0bv1zf9bh36fx7gbi586dligkw202blkn",
-    "version": "1.22.2"
+    "sha256": "00gq6mqqwqipc6d7di2x9mmi1lya11vhkkww9563avchavczb9sv",
+    "version": "1.24.1"
   }
 ]
