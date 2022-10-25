@@ -150,9 +150,9 @@
     "version": "1.24.1"
   },
   {
-    "name": "postcss",
-    "publisher": "csstools",
-    "sha256": "0rbkzfa5czc7ah3ijl7hrrqiwzyyicqr2mkyzzsy9smqcwm874g6",
-    "version": "1.0.9"
+    "name": "vscode-postcss",
+    "publisher": "vunguyentuan",
+    "sha256": "1f1m3245714481mdskxz6qslhzd7p1x59rljdcpwqx1p371w5nxn",
+    "version": "2.0.2"
   }
 ]

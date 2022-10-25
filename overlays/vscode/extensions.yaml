@@ -48,5 +48,5 @@
   publisher: bmewburn
 - name: vim
   publisher: vscodevim
-- name: postcss
-  publisher: csstools
+- name: vscode-postcss
+  publisher: vunguyentuan
