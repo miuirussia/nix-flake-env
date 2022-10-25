@@ -50,8 +50,8 @@
   {
     "name": "gitlens",
     "publisher": "eamodio",
-    "sha256": "1xwcjsmdi0dzydn55k6ck0iijcmshlmhy8kc431cq471agrvld6m",
-    "version": "2022.10.2005"
+    "sha256": "1hp0gg0i6vazpc5qxlrkwifd4vmcl40r97md4sif38x2qwzw6nc8",
+    "version": "2022.10.2505"
   },
   {
     "name": "haskell",
@@ -80,8 +80,8 @@
   {
     "name": "remote-containers",
     "publisher": "ms-vscode-remote",
-    "sha256": "1gpqcv4hmd6sy8vny7s3cb2i958mrc1vjc0m1hfgw46bswsk8xij",
-    "version": "0.260.0"
+    "sha256": "0xl5vwc71i40fciniw4i1kpgcp0fk4mwnb8dj71qwvmdwglml45p",
+    "version": "0.261.0"
   },
   {
     "name": "remote-ssh",
@@ -122,8 +122,8 @@
   {
     "name": "shellcheck",
     "publisher": "timonwong",
-    "sha256": "1y1z81q3ajssvr55lr2bdz28s23mpybx7ngy823bhg69hh2q2n63",
-    "version": "0.25.0"
+    "sha256": "1jbc08vwi7c8dz9rd09p01zy894i1xv7hmq6anbz1chpqbm1h62a",
+    "version": "0.26.1"
   },
   {
     "name": "vscode-thunder-client",
@@ -148,5 +148,11 @@
     "publisher": "vscodevim",
     "sha256": "00gq6mqqwqipc6d7di2x9mmi1lya11vhkkww9563avchavczb9sv",
     "version": "1.24.1"
+  },
+  {
+    "name": "postcss",
+    "publisher": "csstools",
+    "sha256": "0rbkzfa5czc7ah3ijl7hrrqiwzyyicqr2mkyzzsy9smqcwm874g6",
+    "version": "1.0.9"
   }
 ]
