@@ -14,19 +14,20 @@
     trimTrailingWhitespace = true;
     watcherExclude = {
       "**/.bazel-cache" = true;
-      "**/bazel*" = true;
       "**/.spago/**" = true;
+      "**/bazel*" = true;
       "**/output/**" = true;
     };
     exclude = {
       "**/.bazel-cache" = true;
+      "**/.psc-ide-port" = true;
+      "**/.psci_modules" = true;
+      "**/.purs-repl" = true;
+      "**/.spago" = true;
       "**/bazel*" = true;
       "**/bower_components" = true;
       "**/node_modules" = true;
-      "**/.spago/**" = true;
-      "**/output/**" = true;
-      "**/.psc-ide-port" = true;
-      "**/.purs-repl" = true;
+      "**/output" = true;
     };
   };
 
