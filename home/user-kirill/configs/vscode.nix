@@ -25,6 +25,8 @@
       "**/node_modules" = true;
       "**/.spago/**" = true;
       "**/output/**" = true;
+      "**/.psc-ide-port" = true;
+      "**/.purs-repl" = true;
     };
   };
 
