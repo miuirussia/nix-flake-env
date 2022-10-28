@@ -12,18 +12,20 @@
     insertFinalNewline = true;
     trimFinalNewlines = true;
     trimTrailingWhitespace = true;
-  };
-
-  exclude = {
-    "**/.bazel-cache" = true;
-    "**/bazel*" = true;
-    "**/bower_components" = true;
-    "**/node_modules" = true;
-  };
-
-  watcherExclude = {
-    "**/.bazel-cache" = true;
-    "**/bazel*" = true;
+    watcherExclude = {
+      "**/.bazel-cache" = true;
+      "**/bazel*" = true;
+      "**/.spago/**" = true;
+      "**/output/**" = true;
+    };
+    exclude = {
+      "**/.bazel-cache" = true;
+      "**/bazel*" = true;
+      "**/bower_components" = true;
+      "**/node_modules" = true;
+      "**/.spago/**" = true;
+      "**/output/**" = true;
+    };
   };
 
   emmet = {
@@ -110,7 +112,9 @@
 
   flow.pathToFlow = "${pkgs.flow}/bin/flow";
 
-  purescript.pursExe = "${pkgs.nodePackages.purescript}/bin/purs";
+  purescript = {
+    pursExe = "${pkgs.nodePackages.purescript}/bin/purs";
+  };
 
   hadolint.hadolintPath = "${pkgs.hadolint}/bin/hadolint";
 
