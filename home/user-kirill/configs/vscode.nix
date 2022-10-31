@@ -14,17 +14,25 @@
     trimTrailingWhitespace = true;
     watcherExclude = {
       "**/.bazel-cache" = true;
+      "**/.git/objects/**" = true;
+      "**/.git/subtree-cache/**" = true;
       "**/.spago/**" = true;
       "**/bazel*" = true;
-      "**/output/**" = true;
+      "**/node_modules" = true;
+      "**/output" = true;
     };
     exclude = {
       "**/.bazel-cache" = true;
       "**/.psc-ide-port" = true;
       "**/.psci_modules" = true;
       "**/.purs-repl" = true;
-      "**/.spago" = true;
       "**/bazel*" = true;
+    };
+  };
+
+  search = {
+    exclude = {
+      "**/.spago" = true;
       "**/bower_components" = true;
       "**/node_modules" = true;
       "**/output" = true;
