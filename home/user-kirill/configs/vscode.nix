@@ -127,7 +127,6 @@
     addSpagoSources = true;
     autocompleteAddImport = false;
     diagnosticsOnType = true;
-    pursExe = "${pkgs.purescript}/bin/purs";
   };
 
   hadolint = {
