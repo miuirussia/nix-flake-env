@@ -29,7 +29,9 @@ o.visualbell = true
 o.cmdheight = 2
 o.updatetime = 300
 
-o.virtualedit = "all"
+if not vim.g.vscode then
+  o.virtualedit = "all"
+end
 o.wrap = true
 o.whichwrap = o.whichwrap + "<,>,[,],h,l"
 

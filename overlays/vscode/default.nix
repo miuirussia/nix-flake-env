@@ -7,12 +7,12 @@ let
       allowUnfree = true;
     };
   };
-in {
+in
+rec {
+  vscode-mp-extensions = with builtins; unstable.vscode-utils.extensionsFromVscodeMarketplace (fromJSON (readFile ./extensions.json));
+
   vscode-custom = unstable.vscode-with-extensions.override {
-    vscodeExtensions = with builtins;(
-      [
-        final.vscode-extensions.matklad.rust-analyzer-nightly
-      ]
-    ) ++ unstable.vscode-utils.extensionsFromVscodeMarketplace (fromJSON (readFile ./extensions.json));
+    vscode = unstable.vscodium;
+    vscodeExtensions = vscode-mp-extensions;
   };
 }

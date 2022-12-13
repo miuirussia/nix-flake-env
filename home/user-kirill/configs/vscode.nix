@@ -1,11 +1,9 @@
-{ pkgs }:
+{ config, pkgs, ... }:
 
 {
-  telemetry = {
-    enableCrashReporter = false;
-    enableTelemetry = false;
-    telemetryLevel = "off";
-  };
+  window.menuBarVisibility = "toggle";
+
+  telemetry.telemetryLevel = "off";
 
   files = {
     autoSave = "off";
@@ -60,7 +58,7 @@
     renderControlCharacters = true;
     renderWhitespace = "boundary";
     rulers = [ 120 ];
-    scrollBeyondLastLine = false;
+    scrollBeyondLastLine = true;
     semanticHighlighting.enabled = true;
     tabSize = 2;
   };
@@ -78,10 +76,6 @@
     tree.indent = 20;
   };
 
-  search = {
-    location = "panel";
-  };
-
   extensions = {
     autoCheckUpdates = false;
     autoUpdate = false;
@@ -89,14 +83,8 @@
   };
 
   update = {
-    channel = "none";
     mode = "none";
     showReleaseNotes = false;
-  };
-
-  terminal.integrated.shell = {
-    linux = "${pkgs.zsh}/bin/zsh";
-    osx = "${pkgs.zsh}/bin/zsh";
   };
 
   shellcheck = {
@@ -109,30 +97,75 @@
     serverPath = "${pkgs.rnix-lsp}/bin/rnix-lsp";
   };
 
-  haskell.serverExecutablePath = "${pkgs.hls}/bin/haskell-language-server-wrapper";
-  haskell.updateBehavior = "never-check";
+  haskell = {
+    serverExecutablePath = "${pkgs.hls}/bin/haskell-language-server-wrapper";
+    updateBehavior = "never-check";
+  };
 
-  git.path = "${pkgs.git}/bin/git";
+  git = {
+    path = "${pkgs.git}/bin/git";
+    confirmSync = false;
+  };
 
   gitlens = {
     showWelcomeOnInstall = false;
     showWhatsNewAfterUpgrades = false;
   };
 
-  javascript.validate.enable = false;
-
-  flow.pathToFlow = "${pkgs.flow}/bin/flow";
-
-  purescript = {
-    pursExe = "${pkgs.nodePackages.purescript}/bin/purs";
+  javascript = {
+    validate.enable = false;
   };
 
-  hadolint.hadolintPath = "${pkgs.hadolint}/bin/hadolint";
+  flow = {
+    pathToFlow = "${pkgs.flow}/bin/flow";
+  };
 
-  rust-analyzer.server.path = "${pkgs.rust-analyzer-nightly}/bin/rust-analyzer";
+  purescript = {
+    autoStartPscIde = false;
+    addNpmPath = true;
+    addPscPackageSources = true;
+    addSpagoSources = true;
+    autocompleteAddImport = false;
+    diagnosticsOnType = true;
+    pursExe = "${pkgs.purescript}/bin/purs";
+  };
+
+  hadolint = {
+    hadolintPath = "${pkgs.hadolint}/bin/hadolint";
+  };
+
+  rust-analyzer = {
+    server.path = "${pkgs.rust-analyzer-nightly}/bin/rust-analyzer";
+  };
+
+  vscode-neovim = {
+    neovimExecutablePaths.linux = "${config.programs.neovim.finalPackage}/bin/nvim";
+  };
+
+  jest = {
+    nodeEnv = {
+      TZ = "UTC";
+    };
+  };
+
+  vitest = {
+    enable = true;
+    nodeEnv = {
+      TZ = "UTC";
+    };
+  };
 
   intelephense = {
     telemetry.enabled = false;
     runtime = "${pkgs.nodejs}/bin/node";
+  };
+
+  terminal = {
+    integrated = {
+      defaultProfile.linux = "zsh";
+      env.linux = {
+        TZ = "UTC";
+      };
+    };
   };
 }

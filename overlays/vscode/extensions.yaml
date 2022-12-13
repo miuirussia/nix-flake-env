@@ -40,13 +40,18 @@
   publisher: william-voyek
 - name: shellcheck
   publisher: timonwong
+  overrides:
+    0.28.2: sha256-CxZTGCtQkx5vD89lbeaPlljcPmg8QiOjbGy/F3YjwXU=
+    0.29.1: sha256-BLjCxoePUeKIMrZ6+wRCQRaItgyR+CtdNPxdwpVHdCo=
 - name: vscode-thunder-client
   publisher: rangav
 - name: hadolint
   publisher: exiasr
 - name: vscode-intelephense-client
   publisher: bmewburn
-- name: vim
-  publisher: vscodevim
+- name: vscode-neovim
+  publisher: asvetliakov
+- name: vitest-explorer
+  publisher: ZixuanChen
 - name: vscode-postcss
   publisher: vunguyentuan
