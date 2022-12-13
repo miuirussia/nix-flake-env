@@ -9,7 +9,11 @@ let
   };
 in
 rec {
-  vscode-mp-extensions = with builtins; unstable.vscode-utils.extensionsFromVscodeMarketplace (fromJSON (readFile ./extensions.json));
+  vscode-mp-extensions = with builtins; (
+    [
+      unstable.vscode-extensions.rust-lang.rust-analyzer
+    ]
+  ) ++ unstable.vscode-utils.extensionsFromVscodeMarketplace (fromJSON (readFile ./extensions.json));
 
   vscode-custom = unstable.vscode-with-extensions.override {
     vscode = unstable.vscodium;
