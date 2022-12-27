@@ -14,14 +14,14 @@
   {
     "name": "material-icon-theme",
     "publisher": "pkief",
-    "sha256": "0irrivfidgjqfd205gh27r2ccj2anvqgvq7lfaaf92wrrc2zvlsk",
-    "version": "4.22.0"
+    "sha256": "16z0c79gqvkdiwpijp5qg9xan2z3nhpw197jqh0g62gskpm95wh5",
+    "version": "4.23.1"
   },
   {
     "name": "vscode-jest",
     "publisher": "orta",
-    "sha256": "0ryx577g0jb0m9lnfghd9gjzmrwpv3wxban5sz0fvi8ka5xrvzgn",
-    "version": "5.0.3"
+    "sha256": "08b3jrwm3rrwkkq8ybiak6r9d7hp4whjnpdji72jy0344xid1nqa",
+    "version": "5.1.0"
   },
   {
     "name": "flow-for-vscode",
@@ -50,8 +50,8 @@
   {
     "name": "gitlens",
     "publisher": "eamodio",
-    "sha256": "0ybbyrq961zf8ipq59gfnmshbj0xjs82cqjr8lw4jz3114nilkm5",
-    "version": "2022.12.1304"
+    "sha256": "17zzx86k767d0hp6yidxq41mfvqvm8588kxdk1zkr8rlqsxjadz0",
+    "version": "2022.12.2304"
   },
   {
     "name": "haskell",
@@ -74,20 +74,20 @@
   {
     "name": "vscode-docker",
     "publisher": "ms-azuretools",
-    "sha256": "1475hhfxy6s9s24x9qj2q3jb01zmyk9y8w0v8gd3l07j6zslwsj7",
-    "version": "1.23.2"
+    "sha256": "05lxa03hh5rslg7351dw87zlrp4drqy1jmpms1aml0yn1jxfb9yj",
+    "version": "1.23.3"
   },
   {
     "name": "remote-containers",
     "publisher": "ms-vscode-remote",
-    "sha256": "10rfx8mmv0ji8fksyyx05rxw5485l7ngckp6qwp6g5ig9dsc6nc2",
-    "version": "0.267.0"
+    "sha256": "0sp47jpdv09bmglm1yxd1l1q6fzdsdz3bl1flxwdd9x84b4h66cz",
+    "version": "0.268.0"
   },
   {
     "name": "remote-ssh",
     "publisher": "ms-vscode-remote",
-    "sha256": "073qms3bhv0kih7ij81lrz2anvxgv6xhzzmfb0jfi2nwn81yycrc",
-    "version": "0.95.2022121215"
+    "sha256": "105bmfgi3ir0smjr7rwigwwa7ar5kklrw22qr6755dgsppbq4kpy",
+    "version": "0.95.2022122215"
   },
   {
     "name": "remote-ssh-edit",
@@ -122,14 +122,14 @@
   {
     "name": "shellcheck",
     "publisher": "timonwong",
-    "sha256": "sha256-BLjCxoePUeKIMrZ6+wRCQRaItgyR+CtdNPxdwpVHdCo=",
-    "version": "0.29.1"
+    "sha256": "sha256-mb3f8ER9NMuQVOUrdifOFULiLWAfW+xZvaW0nXUZmpc=",
+    "version": "0.29.2"
   },
   {
     "name": "vscode-thunder-client",
     "publisher": "rangav",
-    "sha256": "1ncw0q6y967cgz03r46y2xmvkjs0693q3v72dpjmzzgzr7mhi490",
-    "version": "2.1.2"
+    "sha256": "17bhm5sx8jzb8fcimq9i48akgijia2mzymhr0z8xcvf8kmabsb34",
+    "version": "2.2.4"
   },
   {
     "name": "hadolint",

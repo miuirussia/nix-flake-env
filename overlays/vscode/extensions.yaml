@@ -43,6 +43,7 @@
   overrides:
     0.28.2: sha256-CxZTGCtQkx5vD89lbeaPlljcPmg8QiOjbGy/F3YjwXU=
     0.29.1: sha256-BLjCxoePUeKIMrZ6+wRCQRaItgyR+CtdNPxdwpVHdCo=
+    0.29.2: sha256-mb3f8ER9NMuQVOUrdifOFULiLWAfW+xZvaW0nXUZmpc=
 - name: vscode-thunder-client
   publisher: rangav
 - name: hadolint
