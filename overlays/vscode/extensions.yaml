@@ -14,8 +14,6 @@
   publisher: be5invis
 - name: dhall-lang
   publisher: dhall
-- name: gitlens
-  publisher: eamodio
 - name: haskell
   publisher: haskell
 - name: language-haskell
@@ -56,3 +54,5 @@
   publisher: ZixuanChen
 - name: vscode-postcss
   publisher: vunguyentuan
+- name: gitblame
+  publisher: waderyan
