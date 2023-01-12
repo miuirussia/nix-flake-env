@@ -52,3 +52,5 @@
   publisher: waderyan
 - name: ayu
   publisher: teabyii
+- name: vscode-eslint
+  publisher: dbaeumer

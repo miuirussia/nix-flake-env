@@ -154,5 +154,11 @@
     "publisher": "teabyii",
     "sha256": "1visv44mizfvsysrdby1vrncv1g3qmf45rhjijmbyak2d60nm0gq",
     "version": "1.0.5"
+  },
+  {
+    "name": "vscode-eslint",
+    "publisher": "dbaeumer",
+    "sha256": "0b8rb05alb1xprbflvyp4i58hzy3ycvxrkdshd4vsd60ffaf07vx",
+    "version": "2.3.0"
   }
 ]
