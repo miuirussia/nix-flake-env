@@ -5,6 +5,10 @@
 
   telemetry.telemetryLevel = "off";
 
+  extensions.experimental.affinity = {
+    "asvetliakov.vscode-neovim" = 1;
+  };
+
   files = {
     autoSave = "off";
     insertFinalNewline = true;
@@ -173,4 +177,5 @@
       };
     };
   };
+
 }
