@@ -7,6 +7,7 @@
 
   extensions.experimental.affinity = {
     "asvetliakov.vscode-neovim" = 1;
+    "nwolverson.ide-purescript" = 2;
   };
 
   files = {
