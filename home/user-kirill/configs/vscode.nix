@@ -14,7 +14,6 @@
       "**/.bazel-cache" = true;
       "**/.git/objects/**" = true;
       "**/.git/subtree-cache/**" = true;
-      "**/.spago/**" = true;
       "**/bazel*" = true;
       "**/node_modules" = true;
       "**/output" = true;
@@ -138,7 +137,14 @@
   };
 
   vscode-neovim = {
-    neovimExecutablePaths.linux = "${config.programs.neovim.finalPackage}/bin/nvim";
+    neovimExecutablePaths = {
+      linux = "${config.programs.neovim.package}/bin/nvim";
+      darwin = "${config.programs.neovim.package}/bin/nvim";
+    };
+    neovimInitVimPaths = {
+      linux = ./vscode.vim;
+      darwin = ./vscode.vim;
+    };
   };
 
   jest = {
