@@ -26,8 +26,8 @@
   {
     "name": "flow-for-vscode",
     "publisher": "flowtype",
-    "sha256": "0mp10h68a47hwi6vw9807f65qv9mkzdgs6hwya0dglbc35p2y11p",
-    "version": "2.2.0"
+    "sha256": "1k9x6ap33vnmfqpb3rk0l5b4jb94nklg10gqm9j0i88slpnp2g6d",
+    "version": "2.2.1"
   },
   {
     "name": "Nix",
@@ -66,22 +66,10 @@
     "version": "0.2.1"
   },
   {
-    "name": "vscode-docker",
-    "publisher": "ms-azuretools",
-    "sha256": "05lxa03hh5rslg7351dw87zlrp4drqy1jmpms1aml0yn1jxfb9yj",
-    "version": "1.23.3"
-  },
-  {
     "name": "remote-containers",
     "publisher": "ms-vscode-remote",
-    "sha256": "0sp47jpdv09bmglm1yxd1l1q6fzdsdz3bl1flxwdd9x84b4h66cz",
-    "version": "0.268.0"
-  },
-  {
-    "name": "remote-ssh",
-    "publisher": "ms-vscode-remote",
-    "sha256": "105bmfgi3ir0smjr7rwigwwa7ar5kklrw22qr6755dgsppbq4kpy",
-    "version": "0.95.2022122215"
+    "sha256": "0zlssgrr5d3cxivjyv6ifx6nl8ai08nf4kahsdb4w0cv0bl3hxph",
+    "version": "0.269.0"
   },
   {
     "name": "remote-ssh-edit",
@@ -116,14 +104,14 @@
   {
     "name": "shellcheck",
     "publisher": "timonwong",
-    "sha256": "sha256-mb3f8ER9NMuQVOUrdifOFULiLWAfW+xZvaW0nXUZmpc=",
-    "version": "0.29.2"
+    "sha256": "sha256-KOmQVx51Z5cSHineI1ouLk1niwmex6ufQJfps5T9qck=",
+    "version": "0.29.3"
   },
   {
     "name": "vscode-thunder-client",
     "publisher": "rangav",
-    "sha256": "17bhm5sx8jzb8fcimq9i48akgijia2mzymhr0z8xcvf8kmabsb34",
-    "version": "2.2.4"
+    "sha256": "0aj9dpsaqx51jsvgxl6lzq3q6bwmasvcjv5qhb7z5i2k7822w1j9",
+    "version": "2.3.0"
   },
   {
     "name": "hadolint",
@@ -134,8 +122,8 @@
   {
     "name": "vscode-intelephense-client",
     "publisher": "bmewburn",
-    "sha256": "1sla3pl3jfdawjmscwf2ml42xhwjaa9ywdgdpl6v99p10w6rvx9s",
-    "version": "1.8.2"
+    "sha256": "100hswxqy8li49i6q2kbnzspcdd0w3swq047yvzkx2scqwa6l8lq",
+    "version": "1.9.3"
   },
   {
     "name": "vscode-neovim",
@@ -146,8 +134,8 @@
   {
     "name": "vitest-explorer",
     "publisher": "ZixuanChen",
-    "sha256": "1kbh430z4rkv89z2fzb97l1cllpwvicq81jdqbwk2fj9ki8d4vwa",
-    "version": "0.2.34"
+    "sha256": "0j0x1jml6jkpfmm7pywhhinm8adjzdi4acls2n5zis8d330q9is7",
+    "version": "0.2.36"
   },
   {
     "name": "vscode-postcss",
@@ -160,5 +148,11 @@
     "publisher": "waderyan",
     "sha256": "1z8frp0l2g5j4n07pdgqc2jlzm3cxya1j6ry1d4caw10krl02djd",
     "version": "10.1.0"
+  },
+  {
+    "name": "ayu",
+    "publisher": "teabyii",
+    "sha256": "1visv44mizfvsysrdby1vrncv1g3qmf45rhjijmbyak2d60nm0gq",
+    "version": "1.0.5"
   }
 ]

@@ -64,14 +64,14 @@
   };
 
   workbench = {
-    colorTheme = "Atom One Dark";
+    colorTheme = "Ayu Mirage Bordered";
     editor = {
       highlightModifiedTabs = true;
       enablePreview = false;
     };
     enableExperiments = false;
     fontAliasing = "auto";
-    iconTheme = "material-icon-theme";
+    iconTheme = "ayu";
     settings.enableNaturalLanguageSearch = false;
     tree.indent = 20;
   };

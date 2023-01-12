@@ -20,11 +20,7 @@
   publisher: justusadam
 - name: nix-ide
   publisher: jnoortheen
-- name: vscode-docker
-  publisher: ms-azuretools
 - name: remote-containers
-  publisher: ms-vscode-remote
-- name: remote-ssh
   publisher: ms-vscode-remote
 - name: remote-ssh-edit
   publisher: ms-vscode-remote
@@ -39,9 +35,7 @@
 - name: shellcheck
   publisher: timonwong
   overrides:
-    0.28.2: sha256-CxZTGCtQkx5vD89lbeaPlljcPmg8QiOjbGy/F3YjwXU=
-    0.29.1: sha256-BLjCxoePUeKIMrZ6+wRCQRaItgyR+CtdNPxdwpVHdCo=
-    0.29.2: sha256-mb3f8ER9NMuQVOUrdifOFULiLWAfW+xZvaW0nXUZmpc=
+    0.29.3: sha256-KOmQVx51Z5cSHineI1ouLk1niwmex6ufQJfps5T9qck=
 - name: vscode-thunder-client
   publisher: rangav
 - name: hadolint
@@ -56,3 +50,5 @@
   publisher: vunguyentuan
 - name: gitblame
   publisher: waderyan
+- name: ayu
+  publisher: teabyii
