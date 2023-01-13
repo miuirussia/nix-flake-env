@@ -1,23 +1,5 @@
 [
   {
-    "name": "vscode-theme-onedark",
-    "publisher": "akamud",
-    "sha256": "1km3hznw8k0jk9sp3r81c89fxa311lc6gw20fqikd899pvhayqgh",
-    "version": "2.3.0"
-  },
-  {
-    "name": "vscode-theme-onelight",
-    "publisher": "akamud",
-    "sha256": "198fhna68aqpmln0wvjwqyvfznjjyp9ykar1b2zjhc2id6rz8c09",
-    "version": "2.3.0"
-  },
-  {
-    "name": "material-icon-theme",
-    "publisher": "pkief",
-    "sha256": "16z0c79gqvkdiwpijp5qg9xan2z3nhpw197jqh0g62gskpm95wh5",
-    "version": "4.23.1"
-  },
-  {
     "name": "vscode-jest",
     "publisher": "orta",
     "sha256": "08b3jrwm3rrwkkq8ybiak6r9d7hp4whjnpdji72jy0344xid1nqa",
@@ -66,18 +48,6 @@
     "version": "0.2.1"
   },
   {
-    "name": "remote-containers",
-    "publisher": "ms-vscode-remote",
-    "sha256": "0zlssgrr5d3cxivjyv6ifx6nl8ai08nf4kahsdb4w0cv0bl3hxph",
-    "version": "0.269.0"
-  },
-  {
-    "name": "remote-ssh-edit",
-    "publisher": "ms-vscode-remote",
-    "sha256": "0rw2klz1f4sy1xzwg4bilcm2sjk0lxdfh9ly3f4kbl8a5xccfy6z",
-    "version": "0.84.0"
-  },
-  {
     "name": "ide-purescript",
     "publisher": "nwolverson",
     "sha256": "1ig8z5k6gkdvxqfc0plf3dwvhz3qawydjmrln5bgsacr6jhfxi3i",
@@ -88,12 +58,6 @@
     "publisher": "nwolverson",
     "sha256": "1nhzvjwxld53mlaflf8idyjj18r1dzdys9ygy86095g7gc4b1qys",
     "version": "0.2.8"
-  },
-  {
-    "name": "crates",
-    "publisher": "serayuzgur",
-    "sha256": "1dbhd6xbawbnf9p090lpmn8i5gg1f7y8xk2whc9zhg4432kdv3vd",
-    "version": "0.5.10"
   },
   {
     "name": "vscode-nginx",
@@ -118,12 +82,6 @@
     "publisher": "exiasr",
     "sha256": "00x6bnjm0yk0fcw91c47g8c5shgbcvxyyz49r4y23q4gqizvaqz8",
     "version": "1.1.2"
-  },
-  {
-    "name": "vscode-intelephense-client",
-    "publisher": "bmewburn",
-    "sha256": "100hswxqy8li49i6q2kbnzspcdd0w3swq047yvzkx2scqwa6l8lq",
-    "version": "1.9.3"
   },
   {
     "name": "vscode-neovim",

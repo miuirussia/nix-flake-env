@@ -1,9 +1,3 @@
-- name: vscode-theme-onedark
-  publisher: akamud
-- name: vscode-theme-onelight
-  publisher: akamud
-- name: material-icon-theme
-  publisher: pkief
 - name: vscode-jest
   publisher: orta
 - name: flow-for-vscode
@@ -20,16 +14,10 @@
   publisher: justusadam
 - name: nix-ide
   publisher: jnoortheen
-- name: remote-containers
-  publisher: ms-vscode-remote
-- name: remote-ssh-edit
-  publisher: ms-vscode-remote
 - name: ide-purescript
   publisher: nwolverson
 - name: language-purescript
   publisher: nwolverson
-- name: crates
-  publisher: serayuzgur
 - name: vscode-nginx
   publisher: william-voyek
 - name: shellcheck
@@ -40,8 +28,6 @@
   publisher: rangav
 - name: hadolint
   publisher: exiasr
-- name: vscode-intelephense-client
-  publisher: bmewburn
 - name: vscode-neovim
   publisher: asvetliakov
 - name: vitest-explorer
