@@ -28,14 +28,26 @@
     };
   };
 
+  launchd.daemons.limit-maxproc = {
+    serviceConfig.RunAtLoad = true;
+    serviceConfig.ProgramArguments = [
+      "launchctl"
+      "limit"
+      "maxproc"
+      "2048"
+      "2048"
+    ];
+    serviceConfig.Label = "limit.maxproc";
+  };
+
   launchd.daemons.limit-maxfiles = {
     serviceConfig.RunAtLoad = true;
     serviceConfig.ProgramArguments = [
       "launchctl"
       "limit"
       "maxfiles"
-      "2048"
-      "unlimited"
+      "524288"
+      "524288"
     ];
     serviceConfig.Label = "limit.maxfiles";
   };
