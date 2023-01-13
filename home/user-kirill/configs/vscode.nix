@@ -5,9 +5,12 @@
 
   telemetry.telemetryLevel = "off";
 
-  extensions.experimental.affinity = {
-    "asvetliakov.vscode-neovim" = 1;
-    "nwolverson.ide-purescript" = 2;
+  extensions.experimental = {
+    affinity = {
+      "asvetliakov.vscode-neovim" = 1;
+      "nwolverson.ide-purescript" = 2;
+    };
+    useUtilityProcess = true;
   };
 
   files = {
@@ -19,6 +22,7 @@
       "**/.bazel-cache" = true;
       "**/.git/objects/**" = true;
       "**/.git/subtree-cache/**" = true;
+      "**/.spago/**" = true;
       "**/bazel*" = true;
       "**/node_modules" = true;
       "**/output" = true;
@@ -125,12 +129,11 @@
   };
 
   purescript = {
-    autoStartPscIde = false;
     addNpmPath = true;
-    addPscPackageSources = true;
     addSpagoSources = true;
+    autoStartPscIde = false;
     autocompleteAddImport = false;
-    diagnosticsOnType = true;
+    buildCommand = "spago build --purs-args --json-errors";
   };
 
   hadolint = {
@@ -142,14 +145,30 @@
   };
 
   vscode-neovim = {
-    neovimExecutablePaths = {
-      linux = "${config.programs.neovim.package}/bin/nvim";
-      darwin = "${config.programs.neovim.package}/bin/nvim";
-    };
-    neovimInitVimPaths = {
-      linux = ./vscode.vim;
-      darwin = ./vscode.vim;
-    };
+    neovimExecutablePaths =
+      let
+        vscode-neovim = pkgs.wrapNeovim pkgs.neovim-unwrapped {
+          withNodeJs = true;
+          withPython3 = true;
+          withRuby = true;
+
+          configure = {
+            customRC = builtins.readFile ./vscode.vim;
+            packages = {
+              kdevlab = with pkgs.vimPlugins; {
+                start = [
+                  vim-sandwich
+                ];
+                opt = [ ];
+              };
+            };
+          };
+        };
+      in
+      {
+        linux = "${vscode-neovim}/bin/nvim";
+        darwin = "${vscode-neovim}/bin/nvim";
+      };
   };
 
   jest = {

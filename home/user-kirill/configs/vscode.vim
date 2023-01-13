@@ -24,6 +24,7 @@ execute 'set backupdir=' . s:backup_dir
 execute 'set directory=' . s:directory_dir
 
 set nocompatible
+set clipboard+=unnamed
 
 " remap leader
 " map leader key to space
