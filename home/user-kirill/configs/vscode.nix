@@ -196,6 +196,8 @@
         TZ = "UTC";
       };
     };
+
   };
 
+  vscode-dhall-lsp-server.executable = "${pkgs.dhall-lsp-server}/bin/dhall-lsp-server";
 }

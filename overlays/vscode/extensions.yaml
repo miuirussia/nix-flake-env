@@ -8,6 +8,8 @@
   publisher: be5invis
 - name: dhall-lang
   publisher: dhall
+- name: vscode-dhall-lsp-server
+  publisher: dhall
 - name: haskell
   publisher: haskell
 - name: language-haskell

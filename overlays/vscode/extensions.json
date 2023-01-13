@@ -30,6 +30,12 @@
     "version": "0.0.4"
   },
   {
+    "name": "vscode-dhall-lsp-server",
+    "publisher": "dhall",
+    "sha256": "1zin7s827bpf9yvzpxpr5n6mv0b5rhh3civsqzmj52mdq365d2js",
+    "version": "0.0.4"
+  },
+  {
     "name": "haskell",
     "publisher": "haskell",
     "sha256": "1d5b0p6r9ipwb7j4cx9w13vq31h78bh2sfwl54xri4gyvialhryd",
