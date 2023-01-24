@@ -2,8 +2,8 @@
   {
     "name": "vscode-jest",
     "publisher": "orta",
-    "sha256": "08b3jrwm3rrwkkq8ybiak6r9d7hp4whjnpdji72jy0344xid1nqa",
-    "version": "5.1.0"
+    "sha256": "157n7jna1hksgz1ahbcwjxcr189fwz1pqiwgvnvvii15yw871m8k",
+    "version": "5.2.0"
   },
   {
     "name": "flow-for-vscode",
@@ -80,8 +80,8 @@
   {
     "name": "vscode-thunder-client",
     "publisher": "rangav",
-    "sha256": "0aj9dpsaqx51jsvgxl6lzq3q6bwmasvcjv5qhb7z5i2k7822w1j9",
-    "version": "2.3.0"
+    "sha256": "0im9k3c9hhnxnx6gxsn5yc1pgrylg25drbi7sh2d7ywc2snmgl6y",
+    "version": "2.3.4"
   },
   {
     "name": "hadolint",
@@ -98,8 +98,8 @@
   {
     "name": "vitest-explorer",
     "publisher": "ZixuanChen",
-    "sha256": "0j0x1jml6jkpfmm7pywhhinm8adjzdi4acls2n5zis8d330q9is7",
-    "version": "0.2.36"
+    "sha256": "0danyaydkw50wrfmbprn6bppkddfbv08qsw2ilmjx1dxb148v6nm",
+    "version": "0.2.37"
   },
   {
     "name": "vscode-postcss",
@@ -122,7 +122,7 @@
   {
     "name": "vscode-eslint",
     "publisher": "dbaeumer",
-    "sha256": "0b8rb05alb1xprbflvyp4i58hzy3ycvxrkdshd4vsd60ffaf07vx",
-    "version": "2.3.0"
+    "sha256": "1kr1zbwffbbmv57hf7x65n2f6p9alk5cz6298230snv27fshiqag",
+    "version": "2.3.3"
   }
 ]
