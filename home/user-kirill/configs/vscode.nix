@@ -191,9 +191,17 @@
 
   terminal = {
     integrated = {
-      defaultProfile.linux = "zsh";
-      env.linux = {
-        TZ = "UTC";
+      defaultProfile = {
+        osx = "zsh";
+        linux = "zsh";
+      };
+      env = {
+        osx = {
+          TZ = "UTC";
+        };
+        linux = {
+          TZ = "UTC";
+        };
       };
     };
 
