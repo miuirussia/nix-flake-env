@@ -7,11 +7,10 @@ let
     };
   };
 in {
-  haskell = unstable.haskell;
-  haskell-ci = unstable.haskell-ci;
-  haskell-ci-unstable = unstable.haskell-ci-unstable;
-  haskell-language-server = unstable.haskell-language-server;
-  shellcheck = unstable.shellcheck;
-  pandoc = unstable.pandoc;
-  haskellPackages = unstable.haskellPackages;
+  haskell = prev.haskell // {
+    compiler = prev.haskell.compiler // {
+      ghc925 = unstable.haskell.compiler.ghc925;
+      ghc944 = unstable.haskell.compiler.ghc944;
+    };
+  };
 }
