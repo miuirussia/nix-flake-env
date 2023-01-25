@@ -498,9 +498,7 @@
     "nixUnstable": {
       "inputs": {
         "lowdown-src": "lowdown-src_2",
-        "nixpkgs": [
-          "nixpkgs"
-        ],
+        "nixpkgs": "nixpkgs_3",
         "nixpkgs-regression": "nixpkgs-regression_2"
       },
       "locked": {
@@ -660,6 +658,22 @@
       }
     },
     "nixpkgs_3": {
+      "locked": {
+        "lastModified": 1674552221,
+        "narHash": "sha256-Se0atPZNgMEFiBKdMXsJBr/6ZxhJjwriVBEhRjUFrG4=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "9c5660ebb40d1f64a5f7d9c47ac575c29d8204f1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-22.11-small",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_4": {
       "locked": {
         "lastModified": 1645320021,
         "narHash": "sha256-+zx+yDma99y5oU7GmJMFX7LdTA+RjODy0/pbKrjzTWU=",
@@ -1219,7 +1233,7 @@
         "jetbrains-mono": "jetbrains-mono",
         "neovim": "neovim",
         "nixUnstable": "nixUnstable",
-        "nixpkgs": "nixpkgs_3",
+        "nixpkgs": "nixpkgs_4",
         "nixpkgs-unstable": "nixpkgs-unstable_2",
         "nvim-actionmenu": "nvim-actionmenu",
         "nvim-bufferline": "nvim-bufferline",
