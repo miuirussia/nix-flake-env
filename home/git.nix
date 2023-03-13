@@ -28,7 +28,7 @@
 
     extraConfig = {
       core = {
-        editor = "nvim";
+        editor = "vim";
         logAllRefUpdates = true;
         pager = "${pkgs.diff-so-fancy}/bin/diff-so-fancy | ${pkgs.less}/bin/less --tabs=4 -RFX";
         precomposeunicode = true;
@@ -42,13 +42,13 @@
       color.ui = "auto";
       commit.verbose = true;
       diff.submodule = "log";
-      diff.tool = "nvim -d";
+      diff.tool = "vim -d";
       diff.algorithm = "histogram";
       difftool.prompt = false;
       http.sslCAinfo = "${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt";
       http.sslverify = true;
       hub.protocol = "${pkgs.openssh}/bin/ssh";
-      merge.tool = "nvim -d";
+      merge.tool = "vim -d";
       mergetool.keepBackup = true;
       pull.rebase = true;
       push.default = "current";

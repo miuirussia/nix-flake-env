@@ -1,4 +1,6 @@
-{ config, pkgs, ... }: {
+{ inputs, config, pkgs, ... }:
+
+{
   programs.neovim = let
     dependencies = {
       sumneko_lua_language_server = pkgs.sumneko-lua-language-server;
@@ -34,7 +36,7 @@
     };
   in
     {
-      enable = true;
+      enable = false;
 
       viAlias = true;
       vimAlias = true;

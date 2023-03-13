@@ -37,8 +37,7 @@
     zsh-yarn-completions = { url = "github:chrisands/zsh-yarn-completions"; flake = false; };
 
     # neovim
-    neovim = { url = "github:neovim/neovim/nightly"; flake = false; };
-    tree-sitter = { url = "github:tree-sitter/tree-sitter"; flake = false; };
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
 
     nvim-onedark = { url = "github:navarasu/onedark.nvim"; flake = false; };
 
@@ -93,7 +92,7 @@
     flake-compat = { url = "github:edolstra/flake-compat"; flake = false; };
   };
 
-  outputs = inputs @ { self, agenix, nixpkgs, darwin, home-manager, fenix, flake-utils, haskell-nix, ... }:
+  outputs = inputs @ { self, agenix, nixpkgs, darwin, home-manager, fenix, flake-utils, haskell-nix, neovim-nightly-overlay, ... }:
     let
       supportedSystem = [ "aarch64-darwin" "x86_64-linux" "x86_64-darwin" ];
 
@@ -121,6 +120,7 @@
         overlays = nixpkgsOverlays ++ [
           haskell-nix.overlay
           fenix.overlay
+          neovim-nightly-overlay.overlay
         ];
       };
 
@@ -151,6 +151,7 @@
           {
             nixpkgs = nixpkgsConfig;
             users.users.${user}.home = "/Users/${user}";
+            home-manager.extraSpecialArgs = { inherit inputs; };
             home-manager.useGlobalPkgs = true;
             home-manager.users.${user} = homeManagerConfig args;
             networking = {
