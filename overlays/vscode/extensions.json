@@ -2,8 +2,8 @@
   {
     "name": "vscode-jest",
     "publisher": "orta",
-    "sha256": "157n7jna1hksgz1ahbcwjxcr189fwz1pqiwgvnvvii15yw871m8k",
-    "version": "5.2.0"
+    "sha256": "0086pq5dkrav5lr4fs73q82xvdzds793w4wwch0qw8yxxq2g1wbh",
+    "version": "5.2.3"
   },
   {
     "name": "flow-for-vscode",
@@ -74,14 +74,14 @@
   {
     "name": "shellcheck",
     "publisher": "timonwong",
-    "sha256": "sha256-KOmQVx51Z5cSHineI1ouLk1niwmex6ufQJfps5T9qck=",
-    "version": "0.29.3"
+    "sha256": "sha256-uQ17i1OMW5QGb4Xa+Qd/qmvWBl7OEhJjYWgGE4u4SXM=",
+    "version": "0.29.4"
   },
   {
     "name": "vscode-thunder-client",
     "publisher": "rangav",
-    "sha256": "0im9k3c9hhnxnx6gxsn5yc1pgrylg25drbi7sh2d7ywc2snmgl6y",
-    "version": "2.3.4"
+    "sha256": "07adsbnlbqas654r8zngw4969fj081i551q50lzpmfz8v11knxxm",
+    "version": "2.5.1"
   },
   {
     "name": "hadolint",
@@ -92,14 +92,14 @@
   {
     "name": "vscode-neovim",
     "publisher": "asvetliakov",
-    "sha256": "0sba9n9g96y30kl2wbrbbyh155yz9miqnrhnpi0hnyvz04is78cn",
-    "version": "0.0.95"
+    "sha256": "1z5vqvbgk6pn0li265mi0r28q4ir7wzd508q9sii933pc3qrdldc",
+    "version": "0.0.97"
   },
   {
     "name": "vitest-explorer",
     "publisher": "ZixuanChen",
-    "sha256": "0danyaydkw50wrfmbprn6bppkddfbv08qsw2ilmjx1dxb148v6nm",
-    "version": "0.2.37"
+    "sha256": "0d4mjz2f90inc9g2iag9ywx8gf122fjyxvbk2aizl9wvggvvi6sv",
+    "version": "0.2.39"
   },
   {
     "name": "vscode-postcss",
@@ -122,7 +122,7 @@
   {
     "name": "vscode-eslint",
     "publisher": "dbaeumer",
-    "sha256": "1kr1zbwffbbmv57hf7x65n2f6p9alk5cz6298230snv27fshiqag",
-    "version": "2.3.3"
+    "sha256": "02q5g5p2vy7yxm2l89zvlkfx4rkdyzrrjaa97gl5sf6g88k11igc",
+    "version": "2.4.0"
   }
 ]

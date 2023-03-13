@@ -444,11 +444,11 @@
     "neovim": {
       "flake": false,
       "locked": {
-        "lastModified": 1647990454,
-        "narHash": "sha256-d5vlmZX2xjb6T1Tx8tPlSm5e7Tv0UyKv/fTJoMHzKMQ=",
+        "lastModified": 1678682684,
+        "narHash": "sha256-txcpO0HtONr9a1WH0nKbaHgPHzAr6VJrW4MVFfbMR2U=",
         "owner": "neovim",
         "repo": "neovim",
-        "rev": "7735163652cd9082ef89cb31707ca77df12f7b70",
+        "rev": "773febc46087b5b38c1923389667b1513a78c089",
         "type": "github"
       },
       "original": {
@@ -629,11 +629,11 @@
     },
     "nixpkgs-unstable_2": {
       "locked": {
-        "lastModified": 1674611025,
-        "narHash": "sha256-MUlvQTFLb+kf3648JR73eeLo3AtkBpV+DDwEfWqtaz0=",
+        "lastModified": 1678672338,
+        "narHash": "sha256-9n7ygSC/OI0MdFCOH25oDV3N9QjGyMYmN2WCBBDthQ0=",
         "owner": "miuirussia",
         "repo": "nixpkgs",
-        "rev": "d438aa3e0431b1bf17cf12faa959c2e85db73ec6",
+        "rev": "074908b542e7ededa0bda6ed9007015f3f06ac12",
         "type": "github"
       },
       "original": {
@@ -1349,11 +1349,11 @@
     "tree-sitter": {
       "flake": false,
       "locked": {
-        "lastModified": 1646283052,
-        "narHash": "sha256-zaxy8VCfJKK8NtfuFFojmmP5a19FP1zO/eB5q1EoQPw=",
+        "lastModified": 1676579206,
+        "narHash": "sha256-/PaFaASOT0Z8FpipX5uiRCjnv1kyZtg4B9+TnHA0yTY=",
         "owner": "tree-sitter",
         "repo": "tree-sitter",
-        "rev": "ccd6bf554d922596ce905730d98a77af368bba5c",
+        "rev": "c51896d32dcc11a38e41f36e3deb1a6a9c4f4b14",
         "type": "github"
       },
       "original": {

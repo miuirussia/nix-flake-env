@@ -25,7 +25,7 @@
 - name: shellcheck
   publisher: timonwong
   overrides:
-    0.29.3: sha256-KOmQVx51Z5cSHineI1ouLk1niwmex6ufQJfps5T9qck=
+    0.29.4: sha256-uQ17i1OMW5QGb4Xa+Qd/qmvWBl7OEhJjYWgGE4u4SXM=
 - name: vscode-thunder-client
   publisher: rangav
 - name: hadolint
