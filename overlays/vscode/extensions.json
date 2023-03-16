@@ -124,5 +124,11 @@
     "publisher": "dbaeumer",
     "sha256": "02q5g5p2vy7yxm2l89zvlkfx4rkdyzrrjaa97gl5sf6g88k11igc",
     "version": "2.4.0"
+  },
+  {
+    "name": "yuck",
+    "publisher": "eww-yuck",
+    "sha256": "1hxdxa13s1vlilw7fidr8vnl19c9wjazjvnvmqgl4fsswwny110c",
+    "version": "0.0.3"
   }
 ]

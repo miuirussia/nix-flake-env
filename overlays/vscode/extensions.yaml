@@ -42,3 +42,5 @@
   publisher: teabyii
 - name: vscode-eslint
   publisher: dbaeumer
+- name: yuck
+  publisher: eww-yuck
