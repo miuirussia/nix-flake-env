@@ -77,6 +77,10 @@ in {
     semanticHighlighting.enabled = true;
     tabSize = 2;
   };
+  
+  explorer = {
+    confirmDelete = false;
+  };
 
   workbench = {
     colorTheme = "Ayu Mirage Bordered";
@@ -198,6 +202,7 @@ in {
 
   terminal = {
     integrated = {
+      persistentSessionReviveProcess = "never";
       defaultProfile = {
         osx = "zsh";
         linux = "zsh";

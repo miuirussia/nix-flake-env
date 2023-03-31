@@ -26,6 +26,7 @@
   publisher: timonwong
   overrides:
     0.29.4: sha256-uQ17i1OMW5QGb4Xa+Qd/qmvWBl7OEhJjYWgGE4u4SXM=
+    0.31.1: sha256-KF9KhwOS3FdqQoehe3b7Wy7z8stRpD3ykNYf9XJBGcM=
 - name: vscode-thunder-client
   publisher: rangav
 - name: hadolint
