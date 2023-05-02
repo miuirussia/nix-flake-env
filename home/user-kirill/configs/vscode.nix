@@ -202,6 +202,7 @@ in {
 
   terminal = {
     integrated = {
+      tabs.enabled = false;
       persistentSessionReviveProcess = "never";
       defaultProfile = {
         osx = "zsh";
