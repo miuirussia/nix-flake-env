@@ -38,8 +38,8 @@
   {
     "name": "haskell",
     "publisher": "haskell",
-    "sha256": "1d5b0p6r9ipwb7j4cx9w13vq31h78bh2sfwl54xri4gyvialhryd",
-    "version": "2.2.2"
+    "sha256": "1qsvfb2a2k48gndda92w91z9acis43a151cdwmkmb8qprl311768",
+    "version": "2.2.4"
   },
   {
     "name": "language-haskell",
@@ -74,14 +74,14 @@
   {
     "name": "shellcheck",
     "publisher": "timonwong",
-    "sha256": "sha256-KF9KhwOS3FdqQoehe3b7Wy7z8stRpD3ykNYf9XJBGcM=",
-    "version": "0.31.1"
+    "sha256": "sha256-DkR7HH3CitUuQ6LrmGMGZh5RDYLxAgy/aoafcF0bsSk=",
+    "version": "0.32.5"
   },
   {
     "name": "vscode-thunder-client",
     "publisher": "rangav",
-    "sha256": "01jcaq1q1da569qqznqgjwz0s2q5148zp0ry45lkiyj9qf8fk646",
-    "version": "2.5.3"
+    "sha256": "1592bckvdgr9r7smbh7msbj2s7imf4x9jjbli613r62nq1qz7n7f",
+    "version": "2.6.2"
   },
   {
     "name": "hadolint",
@@ -110,8 +110,8 @@
   {
     "name": "gitblame",
     "publisher": "waderyan",
-    "sha256": "1z8frp0l2g5j4n07pdgqc2jlzm3cxya1j6ry1d4caw10krl02djd",
-    "version": "10.1.0"
+    "sha256": "0iq2dlgkj7wqwdafcsg8acf3s5rcpfps82i5aj8qvjwv0xqrxyy3",
+    "version": "10.2.0"
   },
   {
     "name": "ayu",
@@ -130,5 +130,17 @@
     "publisher": "eww-yuck",
     "sha256": "1hxdxa13s1vlilw7fidr8vnl19c9wjazjvnvmqgl4fsswwny110c",
     "version": "0.0.3"
+  },
+  {
+    "name": "todo-tree",
+    "publisher": "Gruntfuggly",
+    "sha256": "0yrc9qbdk7zznd823bqs1g6n2i5xrda0f9a7349kknj9wp1mqgqn",
+    "version": "0.0.226"
+  },
+  {
+    "name": "vscode-todo-highlight",
+    "publisher": "wayou",
+    "sha256": "1sg4zbr1jgj9adsj3rik5flcn6cbr4k2pzxi446rfzbzvcqns189",
+    "version": "1.0.5"
   }
 ]

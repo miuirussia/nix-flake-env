@@ -221,4 +221,6 @@ in {
   };
 
   vscode-dhall-lsp-server.executable = "${pkgs.dhall-lsp-server}/bin/dhall-lsp-server";
+
+  todo-tree.highlights.enabled = false;
 }
