@@ -50,3 +50,5 @@
   publisher: Gruntfuggly
 - name: vscode-todo-highlight
   publisher: wayou
+- name: pretty-ts-errors
+  publisher: yoavbls

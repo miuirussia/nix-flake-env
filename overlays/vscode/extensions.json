@@ -142,5 +142,11 @@
     "publisher": "wayou",
     "sha256": "1sg4zbr1jgj9adsj3rik5flcn6cbr4k2pzxi446rfzbzvcqns189",
     "version": "1.0.5"
+  },
+  {
+    "name": "pretty-ts-errors",
+    "publisher": "yoavbls",
+    "sha256": "1p4shymmibm4h6ygvhk56gc093lcnisc205hf612jd498qg1bgim",
+    "version": "0.4.0"
   }
 ]
