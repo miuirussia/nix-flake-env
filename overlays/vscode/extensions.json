@@ -80,8 +80,8 @@
   {
     "name": "vscode-thunder-client",
     "publisher": "rangav",
-    "sha256": "1592bckvdgr9r7smbh7msbj2s7imf4x9jjbli613r62nq1qz7n7f",
-    "version": "2.6.2"
+    "sha256": "111xv472x4chnry91jl2qbv9f4j91r114jsh18pmjavlwb94a7b5",
+    "version": "2.7.0"
   },
   {
     "name": "hadolint",
@@ -98,8 +98,8 @@
   {
     "name": "vitest-explorer",
     "publisher": "ZixuanChen",
-    "sha256": "0d4mjz2f90inc9g2iag9ywx8gf122fjyxvbk2aizl9wvggvvi6sv",
-    "version": "0.2.39"
+    "sha256": "1wfhgq7lldphfqsjai0klhpdc2syhial2yawml99gkawxrw8fj1q",
+    "version": "0.2.41"
   },
   {
     "name": "vscode-postcss",
@@ -122,8 +122,8 @@
   {
     "name": "vscode-eslint",
     "publisher": "dbaeumer",
-    "sha256": "02q5g5p2vy7yxm2l89zvlkfx4rkdyzrrjaa97gl5sf6g88k11igc",
-    "version": "2.4.0"
+    "sha256": "01xmwq0l912ysjqazzm86yz4jnmzp0j0hmp2hlqr8f6zbws5sas6",
+    "version": "2.4.1"
   },
   {
     "name": "yuck",
@@ -146,7 +146,7 @@
   {
     "name": "pretty-ts-errors",
     "publisher": "yoavbls",
-    "sha256": "1p4shymmibm4h6ygvhk56gc093lcnisc205hf612jd498qg1bgim",
-    "version": "0.4.0"
+    "sha256": "1hq15xkfnm6nack6j2f6c3x038wlbdzpkzc15lbvgp34xxadv3xx",
+    "version": "0.4.1"
   }
 ]
