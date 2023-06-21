@@ -24,16 +24,16 @@ execute 'set backupdir=' . s:backup_dir
 execute 'set directory=' . s:directory_dir
 
 set nocompatible
-set clipboard+=unnamed
-
-" remap leader
-" map leader key to space
-let g:mapleader = ","
-let g:maplocalleader = ","
 
 lua << EOF
 local o = vim.opt
 
 o.whichwrap = o.whichwrap + "<,>,[,],h,l"
 o.encoding = "UTF-8"
+o.clipboard:append { 'unnamed', 'unnamedplus' }
 EOF
+
+" remap leader
+" map leader key to space
+let g:mapleader = ","
+let g:maplocalleader = ","
