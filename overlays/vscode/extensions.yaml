@@ -28,6 +28,8 @@
     0.29.4: sha256-uQ17i1OMW5QGb4Xa+Qd/qmvWBl7OEhJjYWgGE4u4SXM=
     0.31.1: sha256-KF9KhwOS3FdqQoehe3b7Wy7z8stRpD3ykNYf9XJBGcM=
     0.32.5: sha256-DkR7HH3CitUuQ6LrmGMGZh5RDYLxAgy/aoafcF0bsSk=
+    0.32.6: sha256-/RDvLq82laq4HBpRwP82oTCTXvGeAa0YFAfeFhRqnzQ=
+    0.33.0: sha256-dDd2Pf26XWehPaIxHBsZ2JDTylvcEwQVffqV+X03wlc=
 - name: vscode-thunder-client
   publisher: rangav
 - name: hadolint

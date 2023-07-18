@@ -2,8 +2,8 @@
   {
     "name": "vscode-jest",
     "publisher": "orta",
-    "sha256": "0086pq5dkrav5lr4fs73q82xvdzds793w4wwch0qw8yxxq2g1wbh",
-    "version": "5.2.3"
+    "sha256": "0g1s2rkjbiggqr9vcaj2rkj2i2b445id78na33ngcwjj20yxv68z",
+    "version": "6.0.0"
   },
   {
     "name": "flow-for-vscode",
@@ -38,8 +38,8 @@
   {
     "name": "haskell",
     "publisher": "haskell",
-    "sha256": "1qsvfb2a2k48gndda92w91z9acis43a151cdwmkmb8qprl311768",
-    "version": "2.2.4"
+    "sha256": "0hq36kv86klhmis29r513f3mncrgadjks3dnjp67kq61djmm5cjl",
+    "version": "2.4.0"
   },
   {
     "name": "language-haskell",
@@ -74,14 +74,14 @@
   {
     "name": "shellcheck",
     "publisher": "timonwong",
-    "sha256": "sha256-DkR7HH3CitUuQ6LrmGMGZh5RDYLxAgy/aoafcF0bsSk=",
-    "version": "0.32.5"
+    "sha256": "sha256-dDd2Pf26XWehPaIxHBsZ2JDTylvcEwQVffqV+X03wlc=",
+    "version": "0.33.0"
   },
   {
     "name": "vscode-thunder-client",
     "publisher": "rangav",
-    "sha256": "111xv472x4chnry91jl2qbv9f4j91r114jsh18pmjavlwb94a7b5",
-    "version": "2.7.0"
+    "sha256": "0b71d47rdd9570fyq4vm7vr26992yfc7pfkq0siz9hm07iqh06nq",
+    "version": "2.9.2"
   },
   {
     "name": "hadolint",
@@ -92,14 +92,14 @@
   {
     "name": "vscode-neovim",
     "publisher": "asvetliakov",
-    "sha256": "1z5vqvbgk6pn0li265mi0r28q4ir7wzd508q9sii933pc3qrdldc",
-    "version": "0.0.97"
+    "sha256": "0gpvn1bf6vlswcvwcqbs7wvpj8fr22cj1f9l51az6c986r85mpwj",
+    "version": "0.3.2"
   },
   {
     "name": "vitest-explorer",
     "publisher": "ZixuanChen",
-    "sha256": "1wfhgq7lldphfqsjai0klhpdc2syhial2yawml99gkawxrw8fj1q",
-    "version": "0.2.41"
+    "sha256": "0p94izg2jpsycair1gw7jx3k14m0n2b73a8p2r7myxcwc5z6xirn",
+    "version": "0.2.42"
   },
   {
     "name": "vscode-postcss",
@@ -110,8 +110,8 @@
   {
     "name": "gitblame",
     "publisher": "waderyan",
-    "sha256": "0iq2dlgkj7wqwdafcsg8acf3s5rcpfps82i5aj8qvjwv0xqrxyy3",
-    "version": "10.2.0"
+    "sha256": "0gch9ank9pnr5zflgwk5k137ma6smqf3phd3qxg79yk2dcqfbwrw",
+    "version": "10.4.0"
   },
   {
     "name": "ayu",
@@ -122,8 +122,8 @@
   {
     "name": "vscode-eslint",
     "publisher": "dbaeumer",
-    "sha256": "01xmwq0l912ysjqazzm86yz4jnmzp0j0hmp2hlqr8f6zbws5sas6",
-    "version": "2.4.1"
+    "sha256": "1g5mavks3m4fnn7wav659rdnd9f3lp7r96g8niad4g1vaj4xm23q",
+    "version": "2.4.2"
   },
   {
     "name": "yuck",
