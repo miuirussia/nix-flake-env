@@ -15,6 +15,7 @@ let
     system-ghc = true;
     install-ghc = false;
     nix.enable = false;
+    ghc-options."$locals" = "-optP-Wno-nonportable-include-path";
   };
 
   stackWithConfig = config: (
