@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs = { url = "github:miuirussia/nixpkgs/ff1e08c92637f43f1ac8923555e0909dc93d9d28"; };
     nixpkgs-unstable = { url = "github:miuirussia/nixpkgs"; };
-    nixUnstable = { url = "github:NixOS/nix/3e1a4b18b6fb4dcd276b908dd2c0623d236fe400"; };
+    nixUnstable = { url = "github:NixOS/nix/e503eadafc5fb79dabcca161aa3bf41a4fb777a5"; };
     fenix = { url = "github:nix-community/fenix"; inputs.nixpkgs.follows = "nixpkgs"; };
 
     agenix.url = "github:yaxitech/ragenix";

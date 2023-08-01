@@ -50,8 +50,8 @@
   {
     "name": "nix-ide",
     "publisher": "jnoortheen",
-    "sha256": "0bibb3r4cb7chnx6vpyl41ig12pc0cbg0sb8f2khs52c71nk4bn8",
-    "version": "0.2.1"
+    "sha256": "1264027sjh9a112si0y0p3pk3y36shj5b4qkpsj207z7lbxqq0wg",
+    "version": "0.2.2"
   },
   {
     "name": "ide-purescript",
@@ -80,8 +80,8 @@
   {
     "name": "vscode-thunder-client",
     "publisher": "rangav",
-    "sha256": "0b71d47rdd9570fyq4vm7vr26992yfc7pfkq0siz9hm07iqh06nq",
-    "version": "2.9.2"
+    "sha256": "1fc216yg78747zdxqqmd1k600f67486ax9dv291qf5176ii6rc7i",
+    "version": "2.10.0"
   },
   {
     "name": "hadolint",
@@ -92,8 +92,8 @@
   {
     "name": "vscode-neovim",
     "publisher": "asvetliakov",
-    "sha256": "0gpvn1bf6vlswcvwcqbs7wvpj8fr22cj1f9l51az6c986r85mpwj",
-    "version": "0.3.2"
+    "sha256": "1mhj9q3by2wfqj7sk0zf5llq6i8rlkn10f0s5i2vp46vknjbjdzp",
+    "version": "0.4.1"
   },
   {
     "name": "vitest-explorer",
@@ -146,7 +146,7 @@
   {
     "name": "pretty-ts-errors",
     "publisher": "yoavbls",
-    "sha256": "1hq15xkfnm6nack6j2f6c3x038wlbdzpkzc15lbvgp34xxadv3xx",
-    "version": "0.4.1"
+    "sha256": "0j3kcn9ryzxig8hchns5pz3xsrazpsrm3h8946ak1n9arq88wdyp",
+    "version": "0.5.0"
   }
 ]
