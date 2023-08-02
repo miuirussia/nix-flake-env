@@ -92,7 +92,7 @@
     flake-compat = { url = "github:edolstra/flake-compat"; flake = false; };
   };
 
-  outputs = inputs @ { self, agenix, nixpkgs, darwin, home-manager, fenix, flake-utils, haskell-nix, neovim-nightly-overlay, ... }:
+  outputs = inputs @ { self, agenix, nixpkgs, nixpkgs-unstable, darwin, home-manager, fenix, flake-utils, haskell-nix, neovim-nightly-overlay, ... }:
     let
       supportedSystem = [ "aarch64-darwin" "x86_64-linux" "x86_64-darwin" ];
 
@@ -187,6 +187,20 @@
         ];
     in
     {
+      apps.x86_64-darwin = {
+        update = with nixpkgs-unstable.legacyPackages.x86_64-darwin; {
+          type = "app";
+          program = "${(writeShellScript "update" ''
+            echo "Update apple fonts..."
+            (cd overlays/fonts && ./apple-update)
+            echo "Update vscode plugins..."
+            (cd overlays/vscode && ./update-vscode-plugins.py)
+            echo "Update node modules..."
+            (cd overlays/nodePackages/lib && ${node2nix}/bin/node2nix -i node-packages.json -18)
+          '')}";
+        };
+      };
+
       darwinConfigurations = {
         bootstrap = darwin.lib.darwinSystem {
           inputs = inputs;
