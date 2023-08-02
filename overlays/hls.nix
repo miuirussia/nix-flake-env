@@ -15,10 +15,10 @@ in
       "902"
     ];
   }).overrideAttrs (oldAttrs: {
-    buildInputs = oldAttrs.buildInputs or [] ++ [ prev.makeWrapper ];
-    postInstall = oldAttrs.postInstall or "" + ''
+    buildInputs = oldAttrs.buildInputs or [ ] ++ [ prev.makeWrapper ];
+    buildCommand = oldAttrs.buildCommand or "" + ''
       wrapProgram $out/bin/haskell-language-server-wrapper \
         --prefix PATH : $out/bin
-    ''; 
+    '';
   });
 }
