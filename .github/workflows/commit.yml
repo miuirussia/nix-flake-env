@@ -36,6 +36,4 @@ jobs:
           nix flake show
       - name: Build
         run: |
-          nix build --print-build-logs --show-trace --no-link .#darwinConfigurations.home.system
           nix build --print-build-logs --show-trace --no-link .#darwinConfigurations.work.system
-          nix build --print-build-logs --show-trace --no-link .#darwinConfigurations.macbook.system

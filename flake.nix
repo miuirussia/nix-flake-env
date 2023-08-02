@@ -196,34 +196,6 @@
           system = "x86_64-darwin";
         };
 
-        ghActions = darwin.lib.darwinSystem {
-          inputs = inputs;
-          modules = mkDarwinModules {
-            user = "runner";
-            host = "mac-gh";
-          };
-          system = "x86_64-darwin";
-        };
-
-        home = darwin.lib.darwinSystem {
-          inputs = inputs;
-          modules = mkDarwinModules {
-            user = "kirill";
-            host = "kirill-imac";
-          };
-          system = "x86_64-darwin";
-        };
-
-        macbook = darwin.lib.darwinSystem {
-          inputs = inputs;
-          modules = mkDarwinModules {
-            user = "kirill";
-            host = "kirill-macbook";
-            hostLink = "kirill-imac";
-          };
-          system = "x86_64-darwin";
-        };
-
         work = darwin.lib.darwinSystem {
           inputs = inputs;
           modules = mkDarwinModules {
@@ -231,17 +203,6 @@
             host = "kkuznetsov";
           };
           system = "x86_64-darwin";
-        };
-      };
-
-      nixosConfigurations = {
-        test = nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          specialArgs = { inherit inputs; };
-          modules = mkNixosModules {
-            user = "kirill";
-            host = "test";
-          };
         };
       };
 
