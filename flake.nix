@@ -98,6 +98,13 @@
 
       forAllSystems = f: nixpkgs.lib.genAttrs supportedSystem (system: f system);
 
+      composeExtensions = f: g: final: prev:
+        let
+          fApplied = f final prev;
+          prev' = prev // fApplied;
+        in
+        fApplied // g final prev';
+
       nixpkgsOverlays =
         let
           path = ./overlays;
@@ -112,16 +119,18 @@
             )
             (attrNames (readDir path))
         );
+  
+      overlays = nixpkgsOverlays ++ [
+        haskell-nix.overlay
+        fenix.overlay
+        neovim-nightly-overlay.overlay
+      ];
 
       nixpkgsConfig = with inputs; {
         config = {
           allowUnfree = true;
         };
-        overlays = nixpkgsOverlays ++ [
-          haskell-nix.overlay
-          fenix.overlay
-          neovim-nightly-overlay.overlay
-        ];
+        inherit overlays;
       };
 
       homeManagerConfig =
@@ -187,6 +196,8 @@
         ];
     in
     {
+      overlay = builtins.foldl' composeExtensions (_: _: { }) overlays;
+
       apps.x86_64-darwin = {
         update = with nixpkgs-unstable.legacyPackages.x86_64-darwin; {
           type = "app";
