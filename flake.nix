@@ -13,18 +13,6 @@
     darwin = { url = "github:LnL7/nix-darwin/master"; inputs.nixpkgs.follows = "nixpkgs"; };
     home-manager = { url = "github:nix-community/home-manager"; inputs.nixpkgs.follows = "nixpkgs"; };
 
-    # haskell-nix
-    hackage = { url = "github:input-output-hk/hackage.nix"; flake = false; };
-    stackage = { url = "github:input-output-hk/stackage.nix"; flake = false; };
-    haskell-nix = {
-      url = "github:input-output-hk/haskell.nix";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        hackage.follows = "hackage";
-        stackage.follows = "stackage";
-      };
-    };
-
     # fonts
     jetbrains-mono = { url = "github:JetBrains/JetBrainsMono"; flake = false; };
 
@@ -92,7 +80,7 @@
     flake-compat = { url = "github:edolstra/flake-compat"; flake = false; };
   };
 
-  outputs = inputs @ { self, agenix, nixpkgs, nixpkgs-unstable, darwin, home-manager, fenix, flake-utils, haskell-nix, neovim-nightly-overlay, ... }:
+  outputs = inputs @ { self, agenix, nixpkgs, nixpkgs-unstable, darwin, home-manager, fenix, flake-utils, neovim-nightly-overlay, ... }:
     let
       supportedSystem = [ "aarch64-darwin" "x86_64-linux" "x86_64-darwin" ];
 
@@ -121,7 +109,6 @@
         );
   
       overlays = nixpkgsOverlays ++ [
-        haskell-nix.overlay
         fenix.overlay
         neovim-nightly-overlay.overlay
       ];
