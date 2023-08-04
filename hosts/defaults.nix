@@ -78,7 +78,7 @@
         fonts = with pkgs; [
           jetbrains-mono
           otf-apple
-          opensans-ttf
+          open-sans
         ];
       }
     ]

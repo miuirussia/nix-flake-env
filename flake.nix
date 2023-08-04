@@ -2,8 +2,7 @@
   description = "KDeveloper system config";
 
   inputs = {
-    nixpkgs = { url = "github:miuirussia/nixpkgs/ff1e08c92637f43f1ac8923555e0909dc93d9d28"; };
-    nixpkgs-unstable = { url = "github:miuirussia/nixpkgs"; };
+    nixpkgs = { url = "github:miuirussia/nixpkgs"; };
     nixUnstable = { url = "github:NixOS/nix/e503eadafc5fb79dabcca161aa3bf41a4fb777a5"; };
     fenix = { url = "github:nix-community/fenix"; inputs.nixpkgs.follows = "nixpkgs"; };
 
@@ -80,7 +79,7 @@
     flake-compat = { url = "github:edolstra/flake-compat"; flake = false; };
   };
 
-  outputs = inputs @ { self, agenix, nixpkgs, nixpkgs-unstable, darwin, home-manager, fenix, flake-utils, neovim-nightly-overlay, ... }:
+  outputs = inputs @ { self, agenix, nixpkgs, darwin, home-manager, fenix, flake-utils, neovim-nightly-overlay, ... }:
     let
       supportedSystem = [ "aarch64-darwin" "x86_64-linux" "x86_64-darwin" ];
 
@@ -109,7 +108,7 @@
         );
   
       overlays = nixpkgsOverlays ++ [
-        fenix.overlay
+        fenix.overlays.default
         neovim-nightly-overlay.overlay
       ];
 
@@ -157,7 +156,7 @@
             };
           }
           {
-            environment.systemPackages = [ agenix.defaultPackage.x86_64-darwin ];
+            environment.systemPackages = [ agenix.packages.x86_64-darwin.default ];
           }
         ];
 
@@ -186,7 +185,7 @@
       overlay = builtins.foldl' composeExtensions (_: _: { }) overlays;
 
       apps.x86_64-darwin = {
-        update = with nixpkgs-unstable.legacyPackages.x86_64-darwin; {
+        update = with nixpkgs.legacyPackages.x86_64-darwin; {
           type = "app";
           program = "${(writeShellScript "update" ''
             echo "Update apple fonts..."

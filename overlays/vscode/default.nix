@@ -1,22 +1,14 @@
 inputs: final: prev:
 
-let
-  unstable = import inputs.nixpkgs-unstable {
-    system = prev.system;
-    config = {
-      allowUnfree = true;
-    };
-  };
-in
 rec {
   vscode-mp-extensions = with builtins; (
     [
-      unstable.vscode-extensions.rust-lang.rust-analyzer
+      prev.vscode-extensions.rust-lang.rust-analyzer
     ]
-  ) ++ unstable.vscode-utils.extensionsFromVscodeMarketplace (fromJSON (readFile ./extensions.json));
+  ) ++ prev.vscode-utils.extensionsFromVscodeMarketplace (fromJSON (readFile ./extensions.json));
 
-  vscode-custom = unstable.vscode-with-extensions.override {
-    vscode = unstable.vscodium;
+  vscode-custom = prev.vscode-with-extensions.override {
+    vscode = prev.vscodium;
     vscodeExtensions = vscode-mp-extensions;
   };
 }

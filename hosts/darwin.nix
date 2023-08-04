@@ -67,7 +67,7 @@
       NSGlobalDomain.NSNavPanelExpandedStateForSaveMode2 = true;
 
       # System - Decrease window resize duration
-      NSGlobalDomain.NSWindowResizeTime = "0.001";
+      NSGlobalDomain.NSWindowResizeTime = 0.001;
 
       # Printer - Expand print panel by default.
       NSGlobalDomain.PMPrintingExpandedStateForPrint = true;

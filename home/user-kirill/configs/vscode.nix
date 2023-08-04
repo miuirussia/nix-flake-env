@@ -1,13 +1,6 @@
 { inputs, config, pkgs, ... }:
 
-let
-  unstable = import inputs.nixpkgs-unstable {
-    system = pkgs.system;
-    config = {
-      allowUnfree = true;
-    };
-  };
-in {
+{
   window.menuBarVisibility = "toggle";
 
   telemetry.telemetryLevel = "off";
@@ -158,7 +151,7 @@ in {
   vscode-neovim = {
     neovimExecutablePaths =
       let
-        vscode-neovim = unstable.wrapNeovim pkgs.neovim-unwrapped {
+        vscode-neovim = pkgs.wrapNeovim pkgs.neovim-unwrapped {
           withNodeJs = true;
           withPython3 = true;
           withRuby = true;
