@@ -21,8 +21,11 @@
       builders-use-substitutes = true
     '';
 
-    binaryCaches = builtins.map (a: a.url) caches;
-    binaryCachePublicKeys = builtins.map (a: a.key) caches;
+
+    settings = {
+      substituters = builtins.map (a: a.url) caches;
+      trusted-public-keys = builtins.map (a: a.key) caches;
+    };
   };
 
   environment = {

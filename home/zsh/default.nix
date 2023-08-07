@@ -14,7 +14,7 @@
     autocd = true;
     enableAutosuggestions = true;
     enableCompletion = true;
-    enableSyntaxHighlighting = false;
+    syntaxHighlighting.enable = false;
 
     history = {
       expireDuplicatesFirst = true;

@@ -6,18 +6,22 @@
   ];
 
   nix = {
-    useSandbox = false;
+    configureBuildUsers = true;
+
     gc.automatic = false;
     gc.interval = { Weekday = 5; Hour = 3; Minute = 15; }; # Thu 03:15
     gc.options = "--delete-older-than 30d";
-    trustedUsers = [ "root" ];
+
+    settings = {
+      sandbox = false;
+      trusted-users = [ "root" ];
+    };
   };
 
   services = {
     nix-daemon.enable = true;
   };
 
-  users.nix.configureBuildUsers = true;
 
   system.stateVersion = 4;
 
