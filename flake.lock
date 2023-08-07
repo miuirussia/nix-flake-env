@@ -5,7 +5,9 @@
         "agenix": "agenix_2",
         "crane": "crane",
         "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
         "rust-overlay": "rust-overlay"
       },
       "locked": {
@@ -353,7 +355,9 @@
       "inputs": {
         "flake-compat": "flake-compat_3",
         "lowdown-src": "lowdown-src",
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
         "nixpkgs-regression": "nixpkgs-regression"
       },
       "locked": {
@@ -373,16 +377,15 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1681920287,
-        "narHash": "sha256-+/d6XQQfhhXVfqfLROJoqj3TuG38CAeoT6jO1g9r1k0=",
-        "owner": "nixos",
+        "lastModified": 1691372155,
+        "narHash": "sha256-hhm7kPLE8kXQMq7fkrn5kiqdSCy+Bc7bYs27v4otMJY=",
+        "owner": "miuirussia",
         "repo": "nixpkgs",
-        "rev": "645bc49f34fa8eff95479f0345ff57e55b53437e",
+        "rev": "48516fdd5b7ea910bf82b056030eea8960791599",
         "type": "github"
       },
       "original": {
-        "owner": "nixos",
-        "ref": "nixos-unstable",
+        "owner": "miuirussia",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -400,37 +403,6 @@
         "owner": "NixOS",
         "repo": "nixpkgs",
         "rev": "215d4d0fd80ca5163643b03a33fde804a29cc1e2",
-        "type": "github"
-      }
-    },
-    "nixpkgs_2": {
-      "locked": {
-        "lastModified": 1670461440,
-        "narHash": "sha256-jy1LB8HOMKGJEGXgzFRLDU1CBGL0/LlkolgnqIsF0D8=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "04a75b2eecc0acf6239acf9dd04485ff8d14f425",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-22.11-small",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_3": {
-      "locked": {
-        "lastModified": 1691372155,
-        "narHash": "sha256-hhm7kPLE8kXQMq7fkrn5kiqdSCy+Bc7bYs27v4otMJY=",
-        "owner": "miuirussia",
-        "repo": "nixpkgs",
-        "rev": "48516fdd5b7ea910bf82b056030eea8960791599",
-        "type": "github"
-      },
-      "original": {
-        "owner": "miuirussia",
-        "repo": "nixpkgs",
         "type": "github"
       }
     },
@@ -959,7 +931,7 @@
         "jetbrains-mono": "jetbrains-mono",
         "neovim-nightly": "neovim-nightly",
         "nixUnstable": "nixUnstable",
-        "nixpkgs": "nixpkgs_3",
+        "nixpkgs": "nixpkgs",
         "nvim-actionmenu": "nvim-actionmenu",
         "nvim-bufferline": "nvim-bufferline",
         "nvim-cmp": "nvim-cmp",

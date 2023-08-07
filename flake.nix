@@ -3,10 +3,16 @@
 
   inputs = {
     nixpkgs = { url = "github:miuirussia/nixpkgs"; };
-    nixUnstable = { url = "github:NixOS/nix/e503eadafc5fb79dabcca161aa3bf41a4fb777a5"; };
+    nixUnstable = {
+      url = "github:NixOS/nix/e503eadafc5fb79dabcca161aa3bf41a4fb777a5";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     fenix = { url = "github:nix-community/fenix"; inputs.nixpkgs.follows = "nixpkgs"; };
 
-    agenix.url = "github:yaxitech/ragenix";
+    agenix = {
+      url = "github:yaxitech/ragenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # dotenv management
     darwin = { url = "github:LnL7/nix-darwin/master"; inputs.nixpkgs.follows = "nixpkgs"; };
