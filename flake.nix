@@ -3,10 +3,7 @@
 
   inputs = {
     nixpkgs = { url = "github:miuirussia/nixpkgs"; };
-    nixUnstable = {
-      url = "github:NixOS/nix/e503eadafc5fb79dabcca161aa3bf41a4fb777a5";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    nixUnstable.url = "github:NixOS/nix/e503eadafc5fb79dabcca161aa3bf41a4fb777a5";
     fenix = { url = "github:nix-community/fenix"; inputs.nixpkgs.follows = "nixpkgs"; };
 
     agenix = {
