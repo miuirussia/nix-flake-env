@@ -24,7 +24,10 @@
     zsh-yarn-completions = { url = "github:chrisands/zsh-yarn-completions"; flake = false; };
 
     # neovim
-    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+    neovim-nightly = {
+      url = "github:neovim/neovim/nightly?dir=contrib";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     nvim-onedark = { url = "github:navarasu/onedark.nvim"; flake = false; };
 
@@ -79,7 +82,7 @@
     flake-compat = { url = "github:edolstra/flake-compat"; flake = false; };
   };
 
-  outputs = inputs @ { self, agenix, nixpkgs, darwin, home-manager, fenix, flake-utils, neovim-nightly-overlay, ... }:
+  outputs = inputs @ { self, agenix, nixpkgs, darwin, home-manager, fenix, flake-utils, ... }:
     let
       supportedSystem = [ "aarch64-darwin" "x86_64-linux" "x86_64-darwin" ];
 
@@ -106,10 +109,9 @@
             )
             (attrNames (readDir path))
         );
-  
+
       overlays = nixpkgsOverlays ++ [
         fenix.overlays.default
-        neovim-nightly-overlay.overlay
       ];
 
       nixpkgsConfig = with inputs; {
@@ -158,27 +160,6 @@
           {
             environment.systemPackages = [ agenix.packages.x86_64-darwin.default ];
           }
-        ];
-
-      mkNixosModules =
-        args @ { user
-        , host
-        ,
-        }: [
-          home-manager.nixosModules.home-manager
-          ({ pkgs, ... }: {
-            nixpkgs = nixpkgsConfig;
-            users.users.${user} = {
-              createHome = true;
-              extraGroups = [ "wheel" ];
-              group = "${user}";
-              home = "/home/${user}";
-              isNormalUser = true;
-              shell = pkgs.zsh;
-            };
-            home-manager.useGlobalPkgs = true;
-            home-manager.users.${user} = homeManagerConfig args;
-          })
         ];
     in
     {
