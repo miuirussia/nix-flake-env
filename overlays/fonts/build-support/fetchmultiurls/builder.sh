@@ -30,8 +30,6 @@ download() {
     local out="$downloadPath/$file"
     mkdir -p $(dirname $out)
 
-    header "downloading $url"
-
     # if we get error code 18, resume partial download
     local curlexit=18;
     while [ $curlexit -eq 18 ]; do

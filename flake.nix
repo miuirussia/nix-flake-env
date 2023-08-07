@@ -163,22 +163,6 @@
         ];
     in
     {
-      overlay = builtins.foldl' composeExtensions (_: _: { }) overlays;
-
-      apps.x86_64-darwin = {
-        update = with nixpkgs.legacyPackages.x86_64-darwin; {
-          type = "app";
-          program = "${(writeShellScript "update" ''
-            echo "Update apple fonts..."
-            (cd overlays/fonts && ./apple-update)
-            echo "Update vscode plugins..."
-            (cd overlays/vscode && ./update-vscode-plugins.py)
-            echo "Update node modules..."
-            (cd overlays/nodePackages/lib && ${node2nix}/bin/node2nix -i node-packages.json -18)
-          '')}";
-        };
-      };
-
       darwinConfigurations = {
         bootstrap = darwin.lib.darwinSystem {
           inputs = inputs;
@@ -197,6 +181,22 @@
           system = "x86_64-darwin";
         };
       };
+
+      overlay = builtins.foldl' composeExtensions (_: _: { }) overlays;
+
+      apps = forAllSystems (system: {
+        update = with nixpkgs.legacyPackages.${system}; {
+          type = "app";
+          program = "${(writeShellScript "update" ''
+            echo "Update apple fonts..."
+            (cd overlays/fonts && ./apple-update)
+            echo "Update vscode plugins..."
+            (cd overlays/vscode && ./update-vscode-plugins.py)
+            echo "Update node modules..."
+            (cd overlays/nodePackages/lib && ${node2nix}/bin/node2nix -i node-packages.json -18)
+          '')}";
+        };
+      });
 
       pkgs = forAllSystems (
         system:

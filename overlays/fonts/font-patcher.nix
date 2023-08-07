@@ -5,17 +5,18 @@ let
   font-patcher-repo = {
     owner = "ryanoasis";
     repo = "nerd-fonts";
-    rev = "ac5a5f0b591170dbecfcd503aa22a564cd88be1d";
+    rev = "ef2ff04a3ec28f522950a6c486715accc0601478";
   };
 
   font-patcher-src = fetchGitHubFiles {
     name = "font-patcher-${font-patcher-repo.rev}-src";
     inherit (font-patcher-repo) owner repo rev;
     paths = [
+      "bin/scripts/name_parser"
       "font-patcher"
       "src/glyphs"
     ];
-    sha256 = "1yf12p4dsfy5pqnmn28q7pbadr63dpymmx8xzck21sbwl5qhlfzm";
+    sha256 = "sha256-SnHgJFtvVgxUlvlLY6W6uHf37cjv8Aa65d3WaBZP0vA=";
   };
 in
 stdenvNoCC.mkDerivation {
@@ -31,10 +32,16 @@ stdenvNoCC.mkDerivation {
   buildPhase = ''
     substituteInPlace font-patcher \
       --replace '__dir__ + "/src/glyphs/"' "\"$out/share/nerdfonts/glyphs/\""
+    substituteInPlace font-patcher \
+      --replace '/bin/scripts/name_parser/' "/scripts/name_parser/"
   '';
 
   installPhase = ''
     install -m 755 -D font-patcher $out/bin/font-patcher
-    install -m 644 -D src/glyphs/* -t $out/share/nerdfonts/glyphs/
+    mkdir -p $out/bin/scripts/
+    cp --no-preserve=mode,ownership -r bin/scripts/* $out/bin/scripts/
+    chmod -R 755 $out/bin/scripts/
+    mkdir -p $out/share/nerdfonts/glyphs/
+    cp -r src/glyphs/* $out/share/nerdfonts/glyphs/
   '';
 }

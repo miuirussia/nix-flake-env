@@ -35,7 +35,6 @@ fetchMultiURLs {
     )
 
     downloadPath() {
-      header "downloading $1"
       escaped_path=$(sed 's/[^^]/[&]/g; s/\^/\\^/g' <<< $1)
 
       echo "$paths" | grep -E "[0-9]+ $escaped_path(/|\$)" |
