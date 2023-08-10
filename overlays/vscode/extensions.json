@@ -38,8 +38,8 @@
   {
     "name": "haskell",
     "publisher": "haskell",
-    "sha256": "0hq36kv86klhmis29r513f3mncrgadjks3dnjp67kq61djmm5cjl",
-    "version": "2.4.0"
+    "sha256": "026y5d98dy9p4b2dr18sk64f1i841v1g4ni1h9zhqrfapzligwcw",
+    "version": "2.4.1"
   },
   {
     "name": "language-haskell",
@@ -74,8 +74,8 @@
   {
     "name": "shellcheck",
     "publisher": "timonwong",
-    "sha256": "sha256-dDd2Pf26XWehPaIxHBsZ2JDTylvcEwQVffqV+X03wlc=",
-    "version": "0.33.0"
+    "sha256": "sha256-ICQH/0OiNPgHOfj+bWk53ynqTZnplV4j4vTRoln2pVI=",
+    "version": "0.33.1"
   },
   {
     "name": "vscode-thunder-client",
