@@ -38,3 +38,4 @@ jobs:
         run: |
           nix build --print-build-logs --show-trace --no-link .#darwinConfigurations.work.system
           NIXPKGS_ALLOW_INSECURE=1 nix build --print-build-logs --show-trace --impure --no-link .#darwinConfigurations.work.pkgs.nodejs-14_x
+          NIXPKGS_ALLOW_INSECURE=1 nix build --print-build-logs --show-trace --impure --no-link .#darwinConfigurations.work.pkgs.nodejs-slim_14
