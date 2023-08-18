@@ -2,8 +2,8 @@
   {
     "name": "vscode-jest",
     "publisher": "orta",
-    "sha256": "0g1s2rkjbiggqr9vcaj2rkj2i2b445id78na33ngcwjj20yxv68z",
-    "version": "6.0.0"
+    "sha256": "1dnvhiyi2s3x2lpxapg4czrir0rbih0mr4kwb0216kkp6d56nj85",
+    "version": "6.0.1"
   },
   {
     "name": "flow-for-vscode",
@@ -38,8 +38,8 @@
   {
     "name": "haskell",
     "publisher": "haskell",
-    "sha256": "026y5d98dy9p4b2dr18sk64f1i841v1g4ni1h9zhqrfapzligwcw",
-    "version": "2.4.1"
+    "sha256": "1dnqw3mkzdfqaqy11ygl3cwnfjm30k5dazldl4pqgb7mw11n32as",
+    "version": "2.5.0"
   },
   {
     "name": "language-haskell",
@@ -92,8 +92,8 @@
   {
     "name": "vscode-neovim",
     "publisher": "asvetliakov",
-    "sha256": "1mhj9q3by2wfqj7sk0zf5llq6i8rlkn10f0s5i2vp46vknjbjdzp",
-    "version": "0.4.1"
+    "sha256": "1pb5vmhmsd409jcr8m2lnsdykr63k7jlh9pfcb7ndlrpa1yjbf70",
+    "version": "0.4.2"
   },
   {
     "name": "vitest-explorer",
@@ -146,7 +146,7 @@
   {
     "name": "pretty-ts-errors",
     "publisher": "yoavbls",
-    "sha256": "0j3kcn9ryzxig8hchns5pz3xsrazpsrm3h8946ak1n9arq88wdyp",
-    "version": "0.5.0"
+    "sha256": "0jb06458calk4pwg3a8mr8xq4s76qjms9yck5s6gsc7f76bp70da",
+    "version": "0.5.1"
   }
 ]
