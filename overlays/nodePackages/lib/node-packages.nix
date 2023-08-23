@@ -94,13 +94,13 @@ let
         sha512 = "1/sA4dwrzBAyeUoQ6oxahHKmrZvsnLCg4RfxW3ZFGGmQkSNQPFNLV9CUEFQP1x9EYXHTo5p6xdhZM1Ne9p/AfA==";
       };
     };
-    "@eslint-community/regexpp-4.6.2" = {
+    "@eslint-community/regexpp-4.7.0" = {
       name = "_at_eslint-community_slash_regexpp";
       packageName = "@eslint-community/regexpp";
-      version = "4.6.2";
+      version = "4.7.0";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@eslint-community/regexpp/-/regexpp-4.6.2.tgz";
-        sha512 = "pPTNuaAG3QMH+buKyBIGJs3g/S5y0caxw0ygM3YyE6yJFySwiGGSzA+mM3KJ8QQvzeLh3blwgSonkFjgQdxzMw==";
+        url = "https://registry.npmjs.org/@eslint-community/regexpp/-/regexpp-4.7.0.tgz";
+        sha512 = "+HencqxU7CFJnQb7IKtuNBqS6Yx3Tz4kOL8BJXo+JyeiBm5MEX6pO8onXDkjrkCRlfYXS1Axro15ZjVFe9YgsA==";
       };
     };
     "@eslint/eslintrc-2.1.2" = {
@@ -391,13 +391,13 @@ let
         sha512 = "XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==";
       };
     };
-    "@types/node-20.5.0" = {
+    "@types/node-20.5.3" = {
       name = "_at_types_slash_node";
       packageName = "@types/node";
-      version = "20.5.0";
+      version = "20.5.3";
       src = fetchurl {
-        url = "https://registry.npmjs.org/@types/node/-/node-20.5.0.tgz";
-        sha512 = "Mgq7eCtoTjT89FqNoTzzXg2XvCi5VMhRV6+I2aYanc6kQCBImeNaAYRs/DyoVqk1YEUJK5gN9VO7HRIdz4Wo3Q==";
+        url = "https://registry.npmjs.org/@types/node/-/node-20.5.3.tgz";
+        sha512 = "ITI7rbWczR8a/S6qjAW7DMqxqFMjjTo61qZVWJ1ubPvbIQsL5D/TvwjYEalM8Kthpe3hTzOGrF2TGbAu2uyqeA==";
       };
     };
     "@types/node-fetch-2.6.4" = {
@@ -3415,13 +3415,13 @@ let
         sha512 = "+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==";
       };
     };
-    "node-fetch-2.6.12" = {
+    "node-fetch-2.6.13" = {
       name = "node-fetch";
       packageName = "node-fetch";
-      version = "2.6.12";
+      version = "2.6.13";
       src = fetchurl {
-        url = "https://registry.npmjs.org/node-fetch/-/node-fetch-2.6.12.tgz";
-        sha512 = "C/fGU2E8ToujUivIO0H+tpQ6HWo4eEmchoPIoXtxCrVghxdKq+QOHqEZW7tuP3KlV3bC8FRMO5nMCC7Zm1VP6g==";
+        url = "https://registry.npmjs.org/node-fetch/-/node-fetch-2.6.13.tgz";
+        sha512 = "StxNAxh15zr77QvvkmveSQ8uCQ4+v5FkvNTj0OESmiHu+VRi/gXArXtkWMElOsOUNLtUEvI4yS+rdtOHZTwlQA==";
       };
     };
     "node-static-0.7.11" = {
@@ -3820,13 +3820,13 @@ let
         sha512 = "vtK/94akxsTMhe0/cbfpR+syPuszcuwhqVjJq26CuNDgFGj682oRBXOP5MJpv2r7JtE8MsiepGIqvvOTBwn2vA==";
       };
     };
-    "protobufjs-7.2.4" = {
+    "protobufjs-7.2.5" = {
       name = "protobufjs";
       packageName = "protobufjs";
-      version = "7.2.4";
+      version = "7.2.5";
       src = fetchurl {
-        url = "https://registry.npmjs.org/protobufjs/-/protobufjs-7.2.4.tgz";
-        sha512 = "AT+RJgD2sH8phPmCf7OUZR8xGdcJRga4+1cOaXJ64hvcSkVhNcRHOwIxUatPH15+nj59WAGTDv3LSGZPEQbJaQ==";
+        url = "https://registry.npmjs.org/protobufjs/-/protobufjs-7.2.5.tgz";
+        sha512 = "gGXRSXvxQ7UiPgfw8gevrfRWcTlSbOFg+p/N+JVJEK5VhueL2miT6qTymqAmjr1Q5WbOCyJbyrk6JfWKwlFn6A==";
       };
     };
     "pseudomap-1.0.2" = {
@@ -4792,13 +4792,13 @@ let
         sha512 = "Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==";
       };
     };
-    "tslib-2.6.1" = {
+    "tslib-2.6.2" = {
       name = "tslib";
       packageName = "tslib";
-      version = "2.6.1";
+      version = "2.6.2";
       src = fetchurl {
-        url = "https://registry.npmjs.org/tslib/-/tslib-2.6.1.tgz";
-        sha512 = "t0hLfiEKfMUoqhG+U1oid7Pva4bbDPHYfJNiB7BiIjRkj1pyC++4N3huJfqY6aRH6VTB0rvtzQwjM4K6qpfOig==";
+        url = "https://registry.npmjs.org/tslib/-/tslib-2.6.2.tgz";
+        sha512 = "AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==";
       };
     };
     "tty-browserify-0.0.1" = {
@@ -5513,7 +5513,7 @@ in
     dependencies = [
       sources."@aashutoshrathi/word-wrap-1.2.6"
       sources."@eslint-community/eslint-utils-4.4.0"
-      sources."@eslint-community/regexpp-4.6.2"
+      sources."@eslint-community/regexpp-4.7.0"
       sources."@eslint/eslintrc-2.1.2"
       sources."@eslint/js-8.47.0"
       sources."@humanwhocodes/config-array-0.11.10"
@@ -5684,7 +5684,7 @@ in
       sources."@protobufjs/pool-1.1.0"
       sources."@protobufjs/utf8-1.1.0"
       sources."@selderee/plugin-htmlparser2-0.11.0"
-      sources."@types/node-20.5.0"
+      sources."@types/node-20.5.3"
       (sources."@types/node-fetch-2.6.4" // {
         dependencies = [
           sources."form-data-3.0.1"
@@ -5834,7 +5834,7 @@ in
       sources."mkdirp-1.0.4"
       sources."ms-2.1.2"
       sources."nan-2.17.0"
-      sources."node-fetch-2.6.12"
+      sources."node-fetch-2.6.13"
       sources."nopt-6.0.0"
       sources."npmlog-5.0.1"
       sources."oauth-sign-0.9.0"
@@ -5847,7 +5847,7 @@ in
       sources."picomatch-2.3.1"
       sources."process-0.11.10"
       sources."proto-list-1.2.4"
-      sources."protobufjs-7.2.4"
+      sources."protobufjs-7.2.5"
       sources."pseudomap-1.0.2"
       sources."psl-1.9.0"
       sources."punycode-2.3.0"
@@ -5899,7 +5899,7 @@ in
       sources."to-regex-range-5.0.1"
       sources."tough-cookie-4.1.3"
       sources."tr46-0.0.3"
-      sources."tslib-2.6.1"
+      sources."tslib-2.6.2"
       sources."tunnel-0.0.6"
       sources."tunnel-agent-0.6.0"
       sources."turndown-7.1.2"
