@@ -12,7 +12,6 @@ inputs: final: prev: {
         broken = false;
       });
       spdx = prev.haskell.lib.overrideCabal hsSuper.spdx (_: {
-        doCheck = false;
         broken = false;
         patches = [ ./spdx.patch ];
       });
