@@ -12,7 +12,7 @@
     };
 
     # spdx
-    spdx = { url = "github:phadej/spdx"; flake = false; };
+    spdx = { url = "github:phadej/spdx/7fbc0ee05d23be122f7e61c54514f4b309b0dda3"; flake = false; };
 
     # dotenv management
     darwin = { url = "github:LnL7/nix-darwin/master"; inputs.nixpkgs.follows = "nixpkgs"; };

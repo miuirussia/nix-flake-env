@@ -1053,6 +1053,7 @@
       "original": {
         "owner": "phadej",
         "repo": "spdx",
+        "rev": "7fbc0ee05d23be122f7e61c54514f4b309b0dda3",
         "type": "github"
       }
     },
