@@ -1,0 +1,54 @@
+--- a/spdx.cabal
++++ b/spdx.cabal
+@@ -50,8 +50,8 @@ library
+   hs-source-dirs:   src/
+   ghc-options:      -Wall
+   build-depends:
+-    , base          >=4.3.0.0 && <4.17
+-    , Cabal         ^>=2.4.0.1 || ^>=3.0.0.0 || ^>=3.2.0.0 || ^>=3.4.0.0 || ^>=3.6.0.0
++    , base          >=4.3.0.0 && <4.20
++    , Cabal         ^>=2.4.0.1 || ^>=3.0.0.0 || ^>=3.2.0.0 || ^>=3.4.0.0 || ^>=3.6.0.0 || ^>=3.8.0.0 || ^>=3.10.0.0
+     , containers    >=0.5.0.0 && <0.7
+     , transformers  >=0.3     && <0.6
+
+--- a/src/Distribution/SPDX/Extra/Internal.hs
++++ b/src/Distribution/SPDX/Extra/Internal.hs
+@@ -1,7 +1,5 @@
+ {-# LANGUAGE CPP                #-}
+ {-# LANGUAGE DeriveDataTypeable #-}
+-{-# LANGUAGE DeriveFoldable     #-}
+-{-# LANGUAGE DeriveFunctor      #-}
+ {-# LANGUAGE DeriveTraversable  #-}
+ -- |
+ --
+@@ -28,11 +26,10 @@ data LatticeSyntax a = LVar a
+   deriving (Eq, Ord, Read, Show, Functor, Foldable, Traversable, Typeable, Data)
+ 
+ instance Applicative LatticeSyntax where
+-  pure  = return
++  pure  = pure
+   (<*>) = ap
+ 
+ instance Monad LatticeSyntax where
+-  return = LVar
+   LVar x    >>= f = f x
+   LBound b  >>= _ = LBound b
+   LJoin a b >>= f = LJoin (a >>= f) (b >>= f)
+@@ -83,7 +80,7 @@ instance Functor (Eval v) where
+   fmap = liftM
+ 
+ instance Applicative (Eval v) where
+-  pure = return
++  pure = Eval . pure
+   (<*>) = ap
+ 
+ instance Alternative (Eval v) where
+@@ -91,7 +88,7 @@ instance Alternative (Eval v) where
+   (<|>) = mplus
+ 
+ instance Monad (Eval v) where
+-  return = Eval . return
++  return = pure
+   Eval m >>= k = Eval $ m >>= unEval . k
+ 
+ instance MonadPlus (Eval v) where
