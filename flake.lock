@@ -978,6 +978,7 @@
         "nvim-vsnip": "nvim-vsnip",
         "nvim-web-devicons": "nvim-web-devicons",
         "nvim-which-key": "nvim-which-key",
+        "spdx": "spdx",
         "vim-dhall": "vim-dhall",
         "vim-haskell": "vim-haskell",
         "vim-js": "vim-js",
@@ -1036,6 +1037,22 @@
       "original": {
         "owner": "oxalica",
         "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
+    "spdx": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1682521927,
+        "narHash": "sha256-/eilP5Td/9siFfbWKbg5iGTEdy0ZvssISEmusXDYT/s=",
+        "owner": "phadej",
+        "repo": "spdx",
+        "rev": "7fbc0ee05d23be122f7e61c54514f4b309b0dda3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "phadej",
+        "repo": "spdx",
         "type": "github"
       }
     },

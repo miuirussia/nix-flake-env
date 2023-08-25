@@ -11,10 +11,7 @@ inputs: final: prev: {
         editedCabalFile = "sha256-EmAZ+vPQLzBcV2KulgK+HL92KRFToadGEnCtFClngRE=";
         broken = false;
       });
-      spdx = prev.haskell.lib.overrideCabal hsSuper.spdx (_: {
-        broken = false;
-        patches = [ ./spdx.patch ];
-      });
+      spdx = hsSuper.callCabal2nix "spdx" inputs.spdx {};
     };
   };
 }
