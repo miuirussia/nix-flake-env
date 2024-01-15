@@ -27,7 +27,7 @@ jobs:
           echo "${{ secrets.GIT_CRYPT_KEY }}" | base64  -d > /tmp/git-crypt-key
           git-crypt unlock /tmp/git-crypt-key
           rm /tmp/git-crypt-key
-      - uses: cachix/cachix-action@v13
+      - uses: cachix/cachix-action@v14
         with:
           name: kdevlab
           authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
